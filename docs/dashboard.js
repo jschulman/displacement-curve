@@ -898,6 +898,15 @@
     var scores = sorted.map(function(d) { return d.score; });
     var events = compositeData.events || [];
 
+    // 6-month moving average trendline
+    var trendWindow = 6;
+    var trendline = scores.map(function(val, i) {
+      if (i < trendWindow - 1) return null;
+      var sum = 0;
+      for (var j = i - trendWindow + 1; j <= i; j++) sum += scores[j];
+      return Math.round(sum / trendWindow * 10) / 10;
+    });
+
     // Build event point data
     var eventPoints = [];
     var eventLabelsMap = {};
@@ -926,6 +935,18 @@
             fill: true,
           },
           {
+            label: "Trend (6mo avg)",
+            data: trendline,
+            borderColor: "#f0883e",
+            borderWidth: 2,
+            borderDash: [8, 4],
+            pointRadius: 0,
+            pointHitRadius: 0,
+            tension: 0.4,
+            fill: false,
+            spanGaps: true,
+          },
+          {
             label: "Events",
             data: eventPoints.map(function(p) { return p.y; }),
             borderColor: "transparent",
@@ -952,9 +973,12 @@
                 return items[0].label;
               },
               label: function(context) {
-                if (context.datasetIndex === 1) {
+                if (context.datasetIndex === 2) {
                   var evLabels = context.dataset._eventLabels;
                   return evLabels && evLabels[context.dataIndex] ? evLabels[context.dataIndex] : "Score: " + context.parsed.y;
+                }
+                if (context.datasetIndex === 1) {
+                  return "Trend: " + context.parsed.y.toFixed(1);
                 }
                 return "Score: " + context.parsed.y.toFixed(1);
               },
