@@ -231,15 +231,71 @@ A rising AI-to-traditional ratio indicates firms are structurally shifting their
 
 ---
 
-## Planned Signals
+## Signal 8: Regulatory Guidance Cadence
 
-The following signals are planned for future phases:
+**Source:** Federal Reserve, OCC, FDIC, CFPB, SEC, EU AI Act Framework, NIST AI RMF
+**Update Cadence:** Quarterly
 
-- **Regulatory Guidance:** Rate of AI-related regulatory issuance
+### Regulators Tracked
 
-## Composite Index
+| Key | Regulator | Jurisdiction |
+|-----|-----------|-------------|
+| fed | Federal Reserve | US |
+| occ | Office of the Comptroller of the Currency | US |
+| fdic | Federal Deposit Insurance Corporation | US |
+| cfpb | Consumer Financial Protection Bureau | US |
+| sec | Securities and Exchange Commission | US |
+| eu | EU AI Act | EU |
+| nist | National Institute of Standards and Technology | US |
 
-A weighted composite index (0-100) synthesizing all signals is planned. See the project README for current status.
+### Metrics
+
+- **Document Count:** Total AI-related guidance documents issued per quarter per regulator
+- **Enforcement Count:** Enforcement actions referencing AI per quarter
+- **Guidance Count:** Non-enforcement guidance (frameworks, best practices, comment requests)
+- **Cumulative Documents:** Running total across all regulators
+
+### Interpretation
+
+Accelerating regulatory output signals that AI displacement has become a policy concern. Early-stage regulatory activity (guidance, frameworks) suggests awareness. Enforcement actions indicate the regulatory posture is shifting from observation to intervention. A rapid increase in cumulative documents marks the transition from a permissive to a structured regulatory environment.
+
+---
+
+## Composite Displacement Index
+
+The Composite Displacement Index synthesizes all eight signals into a single score (0-100) indicating where professional services stand on the displacement curve.
+
+### Weights
+
+| Signal | Weight | Rationale |
+|--------|--------|-----------|
+| Professional Services Employment | 0.25 | The definitive lagging indicator of displacement |
+| Revenue Per Employee | 0.20 | Efficiency gains preceding headcount reduction |
+| VC Funding: AI Services | 0.15 | Capital conviction in AI-native replacements |
+| AI vs Traditional Hiring | 0.15 | Real-time labor market composition shift |
+| AI Search Interest | 0.10 | Cultural awareness and behavioral intent |
+| Open Source AI Activity | 0.10 | Developer tooling leading commercial products |
+| Regulatory Guidance | 0.05 | Policy response to displacement concerns |
+
+### Normalization
+
+Each signal is normalized to a 0-100 scale relative to its observed range over the tracking period. This ensures signals with different units (employment in thousands, funding in millions, ratios) are comparable.
+
+### Phase Ranges
+
+| Score Range | Phase | Description |
+|-------------|-------|-------------|
+| 0-25 | Pre-disruption | AI is a topic, not a force. Business as usual. |
+| 26-50 | Productivity | AI is making firms more efficient. Employment stable or growing. |
+| 51-75 | Erosion | Revenue per employee diverging from headcount. Job mix shifting. |
+| 76-100 | Displacement | Employment declining. Funding pouring into replacements. |
+
+### Caveats
+
+- The composite index is a simplification. It compresses eight distinct signals into a single number.
+- Weight assignments are based on editorial judgment, not statistical optimization.
+- Phase boundaries are fixed thresholds, not data-driven breakpoints.
+- The index is designed for directional insight, not precision. A score of 42 vs 44 is noise. A score of 25 vs 50 is signal.
 
 ---
 

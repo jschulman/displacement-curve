@@ -1,4 +1,4 @@
-name: Weekly Job Postings Collection
+name: Weekly Data Collection (Jobs + Regulatory + Composite)
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  collect-jobs:
+  collect-weekly:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -17,14 +17,22 @@ jobs:
         run: pip install -r requirements.txt
       - name: Collect job postings data
         run: python collectors/job_postings.py
+      - name: Collect regulatory guidance data
+        run: python collectors/regulatory_tracker.py
+      - name: Recompute composite displacement index
+        run: python normalizers/composite_index.py
       - name: Copy processed data to docs
         run: |
           mkdir -p docs/data/jobs/processed
           cp data/jobs/processed/*.json docs/data/jobs/processed/
+          mkdir -p docs/data/regulatory/processed
+          cp data/regulatory/processed/*.json docs/data/regulatory/processed/
+          mkdir -p docs/data/composite
+          cp data/composite/*.json docs/data/composite/
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/ docs/data/
-          git diff --staged --quiet || git commit -m "chore: weekly job postings collection $(date -u +%Y-%m-%d)"
+          git diff --staged --quiet || git commit -m "chore: weekly data collection $(date -u +%Y-%m-%d)"
           git push

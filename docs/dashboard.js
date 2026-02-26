@@ -15,6 +15,8 @@
     workforce: "data/sec/processed/workforce.json",
     vc: "data/vc/processed/funding.json",
     jobs: "data/jobs/processed/postings.json",
+    regulatory: "data/regulatory/processed/guidance.json",
+    composite: "data/composite/displacement_index.json",
   };
 
   // ---- Fallback sample data ----
@@ -357,11 +359,96 @@
       ],
       firms: {},
     },
+    regulatory: {
+      regulators: {
+        fed: { name: "Federal Reserve", quarterly: [
+          { quarter: "2022-Q4", document_count: 2, enforcement_count: 0, guidance_count: 2 },
+          { quarter: "2023-Q1", document_count: 3, enforcement_count: 0, guidance_count: 3 },
+          { quarter: "2023-Q2", document_count: 4, enforcement_count: 1, guidance_count: 3 },
+          { quarter: "2023-Q3", document_count: 5, enforcement_count: 1, guidance_count: 4 },
+          { quarter: "2023-Q4", document_count: 6, enforcement_count: 1, guidance_count: 5 },
+          { quarter: "2024-Q1", document_count: 7, enforcement_count: 2, guidance_count: 5 },
+        ]},
+        occ: { name: "OCC", quarterly: [
+          { quarter: "2022-Q4", document_count: 1, enforcement_count: 0, guidance_count: 1 },
+          { quarter: "2023-Q1", document_count: 2, enforcement_count: 0, guidance_count: 2 },
+          { quarter: "2023-Q2", document_count: 2, enforcement_count: 0, guidance_count: 2 },
+          { quarter: "2023-Q3", document_count: 3, enforcement_count: 1, guidance_count: 2 },
+          { quarter: "2023-Q4", document_count: 4, enforcement_count: 1, guidance_count: 3 },
+          { quarter: "2024-Q1", document_count: 5, enforcement_count: 1, guidance_count: 4 },
+        ]},
+        fdic: { name: "FDIC", quarterly: [
+          { quarter: "2022-Q4", document_count: 1, enforcement_count: 0, guidance_count: 1 },
+          { quarter: "2023-Q1", document_count: 1, enforcement_count: 0, guidance_count: 1 },
+          { quarter: "2023-Q2", document_count: 2, enforcement_count: 0, guidance_count: 2 },
+          { quarter: "2023-Q3", document_count: 2, enforcement_count: 0, guidance_count: 2 },
+          { quarter: "2023-Q4", document_count: 3, enforcement_count: 0, guidance_count: 3 },
+          { quarter: "2024-Q1", document_count: 4, enforcement_count: 1, guidance_count: 3 },
+        ]},
+        cfpb: { name: "CFPB", quarterly: [
+          { quarter: "2022-Q4", document_count: 1, enforcement_count: 0, guidance_count: 1 },
+          { quarter: "2023-Q1", document_count: 2, enforcement_count: 1, guidance_count: 1 },
+          { quarter: "2023-Q2", document_count: 2, enforcement_count: 1, guidance_count: 1 },
+          { quarter: "2023-Q3", document_count: 3, enforcement_count: 1, guidance_count: 2 },
+          { quarter: "2023-Q4", document_count: 3, enforcement_count: 1, guidance_count: 2 },
+          { quarter: "2024-Q1", document_count: 4, enforcement_count: 2, guidance_count: 2 },
+        ]},
+        sec: { name: "SEC", quarterly: [
+          { quarter: "2022-Q4", document_count: 2, enforcement_count: 0, guidance_count: 2 },
+          { quarter: "2023-Q1", document_count: 3, enforcement_count: 1, guidance_count: 2 },
+          { quarter: "2023-Q2", document_count: 4, enforcement_count: 1, guidance_count: 3 },
+          { quarter: "2023-Q3", document_count: 5, enforcement_count: 2, guidance_count: 3 },
+          { quarter: "2023-Q4", document_count: 6, enforcement_count: 2, guidance_count: 4 },
+          { quarter: "2024-Q1", document_count: 8, enforcement_count: 3, guidance_count: 5 },
+        ]},
+        eu: { name: "EU AI Act", quarterly: [
+          { quarter: "2022-Q4", document_count: 1, enforcement_count: 0, guidance_count: 1 },
+          { quarter: "2023-Q1", document_count: 2, enforcement_count: 0, guidance_count: 2 },
+          { quarter: "2023-Q2", document_count: 3, enforcement_count: 0, guidance_count: 3 },
+          { quarter: "2023-Q3", document_count: 4, enforcement_count: 0, guidance_count: 4 },
+          { quarter: "2023-Q4", document_count: 5, enforcement_count: 0, guidance_count: 5 },
+          { quarter: "2024-Q1", document_count: 7, enforcement_count: 1, guidance_count: 6 },
+        ]},
+        nist: { name: "NIST", quarterly: [
+          { quarter: "2022-Q4", document_count: 0, enforcement_count: 0, guidance_count: 0 },
+          { quarter: "2023-Q1", document_count: 1, enforcement_count: 0, guidance_count: 1 },
+          { quarter: "2023-Q2", document_count: 2, enforcement_count: 0, guidance_count: 2 },
+          { quarter: "2023-Q3", document_count: 3, enforcement_count: 0, guidance_count: 3 },
+          { quarter: "2023-Q4", document_count: 4, enforcement_count: 0, guidance_count: 4 },
+          { quarter: "2024-Q1", document_count: 5, enforcement_count: 0, guidance_count: 5 },
+        ]},
+      },
+      aggregate: [
+        { quarter: "2022-Q4", total_documents: 8, cumulative_documents: 8 },
+        { quarter: "2023-Q1", total_documents: 14, cumulative_documents: 22 },
+        { quarter: "2023-Q2", total_documents: 19, cumulative_documents: 41 },
+        { quarter: "2023-Q3", total_documents: 25, cumulative_documents: 66 },
+        { quarter: "2023-Q4", total_documents: 31, cumulative_documents: 97 },
+        { quarter: "2024-Q1", total_documents: 40, cumulative_documents: 137 },
+      ],
+    },
+    composite: {
+      weights: { employment: 0.25, rev_per_employee: 0.20, vc_funding: 0.15, job_ratio: 0.15, trends: 0.10, github: 0.10, regulatory: 0.05 },
+      monthly: [
+        { date: "2022-11", score: 18.5, phase: "Pre-disruption", phase_range: "0-25", components: { employment: { raw_value: 1580.2, normalized: 15, weighted: 3.75 } }, trend: "flat" },
+        { date: "2023-03", score: 22.1, phase: "Pre-disruption", phase_range: "0-25", components: { employment: { raw_value: 1590.0, normalized: 18, weighted: 4.5 } }, trend: "up" },
+        { date: "2023-07", score: 28.4, phase: "Productivity", phase_range: "26-50", components: { employment: { raw_value: 1600.0, normalized: 22, weighted: 5.5 } }, trend: "up" },
+        { date: "2023-11", score: 33.2, phase: "Productivity", phase_range: "26-50", components: { employment: { raw_value: 1605.0, normalized: 28, weighted: 7.0 } }, trend: "up" },
+        { date: "2024-03", score: 37.8, phase: "Productivity", phase_range: "26-50", components: { employment: { raw_value: 1608.0, normalized: 32, weighted: 8.0 } }, trend: "up" },
+        { date: "2024-07", score: 41.5, phase: "Productivity", phase_range: "26-50", components: { employment: { raw_value: 1612.0, normalized: 36, weighted: 9.0 } }, trend: "up" },
+      ],
+      events: [
+        { date: "2022-11", label: "ChatGPT Launch", type: "ai_release" },
+        { date: "2023-03", label: "GPT-4 Release", type: "ai_release" },
+        { date: "2023-07", label: "Claude 2", type: "ai_release" },
+        { date: "2024-03", label: "Claude 3 / Devin", type: "ai_release" },
+      ],
+    },
   };
 
   // ---- State ----
   let state = {
-    data: { employment: null, trends: null, github: null, earnings: null, workforce: null, vc: null, jobs: null },
+    data: { employment: null, trends: null, github: null, earnings: null, workforce: null, vc: null, jobs: null, regulatory: null, composite: null },
     expandedSignal: null,
     sparkCharts: {},
     expandedChart: null,
@@ -678,6 +765,322 @@
     };
   }
 
+  // ---- Phase Descriptions ----
+  var PHASE_INFO = {
+    "Pre-disruption": "AI is a topic, not a force. Business as usual.",
+    "Productivity": "AI is making firms more efficient. Employment stable or growing.",
+    "Erosion": "Revenue per employee diverging from headcount. Job mix shifting.",
+    "Displacement": "Employment declining. Funding pouring into replacements.",
+  };
+
+  // ---- Regulatory Summary ----
+  function getRegulatorySummary(regData) {
+    if (!regData || !regData.aggregate || regData.aggregate.length === 0) return null;
+
+    var sorted = regData.aggregate.slice().sort(function(a, b) {
+      return a.quarter.localeCompare(b.quarter);
+    });
+
+    var trailing = last(sorted, 8);
+    var latest = sorted[sorted.length - 1];
+    var prev = sorted.length >= 2 ? sorted[sorted.length - 2] : null;
+    var qoq = prev ? latest.total_documents - prev.total_documents : 0;
+
+    return {
+      value: latest.total_documents,
+      formatted: latest.total_documents + " docs",
+      mom: qoq,
+      momFormatted: (qoq >= 0 ? "+" : "") + qoq + " QoQ",
+      date: latest.quarter,
+      sparkLabels: trailing.map(function(d) { return d.quarter; }),
+      sparkData: trailing.map(function(d) { return d.cumulative_documents; }),
+    };
+  }
+
+  // ---- Hero Score Rendering ----
+  function renderHeroScore(compositeData) {
+    if (!compositeData || !compositeData.monthly || compositeData.monthly.length === 0) return;
+
+    var sorted = compositeData.monthly.slice().sort(function(a, b) {
+      return a.date.localeCompare(b.date);
+    });
+
+    var latest = sorted[sorted.length - 1];
+    var scoreEl = document.getElementById("hero-score");
+    var phaseEl = document.getElementById("hero-phase");
+    var descEl = document.getElementById("hero-description");
+    var trendEl = document.getElementById("hero-trend");
+
+    if (!scoreEl) return;
+
+    scoreEl.textContent = latest.score.toFixed(1);
+
+    // Score color
+    if (latest.score < 50) {
+      scoreEl.style.color = "var(--green)";
+    } else if (latest.score <= 75) {
+      scoreEl.style.color = "#f0883e";
+    } else {
+      scoreEl.style.color = "var(--red)";
+    }
+
+    phaseEl.textContent = latest.phase;
+    descEl.textContent = PHASE_INFO[latest.phase] || "";
+
+    // Trend
+    var trendArrow = "\u2192";
+    var trendLabel = "Flat";
+    var trendColor = "var(--neutral)";
+    if (latest.trend === "up") {
+      trendArrow = "\u2191";
+      trendLabel = "Rising";
+      trendColor = "var(--red)";
+    } else if (latest.trend === "down") {
+      trendArrow = "\u2193";
+      trendLabel = "Falling";
+      trendColor = "var(--green)";
+    }
+    trendEl.textContent = trendArrow + " Trend: " + trendLabel;
+    trendEl.style.color = trendColor;
+  }
+
+  // ---- Timeline Chart ----
+  var timelineChart = null;
+
+  function renderTimeline(compositeData) {
+    if (!compositeData || !compositeData.monthly || compositeData.monthly.length === 0) return;
+
+    var ctx = document.getElementById("timeline-chart");
+    if (!ctx) return;
+
+    if (timelineChart) {
+      timelineChart.destroy();
+    }
+
+    var sorted = compositeData.monthly.slice().sort(function(a, b) {
+      return a.date.localeCompare(b.date);
+    });
+
+    var labels = sorted.map(function(d) { return d.date; });
+    var scores = sorted.map(function(d) { return d.score; });
+    var events = compositeData.events || [];
+
+    // Build event point data
+    var eventPoints = [];
+    var eventLabelsMap = {};
+    events.forEach(function(ev) {
+      var idx = labels.indexOf(ev.date);
+      if (idx >= 0) {
+        eventPoints.push({ x: ev.date, y: scores[idx] });
+        eventLabelsMap[ev.date] = ev.label;
+      }
+    });
+
+    timelineChart = new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: labels,
+        datasets: [
+          {
+            label: "Displacement Score",
+            data: scores,
+            borderColor: "#58a6ff",
+            backgroundColor: "rgba(88, 166, 255, 0.1)",
+            borderWidth: 3,
+            pointRadius: 0,
+            pointHitRadius: 8,
+            tension: 0.3,
+            fill: true,
+          },
+          {
+            label: "Events",
+            data: eventPoints.map(function(p) { return p.y; }),
+            borderColor: "transparent",
+            backgroundColor: "#f0883e",
+            pointRadius: 6,
+            pointHoverRadius: 8,
+            pointStyle: "circle",
+            showLine: false,
+            // Map event points to correct x positions
+            _eventLabels: eventPoints.map(function(p) { return eventLabelsMap[p.x]; }),
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            mode: "nearest",
+            intersect: true,
+            callbacks: {
+              title: function(items) {
+                return items[0].label;
+              },
+              label: function(context) {
+                if (context.datasetIndex === 1) {
+                  var evLabels = context.dataset._eventLabels;
+                  return evLabels && evLabels[context.dataIndex] ? evLabels[context.dataIndex] : "Score: " + context.parsed.y;
+                }
+                return "Score: " + context.parsed.y.toFixed(1);
+              },
+            },
+          },
+        },
+        scales: {
+          x: {
+            title: { display: false },
+            grid: { color: "rgba(48, 54, 61, 0.5)" },
+            ticks: { maxTicksLimit: 8 },
+          },
+          y: {
+            min: 0,
+            max: 100,
+            title: { display: true, text: "Displacement Score" },
+            grid: { color: "rgba(48, 54, 61, 0.3)" },
+            ticks: {
+              stepSize: 25,
+              callback: function(value) {
+                var phaseLabels = { 0: "", 25: "Pre-disruption", 50: "Productivity", 75: "Erosion", 100: "Displacement" };
+                return phaseLabels[value] !== undefined ? value + "  " + phaseLabels[value] : value;
+              },
+            },
+          },
+        },
+        interaction: { mode: "nearest", intersect: false },
+      },
+      plugins: [{
+        id: "phaseBands",
+        beforeDraw: function(chart) {
+          var yAxis = chart.scales.y;
+          var xAxis = chart.scales.x;
+          var ctxDraw = chart.ctx;
+
+          var bands = [
+            { min: 0, max: 25, color: "rgba(63, 185, 80, 0.05)" },
+            { min: 25, max: 50, color: "rgba(88, 166, 255, 0.05)" },
+            { min: 50, max: 75, color: "rgba(240, 136, 62, 0.05)" },
+            { min: 75, max: 100, color: "rgba(248, 81, 73, 0.05)" },
+          ];
+
+          bands.forEach(function(band) {
+            var yTop = yAxis.getPixelForValue(band.max);
+            var yBottom = yAxis.getPixelForValue(band.min);
+            ctxDraw.fillStyle = band.color;
+            ctxDraw.fillRect(xAxis.left, yTop, xAxis.width, yBottom - yTop);
+          });
+
+          // Dashed lines at 25, 50, 75
+          [25, 50, 75].forEach(function(val) {
+            var yPos = yAxis.getPixelForValue(val);
+            ctxDraw.save();
+            ctxDraw.setLineDash([4, 4]);
+            ctxDraw.strokeStyle = "rgba(139, 148, 158, 0.3)";
+            ctxDraw.lineWidth = 1;
+            ctxDraw.beginPath();
+            ctxDraw.moveTo(xAxis.left, yPos);
+            ctxDraw.lineTo(xAxis.right, yPos);
+            ctxDraw.stroke();
+            ctxDraw.restore();
+          });
+        },
+      }],
+    });
+
+    // The events dataset needs to use the same x-axis labels.
+    // Re-map event points properly to label indices
+    var eventData = labels.map(function(label) {
+      var match = events.find(function(ev) { return ev.date === label; });
+      if (match) {
+        var scoreIdx = labels.indexOf(label);
+        return scores[scoreIdx];
+      }
+      return null;
+    });
+    timelineChart.data.datasets[1].data = eventData;
+    timelineChart.data.datasets[1]._eventLabels = labels.map(function(label) {
+      var match = events.find(function(ev) { return ev.date === label; });
+      return match ? match.label : null;
+    });
+    timelineChart.update("none");
+  }
+
+  // ---- Expanded Regulatory Chart ----
+  function renderExpandedRegulatory(regData) {
+    var ctx = document.getElementById("expanded-chart");
+    if (state.expandedChart) state.expandedChart.destroy();
+
+    var regulators = regData.regulators || {};
+    var regKeys = Object.keys(regulators);
+    var colors = ["#58a6ff", "#3fb950", "#d2a8ff", "#f0883e", "#f85149", "#a371f7", "#d29922"];
+    var bgColors = [
+      "rgba(88,166,255,0.6)", "rgba(63,185,80,0.6)", "rgba(210,168,255,0.6)",
+      "rgba(240,136,62,0.6)", "rgba(248,81,73,0.6)", "rgba(163,113,247,0.6)", "rgba(210,153,34,0.6)",
+    ];
+
+    // Collect all quarters
+    var allQuarters = {};
+    regKeys.forEach(function(key) {
+      (regulators[key].quarterly || []).forEach(function(q) {
+        allQuarters[q.quarter] = true;
+      });
+    });
+    var quarters = Object.keys(allQuarters).sort();
+
+    var datasets = regKeys.map(function(key, i) {
+      var dataMap = {};
+      (regulators[key].quarterly || []).forEach(function(q) {
+        dataMap[q.quarter] = q.document_count;
+      });
+      return {
+        label: regulators[key].name || key,
+        data: quarters.map(function(q) { return dataMap[q] || 0; }),
+        backgroundColor: bgColors[i % bgColors.length],
+        borderColor: colors[i % colors.length],
+        borderWidth: 1,
+      };
+    });
+
+    state.expandedChart = new Chart(ctx, {
+      type: "bar",
+      data: { labels: quarters, datasets: datasets },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: true,
+            position: "top",
+            labels: { usePointStyle: true, padding: 12 },
+          },
+          tooltip: {
+            mode: "index",
+            intersect: false,
+            callbacks: {
+              label: function(ctx) {
+                return ctx.dataset.label + ": " + (ctx.parsed.y != null ? ctx.parsed.y : 0) + " docs";
+              },
+            },
+          },
+        },
+        scales: {
+          x: {
+            stacked: true,
+            title: { display: true, text: "Quarter" },
+            grid: { color: "rgba(48, 54, 61, 0.5)" },
+          },
+          y: {
+            stacked: true,
+            title: { display: true, text: "Document Count" },
+            grid: { color: "rgba(48, 54, 61, 0.5)" },
+          },
+        },
+        interaction: { mode: "index", intersect: false },
+      },
+    });
+  }
+
   // ---- Card Rendering ----
 
   function renderCard(signal, summary) {
@@ -708,6 +1111,7 @@
     if (signal === "workforce") sparkColor = "#f85149";
     if (signal === "vc") sparkColor = "#a371f7";
     if (signal === "jobs") sparkColor = "#d2a8ff";
+    if (signal === "regulatory") sparkColor = "#f0883e";
 
     createSparkline(
       "spark-" + signal,
@@ -1310,6 +1714,7 @@
       workforce: "Revenue Per Employee (SEC 10-K)",
       vc: "VC Funding: AI Services (SEC Form D)",
       jobs: "AI vs Traditional Hiring (Indeed / LinkedIn)",
+      regulatory: "Regulatory Guidance (Fed / OCC / SEC / EU / NIST)",
     };
     titleEl.textContent = titles[signal] || signal;
 
@@ -1324,6 +1729,7 @@
     else if (signal === "workforce") renderExpandedWorkforce(state.data.earnings, state.data.workforce);
     else if (signal === "vc") renderExpandedVc(data);
     else if (signal === "jobs") renderExpandedJobs(data);
+    else if (signal === "regulatory") renderExpandedRegulatory(data);
 
     // Scroll to expanded section
     section.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -1382,6 +1788,14 @@
         console.warn("Jobs data fetch failed, using fallback.");
         return FALLBACK.jobs;
       }),
+      fetchJSON(DATA_PATHS.regulatory).catch(function () {
+        console.warn("Regulatory data fetch failed, using fallback.");
+        return FALLBACK.regulatory;
+      }),
+      fetchJSON(DATA_PATHS.composite).catch(function () {
+        console.warn("Composite data fetch failed, using fallback.");
+        return FALLBACK.composite;
+      }),
     ];
 
     Promise.all(promises).then(function (results) {
@@ -1392,6 +1806,8 @@
       state.data.workforce = results[4];
       state.data.vc = results[5];
       state.data.jobs = results[6];
+      state.data.regulatory = results[7];
+      state.data.composite = results[8];
       render();
     });
   }
@@ -1401,7 +1817,7 @@
   function render() {
     // Update last-updated from metadata
     var dates = [];
-    ["employment", "trends", "github", "earnings", "workforce", "vc", "jobs"].forEach(function (key) {
+    ["employment", "trends", "github", "earnings", "workforce", "vc", "jobs", "regulatory"].forEach(function (key) {
       var d = state.data[key];
       if (d && d.metadata && d.metadata.last_updated) {
         dates.push(d.metadata.last_updated);
@@ -1413,6 +1829,10 @@
       document.getElementById("last-updated").textContent =
         "Last updated: " + formatDate(mostRecent);
     }
+
+    // Hero composite score
+    renderHeroScore(state.data.composite);
+    renderTimeline(state.data.composite);
 
     // Render cards
     var empSummary = getEmploymentSummary(state.data.employment);
@@ -1435,6 +1855,9 @@
 
     var jobsSummary = getJobsSummary(state.data.jobs);
     renderCard("jobs", jobsSummary);
+
+    var regSummary = getRegulatorySummary(state.data.regulatory);
+    renderCard("regulatory", regSummary);
   }
 
   // ---- Event Binding ----

@@ -1,0 +1,657 @@
+{
+  "metadata": {
+    "source": "Federal Regulators RSS",
+    "last_updated": "2026-02-26",
+    "mock": true
+  },
+  "regulators": {
+    "fed": {
+      "name": "Federal Reserve",
+      "quarterly": [
+        {
+          "quarter": "2022-Q4",
+          "document_count": 1,
+          "enforcement_count": 0,
+          "guidance_count": 1
+        },
+        {
+          "quarter": "2023-Q1",
+          "document_count": 2,
+          "enforcement_count": 0,
+          "guidance_count": 0
+        },
+        {
+          "quarter": "2023-Q2",
+          "document_count": 1,
+          "enforcement_count": 0,
+          "guidance_count": 1
+        },
+        {
+          "quarter": "2023-Q3",
+          "document_count": 2,
+          "enforcement_count": 1,
+          "guidance_count": 1
+        },
+        {
+          "quarter": "2023-Q4",
+          "document_count": 1,
+          "enforcement_count": 0,
+          "guidance_count": 1
+        },
+        {
+          "quarter": "2024-Q1",
+          "document_count": 3,
+          "enforcement_count": 0,
+          "guidance_count": 2
+        },
+        {
+          "quarter": "2024-Q2",
+          "document_count": 2,
+          "enforcement_count": 0,
+          "guidance_count": 2
+        },
+        {
+          "quarter": "2024-Q3",
+          "document_count": 3,
+          "enforcement_count": 1,
+          "guidance_count": 2
+        },
+        {
+          "quarter": "2024-Q4",
+          "document_count": 4,
+          "enforcement_count": 1,
+          "guidance_count": 3
+        },
+        {
+          "quarter": "2025-Q1",
+          "document_count": 6,
+          "enforcement_count": 1,
+          "guidance_count": 4
+        },
+        {
+          "quarter": "2025-Q2",
+          "document_count": 6,
+          "enforcement_count": 1,
+          "guidance_count": 5
+        },
+        {
+          "quarter": "2025-Q3",
+          "document_count": 7,
+          "enforcement_count": 2,
+          "guidance_count": 5
+        },
+        {
+          "quarter": "2025-Q4",
+          "document_count": 8,
+          "enforcement_count": 2,
+          "guidance_count": 6
+        }
+      ]
+    },
+    "occ": {
+      "name": "OCC",
+      "quarterly": [
+        {
+          "quarter": "2022-Q4",
+          "document_count": 1,
+          "enforcement_count": 0,
+          "guidance_count": 1
+        },
+        {
+          "quarter": "2023-Q1",
+          "document_count": 1,
+          "enforcement_count": 0,
+          "guidance_count": 1
+        },
+        {
+          "quarter": "2023-Q2",
+          "document_count": 1,
+          "enforcement_count": 0,
+          "guidance_count": 1
+        },
+        {
+          "quarter": "2023-Q3",
+          "document_count": 2,
+          "enforcement_count": 0,
+          "guidance_count": 2
+        },
+        {
+          "quarter": "2023-Q4",
+          "document_count": 2,
+          "enforcement_count": 0,
+          "guidance_count": 1
+        },
+        {
+          "quarter": "2024-Q1",
+          "document_count": 2,
+          "enforcement_count": 0,
+          "guidance_count": 2
+        },
+        {
+          "quarter": "2024-Q2",
+          "document_count": 3,
+          "enforcement_count": 1,
+          "guidance_count": 2
+        },
+        {
+          "quarter": "2024-Q3",
+          "document_count": 3,
+          "enforcement_count": 1,
+          "guidance_count": 2
+        },
+        {
+          "quarter": "2024-Q4",
+          "document_count": 4,
+          "enforcement_count": 1,
+          "guidance_count": 3
+        },
+        {
+          "quarter": "2025-Q1",
+          "document_count": 6,
+          "enforcement_count": 2,
+          "guidance_count": 4
+        },
+        {
+          "quarter": "2025-Q2",
+          "document_count": 6,
+          "enforcement_count": 3,
+          "guidance_count": 3
+        },
+        {
+          "quarter": "2025-Q3",
+          "document_count": 7,
+          "enforcement_count": 2,
+          "guidance_count": 5
+        },
+        {
+          "quarter": "2025-Q4",
+          "document_count": 7,
+          "enforcement_count": 3,
+          "guidance_count": 4
+        }
+      ]
+    },
+    "fdic": {
+      "name": "FDIC",
+      "quarterly": [
+        {
+          "quarter": "2022-Q4",
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
+        },
+        {
+          "quarter": "2023-Q1",
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
+        },
+        {
+          "quarter": "2023-Q2",
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
+        },
+        {
+          "quarter": "2023-Q3",
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
+        },
+        {
+          "quarter": "2023-Q4",
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
+        },
+        {
+          "quarter": "2024-Q1",
+          "document_count": 2,
+          "enforcement_count": 0,
+          "guidance_count": 0
+        },
+        {
+          "quarter": "2024-Q2",
+          "document_count": 1,
+          "enforcement_count": 0,
+          "guidance_count": 1
+        },
+        {
+          "quarter": "2024-Q3",
+          "document_count": 2,
+          "enforcement_count": 0,
+          "guidance_count": 1
+        },
+        {
+          "quarter": "2024-Q4",
+          "document_count": 3,
+          "enforcement_count": 1,
+          "guidance_count": 2
+        },
+        {
+          "quarter": "2025-Q1",
+          "document_count": 2,
+          "enforcement_count": 0,
+          "guidance_count": 2
+        },
+        {
+          "quarter": "2025-Q2",
+          "document_count": 4,
+          "enforcement_count": 1,
+          "guidance_count": 3
+        },
+        {
+          "quarter": "2025-Q3",
+          "document_count": 5,
+          "enforcement_count": 1,
+          "guidance_count": 4
+        },
+        {
+          "quarter": "2025-Q4",
+          "document_count": 5,
+          "enforcement_count": 1,
+          "guidance_count": 4
+        }
+      ]
+    },
+    "cfpb": {
+      "name": "CFPB",
+      "quarterly": [
+        {
+          "quarter": "2022-Q4",
+          "document_count": 1,
+          "enforcement_count": 0,
+          "guidance_count": 1
+        },
+        {
+          "quarter": "2023-Q1",
+          "document_count": 1,
+          "enforcement_count": 0,
+          "guidance_count": 1
+        },
+        {
+          "quarter": "2023-Q2",
+          "document_count": 1,
+          "enforcement_count": 0,
+          "guidance_count": 1
+        },
+        {
+          "quarter": "2023-Q3",
+          "document_count": 2,
+          "enforcement_count": 0,
+          "guidance_count": 2
+        },
+        {
+          "quarter": "2023-Q4",
+          "document_count": 1,
+          "enforcement_count": 0,
+          "guidance_count": 1
+        },
+        {
+          "quarter": "2024-Q1",
+          "document_count": 2,
+          "enforcement_count": 0,
+          "guidance_count": 2
+        },
+        {
+          "quarter": "2024-Q2",
+          "document_count": 3,
+          "enforcement_count": 0,
+          "guidance_count": 3
+        },
+        {
+          "quarter": "2024-Q3",
+          "document_count": 2,
+          "enforcement_count": 0,
+          "guidance_count": 2
+        },
+        {
+          "quarter": "2024-Q4",
+          "document_count": 4,
+          "enforcement_count": 0,
+          "guidance_count": 2
+        },
+        {
+          "quarter": "2025-Q1",
+          "document_count": 4,
+          "enforcement_count": 1,
+          "guidance_count": 2
+        },
+        {
+          "quarter": "2025-Q2",
+          "document_count": 5,
+          "enforcement_count": 1,
+          "guidance_count": 2
+        },
+        {
+          "quarter": "2025-Q3",
+          "document_count": 6,
+          "enforcement_count": 2,
+          "guidance_count": 4
+        },
+        {
+          "quarter": "2025-Q4",
+          "document_count": 6,
+          "enforcement_count": 2,
+          "guidance_count": 4
+        }
+      ]
+    },
+    "sec": {
+      "name": "SEC",
+      "quarterly": [
+        {
+          "quarter": "2022-Q4",
+          "document_count": 2,
+          "enforcement_count": 0,
+          "guidance_count": 2
+        },
+        {
+          "quarter": "2023-Q1",
+          "document_count": 2,
+          "enforcement_count": 0,
+          "guidance_count": 2
+        },
+        {
+          "quarter": "2023-Q2",
+          "document_count": 2,
+          "enforcement_count": 0,
+          "guidance_count": 2
+        },
+        {
+          "quarter": "2023-Q3",
+          "document_count": 3,
+          "enforcement_count": 1,
+          "guidance_count": 2
+        },
+        {
+          "quarter": "2023-Q4",
+          "document_count": 4,
+          "enforcement_count": 1,
+          "guidance_count": 3
+        },
+        {
+          "quarter": "2024-Q1",
+          "document_count": 4,
+          "enforcement_count": 1,
+          "guidance_count": 3
+        },
+        {
+          "quarter": "2024-Q2",
+          "document_count": 4,
+          "enforcement_count": 1,
+          "guidance_count": 3
+        },
+        {
+          "quarter": "2024-Q3",
+          "document_count": 6,
+          "enforcement_count": 2,
+          "guidance_count": 4
+        },
+        {
+          "quarter": "2024-Q4",
+          "document_count": 6,
+          "enforcement_count": 2,
+          "guidance_count": 4
+        },
+        {
+          "quarter": "2025-Q1",
+          "document_count": 7,
+          "enforcement_count": 2,
+          "guidance_count": 5
+        },
+        {
+          "quarter": "2025-Q2",
+          "document_count": 9,
+          "enforcement_count": 3,
+          "guidance_count": 6
+        },
+        {
+          "quarter": "2025-Q3",
+          "document_count": 10,
+          "enforcement_count": 4,
+          "guidance_count": 6
+        },
+        {
+          "quarter": "2025-Q4",
+          "document_count": 11,
+          "enforcement_count": 4,
+          "guidance_count": 7
+        }
+      ]
+    },
+    "eu": {
+      "name": "EU AI Act",
+      "quarterly": [
+        {
+          "quarter": "2022-Q4",
+          "document_count": 2,
+          "enforcement_count": 0,
+          "guidance_count": 1
+        },
+        {
+          "quarter": "2023-Q1",
+          "document_count": 1,
+          "enforcement_count": 0,
+          "guidance_count": 1
+        },
+        {
+          "quarter": "2023-Q2",
+          "document_count": 2,
+          "enforcement_count": 0,
+          "guidance_count": 1
+        },
+        {
+          "quarter": "2023-Q3",
+          "document_count": 2,
+          "enforcement_count": 0,
+          "guidance_count": 1
+        },
+        {
+          "quarter": "2023-Q4",
+          "document_count": 3,
+          "enforcement_count": 0,
+          "guidance_count": 2
+        },
+        {
+          "quarter": "2024-Q1",
+          "document_count": 4,
+          "enforcement_count": 1,
+          "guidance_count": 3
+        },
+        {
+          "quarter": "2024-Q2",
+          "document_count": 4,
+          "enforcement_count": 1,
+          "guidance_count": 3
+        },
+        {
+          "quarter": "2024-Q3",
+          "document_count": 5,
+          "enforcement_count": 1,
+          "guidance_count": 4
+        },
+        {
+          "quarter": "2024-Q4",
+          "document_count": 7,
+          "enforcement_count": 2,
+          "guidance_count": 5
+        },
+        {
+          "quarter": "2025-Q1",
+          "document_count": 8,
+          "enforcement_count": 2,
+          "guidance_count": 6
+        },
+        {
+          "quarter": "2025-Q2",
+          "document_count": 10,
+          "enforcement_count": 2,
+          "guidance_count": 6
+        },
+        {
+          "quarter": "2025-Q3",
+          "document_count": 11,
+          "enforcement_count": 3,
+          "guidance_count": 8
+        },
+        {
+          "quarter": "2025-Q4",
+          "document_count": 12,
+          "enforcement_count": 3,
+          "guidance_count": 9
+        }
+      ]
+    },
+    "nist": {
+      "name": "NIST",
+      "quarterly": [
+        {
+          "quarter": "2022-Q4",
+          "document_count": 1,
+          "enforcement_count": 0,
+          "guidance_count": 1
+        },
+        {
+          "quarter": "2023-Q1",
+          "document_count": 1,
+          "enforcement_count": 0,
+          "guidance_count": 1
+        },
+        {
+          "quarter": "2023-Q2",
+          "document_count": 2,
+          "enforcement_count": 0,
+          "guidance_count": 2
+        },
+        {
+          "quarter": "2023-Q3",
+          "document_count": 1,
+          "enforcement_count": 0,
+          "guidance_count": 1
+        },
+        {
+          "quarter": "2023-Q4",
+          "document_count": 2,
+          "enforcement_count": 0,
+          "guidance_count": 2
+        },
+        {
+          "quarter": "2024-Q1",
+          "document_count": 2,
+          "enforcement_count": 0,
+          "guidance_count": 2
+        },
+        {
+          "quarter": "2024-Q2",
+          "document_count": 3,
+          "enforcement_count": 0,
+          "guidance_count": 3
+        },
+        {
+          "quarter": "2024-Q3",
+          "document_count": 3,
+          "enforcement_count": 0,
+          "guidance_count": 3
+        },
+        {
+          "quarter": "2024-Q4",
+          "document_count": 3,
+          "enforcement_count": 0,
+          "guidance_count": 3
+        },
+        {
+          "quarter": "2025-Q1",
+          "document_count": 5,
+          "enforcement_count": 0,
+          "guidance_count": 4
+        },
+        {
+          "quarter": "2025-Q2",
+          "document_count": 4,
+          "enforcement_count": 0,
+          "guidance_count": 4
+        },
+        {
+          "quarter": "2025-Q3",
+          "document_count": 6,
+          "enforcement_count": 0,
+          "guidance_count": 5
+        },
+        {
+          "quarter": "2025-Q4",
+          "document_count": 6,
+          "enforcement_count": 0,
+          "guidance_count": 6
+        }
+      ]
+    }
+  },
+  "aggregate": [
+    {
+      "quarter": "2022-Q4",
+      "total_documents": 8,
+      "cumulative_documents": 8
+    },
+    {
+      "quarter": "2023-Q1",
+      "total_documents": 8,
+      "cumulative_documents": 16
+    },
+    {
+      "quarter": "2023-Q2",
+      "total_documents": 9,
+      "cumulative_documents": 25
+    },
+    {
+      "quarter": "2023-Q3",
+      "total_documents": 12,
+      "cumulative_documents": 37
+    },
+    {
+      "quarter": "2023-Q4",
+      "total_documents": 13,
+      "cumulative_documents": 50
+    },
+    {
+      "quarter": "2024-Q1",
+      "total_documents": 19,
+      "cumulative_documents": 69
+    },
+    {
+      "quarter": "2024-Q2",
+      "total_documents": 20,
+      "cumulative_documents": 89
+    },
+    {
+      "quarter": "2024-Q3",
+      "total_documents": 24,
+      "cumulative_documents": 113
+    },
+    {
+      "quarter": "2024-Q4",
+      "total_documents": 31,
+      "cumulative_documents": 144
+    },
+    {
+      "quarter": "2025-Q1",
+      "total_documents": 38,
+      "cumulative_documents": 182
+    },
+    {
+      "quarter": "2025-Q2",
+      "total_documents": 44,
+      "cumulative_documents": 226
+    },
+    {
+      "quarter": "2025-Q3",
+      "total_documents": 52,
+      "cumulative_documents": 278
+    },
+    {
+      "quarter": "2025-Q4",
+      "total_documents": 55,
+      "cumulative_documents": 333
+    }
+  ]
+}

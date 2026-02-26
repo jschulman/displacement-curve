@@ -31,14 +31,19 @@ An open-source dashboard that aggregates publicly available market signals to an
 | AI Revenue Reporting | SEC EDGAR / Earnings Transcripts | Quarterly |
 | Revenue Per Employee (SEC Workforce) | SEC EDGAR 10-K | Quarterly |
 
-### Phase 3 (Current)
+### Phase 3
 | Signal | Source | Frequency |
 |--------|--------|-----------|
 | VC Funding: AI Services | SEC Form D | Quarterly |
 | AI vs Traditional Hiring | Indeed Hiring Lab / LinkedIn | Monthly |
 
-### Planned
-- Regulatory Guidance Cadence
+### Phase 4 (Current)
+| Signal | Source | Frequency |
+|--------|--------|-----------|
+| Regulatory Guidance | Fed / OCC / FDIC / CFPB / SEC / EU / NIST | Quarterly |
+| Composite Displacement Index | All signals (weighted) | Monthly |
+
+The **Composite Displacement Index** is the flagship feature: a single 0-100 score synthesizing all eight signals into one answer to "where are we on the curve?" The hero section displays the current score and phase, while the timeline chart shows the full trajectory with annotated events.
 
 ## Methodology
 
@@ -64,7 +69,15 @@ cd docs && python3 -m http.server 8000
 
 ## Contributing
 
-This project is in active development. Contributions welcome — especially for new signal collectors.
+Contributions welcome. To contribute:
+
+1. **Fork** the repository
+2. **Create a branch** for your change (`git checkout -b feature/my-signal`)
+3. **Follow existing patterns** for data format (see `data/` directory structure)
+4. **Test locally** by serving `docs/` and verifying the dashboard renders
+5. **Submit a PR** with a clear description of the change
+
+For new signal collectors, see [METHODOLOGY.md](METHODOLOGY.md) for the documentation standard each signal must meet.
 
 ## License
 

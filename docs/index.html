@@ -19,6 +19,28 @@
   </header>
 
   <main class="container">
+    <!-- Composite Score Hero -->
+    <section class="hero-score" id="hero-section">
+      <div class="hero-inner">
+        <div class="score-display">
+          <div class="score-number" id="hero-score">--</div>
+          <div class="score-label">/ 100</div>
+        </div>
+        <div class="score-meta">
+          <div class="phase-label" id="hero-phase">Loading...</div>
+          <div class="phase-description" id="hero-description"></div>
+          <div class="score-trend" id="hero-trend"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="timeline-section" id="timeline-section">
+      <h2 class="section-title">The Displacement Curve</h2>
+      <canvas id="timeline-chart" height="200"></canvas>
+    </section>
+
+    <h2 class="section-title">The Signals</h2>
     <section class="signal-cards" id="signal-cards">
       <div class="card" data-signal="employment" id="card-employment">
         <div class="card-header">
@@ -152,6 +174,25 @@
           <span class="card-expand-hint">Click to expand</span>
         </div>
       </div>
+
+      <div class="card" data-signal="regulatory" id="card-regulatory">
+        <div class="card-header">
+          <span class="card-icon" aria-hidden="true">&#x2696;</span>
+          <h2 class="card-title">Regulatory Guidance</h2>
+          <span class="card-source">Fed / OCC / SEC</span>
+        </div>
+        <div class="card-body">
+          <div class="card-value" id="val-regulatory">--</div>
+          <div class="card-change" id="change-regulatory">--</div>
+          <div class="card-sparkline">
+            <canvas id="spark-regulatory" height="60"></canvas>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="card-updated" id="updated-regulatory">--</span>
+          <span class="card-expand-hint">Click to expand</span>
+        </div>
+      </div>
     </section>
 
     <section class="expanded-chart-section" id="expanded-section" hidden>
@@ -175,7 +216,10 @@
         <a href="https://trends.google.com/" target="_blank" rel="noopener">Google Trends</a>,
         <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>,
         <a href="https://www.sec.gov/edgar" target="_blank" rel="noopener">SEC EDGAR</a>,
-        Indeed Hiring Lab
+        Indeed Hiring Lab,
+        <a href="https://www.federalreserve.gov/" target="_blank" rel="noopener">Federal Reserve</a>,
+        <a href="https://www.occ.treas.gov/" target="_blank" rel="noopener">OCC</a>,
+        <a href="https://www.nist.gov/" target="_blank" rel="noopener">NIST</a>
       </p>
       <p class="footer-links">
         <a href="METHODOLOGY.md" target="_blank" rel="noopener">Methodology</a>

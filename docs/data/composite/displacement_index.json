@@ -1,0 +1,1733 @@
+{
+  "metadata": {
+    "source": "Displacement Curve Composite",
+    "last_updated": "2026-02-26",
+    "mock": true,
+    "version": "1.0"
+  },
+  "weights": {
+    "employment": 0.25,
+    "rev_per_employee": 0.2,
+    "vc_funding": 0.15,
+    "job_ratio": 0.15,
+    "trends": 0.1,
+    "github": 0.1,
+    "regulatory": 0.05
+  },
+  "monthly": [
+    {
+      "date": "2022-11",
+      "score": 17.4,
+      "phase": "Pre-disruption",
+      "phase_range": "0-25",
+      "components": {
+        "employment": {
+          "raw_value": 1583.4,
+          "normalized": 13.6,
+          "weighted": 3.4
+        },
+        "rev_per_employee": {
+          "raw_value": 19.2,
+          "normalized": 18.9,
+          "weighted": 3.78
+        },
+        "vc_funding": {
+          "raw_value": 124.7,
+          "normalized": 13.9,
+          "weighted": 2.08
+        },
+        "job_ratio": {
+          "raw_value": 0.033,
+          "normalized": 6.0,
+          "weighted": 0.9
+        },
+        "trends": {
+          "raw_value": 25.0,
+          "normalized": 25.0,
+          "weighted": 2.5
+        },
+        "github": {
+          "raw_value": 46.0,
+          "normalized": 46.0,
+          "weighted": 4.6
+        },
+        "regulatory": {
+          "raw_value": 2.0,
+          "normalized": 2.0,
+          "weighted": 0.1
+        }
+      },
+      "trend": "flat"
+    },
+    {
+      "date": "2022-12",
+      "score": 18.7,
+      "phase": "Pre-disruption",
+      "phase_range": "0-25",
+      "components": {
+        "employment": {
+          "raw_value": 1578.2,
+          "normalized": 15.5,
+          "weighted": 3.88
+        },
+        "rev_per_employee": {
+          "raw_value": 19.4,
+          "normalized": 19.5,
+          "weighted": 3.9
+        },
+        "vc_funding": {
+          "raw_value": 122.2,
+          "normalized": 13.6,
+          "weighted": 2.04
+        },
+        "job_ratio": {
+          "raw_value": 0.069,
+          "normalized": 12.5,
+          "weighted": 1.88
+        },
+        "trends": {
+          "raw_value": 24.0,
+          "normalized": 24.0,
+          "weighted": 2.4
+        },
+        "github": {
+          "raw_value": 45.0,
+          "normalized": 45.0,
+          "weighted": 4.5
+        },
+        "regulatory": {
+          "raw_value": 3.0,
+          "normalized": 3.0,
+          "weighted": 0.15
+        }
+      },
+      "trend": "up"
+    },
+    {
+      "date": "2023-01",
+      "score": 17.6,
+      "phase": "Pre-disruption",
+      "phase_range": "0-25",
+      "components": {
+        "employment": {
+          "raw_value": 1580.5,
+          "normalized": 14.6,
+          "weighted": 3.65
+        },
+        "rev_per_employee": {
+          "raw_value": 19.7,
+          "normalized": 20.3,
+          "weighted": 4.06
+        },
+        "vc_funding": {
+          "raw_value": 113.4,
+          "normalized": 12.6,
+          "weighted": 1.89
+        },
+        "job_ratio": {
+          "raw_value": 0.035,
+          "normalized": 6.4,
+          "weighted": 0.96
+        },
+        "trends": {
+          "raw_value": 23.0,
+          "normalized": 23.0,
+          "weighted": 2.3
+        },
+        "github": {
+          "raw_value": 46.0,
+          "normalized": 46.0,
+          "weighted": 4.6
+        },
+        "regulatory": {
+          "raw_value": 3.0,
+          "normalized": 3.0,
+          "weighted": 0.15
+        }
+      },
+      "trend": "down"
+    },
+    {
+      "date": "2023-02",
+      "score": 17.7,
+      "phase": "Pre-disruption",
+      "phase_range": "0-25",
+      "components": {
+        "employment": {
+          "raw_value": 1577.2,
+          "normalized": 15.9,
+          "weighted": 3.98
+        },
+        "rev_per_employee": {
+          "raw_value": 20.2,
+          "normalized": 21.6,
+          "weighted": 4.32
+        },
+        "vc_funding": {
+          "raw_value": 81.4,
+          "normalized": 9.0,
+          "weighted": 1.35
+        },
+        "job_ratio": {
+          "raw_value": 0.046,
+          "normalized": 8.4,
+          "weighted": 1.26
+        },
+        "trends": {
+          "raw_value": 24.0,
+          "normalized": 24.0,
+          "weighted": 2.4
+        },
+        "github": {
+          "raw_value": 42.0,
+          "normalized": 42.0,
+          "weighted": 4.2
+        },
+        "regulatory": {
+          "raw_value": 4.0,
+          "normalized": 4.0,
+          "weighted": 0.2
+        }
+      },
+      "trend": "flat"
+    },
+    {
+      "date": "2023-03",
+      "score": 19.2,
+      "phase": "Pre-disruption",
+      "phase_range": "0-25",
+      "components": {
+        "employment": {
+          "raw_value": 1575.7,
+          "normalized": 16.4,
+          "weighted": 4.1
+        },
+        "rev_per_employee": {
+          "raw_value": 20.7,
+          "normalized": 22.9,
+          "weighted": 4.58
+        },
+        "vc_funding": {
+          "raw_value": 111.5,
+          "normalized": 12.4,
+          "weighted": 1.86
+        },
+        "job_ratio": {
+          "raw_value": 0.04,
+          "normalized": 7.3,
+          "weighted": 1.09
+        },
+        "trends": {
+          "raw_value": 25.0,
+          "normalized": 25.0,
+          "weighted": 2.5
+        },
+        "github": {
+          "raw_value": 50.0,
+          "normalized": 50.0,
+          "weighted": 5.0
+        },
+        "regulatory": {
+          "raw_value": 2.0,
+          "normalized": 2.0,
+          "weighted": 0.1
+        }
+      },
+      "trend": "up"
+    },
+    {
+      "date": "2023-04",
+      "score": 18.6,
+      "phase": "Pre-disruption",
+      "phase_range": "0-25",
+      "components": {
+        "employment": {
+          "raw_value": 1575.8,
+          "normalized": 16.4,
+          "weighted": 4.1
+        },
+        "rev_per_employee": {
+          "raw_value": 20.0,
+          "normalized": 21.1,
+          "weighted": 4.22
+        },
+        "vc_funding": {
+          "raw_value": 119.2,
+          "normalized": 13.2,
+          "weighted": 1.98
+        },
+        "job_ratio": {
+          "raw_value": 0.041,
+          "normalized": 7.5,
+          "weighted": 1.12
+        },
+        "trends": {
+          "raw_value": 25.0,
+          "normalized": 25.0,
+          "weighted": 2.5
+        },
+        "github": {
+          "raw_value": 46.0,
+          "normalized": 46.0,
+          "weighted": 4.6
+        },
+        "regulatory": {
+          "raw_value": 1,
+          "normalized": 1.0,
+          "weighted": 0.05
+        }
+      },
+      "trend": "down"
+    },
+    {
+      "date": "2023-05",
+      "score": 20.1,
+      "phase": "Pre-disruption",
+      "phase_range": "0-25",
+      "components": {
+        "employment": {
+          "raw_value": 1571.9,
+          "normalized": 17.8,
+          "weighted": 4.45
+        },
+        "rev_per_employee": {
+          "raw_value": 20.0,
+          "normalized": 21.1,
+          "weighted": 4.22
+        },
+        "vc_funding": {
+          "raw_value": 143.9,
+          "normalized": 16.0,
+          "weighted": 2.4
+        },
+        "job_ratio": {
+          "raw_value": 0.042,
+          "normalized": 7.6,
+          "weighted": 1.14
+        },
+        "trends": {
+          "raw_value": 26.0,
+          "normalized": 26.0,
+          "weighted": 2.6
+        },
+        "github": {
+          "raw_value": 51.0,
+          "normalized": 51.0,
+          "weighted": 5.1
+        },
+        "regulatory": {
+          "raw_value": 3.0,
+          "normalized": 3.0,
+          "weighted": 0.15
+        }
+      },
+      "trend": "up"
+    },
+    {
+      "date": "2023-06",
+      "score": 21.1,
+      "phase": "Pre-disruption",
+      "phase_range": "0-25",
+      "components": {
+        "employment": {
+          "raw_value": 1568.8,
+          "normalized": 19.0,
+          "weighted": 4.75
+        },
+        "rev_per_employee": {
+          "raw_value": 20.4,
+          "normalized": 22.1,
+          "weighted": 4.42
+        },
+        "vc_funding": {
+          "raw_value": 154.0,
+          "normalized": 17.1,
+          "weighted": 2.56
+        },
+        "job_ratio": {
+          "raw_value": 0.056,
+          "normalized": 10.2,
+          "weighted": 1.53
+        },
+        "trends": {
+          "raw_value": 27.0,
+          "normalized": 27.0,
+          "weighted": 2.7
+        },
+        "github": {
+          "raw_value": 50.0,
+          "normalized": 50.0,
+          "weighted": 5.0
+        },
+        "regulatory": {
+          "raw_value": 3.0,
+          "normalized": 3.0,
+          "weighted": 0.15
+        }
+      },
+      "trend": "up"
+    },
+    {
+      "date": "2023-07",
+      "score": 20.6,
+      "phase": "Pre-disruption",
+      "phase_range": "0-25",
+      "components": {
+        "employment": {
+          "raw_value": 1573.0,
+          "normalized": 17.4,
+          "weighted": 4.35
+        },
+        "rev_per_employee": {
+          "raw_value": 20.9,
+          "normalized": 23.4,
+          "weighted": 4.68
+        },
+        "vc_funding": {
+          "raw_value": 104.1,
+          "normalized": 11.6,
+          "weighted": 1.74
+        },
+        "job_ratio": {
+          "raw_value": 0.065,
+          "normalized": 11.8,
+          "weighted": 1.77
+        },
+        "trends": {
+          "raw_value": 30.0,
+          "normalized": 30.0,
+          "weighted": 3.0
+        },
+        "github": {
+          "raw_value": 48.0,
+          "normalized": 48.0,
+          "weighted": 4.8
+        },
+        "regulatory": {
+          "raw_value": 5.0,
+          "normalized": 5.0,
+          "weighted": 0.25
+        }
+      },
+      "trend": "flat"
+    },
+    {
+      "date": "2023-08",
+      "score": 22.6,
+      "phase": "Pre-disruption",
+      "phase_range": "0-25",
+      "components": {
+        "employment": {
+          "raw_value": 1564.9,
+          "normalized": 20.4,
+          "weighted": 5.1
+        },
+        "rev_per_employee": {
+          "raw_value": 21.0,
+          "normalized": 23.7,
+          "weighted": 4.74
+        },
+        "vc_funding": {
+          "raw_value": 126.0,
+          "normalized": 14.0,
+          "weighted": 2.1
+        },
+        "job_ratio": {
+          "raw_value": 0.086,
+          "normalized": 15.6,
+          "weighted": 2.34
+        },
+        "trends": {
+          "raw_value": 29.0,
+          "normalized": 29.0,
+          "weighted": 2.9
+        },
+        "github": {
+          "raw_value": 52.0,
+          "normalized": 52.0,
+          "weighted": 5.2
+        },
+        "regulatory": {
+          "raw_value": 4.0,
+          "normalized": 4.0,
+          "weighted": 0.2
+        }
+      },
+      "trend": "up"
+    },
+    {
+      "date": "2023-09",
+      "score": 23.7,
+      "phase": "Pre-disruption",
+      "phase_range": "0-25",
+      "components": {
+        "employment": {
+          "raw_value": 1566.0,
+          "normalized": 20.0,
+          "weighted": 5.0
+        },
+        "rev_per_employee": {
+          "raw_value": 21.8,
+          "normalized": 25.8,
+          "weighted": 5.16
+        },
+        "vc_funding": {
+          "raw_value": 155.0,
+          "normalized": 17.2,
+          "weighted": 2.58
+        },
+        "job_ratio": {
+          "raw_value": 0.08,
+          "normalized": 14.5,
+          "weighted": 2.17
+        },
+        "trends": {
+          "raw_value": 32.0,
+          "normalized": 32.0,
+          "weighted": 3.2
+        },
+        "github": {
+          "raw_value": 53.0,
+          "normalized": 53.0,
+          "weighted": 5.3
+        },
+        "regulatory": {
+          "raw_value": 6.0,
+          "normalized": 6.0,
+          "weighted": 0.3
+        }
+      },
+      "trend": "up"
+    },
+    {
+      "date": "2023-10",
+      "score": 24.5,
+      "phase": "Pre-disruption",
+      "phase_range": "0-25",
+      "components": {
+        "employment": {
+          "raw_value": 1562.8,
+          "normalized": 21.2,
+          "weighted": 5.3
+        },
+        "rev_per_employee": {
+          "raw_value": 22.1,
+          "normalized": 26.6,
+          "weighted": 5.32
+        },
+        "vc_funding": {
+          "raw_value": 161.7,
+          "normalized": 18.0,
+          "weighted": 2.7
+        },
+        "job_ratio": {
+          "raw_value": 0.083,
+          "normalized": 15.1,
+          "weighted": 2.26
+        },
+        "trends": {
+          "raw_value": 32.0,
+          "normalized": 32.0,
+          "weighted": 3.2
+        },
+        "github": {
+          "raw_value": 54.0,
+          "normalized": 54.0,
+          "weighted": 5.4
+        },
+        "regulatory": {
+          "raw_value": 6.0,
+          "normalized": 6.0,
+          "weighted": 0.3
+        }
+      },
+      "trend": "up"
+    },
+    {
+      "date": "2023-11",
+      "score": 25.0,
+      "phase": "Pre-disruption",
+      "phase_range": "0-25",
+      "components": {
+        "employment": {
+          "raw_value": 1563.0,
+          "normalized": 21.1,
+          "weighted": 5.28
+        },
+        "rev_per_employee": {
+          "raw_value": 22.0,
+          "normalized": 26.3,
+          "weighted": 5.26
+        },
+        "vc_funding": {
+          "raw_value": 176.7,
+          "normalized": 19.6,
+          "weighted": 2.94
+        },
+        "job_ratio": {
+          "raw_value": 0.068,
+          "normalized": 12.4,
+          "weighted": 1.86
+        },
+        "trends": {
+          "raw_value": 38.0,
+          "normalized": 38.0,
+          "weighted": 3.8
+        },
+        "github": {
+          "raw_value": 55.0,
+          "normalized": 55.0,
+          "weighted": 5.5
+        },
+        "regulatory": {
+          "raw_value": 7.0,
+          "normalized": 7.0,
+          "weighted": 0.35
+        }
+      },
+      "trend": "flat"
+    },
+    {
+      "date": "2023-12",
+      "score": 26.2,
+      "phase": "Productivity",
+      "phase_range": "26-50",
+      "components": {
+        "employment": {
+          "raw_value": 1552.1,
+          "normalized": 25.1,
+          "weighted": 6.28
+        },
+        "rev_per_employee": {
+          "raw_value": 22.1,
+          "normalized": 26.6,
+          "weighted": 5.32
+        },
+        "vc_funding": {
+          "raw_value": 176.7,
+          "normalized": 19.6,
+          "weighted": 2.94
+        },
+        "job_ratio": {
+          "raw_value": 0.095,
+          "normalized": 17.3,
+          "weighted": 2.6
+        },
+        "trends": {
+          "raw_value": 32.0,
+          "normalized": 32.0,
+          "weighted": 3.2
+        },
+        "github": {
+          "raw_value": 54.0,
+          "normalized": 54.0,
+          "weighted": 5.4
+        },
+        "regulatory": {
+          "raw_value": 9.0,
+          "normalized": 9.0,
+          "weighted": 0.45
+        }
+      },
+      "trend": "up"
+    },
+    {
+      "date": "2024-01",
+      "score": 28.5,
+      "phase": "Productivity",
+      "phase_range": "26-50",
+      "components": {
+        "employment": {
+          "raw_value": 1553.5,
+          "normalized": 24.6,
+          "weighted": 6.15
+        },
+        "rev_per_employee": {
+          "raw_value": 23.2,
+          "normalized": 29.5,
+          "weighted": 5.9
+        },
+        "vc_funding": {
+          "raw_value": 175.9,
+          "normalized": 19.5,
+          "weighted": 2.92
+        },
+        "job_ratio": {
+          "raw_value": 0.097,
+          "normalized": 17.6,
+          "weighted": 2.64
+        },
+        "trends": {
+          "raw_value": 45.0,
+          "normalized": 45.0,
+          "weighted": 4.5
+        },
+        "github": {
+          "raw_value": 60.0,
+          "normalized": 60.0,
+          "weighted": 6.0
+        },
+        "regulatory": {
+          "raw_value": 7.0,
+          "normalized": 7.0,
+          "weighted": 0.35
+        }
+      },
+      "trend": "up"
+    },
+    {
+      "date": "2024-02",
+      "score": 27.8,
+      "phase": "Productivity",
+      "phase_range": "26-50",
+      "components": {
+        "employment": {
+          "raw_value": 1554.8,
+          "normalized": 24.1,
+          "weighted": 6.03
+        },
+        "rev_per_employee": {
+          "raw_value": 23.0,
+          "normalized": 28.9,
+          "weighted": 5.78
+        },
+        "vc_funding": {
+          "raw_value": 183.8,
+          "normalized": 20.4,
+          "weighted": 3.06
+        },
+        "job_ratio": {
+          "raw_value": 0.114,
+          "normalized": 20.7,
+          "weighted": 3.1
+        },
+        "trends": {
+          "raw_value": 41.0,
+          "normalized": 41.0,
+          "weighted": 4.1
+        },
+        "github": {
+          "raw_value": 53.0,
+          "normalized": 53.0,
+          "weighted": 5.3
+        },
+        "regulatory": {
+          "raw_value": 9.0,
+          "normalized": 9.0,
+          "weighted": 0.45
+        }
+      },
+      "trend": "down"
+    },
+    {
+      "date": "2024-03",
+      "score": 29.7,
+      "phase": "Productivity",
+      "phase_range": "26-50",
+      "components": {
+        "employment": {
+          "raw_value": 1550.4,
+          "normalized": 25.8,
+          "weighted": 6.45
+        },
+        "rev_per_employee": {
+          "raw_value": 23.8,
+          "normalized": 31.1,
+          "weighted": 6.22
+        },
+        "vc_funding": {
+          "raw_value": 231.2,
+          "normalized": 25.7,
+          "weighted": 3.85
+        },
+        "job_ratio": {
+          "raw_value": 0.099,
+          "normalized": 18.0,
+          "weighted": 2.7
+        },
+        "trends": {
+          "raw_value": 43.0,
+          "normalized": 43.0,
+          "weighted": 4.3
+        },
+        "github": {
+          "raw_value": 57.0,
+          "normalized": 57.0,
+          "weighted": 5.7
+        },
+        "regulatory": {
+          "raw_value": 10.0,
+          "normalized": 10.0,
+          "weighted": 0.5
+        }
+      },
+      "trend": "up"
+    },
+    {
+      "date": "2024-04",
+      "score": 31.0,
+      "phase": "Productivity",
+      "phase_range": "26-50",
+      "components": {
+        "employment": {
+          "raw_value": 1546.4,
+          "normalized": 27.3,
+          "weighted": 6.83
+        },
+        "rev_per_employee": {
+          "raw_value": 23.7,
+          "normalized": 30.8,
+          "weighted": 6.16
+        },
+        "vc_funding": {
+          "raw_value": 228.5,
+          "normalized": 25.4,
+          "weighted": 3.81
+        },
+        "job_ratio": {
+          "raw_value": 0.12,
+          "normalized": 21.8,
+          "weighted": 3.27
+        },
+        "trends": {
+          "raw_value": 48.0,
+          "normalized": 48.0,
+          "weighted": 4.8
+        },
+        "github": {
+          "raw_value": 55.0,
+          "normalized": 55.0,
+          "weighted": 5.5
+        },
+        "regulatory": {
+          "raw_value": 13.0,
+          "normalized": 13.0,
+          "weighted": 0.65
+        }
+      },
+      "trend": "up"
+    },
+    {
+      "date": "2024-05",
+      "score": 31.4,
+      "phase": "Productivity",
+      "phase_range": "26-50",
+      "components": {
+        "employment": {
+          "raw_value": 1546.5,
+          "normalized": 27.2,
+          "weighted": 6.8
+        },
+        "rev_per_employee": {
+          "raw_value": 24.4,
+          "normalized": 32.6,
+          "weighted": 6.52
+        },
+        "vc_funding": {
+          "raw_value": 212.9,
+          "normalized": 23.7,
+          "weighted": 3.55
+        },
+        "job_ratio": {
+          "raw_value": 0.118,
+          "normalized": 21.5,
+          "weighted": 3.23
+        },
+        "trends": {
+          "raw_value": 47.0,
+          "normalized": 47.0,
+          "weighted": 4.7
+        },
+        "github": {
+          "raw_value": 60.0,
+          "normalized": 60.0,
+          "weighted": 6.0
+        },
+        "regulatory": {
+          "raw_value": 13.0,
+          "normalized": 13.0,
+          "weighted": 0.65
+        }
+      },
+      "trend": "flat"
+    },
+    {
+      "date": "2024-06",
+      "score": 33.3,
+      "phase": "Productivity",
+      "phase_range": "26-50",
+      "components": {
+        "employment": {
+          "raw_value": 1544.5,
+          "normalized": 28.0,
+          "weighted": 7.0
+        },
+        "rev_per_employee": {
+          "raw_value": 24.9,
+          "normalized": 33.9,
+          "weighted": 6.78
+        },
+        "vc_funding": {
+          "raw_value": 236.8,
+          "normalized": 26.3,
+          "weighted": 3.94
+        },
+        "job_ratio": {
+          "raw_value": 0.144,
+          "normalized": 26.2,
+          "weighted": 3.93
+        },
+        "trends": {
+          "raw_value": 47.0,
+          "normalized": 47.0,
+          "weighted": 4.7
+        },
+        "github": {
+          "raw_value": 62.0,
+          "normalized": 62.0,
+          "weighted": 6.2
+        },
+        "regulatory": {
+          "raw_value": 15.0,
+          "normalized": 15.0,
+          "weighted": 0.75
+        }
+      },
+      "trend": "up"
+    },
+    {
+      "date": "2024-07",
+      "score": 34.3,
+      "phase": "Productivity",
+      "phase_range": "26-50",
+      "components": {
+        "employment": {
+          "raw_value": 1545.5,
+          "normalized": 27.6,
+          "weighted": 6.9
+        },
+        "rev_per_employee": {
+          "raw_value": 24.8,
+          "normalized": 33.7,
+          "weighted": 6.74
+        },
+        "vc_funding": {
+          "raw_value": 276.6,
+          "normalized": 30.7,
+          "weighted": 4.6
+        },
+        "job_ratio": {
+          "raw_value": 0.155,
+          "normalized": 28.2,
+          "weighted": 4.23
+        },
+        "trends": {
+          "raw_value": 50.0,
+          "normalized": 50.0,
+          "weighted": 5.0
+        },
+        "github": {
+          "raw_value": 60.0,
+          "normalized": 60.0,
+          "weighted": 6.0
+        },
+        "regulatory": {
+          "raw_value": 16.0,
+          "normalized": 16.0,
+          "weighted": 0.8
+        }
+      },
+      "trend": "up"
+    },
+    {
+      "date": "2024-08",
+      "score": 36.7,
+      "phase": "Productivity",
+      "phase_range": "26-50",
+      "components": {
+        "employment": {
+          "raw_value": 1538.1,
+          "normalized": 30.3,
+          "weighted": 7.58
+        },
+        "rev_per_employee": {
+          "raw_value": 26.0,
+          "normalized": 36.8,
+          "weighted": 7.36
+        },
+        "vc_funding": {
+          "raw_value": 285.6,
+          "normalized": 31.7,
+          "weighted": 4.75
+        },
+        "job_ratio": {
+          "raw_value": 0.16,
+          "normalized": 29.1,
+          "weighted": 4.37
+        },
+        "trends": {
+          "raw_value": 51.0,
+          "normalized": 51.0,
+          "weighted": 5.1
+        },
+        "github": {
+          "raw_value": 67.0,
+          "normalized": 67.0,
+          "weighted": 6.7
+        },
+        "regulatory": {
+          "raw_value": 16.0,
+          "normalized": 16.0,
+          "weighted": 0.8
+        }
+      },
+      "trend": "up"
+    },
+    {
+      "date": "2024-09",
+      "score": 36.8,
+      "phase": "Productivity",
+      "phase_range": "26-50",
+      "components": {
+        "employment": {
+          "raw_value": 1537.1,
+          "normalized": 30.7,
+          "weighted": 7.67
+        },
+        "rev_per_employee": {
+          "raw_value": 25.8,
+          "normalized": 36.3,
+          "weighted": 7.26
+        },
+        "vc_funding": {
+          "raw_value": 306.7,
+          "normalized": 34.1,
+          "weighted": 5.12
+        },
+        "job_ratio": {
+          "raw_value": 0.149,
+          "normalized": 27.1,
+          "weighted": 4.07
+        },
+        "trends": {
+          "raw_value": 52.0,
+          "normalized": 52.0,
+          "weighted": 5.2
+        },
+        "github": {
+          "raw_value": 66.0,
+          "normalized": 66.0,
+          "weighted": 6.6
+        },
+        "regulatory": {
+          "raw_value": 18.0,
+          "normalized": 18.0,
+          "weighted": 0.9
+        }
+      },
+      "trend": "flat"
+    },
+    {
+      "date": "2024-10",
+      "score": 39.3,
+      "phase": "Productivity",
+      "phase_range": "26-50",
+      "components": {
+        "employment": {
+          "raw_value": 1531.7,
+          "normalized": 32.7,
+          "weighted": 8.18
+        },
+        "rev_per_employee": {
+          "raw_value": 26.9,
+          "normalized": 39.2,
+          "weighted": 7.84
+        },
+        "vc_funding": {
+          "raw_value": 297.8,
+          "normalized": 33.1,
+          "weighted": 4.96
+        },
+        "job_ratio": {
+          "raw_value": 0.166,
+          "normalized": 30.2,
+          "weighted": 4.53
+        },
+        "trends": {
+          "raw_value": 58.0,
+          "normalized": 58.0,
+          "weighted": 5.8
+        },
+        "github": {
+          "raw_value": 70.0,
+          "normalized": 70.0,
+          "weighted": 7.0
+        },
+        "regulatory": {
+          "raw_value": 20.0,
+          "normalized": 20.0,
+          "weighted": 1.0
+        }
+      },
+      "trend": "up"
+    },
+    {
+      "date": "2024-11",
+      "score": 40.8,
+      "phase": "Productivity",
+      "phase_range": "26-50",
+      "components": {
+        "employment": {
+          "raw_value": 1528.3,
+          "normalized": 34.0,
+          "weighted": 8.5
+        },
+        "rev_per_employee": {
+          "raw_value": 27.0,
+          "normalized": 39.5,
+          "weighted": 7.9
+        },
+        "vc_funding": {
+          "raw_value": 329.0,
+          "normalized": 36.6,
+          "weighted": 5.49
+        },
+        "job_ratio": {
+          "raw_value": 0.175,
+          "normalized": 31.8,
+          "weighted": 4.77
+        },
+        "trends": {
+          "raw_value": 61.0,
+          "normalized": 61.0,
+          "weighted": 6.1
+        },
+        "github": {
+          "raw_value": 70.0,
+          "normalized": 70.0,
+          "weighted": 7.0
+        },
+        "regulatory": {
+          "raw_value": 21.0,
+          "normalized": 21.0,
+          "weighted": 1.05
+        }
+      },
+      "trend": "up"
+    },
+    {
+      "date": "2024-12",
+      "score": 41.9,
+      "phase": "Productivity",
+      "phase_range": "26-50",
+      "components": {
+        "employment": {
+          "raw_value": 1525.9,
+          "normalized": 34.9,
+          "weighted": 8.72
+        },
+        "rev_per_employee": {
+          "raw_value": 27.1,
+          "normalized": 39.7,
+          "weighted": 7.94
+        },
+        "vc_funding": {
+          "raw_value": 335.6,
+          "normalized": 37.3,
+          "weighted": 5.59
+        },
+        "job_ratio": {
+          "raw_value": 0.191,
+          "normalized": 34.7,
+          "weighted": 5.21
+        },
+        "trends": {
+          "raw_value": 64.0,
+          "normalized": 64.0,
+          "weighted": 6.4
+        },
+        "github": {
+          "raw_value": 70.0,
+          "normalized": 70.0,
+          "weighted": 7.0
+        },
+        "regulatory": {
+          "raw_value": 21.0,
+          "normalized": 21.0,
+          "weighted": 1.05
+        }
+      },
+      "trend": "up"
+    },
+    {
+      "date": "2025-01",
+      "score": 43.3,
+      "phase": "Productivity",
+      "phase_range": "26-50",
+      "components": {
+        "employment": {
+          "raw_value": 1525.9,
+          "normalized": 34.9,
+          "weighted": 8.72
+        },
+        "rev_per_employee": {
+          "raw_value": 28.5,
+          "normalized": 43.4,
+          "weighted": 8.68
+        },
+        "vc_funding": {
+          "raw_value": 370.9,
+          "normalized": 41.2,
+          "weighted": 6.18
+        },
+        "job_ratio": {
+          "raw_value": 0.182,
+          "normalized": 33.1,
+          "weighted": 4.96
+        },
+        "trends": {
+          "raw_value": 61.0,
+          "normalized": 61.0,
+          "weighted": 6.1
+        },
+        "github": {
+          "raw_value": 74.0,
+          "normalized": 74.0,
+          "weighted": 7.4
+        },
+        "regulatory": {
+          "raw_value": 25.0,
+          "normalized": 25.0,
+          "weighted": 1.25
+        }
+      },
+      "trend": "up"
+    },
+    {
+      "date": "2025-02",
+      "score": 44.9,
+      "phase": "Productivity",
+      "phase_range": "26-50",
+      "components": {
+        "employment": {
+          "raw_value": 1520.9,
+          "normalized": 36.7,
+          "weighted": 9.18
+        },
+        "rev_per_employee": {
+          "raw_value": 28.9,
+          "normalized": 44.5,
+          "weighted": 8.9
+        },
+        "vc_funding": {
+          "raw_value": 357.7,
+          "normalized": 39.7,
+          "weighted": 5.96
+        },
+        "job_ratio": {
+          "raw_value": 0.194,
+          "normalized": 35.3,
+          "weighted": 5.29
+        },
+        "trends": {
+          "raw_value": 66.0,
+          "normalized": 66.0,
+          "weighted": 6.6
+        },
+        "github": {
+          "raw_value": 77.0,
+          "normalized": 77.0,
+          "weighted": 7.7
+        },
+        "regulatory": {
+          "raw_value": 25.0,
+          "normalized": 25.0,
+          "weighted": 1.25
+        }
+      },
+      "trend": "up"
+    },
+    {
+      "date": "2025-03",
+      "score": 46.2,
+      "phase": "Productivity",
+      "phase_range": "26-50",
+      "components": {
+        "employment": {
+          "raw_value": 1518.9,
+          "normalized": 37.4,
+          "weighted": 9.35
+        },
+        "rev_per_employee": {
+          "raw_value": 29.0,
+          "normalized": 44.7,
+          "weighted": 8.94
+        },
+        "vc_funding": {
+          "raw_value": 392.6,
+          "normalized": 43.6,
+          "weighted": 6.54
+        },
+        "job_ratio": {
+          "raw_value": 0.209,
+          "normalized": 38.0,
+          "weighted": 5.7
+        },
+        "trends": {
+          "raw_value": 67.0,
+          "normalized": 67.0,
+          "weighted": 6.7
+        },
+        "github": {
+          "raw_value": 75.0,
+          "normalized": 75.0,
+          "weighted": 7.5
+        },
+        "regulatory": {
+          "raw_value": 30.0,
+          "normalized": 30.0,
+          "weighted": 1.5
+        }
+      },
+      "trend": "up"
+    },
+    {
+      "date": "2025-04",
+      "score": 48.5,
+      "phase": "Productivity",
+      "phase_range": "26-50",
+      "components": {
+        "employment": {
+          "raw_value": 1519.0,
+          "normalized": 37.4,
+          "weighted": 9.35
+        },
+        "rev_per_employee": {
+          "raw_value": 30.6,
+          "normalized": 48.9,
+          "weighted": 9.78
+        },
+        "vc_funding": {
+          "raw_value": 434.9,
+          "normalized": 48.3,
+          "weighted": 7.24
+        },
+        "job_ratio": {
+          "raw_value": 0.231,
+          "normalized": 42.0,
+          "weighted": 6.3
+        },
+        "trends": {
+          "raw_value": 69.0,
+          "normalized": 69.0,
+          "weighted": 6.9
+        },
+        "github": {
+          "raw_value": 75.0,
+          "normalized": 75.0,
+          "weighted": 7.5
+        },
+        "regulatory": {
+          "raw_value": 29.0,
+          "normalized": 29.0,
+          "weighted": 1.45
+        }
+      },
+      "trend": "up"
+    },
+    {
+      "date": "2025-05",
+      "score": 49.5,
+      "phase": "Productivity",
+      "phase_range": "26-50",
+      "components": {
+        "employment": {
+          "raw_value": 1516.2,
+          "normalized": 38.4,
+          "weighted": 9.6
+        },
+        "rev_per_employee": {
+          "raw_value": 30.5,
+          "normalized": 48.7,
+          "weighted": 9.74
+        },
+        "vc_funding": {
+          "raw_value": 428.5,
+          "normalized": 47.6,
+          "weighted": 7.14
+        },
+        "job_ratio": {
+          "raw_value": 0.232,
+          "normalized": 42.2,
+          "weighted": 6.33
+        },
+        "trends": {
+          "raw_value": 74.0,
+          "normalized": 74.0,
+          "weighted": 7.4
+        },
+        "github": {
+          "raw_value": 77.0,
+          "normalized": 77.0,
+          "weighted": 7.7
+        },
+        "regulatory": {
+          "raw_value": 31.0,
+          "normalized": 31.0,
+          "weighted": 1.55
+        }
+      },
+      "trend": "up"
+    },
+    {
+      "date": "2025-06",
+      "score": 50.6,
+      "phase": "Erosion",
+      "phase_range": "51-75",
+      "components": {
+        "employment": {
+          "raw_value": 1518.0,
+          "normalized": 37.8,
+          "weighted": 9.45
+        },
+        "rev_per_employee": {
+          "raw_value": 31.4,
+          "normalized": 51.1,
+          "weighted": 10.22
+        },
+        "vc_funding": {
+          "raw_value": 446.5,
+          "normalized": 49.6,
+          "weighted": 7.44
+        },
+        "job_ratio": {
+          "raw_value": 0.235,
+          "normalized": 42.7,
+          "weighted": 6.41
+        },
+        "trends": {
+          "raw_value": 72.0,
+          "normalized": 72.0,
+          "weighted": 7.2
+        },
+        "github": {
+          "raw_value": 81.0,
+          "normalized": 81.0,
+          "weighted": 8.1
+        },
+        "regulatory": {
+          "raw_value": 35.0,
+          "normalized": 35.0,
+          "weighted": 1.75
+        }
+      },
+      "trend": "up"
+    },
+    {
+      "date": "2025-07",
+      "score": 52.8,
+      "phase": "Erosion",
+      "phase_range": "51-75",
+      "components": {
+        "employment": {
+          "raw_value": 1513.0,
+          "normalized": 39.6,
+          "weighted": 9.9
+        },
+        "rev_per_employee": {
+          "raw_value": 32.0,
+          "normalized": 52.6,
+          "weighted": 10.52
+        },
+        "vc_funding": {
+          "raw_value": 460.6,
+          "normalized": 51.2,
+          "weighted": 7.68
+        },
+        "job_ratio": {
+          "raw_value": 0.26,
+          "normalized": 47.3,
+          "weighted": 7.09
+        },
+        "trends": {
+          "raw_value": 75.0,
+          "normalized": 75.0,
+          "weighted": 7.5
+        },
+        "github": {
+          "raw_value": 83.0,
+          "normalized": 83.0,
+          "weighted": 8.3
+        },
+        "regulatory": {
+          "raw_value": 36.0,
+          "normalized": 36.0,
+          "weighted": 1.8
+        }
+      },
+      "trend": "up"
+    },
+    {
+      "date": "2025-08",
+      "score": 54.4,
+      "phase": "Erosion",
+      "phase_range": "51-75",
+      "components": {
+        "employment": {
+          "raw_value": 1510.6,
+          "normalized": 40.5,
+          "weighted": 10.12
+        },
+        "rev_per_employee": {
+          "raw_value": 32.4,
+          "normalized": 53.7,
+          "weighted": 10.74
+        },
+        "vc_funding": {
+          "raw_value": 498.5,
+          "normalized": 55.4,
+          "weighted": 8.31
+        },
+        "job_ratio": {
+          "raw_value": 0.259,
+          "normalized": 47.1,
+          "weighted": 7.07
+        },
+        "trends": {
+          "raw_value": 76.0,
+          "normalized": 76.0,
+          "weighted": 7.6
+        },
+        "github": {
+          "raw_value": 86.0,
+          "normalized": 86.0,
+          "weighted": 8.6
+        },
+        "regulatory": {
+          "raw_value": 40.0,
+          "normalized": 40.0,
+          "weighted": 2.0
+        }
+      },
+      "trend": "up"
+    },
+    {
+      "date": "2025-09",
+      "score": 56.1,
+      "phase": "Erosion",
+      "phase_range": "51-75",
+      "components": {
+        "employment": {
+          "raw_value": 1505.8,
+          "normalized": 42.3,
+          "weighted": 10.57
+        },
+        "rev_per_employee": {
+          "raw_value": 33.4,
+          "normalized": 56.3,
+          "weighted": 11.26
+        },
+        "vc_funding": {
+          "raw_value": 495.8,
+          "normalized": 55.1,
+          "weighted": 8.27
+        },
+        "job_ratio": {
+          "raw_value": 0.28,
+          "normalized": 50.9,
+          "weighted": 7.63
+        },
+        "trends": {
+          "raw_value": 78.0,
+          "normalized": 78.0,
+          "weighted": 7.8
+        },
+        "github": {
+          "raw_value": 85.0,
+          "normalized": 85.0,
+          "weighted": 8.5
+        },
+        "regulatory": {
+          "raw_value": 41.0,
+          "normalized": 41.0,
+          "weighted": 2.05
+        }
+      },
+      "trend": "up"
+    },
+    {
+      "date": "2025-10",
+      "score": 58.7,
+      "phase": "Erosion",
+      "phase_range": "51-75",
+      "components": {
+        "employment": {
+          "raw_value": 1498.6,
+          "normalized": 45.0,
+          "weighted": 11.25
+        },
+        "rev_per_employee": {
+          "raw_value": 33.4,
+          "normalized": 56.3,
+          "weighted": 11.26
+        },
+        "vc_funding": {
+          "raw_value": 537.4,
+          "normalized": 59.7,
+          "weighted": 8.96
+        },
+        "job_ratio": {
+          "raw_value": 0.294,
+          "normalized": 53.5,
+          "weighted": 8.03
+        },
+        "trends": {
+          "raw_value": 82.0,
+          "normalized": 82.0,
+          "weighted": 8.2
+        },
+        "github": {
+          "raw_value": 89.0,
+          "normalized": 89.0,
+          "weighted": 8.9
+        },
+        "regulatory": {
+          "raw_value": 43.0,
+          "normalized": 43.0,
+          "weighted": 2.15
+        }
+      },
+      "trend": "up"
+    },
+    {
+      "date": "2025-11",
+      "score": 60.6,
+      "phase": "Erosion",
+      "phase_range": "51-75",
+      "components": {
+        "employment": {
+          "raw_value": 1501.0,
+          "normalized": 44.1,
+          "weighted": 11.03
+        },
+        "rev_per_employee": {
+          "raw_value": 34.3,
+          "normalized": 58.7,
+          "weighted": 11.74
+        },
+        "vc_funding": {
+          "raw_value": 566.6,
+          "normalized": 63.0,
+          "weighted": 9.45
+        },
+        "job_ratio": {
+          "raw_value": 0.312,
+          "normalized": 56.7,
+          "weighted": 8.51
+        },
+        "trends": {
+          "raw_value": 85.0,
+          "normalized": 85.0,
+          "weighted": 8.5
+        },
+        "github": {
+          "raw_value": 91.0,
+          "normalized": 91.0,
+          "weighted": 9.1
+        },
+        "regulatory": {
+          "raw_value": 45.0,
+          "normalized": 45.0,
+          "weighted": 2.25
+        }
+      },
+      "trend": "up"
+    },
+    {
+      "date": "2025-12",
+      "score": 62.1,
+      "phase": "Erosion",
+      "phase_range": "51-75",
+      "components": {
+        "employment": {
+          "raw_value": 1499.5,
+          "normalized": 44.6,
+          "weighted": 11.15
+        },
+        "rev_per_employee": {
+          "raw_value": 34.9,
+          "normalized": 60.3,
+          "weighted": 12.06
+        },
+        "vc_funding": {
+          "raw_value": 579.7,
+          "normalized": 64.4,
+          "weighted": 9.66
+        },
+        "job_ratio": {
+          "raw_value": 0.312,
+          "normalized": 56.7,
+          "weighted": 8.51
+        },
+        "trends": {
+          "raw_value": 88.0,
+          "normalized": 88.0,
+          "weighted": 8.8
+        },
+        "github": {
+          "raw_value": 95.0,
+          "normalized": 95.0,
+          "weighted": 9.5
+        },
+        "regulatory": {
+          "raw_value": 48.0,
+          "normalized": 48.0,
+          "weighted": 2.4
+        }
+      },
+      "trend": "up"
+    }
+  ],
+  "events": [
+    {
+      "date": "2022-11",
+      "label": "ChatGPT Launch",
+      "type": "ai_release"
+    },
+    {
+      "date": "2023-03",
+      "label": "GPT-4 Release",
+      "type": "ai_release"
+    },
+    {
+      "date": "2023-07",
+      "label": "Claude 2 Launch",
+      "type": "ai_release"
+    },
+    {
+      "date": "2024-03",
+      "label": "Claude 3 Launch",
+      "type": "ai_release"
+    },
+    {
+      "date": "2024-06",
+      "label": "EU AI Act Final",
+      "type": "regulatory"
+    },
+    {
+      "date": "2024-11",
+      "label": "GPT-4o Launch",
+      "type": "ai_release"
+    },
+    {
+      "date": "2025-02",
+      "label": "Claude 3.5 Opus",
+      "type": "ai_release"
+    },
+    {
+      "date": "2025-06",
+      "label": "Accenture AI Revenue $3B",
+      "type": "earnings"
+    }
+  ]
+}
