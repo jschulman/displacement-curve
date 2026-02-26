@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Displacement Curve</title>
+  <meta name="description" content="Tracking AI's displacement of human labor in professional services. Open data, no tracking.">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">The Displacement Curve</h1>
+      <p class="site-subtitle">Tracking AI's displacement of human labor in professional services</p>
+      <p class="last-updated" id="last-updated">Last updated: loading...</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="signal-cards" id="signal-cards">
+      <div class="card" data-signal="employment" id="card-employment">
+        <div class="card-header">
+          <span class="card-icon" aria-hidden="true">&#x1F4CA;</span>
+          <h2 class="card-title">Professional Services Employment</h2>
+          <span class="card-source">BLS</span>
+        </div>
+        <div class="card-body">
+          <div class="card-value" id="val-employment">--</div>
+          <div class="card-change" id="change-employment">--</div>
+          <div class="card-sparkline">
+            <canvas id="spark-employment" height="60"></canvas>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="card-updated" id="updated-employment">--</span>
+          <span class="card-expand-hint">Click to expand</span>
+        </div>
+      </div>
+
+      <div class="card" data-signal="trends" id="card-trends">
+        <div class="card-header">
+          <span class="card-icon" aria-hidden="true">&#x1F50D;</span>
+          <h2 class="card-title">AI Search Interest</h2>
+          <span class="card-source">Google Trends</span>
+        </div>
+        <div class="card-body">
+          <div class="card-value" id="val-trends">--</div>
+          <div class="card-change" id="change-trends">--</div>
+          <div class="card-sparkline">
+            <canvas id="spark-trends" height="60"></canvas>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="card-updated" id="updated-trends">--</span>
+          <span class="card-expand-hint">Click to expand</span>
+        </div>
+      </div>
+
+      <div class="card" data-signal="github" id="card-github">
+        <div class="card-header">
+          <span class="card-icon" aria-hidden="true">&#x2B50;</span>
+          <h2 class="card-title">Open Source AI Activity</h2>
+          <span class="card-source">GitHub</span>
+        </div>
+        <div class="card-body">
+          <div class="card-value" id="val-github">--</div>
+          <div class="card-change" id="change-github">--</div>
+          <div class="card-sparkline">
+            <canvas id="spark-github" height="60"></canvas>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="card-updated" id="updated-github">--</span>
+          <span class="card-expand-hint">Click to expand</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="expanded-chart-section" id="expanded-section" hidden>
+      <div class="expanded-chart-container">
+        <div class="expanded-header">
+          <h2 id="expanded-title">--</h2>
+          <button class="expanded-close" id="expanded-close" aria-label="Close chart">&times;</button>
+        </div>
+        <div class="expanded-chart-wrapper">
+          <canvas id="expanded-chart"></canvas>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-sources">
+        Data sources:
+        <a href="https://www.bls.gov/" target="_blank" rel="noopener">BLS</a>,
+        <a href="https://trends.google.com/" target="_blank" rel="noopener">Google Trends</a>,
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+      </p>
+      <p class="footer-links">
+        <a href="METHODOLOGY.md" target="_blank" rel="noopener">Methodology</a>
+        <span class="footer-sep">|</span>
+        <a href="https://github.com/jschulman/displacement-curve" target="_blank" rel="noopener">Source code on GitHub</a>
+      </p>
+      <p class="footer-privacy">No cookies. No tracking. No login. Just data.</p>
+    </div>
+  </footer>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

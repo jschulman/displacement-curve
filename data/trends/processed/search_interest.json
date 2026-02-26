@@ -1,0 +1,686 @@
+{
+  "metadata": {
+    "source": "Google Trends",
+    "last_updated": "2026-02-26",
+    "mock": true,
+    "baseline": "2023-01 = 100"
+  },
+  "categories": {
+    "ai_adoption": {
+      "terms": [
+        "AI agent for accounting",
+        "AI audit tool",
+        "AI compliance software"
+      ],
+      "composite": [
+        {
+          "date": "2022-11",
+          "value": 17
+        },
+        {
+          "date": "2022-12",
+          "value": 104
+        },
+        {
+          "date": "2023-01",
+          "value": 101
+        },
+        {
+          "date": "2023-02",
+          "value": 78
+        },
+        {
+          "date": "2023-03",
+          "value": 103
+        },
+        {
+          "date": "2023-04",
+          "value": 116
+        },
+        {
+          "date": "2023-05",
+          "value": 141
+        },
+        {
+          "date": "2023-06",
+          "value": 145
+        },
+        {
+          "date": "2023-07",
+          "value": 177
+        },
+        {
+          "date": "2023-08",
+          "value": 187
+        },
+        {
+          "date": "2023-09",
+          "value": 216
+        },
+        {
+          "date": "2023-10",
+          "value": 213
+        },
+        {
+          "date": "2023-11",
+          "value": 226
+        },
+        {
+          "date": "2023-12",
+          "value": 223
+        },
+        {
+          "date": "2024-01",
+          "value": 229
+        },
+        {
+          "date": "2024-02",
+          "value": 264
+        },
+        {
+          "date": "2024-03",
+          "value": 254
+        },
+        {
+          "date": "2024-04",
+          "value": 267
+        },
+        {
+          "date": "2024-05",
+          "value": 271
+        },
+        {
+          "date": "2024-06",
+          "value": 284
+        },
+        {
+          "date": "2024-07",
+          "value": 253
+        },
+        {
+          "date": "2024-08",
+          "value": 257
+        },
+        {
+          "date": "2024-09",
+          "value": 297
+        },
+        {
+          "date": "2024-10",
+          "value": 328
+        },
+        {
+          "date": "2024-11",
+          "value": 267
+        },
+        {
+          "date": "2024-12",
+          "value": 290
+        },
+        {
+          "date": "2025-01",
+          "value": 308
+        },
+        {
+          "date": "2025-02",
+          "value": 300
+        },
+        {
+          "date": "2025-03",
+          "value": 306
+        },
+        {
+          "date": "2025-04",
+          "value": 308
+        },
+        {
+          "date": "2025-05",
+          "value": 333
+        },
+        {
+          "date": "2025-06",
+          "value": 320
+        },
+        {
+          "date": "2025-07",
+          "value": 324
+        },
+        {
+          "date": "2025-08",
+          "value": 303
+        },
+        {
+          "date": "2025-09",
+          "value": 337
+        },
+        {
+          "date": "2025-10",
+          "value": 357
+        },
+        {
+          "date": "2025-11",
+          "value": 339
+        },
+        {
+          "date": "2025-12",
+          "value": 324
+        },
+        {
+          "date": "2026-01",
+          "value": 310
+        },
+        {
+          "date": "2026-02",
+          "value": 341
+        }
+      ]
+    },
+    "disruption_anxiety": {
+      "terms": [
+        "AI replacing consultants",
+        "AI replacing accountants",
+        "AI replacing lawyers"
+      ],
+      "composite": [
+        {
+          "date": "2022-11",
+          "value": 8
+        },
+        {
+          "date": "2022-12",
+          "value": 11
+        },
+        {
+          "date": "2023-01",
+          "value": 21
+        },
+        {
+          "date": "2023-02",
+          "value": 135
+        },
+        {
+          "date": "2023-03",
+          "value": 203
+        },
+        {
+          "date": "2023-04",
+          "value": 145
+        },
+        {
+          "date": "2023-05",
+          "value": 51
+        },
+        {
+          "date": "2023-06",
+          "value": 28
+        },
+        {
+          "date": "2023-07",
+          "value": 27
+        },
+        {
+          "date": "2023-08",
+          "value": 35
+        },
+        {
+          "date": "2023-09",
+          "value": 35
+        },
+        {
+          "date": "2023-10",
+          "value": 43
+        },
+        {
+          "date": "2023-11",
+          "value": 39
+        },
+        {
+          "date": "2023-12",
+          "value": 41
+        },
+        {
+          "date": "2024-01",
+          "value": 47
+        },
+        {
+          "date": "2024-02",
+          "value": 47
+        },
+        {
+          "date": "2024-03",
+          "value": 45
+        },
+        {
+          "date": "2024-04",
+          "value": 52
+        },
+        {
+          "date": "2024-05",
+          "value": 50
+        },
+        {
+          "date": "2024-06",
+          "value": 58
+        },
+        {
+          "date": "2024-07",
+          "value": 58
+        },
+        {
+          "date": "2024-08",
+          "value": 78
+        },
+        {
+          "date": "2024-09",
+          "value": 101
+        },
+        {
+          "date": "2024-10",
+          "value": 125
+        },
+        {
+          "date": "2024-11",
+          "value": 118
+        },
+        {
+          "date": "2024-12",
+          "value": 91
+        },
+        {
+          "date": "2025-01",
+          "value": 72
+        },
+        {
+          "date": "2025-02",
+          "value": 67
+        },
+        {
+          "date": "2025-03",
+          "value": 77
+        },
+        {
+          "date": "2025-04",
+          "value": 74
+        },
+        {
+          "date": "2025-05",
+          "value": 212
+        },
+        {
+          "date": "2025-06",
+          "value": 231
+        },
+        {
+          "date": "2025-07",
+          "value": 212
+        },
+        {
+          "date": "2025-08",
+          "value": 239
+        },
+        {
+          "date": "2025-09",
+          "value": 245
+        },
+        {
+          "date": "2025-10",
+          "value": 236
+        },
+        {
+          "date": "2025-11",
+          "value": 227
+        },
+        {
+          "date": "2025-12",
+          "value": 239
+        },
+        {
+          "date": "2026-01",
+          "value": 263
+        },
+        {
+          "date": "2026-02",
+          "value": 250
+        }
+      ]
+    },
+    "upskilling": {
+      "terms": [
+        "AI certification accounting",
+        "AI for CPAs",
+        "prompt engineering for consultants"
+      ],
+      "composite": [
+        {
+          "date": "2022-11",
+          "value": 5
+        },
+        {
+          "date": "2022-12",
+          "value": 6
+        },
+        {
+          "date": "2023-01",
+          "value": 5
+        },
+        {
+          "date": "2023-02",
+          "value": 7
+        },
+        {
+          "date": "2023-03",
+          "value": 1
+        },
+        {
+          "date": "2023-04",
+          "value": 2
+        },
+        {
+          "date": "2023-05",
+          "value": 2
+        },
+        {
+          "date": "2023-06",
+          "value": 3
+        },
+        {
+          "date": "2023-07",
+          "value": 10
+        },
+        {
+          "date": "2023-08",
+          "value": 9
+        },
+        {
+          "date": "2023-09",
+          "value": 6
+        },
+        {
+          "date": "2023-10",
+          "value": 8
+        },
+        {
+          "date": "2023-11",
+          "value": 16
+        },
+        {
+          "date": "2023-12",
+          "value": 11
+        },
+        {
+          "date": "2024-01",
+          "value": 15
+        },
+        {
+          "date": "2024-02",
+          "value": 21
+        },
+        {
+          "date": "2024-03",
+          "value": 26
+        },
+        {
+          "date": "2024-04",
+          "value": 29
+        },
+        {
+          "date": "2024-05",
+          "value": 27
+        },
+        {
+          "date": "2024-06",
+          "value": 28
+        },
+        {
+          "date": "2024-07",
+          "value": 33
+        },
+        {
+          "date": "2024-08",
+          "value": 42
+        },
+        {
+          "date": "2024-09",
+          "value": 46
+        },
+        {
+          "date": "2024-10",
+          "value": 54
+        },
+        {
+          "date": "2024-11",
+          "value": 58
+        },
+        {
+          "date": "2024-12",
+          "value": 65
+        },
+        {
+          "date": "2025-01",
+          "value": 64
+        },
+        {
+          "date": "2025-02",
+          "value": 70
+        },
+        {
+          "date": "2025-03",
+          "value": 80
+        },
+        {
+          "date": "2025-04",
+          "value": 89
+        },
+        {
+          "date": "2025-05",
+          "value": 91
+        },
+        {
+          "date": "2025-06",
+          "value": 109
+        },
+        {
+          "date": "2025-07",
+          "value": 102
+        },
+        {
+          "date": "2025-08",
+          "value": 119
+        },
+        {
+          "date": "2025-09",
+          "value": 123
+        },
+        {
+          "date": "2025-10",
+          "value": 141
+        },
+        {
+          "date": "2025-11",
+          "value": 152
+        },
+        {
+          "date": "2025-12",
+          "value": 156
+        },
+        {
+          "date": "2026-01",
+          "value": 172
+        },
+        {
+          "date": "2026-02",
+          "value": 192
+        }
+      ]
+    },
+    "tool_adoption": {
+      "terms": [
+        "ChatGPT for audit",
+        "Claude for accounting",
+        "AI tax preparation"
+      ],
+      "composite": [
+        {
+          "date": "2022-11",
+          "value": 8
+        },
+        {
+          "date": "2022-12",
+          "value": 5
+        },
+        {
+          "date": "2023-01",
+          "value": 5
+        },
+        {
+          "date": "2023-02",
+          "value": 2
+        },
+        {
+          "date": "2023-03",
+          "value": 8
+        },
+        {
+          "date": "2023-04",
+          "value": 10
+        },
+        {
+          "date": "2023-05",
+          "value": 10
+        },
+        {
+          "date": "2023-06",
+          "value": 13
+        },
+        {
+          "date": "2023-07",
+          "value": 12
+        },
+        {
+          "date": "2023-08",
+          "value": 25
+        },
+        {
+          "date": "2023-09",
+          "value": 26
+        },
+        {
+          "date": "2023-10",
+          "value": 28
+        },
+        {
+          "date": "2023-11",
+          "value": 36
+        },
+        {
+          "date": "2023-12",
+          "value": 41
+        },
+        {
+          "date": "2024-01",
+          "value": 47
+        },
+        {
+          "date": "2024-02",
+          "value": 53
+        },
+        {
+          "date": "2024-03",
+          "value": 61
+        },
+        {
+          "date": "2024-04",
+          "value": 70
+        },
+        {
+          "date": "2024-05",
+          "value": 80
+        },
+        {
+          "date": "2024-06",
+          "value": 90
+        },
+        {
+          "date": "2024-07",
+          "value": 98
+        },
+        {
+          "date": "2024-08",
+          "value": 111
+        },
+        {
+          "date": "2024-09",
+          "value": 116
+        },
+        {
+          "date": "2024-10",
+          "value": 118
+        },
+        {
+          "date": "2024-11",
+          "value": 130
+        },
+        {
+          "date": "2024-12",
+          "value": 160
+        },
+        {
+          "date": "2025-01",
+          "value": 153
+        },
+        {
+          "date": "2025-02",
+          "value": 173
+        },
+        {
+          "date": "2025-03",
+          "value": 196
+        },
+        {
+          "date": "2025-04",
+          "value": 221
+        },
+        {
+          "date": "2025-05",
+          "value": 203
+        },
+        {
+          "date": "2025-06",
+          "value": 229
+        },
+        {
+          "date": "2025-07",
+          "value": 250
+        },
+        {
+          "date": "2025-08",
+          "value": 268
+        },
+        {
+          "date": "2025-09",
+          "value": 297
+        },
+        {
+          "date": "2025-10",
+          "value": 329
+        },
+        {
+          "date": "2025-11",
+          "value": 347
+        },
+        {
+          "date": "2025-12",
+          "value": 408
+        },
+        {
+          "date": "2026-01",
+          "value": 408
+        },
+        {
+          "date": "2026-02",
+          "value": 372
+        }
+      ]
+    }
+  }
+}

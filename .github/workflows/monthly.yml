@@ -1,0 +1,30 @@
+name: Monthly Data Collection
+
+on:
+  schedule:
+    - cron: '0 12 8 * *'  # 8th of each month at noon UTC (after BLS release)
+  workflow_dispatch:
+
+jobs:
+  collect-bls:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Collect BLS employment data
+        run: python collectors/bls_employment.py
+      - name: Copy processed data to docs
+        run: |
+          mkdir -p docs/data/bls/processed
+          cp data/bls/processed/*.json docs/data/bls/processed/
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/ docs/data/
+          git diff --staged --quiet || git commit -m "chore: monthly BLS data collection $(date -u +%Y-%m-%d)"
+          git push
