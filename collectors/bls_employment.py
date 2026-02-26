@@ -3,7 +3,7 @@
 BLS Employment Data Collector for the Displacement Curve.
 
 Fetches Current Employment Statistics (CES) data from the Bureau of Labor
-Statistics Public Data API v1 (no key required, 25 queries/day limit).
+Statistics Public Data API v2 (API key required, 500 queries/day).
 
 Series tracked:
   CES5541200001 - Accounting & Tax Preparation
@@ -35,7 +35,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW_DIR = os.path.join(BASE_DIR, "data", "bls", "raw")
 PROCESSED_DIR = os.path.join(BASE_DIR, "data", "bls", "processed")
 
-BLS_API_URL = "https://api.bls.gov/publicAPI/v1/timeseries/data/"
+BLS_API_URL = "https://api.bls.gov/publicAPI/v2/timeseries/data/"
 
 SERIES = {
     "CES5541200001": "Accounting & Tax Preparation",
@@ -53,13 +53,15 @@ RETRY_DELAY = 5  # seconds
 # API Fetch
 # ---------------------------------------------------------------------------
 
-def fetch_bls_data(series_ids, start_year, end_year):
-    """Fetch data from BLS Public Data API v1."""
+def fetch_bls_data(series_ids, start_year, end_year, api_key=None):
+    """Fetch data from BLS Public Data API v2."""
     payload = {
         "seriesid": series_ids,
         "startyear": str(start_year),
         "endyear": str(end_year),
     }
+    if api_key:
+        payload["registrationkey"] = api_key
 
     for attempt in range(1, MAX_RETRIES + 1):
         try:
@@ -157,16 +159,18 @@ def main():
     parser.add_argument("--mock", action="store_true", help="Generate mock data instead of calling API")
     parser.add_argument("--start-year", type=int, default=2022, help="Start year (default: 2022)")
     parser.add_argument("--end-year", type=int, default=2026, help="End year (default: 2026)")
+    parser.add_argument("--api-key", type=str, default=os.environ.get("BLS_API_KEY"), help="BLS API v2 key (or set BLS_API_KEY env var)")
     args = parser.parse_args()
 
     print("BLS Employment Collector")
     print(f"  Range: {args.start_year}-{args.end_year}")
-    print(f"  Mode:  {'MOCK' if args.mock else 'LIVE API'}\n")
+    api_ver = "v2 (keyed)" if args.api_key else "v2 (no key)"
+    print(f"  Mode:  {'MOCK' if args.mock else 'LIVE API ' + api_ver}\n")
 
     if args.mock:
         processed = generate_mock(args.start_year, args.end_year)
     else:
-        raw = fetch_bls_data(list(SERIES.keys()), args.start_year, args.end_year)
+        raw = fetch_bls_data(list(SERIES.keys()), args.start_year, args.end_year, args.api_key)
         # Save raw response
         raw_path = os.path.join(RAW_DIR, f"bls_raw_{datetime.utcnow().strftime('%Y%m%d_%H%M%S')}.json")
         save_json(raw, raw_path)

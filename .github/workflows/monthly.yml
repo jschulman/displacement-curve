@@ -16,7 +16,9 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Collect BLS employment data
-        run: python collectors/bls_employment.py
+        run: python collectors/bls_employment.py --api-key "$BLS_API_KEY"
+        env:
+          BLS_API_KEY: ${{ secrets.BLS_API_KEY }}
       - name: Copy processed data to docs
         run: |
           mkdir -p docs/data/bls/processed
