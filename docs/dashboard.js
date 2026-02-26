@@ -948,15 +948,20 @@
           },
           {
             label: "Events",
-            data: eventPoints.map(function(p) { return p.y; }),
+            data: labels.map(function(lbl) {
+              var ev = eventPoints.find(function(p) { return p.x === lbl; });
+              return ev ? ev.y : null;
+            }),
             borderColor: "transparent",
             backgroundColor: "#f0883e",
-            pointRadius: 6,
+            pointRadius: labels.map(function(lbl) {
+              return eventPoints.some(function(p) { return p.x === lbl; }) ? 6 : 0;
+            }),
             pointHoverRadius: 8,
             pointStyle: "circle",
             showLine: false,
-            // Map event points to correct x positions
-            _eventLabels: eventPoints.map(function(p) { return eventLabelsMap[p.x]; }),
+            spanGaps: false,
+            _eventLabels: labels.map(function(lbl) { return eventLabelsMap[lbl] || null; }),
           },
         ],
       },
@@ -973,14 +978,18 @@
                 return items[0].label;
               },
               label: function(context) {
-                if (context.datasetIndex === 2) {
+                if (context.datasetIndex === 2 && context.parsed.y != null) {
                   var evLabels = context.dataset._eventLabels;
-                  return evLabels && evLabels[context.dataIndex] ? evLabels[context.dataIndex] : "Score: " + context.parsed.y;
+                  var evLabel = evLabels && evLabels[context.dataIndex];
+                  return evLabel ? evLabel + " (" + context.parsed.y.toFixed(1) + ")" : "Score: " + context.parsed.y.toFixed(1);
                 }
-                if (context.datasetIndex === 1) {
+                if (context.datasetIndex === 1 && context.parsed.y != null) {
                   return "Trend: " + context.parsed.y.toFixed(1);
                 }
-                return "Score: " + context.parsed.y.toFixed(1);
+                if (context.parsed.y != null) {
+                  return "Score: " + context.parsed.y.toFixed(1);
+                }
+                return null;
               },
             },
           },
