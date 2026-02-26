@@ -19,14 +19,17 @@ jobs:
         run: python collectors/bls_employment.py --api-key "$BLS_API_KEY"
         env:
           BLS_API_KEY: ${{ secrets.BLS_API_KEY }}
+      - name: Collect VC funding data
+        run: python collectors/vc_funding.py
       - name: Copy processed data to docs
         run: |
-          mkdir -p docs/data/bls/processed
+          mkdir -p docs/data/bls/processed docs/data/vc/processed
           cp data/bls/processed/*.json docs/data/bls/processed/
+          cp data/vc/processed/*.json docs/data/vc/processed/
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/ docs/data/
-          git diff --staged --quiet || git commit -m "chore: monthly BLS data collection $(date -u +%Y-%m-%d)"
+          git diff --staged --quiet || git commit -m "chore: monthly BLS + VC data collection $(date -u +%Y-%m-%d)"
           git push

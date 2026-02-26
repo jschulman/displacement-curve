@@ -13,6 +13,8 @@
     github: "data/github/processed/activity.json",
     earnings: "data/earnings/processed/revenue.json",
     workforce: "data/sec/processed/workforce.json",
+    vc: "data/vc/processed/funding.json",
+    jobs: "data/jobs/processed/postings.json",
   };
 
   // ---- Fallback sample data ----
@@ -282,11 +284,84 @@
         { year: 2025, total_headcount: 1720000, avg_contractor_pct: 14.5 },
       ],
     },
+    vc: {
+      metadata: { source: "SEC Form D", last_updated: "2026-02-26", mock: true },
+      categories: {
+        ai_audit: { name: "AI-Native Audit/Accounting", quarterly: [
+          { quarter: "2023-Q1", funding_mm: 52.0, deal_count: 4 },
+          { quarter: "2023-Q2", funding_mm: 60.0, deal_count: 5 },
+          { quarter: "2023-Q3", funding_mm: 68.0, deal_count: 5 },
+          { quarter: "2023-Q4", funding_mm: 75.0, deal_count: 6 },
+          { quarter: "2024-Q1", funding_mm: 85.0, deal_count: 7 },
+          { quarter: "2024-Q2", funding_mm: 95.0, deal_count: 8 },
+        ]},
+        ai_legal: { name: "AI Legal Services", quarterly: [
+          { quarter: "2023-Q1", funding_mm: 40.0, deal_count: 3 },
+          { quarter: "2023-Q2", funding_mm: 48.0, deal_count: 4 },
+          { quarter: "2023-Q3", funding_mm: 55.0, deal_count: 4 },
+          { quarter: "2023-Q4", funding_mm: 62.0, deal_count: 5 },
+          { quarter: "2024-Q1", funding_mm: 70.0, deal_count: 6 },
+          { quarter: "2024-Q2", funding_mm: 80.0, deal_count: 7 },
+        ]},
+        ai_consulting: { name: "AI Consulting/Strategy", quarterly: [
+          { quarter: "2023-Q1", funding_mm: 35.0, deal_count: 3 },
+          { quarter: "2023-Q2", funding_mm: 42.0, deal_count: 3 },
+          { quarter: "2023-Q3", funding_mm: 50.0, deal_count: 4 },
+          { quarter: "2023-Q4", funding_mm: 58.0, deal_count: 5 },
+          { quarter: "2024-Q1", funding_mm: 65.0, deal_count: 5 },
+          { quarter: "2024-Q2", funding_mm: 72.0, deal_count: 6 },
+        ]},
+        ai_compliance: { name: "AI Compliance/Regulatory", quarterly: [
+          { quarter: "2023-Q1", funding_mm: 20.0, deal_count: 2 },
+          { quarter: "2023-Q2", funding_mm: 25.0, deal_count: 2 },
+          { quarter: "2023-Q3", funding_mm: 30.0, deal_count: 3 },
+          { quarter: "2023-Q4", funding_mm: 35.0, deal_count: 3 },
+          { quarter: "2024-Q1", funding_mm: 42.0, deal_count: 4 },
+          { quarter: "2024-Q2", funding_mm: 50.0, deal_count: 5 },
+        ]},
+        ai_staffing: { name: "AI-Native Staffing", quarterly: [
+          { quarter: "2023-Q1", funding_mm: 15.0, deal_count: 2 },
+          { quarter: "2023-Q2", funding_mm: 18.0, deal_count: 2 },
+          { quarter: "2023-Q3", funding_mm: 22.0, deal_count: 2 },
+          { quarter: "2023-Q4", funding_mm: 28.0, deal_count: 3 },
+          { quarter: "2024-Q1", funding_mm: 35.0, deal_count: 3 },
+          { quarter: "2024-Q2", funding_mm: 42.0, deal_count: 4 },
+        ]},
+        horizontal_ai: { name: "Horizontal AI Agents", quarterly: [
+          { quarter: "2023-Q1", funding_mm: 80.0, deal_count: 6 },
+          { quarter: "2023-Q2", funding_mm: 95.0, deal_count: 7 },
+          { quarter: "2023-Q3", funding_mm: 110.0, deal_count: 8 },
+          { quarter: "2023-Q4", funding_mm: 130.0, deal_count: 9 },
+          { quarter: "2024-Q1", funding_mm: 150.0, deal_count: 10 },
+          { quarter: "2024-Q2", funding_mm: 175.0, deal_count: 12 },
+        ]},
+      },
+      aggregate: [
+        { quarter: "2023-Q1", total_funding_mm: 242.0, total_deals: 20, cumulative_mm: 242.0 },
+        { quarter: "2023-Q2", total_funding_mm: 288.0, total_deals: 23, cumulative_mm: 530.0 },
+        { quarter: "2023-Q3", total_funding_mm: 335.0, total_deals: 26, cumulative_mm: 865.0 },
+        { quarter: "2023-Q4", total_funding_mm: 388.0, total_deals: 31, cumulative_mm: 1253.0 },
+        { quarter: "2024-Q1", total_funding_mm: 447.0, total_deals: 35, cumulative_mm: 1700.0 },
+        { quarter: "2024-Q2", total_funding_mm: 514.0, total_deals: 42, cumulative_mm: 2214.0 },
+      ],
+    },
+    jobs: {
+      metadata: { source: "Indeed Hiring Lab / LinkedIn", last_updated: "2026-02-26", mock: true },
+      monthly: [
+        { date: "2024-01", total_postings_idx: 105.0, ai_postings_pct: 5.8, traditional_pct: 68.2, ai_to_traditional_ratio: 0.085 },
+        { date: "2024-02", total_postings_idx: 106.0, ai_postings_pct: 6.1, traditional_pct: 67.5, ai_to_traditional_ratio: 0.090 },
+        { date: "2024-03", total_postings_idx: 107.0, ai_postings_pct: 6.5, traditional_pct: 66.8, ai_to_traditional_ratio: 0.097 },
+        { date: "2024-04", total_postings_idx: 108.0, ai_postings_pct: 6.9, traditional_pct: 66.0, ai_to_traditional_ratio: 0.105 },
+        { date: "2024-05", total_postings_idx: 109.0, ai_postings_pct: 7.2, traditional_pct: 65.3, ai_to_traditional_ratio: 0.110 },
+        { date: "2024-06", total_postings_idx: 110.0, ai_postings_pct: 7.6, traditional_pct: 64.5, ai_to_traditional_ratio: 0.118 },
+      ],
+      firms: {},
+    },
   };
 
   // ---- State ----
   let state = {
-    data: { employment: null, trends: null, github: null, earnings: null, workforce: null },
+    data: { employment: null, trends: null, github: null, earnings: null, workforce: null, vc: null, jobs: null },
     expandedSignal: null,
     sparkCharts: {},
     expandedChart: null,
@@ -557,6 +632,52 @@
     };
   }
 
+  function getVcSummary(vcData) {
+    if (!vcData || !vcData.aggregate || vcData.aggregate.length === 0) return null;
+
+    var sorted = vcData.aggregate.slice().sort(function(a, b) {
+      return a.quarter.localeCompare(b.quarter);
+    });
+
+    var trailing = last(sorted, 8);
+    var latest = sorted[sorted.length - 1];
+    var prev = sorted.length >= 2 ? sorted[sorted.length - 2] : null;
+    var qoq = prev ? latest.total_funding_mm - prev.total_funding_mm : 0;
+
+    return {
+      value: latest.total_funding_mm,
+      formatted: "$" + Math.round(latest.total_funding_mm) + "M",
+      mom: qoq,
+      momFormatted: (qoq >= 0 ? "+" : "") + "$" + Math.abs(Math.round(qoq)) + "M QoQ",
+      date: latest.quarter,
+      sparkLabels: trailing.map(function(d) { return d.quarter; }),
+      sparkData: trailing.map(function(d) { return d.total_funding_mm; }),
+    };
+  }
+
+  function getJobsSummary(jobsData) {
+    if (!jobsData || !jobsData.monthly || jobsData.monthly.length === 0) return null;
+
+    var sorted = jobsData.monthly.slice().sort(function(a, b) {
+      return a.date.localeCompare(b.date);
+    });
+
+    var trailing = last(sorted, 12);
+    var latest = sorted[sorted.length - 1];
+    var prev = sorted.length >= 2 ? sorted[sorted.length - 2] : null;
+    var mom = prev ? latest.ai_to_traditional_ratio - prev.ai_to_traditional_ratio : 0;
+
+    return {
+      value: latest.ai_to_traditional_ratio,
+      formatted: latest.ai_to_traditional_ratio.toFixed(3) + "x",
+      mom: mom,
+      momFormatted: (mom >= 0 ? "+" : "") + mom.toFixed(3) + " MoM",
+      date: latest.date,
+      sparkLabels: trailing.map(function(d) { return d.date; }),
+      sparkData: trailing.map(function(d) { return d.ai_to_traditional_ratio; }),
+    };
+  }
+
   // ---- Card Rendering ----
 
   function renderCard(signal, summary) {
@@ -585,6 +706,8 @@
     if (signal === "github") sparkColor = "#3fb950";
     if (signal === "earnings") sparkColor = "#f0883e";
     if (signal === "workforce") sparkColor = "#f85149";
+    if (signal === "vc") sparkColor = "#a371f7";
+    if (signal === "jobs") sparkColor = "#d2a8ff";
 
     createSparkline(
       "spark-" + signal,
@@ -1011,6 +1134,150 @@
     });
   }
 
+  function renderExpandedVc(vcData) {
+    var ctx = document.getElementById("expanded-chart");
+    if (state.expandedChart) state.expandedChart.destroy();
+
+    var categories = vcData.categories || {};
+    var catKeys = Object.keys(categories);
+    var colors = ["#58a6ff", "#3fb950", "#d2a8ff", "#f0883e", "#f85149", "#a371f7"];
+    var bgColors = ["rgba(88,166,255,0.6)", "rgba(63,185,80,0.6)", "rgba(210,168,255,0.6)", "rgba(240,136,62,0.6)", "rgba(248,81,73,0.6)", "rgba(163,113,247,0.6)"];
+
+    // Collect all quarters
+    var allQuarters = {};
+    catKeys.forEach(function(key) {
+      (categories[key].quarterly || []).forEach(function(q) {
+        allQuarters[q.quarter] = true;
+      });
+    });
+    var quarters = Object.keys(allQuarters).sort();
+
+    var datasets = catKeys.map(function(key, i) {
+      var dataMap = {};
+      (categories[key].quarterly || []).forEach(function(q) {
+        dataMap[q.quarter] = q.funding_mm;
+      });
+      return {
+        label: categories[key].name || key,
+        data: quarters.map(function(q) { return dataMap[q] || 0; }),
+        backgroundColor: bgColors[i % bgColors.length],
+        borderColor: colors[i % colors.length],
+        borderWidth: 1,
+      };
+    });
+
+    state.expandedChart = new Chart(ctx, {
+      type: "bar",
+      data: { labels: quarters, datasets: datasets },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: true,
+            position: "top",
+            labels: { usePointStyle: true, padding: 12 },
+          },
+          tooltip: {
+            mode: "index",
+            intersect: false,
+            callbacks: {
+              label: function(ctx) {
+                return ctx.dataset.label + ": $" + (ctx.parsed.y != null ? ctx.parsed.y : 0) + "M";
+              },
+            },
+          },
+        },
+        scales: {
+          x: {
+            stacked: true,
+            title: { display: true, text: "Quarter" },
+            grid: { color: "rgba(48, 54, 61, 0.5)" },
+          },
+          y: {
+            stacked: true,
+            title: { display: true, text: "Funding ($ millions)" },
+            grid: { color: "rgba(48, 54, 61, 0.5)" },
+          },
+        },
+        interaction: { mode: "index", intersect: false },
+      },
+    });
+  }
+
+  function renderExpandedJobs(jobsData) {
+    var ctx = document.getElementById("expanded-chart");
+    if (state.expandedChart) state.expandedChart.destroy();
+
+    var monthly = (jobsData.monthly || []).slice().sort(function(a, b) {
+      return a.date.localeCompare(b.date);
+    });
+
+    var labels = monthly.map(function(d) { return d.date; });
+    var aiPct = monthly.map(function(d) { return d.ai_postings_pct; });
+    var tradPct = monthly.map(function(d) { return d.traditional_pct; });
+
+    state.expandedChart = new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: labels,
+        datasets: [
+          {
+            label: "AI Postings %",
+            data: aiPct,
+            borderColor: "#3fb950",
+            backgroundColor: "transparent",
+            borderWidth: 2,
+            pointRadius: 3,
+            tension: 0.3,
+            yAxisID: "y",
+          },
+          {
+            label: "Traditional Postings %",
+            data: tradPct,
+            borderColor: "#f85149",
+            backgroundColor: "transparent",
+            borderWidth: 2,
+            pointRadius: 3,
+            tension: 0.3,
+            yAxisID: "y",
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: true,
+            position: "top",
+            labels: { usePointStyle: true, pointStyle: "line", padding: 16 },
+          },
+          tooltip: {
+            mode: "index",
+            intersect: false,
+            callbacks: {
+              label: function(ctx) {
+                return ctx.dataset.label + ": " + (ctx.parsed.y != null ? ctx.parsed.y.toFixed(1) : "--") + "%";
+              },
+            },
+          },
+        },
+        scales: {
+          x: {
+            title: { display: true, text: "Month" },
+            grid: { color: "rgba(48, 54, 61, 0.5)" },
+          },
+          y: {
+            title: { display: true, text: "Percentage of Postings (%)" },
+            grid: { color: "rgba(48, 54, 61, 0.5)" },
+          },
+        },
+        interaction: { mode: "index", intersect: false },
+      },
+    });
+  }
+
   // ---- Expand / Collapse ----
 
   function expandSignal(signal) {
@@ -1041,6 +1308,8 @@
       github: "Open Source AI Activity (GitHub)",
       earnings: "AI Revenue Reporting (SEC/Earnings)",
       workforce: "Revenue Per Employee (SEC 10-K)",
+      vc: "VC Funding: AI Services (SEC Form D)",
+      jobs: "AI vs Traditional Hiring (Indeed / LinkedIn)",
     };
     titleEl.textContent = titles[signal] || signal;
 
@@ -1053,6 +1322,8 @@
     else if (signal === "github") renderExpandedGithub(data);
     else if (signal === "earnings") renderExpandedEarnings(data);
     else if (signal === "workforce") renderExpandedWorkforce(state.data.earnings, state.data.workforce);
+    else if (signal === "vc") renderExpandedVc(data);
+    else if (signal === "jobs") renderExpandedJobs(data);
 
     // Scroll to expanded section
     section.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -1103,6 +1374,14 @@
         console.warn("Workforce data fetch failed, using fallback.");
         return FALLBACK.workforce;
       }),
+      fetchJSON(DATA_PATHS.vc).catch(function () {
+        console.warn("VC funding data fetch failed, using fallback.");
+        return FALLBACK.vc;
+      }),
+      fetchJSON(DATA_PATHS.jobs).catch(function () {
+        console.warn("Jobs data fetch failed, using fallback.");
+        return FALLBACK.jobs;
+      }),
     ];
 
     Promise.all(promises).then(function (results) {
@@ -1111,6 +1390,8 @@
       state.data.github = results[2];
       state.data.earnings = results[3];
       state.data.workforce = results[4];
+      state.data.vc = results[5];
+      state.data.jobs = results[6];
       render();
     });
   }
@@ -1120,7 +1401,7 @@
   function render() {
     // Update last-updated from metadata
     var dates = [];
-    ["employment", "trends", "github", "earnings", "workforce"].forEach(function (key) {
+    ["employment", "trends", "github", "earnings", "workforce", "vc", "jobs"].forEach(function (key) {
       var d = state.data[key];
       if (d && d.metadata && d.metadata.last_updated) {
         dates.push(d.metadata.last_updated);
@@ -1148,6 +1429,12 @@
 
     var workforceSummary = getWorkforceSummary(state.data.earnings);
     renderCard("workforce", workforceSummary);
+
+    var vcSummary = getVcSummary(state.data.vc);
+    renderCard("vc", vcSummary);
+
+    var jobsSummary = getJobsSummary(state.data.jobs);
+    renderCard("jobs", jobsSummary);
   }
 
   // ---- Event Binding ----

@@ -1,0 +1,30 @@
+name: Weekly Job Postings Collection
+
+on:
+  schedule:
+    - cron: '0 12 * * 1'  # Every Monday at noon UTC
+  workflow_dispatch:
+
+jobs:
+  collect-jobs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Collect job postings data
+        run: python collectors/job_postings.py
+      - name: Copy processed data to docs
+        run: |
+          mkdir -p docs/data/jobs/processed
+          cp data/jobs/processed/*.json docs/data/jobs/processed/
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/ docs/data/
+          git diff --staged --quiet || git commit -m "chore: weekly job postings collection $(date -u +%Y-%m-%d)"
+          git push

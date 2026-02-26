@@ -163,12 +163,78 @@ SEC filings provide the most reliable headcount data. Declining headcount at IT 
 
 ---
 
+## Signal 6: VC Funding in AI Services
+
+**Source:** SEC Form D Filings, Crunchbase, PitchBook
+**Update Cadence:** Quarterly
+
+### What It Measures
+
+Capital flows into AI-native competitors to traditional professional services firms. Rising VC investment in AI-native audit, legal, consulting, compliance, and staffing startups signals investor conviction that these markets are ripe for disruption.
+
+### Categories Tracked
+
+| Category Key | Description |
+|-------------|-------------|
+| ai_audit | AI-Native Audit/Accounting startups |
+| ai_legal | AI Legal Services startups |
+| ai_consulting | AI Consulting/Strategy startups |
+| ai_compliance | AI Compliance/Regulatory startups |
+| ai_staffing | AI-Native Staffing startups |
+| horizontal_ai | Horizontal AI Agents (cross-sector) |
+
+### Metrics
+
+- **Total Funding ($M):** Aggregate quarterly funding across all tracked categories
+- **Deal Count:** Number of funding rounds per quarter
+- **Cumulative Funding ($M):** Running total of all capital deployed
+- **Category Breakdown:** Funding by vertical (stacked bar chart)
+
+### Interpretation
+
+Accelerating VC investment in AI-native professional services companies indicates smart money believes displacement is imminent. The category breakdown reveals which professional services verticals are attracting the most disruptive investment.
+
+---
+
+## Signal 7: Job Posting Trends
+
+**Source:** Indeed Hiring Lab, LinkedIn Economic Graph
+**Update Cadence:** Monthly
+
+### What It Measures
+
+Structural shifts in hiring patterns across professional services. Tracks the ratio of AI-related job postings to traditional role postings, revealing whether firms are replacing traditional hiring with AI-focused roles.
+
+### Firms Tracked
+
+| Ticker | Firm | Sector |
+|--------|------|--------|
+| ACN | Accenture | IT Consulting |
+| CTSH | Cognizant | IT Consulting |
+| INFY | Infosys | IT Consulting |
+| WIT | Wipro | IT Consulting |
+| EPAM | EPAM Systems | IT Consulting |
+| GLOB | Globant | IT Consulting |
+| IT | Gartner | Advisory |
+| BAH | Booz Allen Hamilton | Government Consulting |
+
+### Metrics
+
+- **AI Postings %:** Percentage of job postings requiring AI/ML skills
+- **Traditional Postings %:** Percentage of traditional (non-AI) role postings
+- **AI-to-Traditional Ratio:** Direct ratio of AI to traditional postings (key displacement indicator)
+- **Total Postings Index:** Overall posting volume indexed to baseline
+
+### Interpretation
+
+A rising AI-to-traditional ratio indicates firms are structurally shifting their workforce composition toward AI skills. When AI postings rise while traditional postings decline, it signals active displacement of traditional roles rather than net new hiring.
+
+---
+
 ## Planned Signals
 
 The following signals are planned for future phases:
 
-- **VC Funding:** Capital flows into AI-native professional services competitors
-- **Job Posting Trends:** Structural shifts in hiring patterns
 - **Regulatory Guidance:** Rate of AI-related regulatory issuance
 
 ## Composite Index

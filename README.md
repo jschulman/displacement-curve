@@ -25,15 +25,19 @@ An open-source dashboard that aggregates publicly available market signals to an
 | AI Search Interest | Google Trends | Daily |
 | Open Source AI Activity | GitHub API | Daily |
 
-### Phase 2 (Current)
+### Phase 2
 | Signal | Source | Frequency |
 |--------|--------|-----------|
 | AI Revenue Reporting | SEC EDGAR / Earnings Transcripts | Quarterly |
 | Revenue Per Employee (SEC Workforce) | SEC EDGAR 10-K | Quarterly |
 
+### Phase 3 (Current)
+| Signal | Source | Frequency |
+|--------|--------|-----------|
+| VC Funding: AI Services | SEC Form D | Quarterly |
+| AI vs Traditional Hiring | Indeed Hiring Lab / LinkedIn | Monthly |
+
 ### Planned
-- VC Funding in AI-Native Competitors
-- Job Posting Trends
 - Regulatory Guidance Cadence
 
 ## Methodology
