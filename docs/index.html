@@ -76,6 +76,44 @@
           <span class="card-expand-hint">Click to expand</span>
         </div>
       </div>
+
+      <div class="card" data-signal="earnings" id="card-earnings">
+        <div class="card-header">
+          <span class="card-icon" aria-hidden="true">&#x1F4B0;</span>
+          <h2 class="card-title">AI Revenue Reporting</h2>
+          <span class="card-source">SEC/Earnings</span>
+        </div>
+        <div class="card-body">
+          <div class="card-value" id="val-earnings">--</div>
+          <div class="card-change" id="change-earnings">--</div>
+          <div class="card-sparkline">
+            <canvas id="spark-earnings" height="60"></canvas>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="card-updated" id="updated-earnings">--</span>
+          <span class="card-expand-hint">Click to expand</span>
+        </div>
+      </div>
+
+      <div class="card" data-signal="workforce" id="card-workforce">
+        <div class="card-header">
+          <span class="card-icon" aria-hidden="true">&#x1F465;</span>
+          <h2 class="card-title">Revenue Per Employee</h2>
+          <span class="card-source">SEC 10-K</span>
+        </div>
+        <div class="card-body">
+          <div class="card-value" id="val-workforce">--</div>
+          <div class="card-change" id="change-workforce">--</div>
+          <div class="card-sparkline">
+            <canvas id="spark-workforce" height="60"></canvas>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="card-updated" id="updated-workforce">--</span>
+          <span class="card-expand-hint">Click to expand</span>
+        </div>
+      </div>
     </section>
 
     <section class="expanded-chart-section" id="expanded-section" hidden>
@@ -97,7 +135,8 @@
         Data sources:
         <a href="https://www.bls.gov/" target="_blank" rel="noopener">BLS</a>,
         <a href="https://trends.google.com/" target="_blank" rel="noopener">Google Trends</a>,
-        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>,
+        <a href="https://www.sec.gov/edgar" target="_blank" rel="noopener">SEC EDGAR</a>
       </p>
       <p class="footer-links">
         <a href="METHODOLOGY.md" target="_blank" rel="noopener">Methodology</a>

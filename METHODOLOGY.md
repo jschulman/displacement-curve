@@ -90,12 +90,83 @@ Open source activity is a leading indicator of commercial tooling. Developer act
 
 ---
 
+## Signal 4: AI Revenue Reporting
+
+**Source:** SEC EDGAR, Earnings Transcripts
+**Update Cadence:** Quarterly (following earnings releases)
+
+### Firms Tracked
+
+| Ticker | Firm | Sector |
+|--------|------|--------|
+| ACN | Accenture | IT Consulting |
+| CTSH | Cognizant | IT Consulting |
+| INFY | Infosys | IT Consulting |
+| WIT | Wipro | IT Consulting |
+| EPAM | EPAM Systems | IT Consulting |
+| GLOB | Globant | IT Consulting |
+| IT | Gartner | Advisory |
+| BAH | Booz Allen Hamilton | Government Consulting |
+
+### The Accenture Normalization Problem
+
+Accenture dominates reported "AI revenue" in this cohort and frequently relabels existing digital/cloud services as AI-enabled. This creates a measurement challenge: are firms genuinely growing AI revenue, or relabeling existing work? We address this with the Relabeling Index.
+
+### Relabeling Index
+
+A ratio comparing a firm's reported AI revenue growth rate to its total revenue growth rate. An index of 1.0 means AI revenue grows at the same rate as total revenue (no signal). Values above 1.5 suggest genuine AI-specific growth. Values below 1.0 suggest relabeling may exceed actual new work.
+
+### Metrics
+
+- **AI Revenue ($M):** Total AI-attributed revenue across tracked firms
+- **AI Revenue %:** AI revenue as a percentage of total revenue
+- **Revenue Per Employee ($K):** Quarterly revenue divided by headcount (efficiency proxy)
+- **Relabeling Index:** Ratio of AI rev growth to total rev growth
+
+### Interpretation
+
+Rising AI revenue alongside flat or declining headcount is the core displacement signal. The relabeling index helps distinguish genuine AI-driven efficiency from marketing rebranding.
+
+---
+
+## Signal 5: SEC Workforce Disclosures
+
+**Source:** SEC EDGAR 10-K Annual Reports, Item 1 (Human Capital)
+**Update Cadence:** Quarterly (following 10-K/10-Q filings)
+
+### Firms Tracked
+
+| Ticker | Firm | Sector |
+|--------|------|--------|
+| ACN | Accenture | IT Consulting |
+| CTSH | Cognizant | IT Consulting |
+| INFY | Infosys | IT Consulting |
+| WIT | Wipro | IT Consulting |
+| EPAM | EPAM Systems | IT Consulting |
+| GLOB | Globant | IT Consulting |
+| IT | Gartner | Advisory |
+| BAH | Booz Allen Hamilton | Government Consulting |
+| KFRC | Kforce | Staffing |
+| RHI | Robert Half | Staffing |
+| MAN | ManpowerGroup | Staffing |
+
+### Metrics
+
+- **Headcount:** Total reported employees
+- **YoY Change:** Year-over-year headcount change (%)
+- **Contractor %:** Estimated contractor/contingent workforce as percentage of total
+- **Revenue Per Employee ($K):** Annual revenue divided by headcount
+
+### Interpretation
+
+SEC filings provide the most reliable headcount data. Declining headcount at IT services firms while revenue grows indicates productivity gains (potentially AI-driven). Staffing firms (KFRC, RHI, MAN) serve as a canary — declining placements suggest reduced demand for human labor.
+
+---
+
 ## Planned Signals
 
 The following signals are planned for future phases:
 
-- **AI Revenue Reporting:** Quarterly earnings analysis of major professional services firms
-- **SEC Workforce Disclosures:** Headcount tracking from 10-K/10-Q filings
 - **VC Funding:** Capital flows into AI-native professional services competitors
 - **Job Posting Trends:** Structural shifts in hiring patterns
 - **Regulatory Guidance:** Rate of AI-related regulatory issuance

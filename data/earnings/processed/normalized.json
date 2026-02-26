@@ -1,0 +1,1197 @@
+{
+  "metadata": {
+    "source": "SEC EDGAR / Earnings Transcripts",
+    "last_updated": "2026-02-26",
+    "mock": true,
+    "normalized": true,
+    "relabeling_threshold": 3.0
+  },
+  "firms": {
+    "ACN": {
+      "name": "Accenture",
+      "quarterly": [
+        {
+          "quarter": "2022-Q4",
+          "total_revenue_mm": 15880,
+          "ai_revenue_mm": 474,
+          "headcount": 736418,
+          "revenue_per_employee": 21.6,
+          "ai_pct": 2.98,
+          "relabeling_index": 1.0,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2023-Q1",
+          "total_revenue_mm": 15782,
+          "ai_revenue_mm": 496,
+          "headcount": 737925,
+          "revenue_per_employee": 21.4,
+          "ai_pct": 3.14,
+          "relabeling_index": 0,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2023-Q2",
+          "total_revenue_mm": 15704,
+          "ai_revenue_mm": 529,
+          "headcount": 737376,
+          "revenue_per_employee": 21.3,
+          "ai_pct": 3.37,
+          "relabeling_index": 0,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2023-Q3",
+          "total_revenue_mm": 15728,
+          "ai_revenue_mm": 654,
+          "headcount": 735392,
+          "revenue_per_employee": 21.4,
+          "ai_pct": 4.16,
+          "relabeling_index": 154.62,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2023-Q4",
+          "total_revenue_mm": 15968,
+          "ai_revenue_mm": 763,
+          "headcount": 736403,
+          "revenue_per_employee": 21.7,
+          "ai_pct": 4.78,
+          "relabeling_index": 10.92,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2024-Q1",
+          "total_revenue_mm": 16227,
+          "ai_revenue_mm": 1020,
+          "headcount": 736861,
+          "revenue_per_employee": 22.0,
+          "ai_pct": 6.29,
+          "relabeling_index": 20.77,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2024-Q2",
+          "total_revenue_mm": 15813,
+          "ai_revenue_mm": 1199,
+          "headcount": 735022,
+          "revenue_per_employee": 21.5,
+          "ai_pct": 7.58,
+          "relabeling_index": 0,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2024-Q3",
+          "total_revenue_mm": 15921,
+          "ai_revenue_mm": 1422,
+          "headcount": 735673,
+          "revenue_per_employee": 21.6,
+          "ai_pct": 8.93,
+          "relabeling_index": 27.23,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2024-Q4",
+          "total_revenue_mm": 16526,
+          "ai_revenue_mm": 1670,
+          "headcount": 735752,
+          "revenue_per_employee": 22.5,
+          "ai_pct": 10.11,
+          "relabeling_index": 4.59,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2025-Q1",
+          "total_revenue_mm": 15674,
+          "ai_revenue_mm": 1957,
+          "headcount": 734223,
+          "revenue_per_employee": 21.3,
+          "ai_pct": 12.49,
+          "relabeling_index": 0,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2025-Q2",
+          "total_revenue_mm": 16189,
+          "ai_revenue_mm": 2319,
+          "headcount": 733602,
+          "revenue_per_employee": 22.1,
+          "ai_pct": 14.32,
+          "relabeling_index": 5.63,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2025-Q3",
+          "total_revenue_mm": 16506,
+          "ai_revenue_mm": 2664,
+          "headcount": 732542,
+          "revenue_per_employee": 22.5,
+          "ai_pct": 16.14,
+          "relabeling_index": 7.6,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2025-Q4",
+          "total_revenue_mm": 16370,
+          "ai_revenue_mm": 2997,
+          "headcount": 732815,
+          "revenue_per_employee": 22.3,
+          "ai_pct": 18.31,
+          "relabeling_index": 0,
+          "relabeling_flag": false
+        }
+      ]
+    },
+    "CTSH": {
+      "name": "Cognizant",
+      "quarterly": [
+        {
+          "quarter": "2022-Q4",
+          "total_revenue_mm": 4745,
+          "ai_revenue_mm": 71,
+          "headcount": 351237,
+          "revenue_per_employee": 13.5,
+          "ai_pct": 1.5,
+          "relabeling_index": 1.0,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2023-Q1",
+          "total_revenue_mm": 4760,
+          "ai_revenue_mm": 80,
+          "headcount": 350525,
+          "revenue_per_employee": 13.6,
+          "ai_pct": 1.68,
+          "relabeling_index": 40.1,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2023-Q2",
+          "total_revenue_mm": 4889,
+          "ai_revenue_mm": 100,
+          "headcount": 348490,
+          "revenue_per_employee": 14.0,
+          "ai_pct": 2.05,
+          "relabeling_index": 9.22,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2023-Q3",
+          "total_revenue_mm": 4729,
+          "ai_revenue_mm": 121,
+          "headcount": 348222,
+          "revenue_per_employee": 13.6,
+          "ai_pct": 2.56,
+          "relabeling_index": 0,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2023-Q4",
+          "total_revenue_mm": 4946,
+          "ai_revenue_mm": 155,
+          "headcount": 347078,
+          "revenue_per_employee": 14.3,
+          "ai_pct": 3.13,
+          "relabeling_index": 6.12,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2024-Q1",
+          "total_revenue_mm": 4891,
+          "ai_revenue_mm": 175,
+          "headcount": 346459,
+          "revenue_per_employee": 14.1,
+          "ai_pct": 3.58,
+          "relabeling_index": 0,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2024-Q2",
+          "total_revenue_mm": 4956,
+          "ai_revenue_mm": 224,
+          "headcount": 345736,
+          "revenue_per_employee": 14.3,
+          "ai_pct": 4.52,
+          "relabeling_index": 21.07,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2024-Q3",
+          "total_revenue_mm": 4967,
+          "ai_revenue_mm": 245,
+          "headcount": 344178,
+          "revenue_per_employee": 14.4,
+          "ai_pct": 4.93,
+          "relabeling_index": 42.24,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2024-Q4",
+          "total_revenue_mm": 4920,
+          "ai_revenue_mm": 284,
+          "headcount": 343707,
+          "revenue_per_employee": 14.3,
+          "ai_pct": 5.77,
+          "relabeling_index": 0,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2025-Q1",
+          "total_revenue_mm": 5051,
+          "ai_revenue_mm": 328,
+          "headcount": 342208,
+          "revenue_per_employee": 14.8,
+          "ai_pct": 6.49,
+          "relabeling_index": 5.82,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2025-Q2",
+          "total_revenue_mm": 5026,
+          "ai_revenue_mm": 415,
+          "headcount": 341200,
+          "revenue_per_employee": 14.7,
+          "ai_pct": 8.26,
+          "relabeling_index": 0,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2025-Q3",
+          "total_revenue_mm": 4955,
+          "ai_revenue_mm": 439,
+          "headcount": 340710,
+          "revenue_per_employee": 14.5,
+          "ai_pct": 8.86,
+          "relabeling_index": 0,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2025-Q4",
+          "total_revenue_mm": 5005,
+          "ai_revenue_mm": 504,
+          "headcount": 339438,
+          "revenue_per_employee": 14.7,
+          "ai_pct": 10.07,
+          "relabeling_index": 14.67,
+          "relabeling_flag": true
+        }
+      ]
+    },
+    "INFY": {
+      "name": "Infosys",
+      "quarterly": [
+        {
+          "quarter": "2022-Q4",
+          "total_revenue_mm": 4387,
+          "ai_revenue_mm": 62,
+          "headcount": 345619,
+          "revenue_per_employee": 12.7,
+          "ai_pct": 1.41,
+          "relabeling_index": 1.0,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2023-Q1",
+          "total_revenue_mm": 4548,
+          "ai_revenue_mm": 65,
+          "headcount": 345379,
+          "revenue_per_employee": 13.2,
+          "ai_pct": 1.43,
+          "relabeling_index": 1.32,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2023-Q2",
+          "total_revenue_mm": 4517,
+          "ai_revenue_mm": 67,
+          "headcount": 343913,
+          "revenue_per_employee": 13.1,
+          "ai_pct": 1.48,
+          "relabeling_index": 0,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2023-Q3",
+          "total_revenue_mm": 4605,
+          "ai_revenue_mm": 74,
+          "headcount": 343824,
+          "revenue_per_employee": 13.4,
+          "ai_pct": 1.61,
+          "relabeling_index": 5.36,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2023-Q4",
+          "total_revenue_mm": 4613,
+          "ai_revenue_mm": 122,
+          "headcount": 342067,
+          "revenue_per_employee": 13.5,
+          "ai_pct": 2.64,
+          "relabeling_index": 373.38,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2024-Q1",
+          "total_revenue_mm": 4639,
+          "ai_revenue_mm": 140,
+          "headcount": 341653,
+          "revenue_per_employee": 13.6,
+          "ai_pct": 3.02,
+          "relabeling_index": 26.18,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2024-Q2",
+          "total_revenue_mm": 4762,
+          "ai_revenue_mm": 156,
+          "headcount": 341047,
+          "revenue_per_employee": 14.0,
+          "ai_pct": 3.28,
+          "relabeling_index": 4.31,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2024-Q3",
+          "total_revenue_mm": 4816,
+          "ai_revenue_mm": 206,
+          "headcount": 341193,
+          "revenue_per_employee": 14.1,
+          "ai_pct": 4.28,
+          "relabeling_index": 28.26,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2024-Q4",
+          "total_revenue_mm": 4748,
+          "ai_revenue_mm": 221,
+          "headcount": 338760,
+          "revenue_per_employee": 14.0,
+          "ai_pct": 4.65,
+          "relabeling_index": 0,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2025-Q1",
+          "total_revenue_mm": 4804,
+          "ai_revenue_mm": 284,
+          "headcount": 339054,
+          "revenue_per_employee": 14.2,
+          "ai_pct": 5.91,
+          "relabeling_index": 24.17,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2025-Q2",
+          "total_revenue_mm": 4772,
+          "ai_revenue_mm": 310,
+          "headcount": 338439,
+          "revenue_per_employee": 14.1,
+          "ai_pct": 6.5,
+          "relabeling_index": 0,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2025-Q3",
+          "total_revenue_mm": 4885,
+          "ai_revenue_mm": 364,
+          "headcount": 338223,
+          "revenue_per_employee": 14.4,
+          "ai_pct": 7.45,
+          "relabeling_index": 7.36,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2025-Q4",
+          "total_revenue_mm": 4799,
+          "ai_revenue_mm": 405,
+          "headcount": 337010,
+          "revenue_per_employee": 14.2,
+          "ai_pct": 8.44,
+          "relabeling_index": 0,
+          "relabeling_flag": false
+        }
+      ]
+    },
+    "WIT": {
+      "name": "Wipro",
+      "quarterly": [
+        {
+          "quarter": "2022-Q4",
+          "total_revenue_mm": 2700,
+          "ai_revenue_mm": 20,
+          "headcount": 257550,
+          "revenue_per_employee": 10.5,
+          "ai_pct": 0.74,
+          "relabeling_index": 1.0,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2023-Q1",
+          "total_revenue_mm": 2771,
+          "ai_revenue_mm": 38,
+          "headcount": 256924,
+          "revenue_per_employee": 10.8,
+          "ai_pct": 1.37,
+          "relabeling_index": 34.23,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2023-Q2",
+          "total_revenue_mm": 2782,
+          "ai_revenue_mm": 40,
+          "headcount": 254832,
+          "revenue_per_employee": 10.9,
+          "ai_pct": 1.44,
+          "relabeling_index": 13.26,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2023-Q3",
+          "total_revenue_mm": 2726,
+          "ai_revenue_mm": 42,
+          "headcount": 254945,
+          "revenue_per_employee": 10.7,
+          "ai_pct": 1.54,
+          "relabeling_index": 0,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2023-Q4",
+          "total_revenue_mm": 2792,
+          "ai_revenue_mm": 52,
+          "headcount": 253325,
+          "revenue_per_employee": 11.0,
+          "ai_pct": 1.86,
+          "relabeling_index": 9.83,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2024-Q1",
+          "total_revenue_mm": 2822,
+          "ai_revenue_mm": 70,
+          "headcount": 252544,
+          "revenue_per_employee": 11.2,
+          "ai_pct": 2.48,
+          "relabeling_index": 32.22,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2024-Q2",
+          "total_revenue_mm": 2781,
+          "ai_revenue_mm": 87,
+          "headcount": 252025,
+          "revenue_per_employee": 11.0,
+          "ai_pct": 3.13,
+          "relabeling_index": 0,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2024-Q3",
+          "total_revenue_mm": 2886,
+          "ai_revenue_mm": 99,
+          "headcount": 250249,
+          "revenue_per_employee": 11.5,
+          "ai_pct": 3.43,
+          "relabeling_index": 3.65,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2024-Q4",
+          "total_revenue_mm": 2833,
+          "ai_revenue_mm": 113,
+          "headcount": 248518,
+          "revenue_per_employee": 11.4,
+          "ai_pct": 3.99,
+          "relabeling_index": 0,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2025-Q1",
+          "total_revenue_mm": 2866,
+          "ai_revenue_mm": 126,
+          "headcount": 248108,
+          "revenue_per_employee": 11.6,
+          "ai_pct": 4.4,
+          "relabeling_index": 9.88,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2025-Q2",
+          "total_revenue_mm": 2901,
+          "ai_revenue_mm": 159,
+          "headcount": 246714,
+          "revenue_per_employee": 11.8,
+          "ai_pct": 5.48,
+          "relabeling_index": 21.45,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2025-Q3",
+          "total_revenue_mm": 2885,
+          "ai_revenue_mm": 179,
+          "headcount": 246741,
+          "revenue_per_employee": 11.7,
+          "ai_pct": 6.2,
+          "relabeling_index": 0,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2025-Q4",
+          "total_revenue_mm": 2945,
+          "ai_revenue_mm": 204,
+          "headcount": 245117,
+          "revenue_per_employee": 12.0,
+          "ai_pct": 6.93,
+          "relabeling_index": 6.72,
+          "relabeling_flag": true
+        }
+      ]
+    },
+    "EPAM": {
+      "name": "EPAM Systems",
+      "quarterly": [
+        {
+          "quarter": "2022-Q4",
+          "total_revenue_mm": 884,
+          "ai_revenue_mm": 24,
+          "headcount": 55236,
+          "revenue_per_employee": 16.0,
+          "ai_pct": 2.71,
+          "relabeling_index": 1.0,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2023-Q1",
+          "total_revenue_mm": 911,
+          "ai_revenue_mm": 20,
+          "headcount": 54900,
+          "revenue_per_employee": 16.6,
+          "ai_pct": 2.2,
+          "relabeling_index": 0,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2023-Q2",
+          "total_revenue_mm": 913,
+          "ai_revenue_mm": 27,
+          "headcount": 54747,
+          "revenue_per_employee": 16.7,
+          "ai_pct": 2.96,
+          "relabeling_index": 159.42,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2023-Q3",
+          "total_revenue_mm": 920,
+          "ai_revenue_mm": 31,
+          "headcount": 54141,
+          "revenue_per_employee": 17.0,
+          "ai_pct": 3.37,
+          "relabeling_index": 19.32,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2023-Q4",
+          "total_revenue_mm": 920,
+          "ai_revenue_mm": 38,
+          "headcount": 53860,
+          "revenue_per_employee": 17.1,
+          "ai_pct": 4.13,
+          "relabeling_index": 22.58,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2024-Q1",
+          "total_revenue_mm": 963,
+          "ai_revenue_mm": 46,
+          "headcount": 53682,
+          "revenue_per_employee": 17.9,
+          "ai_pct": 4.78,
+          "relabeling_index": 4.5,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2024-Q2",
+          "total_revenue_mm": 948,
+          "ai_revenue_mm": 59,
+          "headcount": 53554,
+          "revenue_per_employee": 17.7,
+          "ai_pct": 6.22,
+          "relabeling_index": 0,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2024-Q3",
+          "total_revenue_mm": 964,
+          "ai_revenue_mm": 64,
+          "headcount": 53144,
+          "revenue_per_employee": 18.1,
+          "ai_pct": 6.64,
+          "relabeling_index": 5.02,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2024-Q4",
+          "total_revenue_mm": 953,
+          "ai_revenue_mm": 84,
+          "headcount": 53119,
+          "revenue_per_employee": 17.9,
+          "ai_pct": 8.81,
+          "relabeling_index": 0,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2025-Q1",
+          "total_revenue_mm": 1009,
+          "ai_revenue_mm": 99,
+          "headcount": 52677,
+          "revenue_per_employee": 19.2,
+          "ai_pct": 9.81,
+          "relabeling_index": 3.04,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2025-Q2",
+          "total_revenue_mm": 972,
+          "ai_revenue_mm": 113,
+          "headcount": 52002,
+          "revenue_per_employee": 18.7,
+          "ai_pct": 11.63,
+          "relabeling_index": 0,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2025-Q3",
+          "total_revenue_mm": 1005,
+          "ai_revenue_mm": 134,
+          "headcount": 52576,
+          "revenue_per_employee": 19.1,
+          "ai_pct": 13.33,
+          "relabeling_index": 5.47,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2025-Q4",
+          "total_revenue_mm": 1008,
+          "ai_revenue_mm": 152,
+          "headcount": 51931,
+          "revenue_per_employee": 19.4,
+          "ai_pct": 15.08,
+          "relabeling_index": 45.0,
+          "relabeling_flag": true
+        }
+      ]
+    },
+    "GLOB": {
+      "name": "Globant",
+      "quarterly": [
+        {
+          "quarter": "2022-Q4",
+          "total_revenue_mm": 502,
+          "ai_revenue_mm": 14,
+          "headcount": 27086,
+          "revenue_per_employee": 18.5,
+          "ai_pct": 2.79,
+          "relabeling_index": 1.0,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2023-Q1",
+          "total_revenue_mm": 505,
+          "ai_revenue_mm": 18,
+          "headcount": 27145,
+          "revenue_per_employee": 18.6,
+          "ai_pct": 3.56,
+          "relabeling_index": 47.81,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2023-Q2",
+          "total_revenue_mm": 504,
+          "ai_revenue_mm": 16,
+          "headcount": 27268,
+          "revenue_per_employee": 18.5,
+          "ai_pct": 3.17,
+          "relabeling_index": 56.11,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2023-Q3",
+          "total_revenue_mm": 518,
+          "ai_revenue_mm": 21,
+          "headcount": 27427,
+          "revenue_per_employee": 18.9,
+          "ai_pct": 4.05,
+          "relabeling_index": 11.25,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2023-Q4",
+          "total_revenue_mm": 515,
+          "ai_revenue_mm": 27,
+          "headcount": 27322,
+          "revenue_per_employee": 18.8,
+          "ai_pct": 5.24,
+          "relabeling_index": 0,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2024-Q1",
+          "total_revenue_mm": 545,
+          "ai_revenue_mm": 36,
+          "headcount": 27729,
+          "revenue_per_employee": 19.7,
+          "ai_pct": 6.61,
+          "relabeling_index": 5.72,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2024-Q2",
+          "total_revenue_mm": 542,
+          "ai_revenue_mm": 35,
+          "headcount": 27846,
+          "revenue_per_employee": 19.5,
+          "ai_pct": 6.46,
+          "relabeling_index": 5.05,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2024-Q3",
+          "total_revenue_mm": 572,
+          "ai_revenue_mm": 43,
+          "headcount": 27965,
+          "revenue_per_employee": 20.5,
+          "ai_pct": 7.52,
+          "relabeling_index": 4.13,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2024-Q4",
+          "total_revenue_mm": 572,
+          "ai_revenue_mm": 56,
+          "headcount": 28107,
+          "revenue_per_employee": 20.4,
+          "ai_pct": 9.79,
+          "relabeling_index": 30.23,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2025-Q1",
+          "total_revenue_mm": 574,
+          "ai_revenue_mm": 63,
+          "headcount": 28247,
+          "revenue_per_employee": 20.3,
+          "ai_pct": 10.98,
+          "relabeling_index": 35.75,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2025-Q2",
+          "total_revenue_mm": 607,
+          "ai_revenue_mm": 73,
+          "headcount": 28205,
+          "revenue_per_employee": 21.5,
+          "ai_pct": 12.03,
+          "relabeling_index": 2.76,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2025-Q3",
+          "total_revenue_mm": 610,
+          "ai_revenue_mm": 89,
+          "headcount": 28361,
+          "revenue_per_employee": 21.5,
+          "ai_pct": 14.59,
+          "relabeling_index": 44.35,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2025-Q4",
+          "total_revenue_mm": 633,
+          "ai_revenue_mm": 101,
+          "headcount": 28547,
+          "revenue_per_employee": 22.2,
+          "ai_pct": 15.96,
+          "relabeling_index": 3.58,
+          "relabeling_flag": true
+        }
+      ]
+    },
+    "IT": {
+      "name": "Gartner",
+      "quarterly": [
+        {
+          "quarter": "2022-Q4",
+          "total_revenue_mm": 1412,
+          "ai_revenue_mm": 29,
+          "headcount": 18946,
+          "revenue_per_employee": 74.5,
+          "ai_pct": 2.05,
+          "relabeling_index": 1.0,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2023-Q1",
+          "total_revenue_mm": 1379,
+          "ai_revenue_mm": 32,
+          "headcount": 19050,
+          "revenue_per_employee": 72.4,
+          "ai_pct": 2.32,
+          "relabeling_index": 0,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2023-Q2",
+          "total_revenue_mm": 1404,
+          "ai_revenue_mm": 34,
+          "headcount": 19174,
+          "revenue_per_employee": 73.2,
+          "ai_pct": 2.42,
+          "relabeling_index": 3.45,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2023-Q3",
+          "total_revenue_mm": 1468,
+          "ai_revenue_mm": 43,
+          "headcount": 19367,
+          "revenue_per_employee": 75.8,
+          "ai_pct": 2.93,
+          "relabeling_index": 5.81,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2023-Q4",
+          "total_revenue_mm": 1440,
+          "ai_revenue_mm": 55,
+          "headcount": 19255,
+          "revenue_per_employee": 74.8,
+          "ai_pct": 3.82,
+          "relabeling_index": 0,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2024-Q1",
+          "total_revenue_mm": 1473,
+          "ai_revenue_mm": 65,
+          "headcount": 19418,
+          "revenue_per_employee": 75.9,
+          "ai_pct": 4.41,
+          "relabeling_index": 7.93,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2024-Q2",
+          "total_revenue_mm": 1469,
+          "ai_revenue_mm": 76,
+          "headcount": 19641,
+          "revenue_per_employee": 74.8,
+          "ai_pct": 5.17,
+          "relabeling_index": 0,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2024-Q3",
+          "total_revenue_mm": 1471,
+          "ai_revenue_mm": 88,
+          "headcount": 19604,
+          "revenue_per_employee": 75.0,
+          "ai_pct": 5.98,
+          "relabeling_index": 115.97,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2024-Q4",
+          "total_revenue_mm": 1497,
+          "ai_revenue_mm": 104,
+          "headcount": 19820,
+          "revenue_per_employee": 75.5,
+          "ai_pct": 6.95,
+          "relabeling_index": 10.29,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2025-Q1",
+          "total_revenue_mm": 1463,
+          "ai_revenue_mm": 119,
+          "headcount": 19809,
+          "revenue_per_employee": 73.9,
+          "ai_pct": 8.13,
+          "relabeling_index": 0,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2025-Q2",
+          "total_revenue_mm": 1516,
+          "ai_revenue_mm": 138,
+          "headcount": 20019,
+          "revenue_per_employee": 75.7,
+          "ai_pct": 9.1,
+          "relabeling_index": 4.41,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2025-Q3",
+          "total_revenue_mm": 1532,
+          "ai_revenue_mm": 168,
+          "headcount": 20079,
+          "revenue_per_employee": 76.3,
+          "ai_pct": 10.97,
+          "relabeling_index": 20.6,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2025-Q4",
+          "total_revenue_mm": 1505,
+          "ai_revenue_mm": 173,
+          "headcount": 20124,
+          "revenue_per_employee": 74.8,
+          "ai_pct": 11.5,
+          "relabeling_index": 0,
+          "relabeling_flag": false
+        }
+      ]
+    },
+    "BAH": {
+      "name": "Booz Allen Hamilton",
+      "quarterly": [
+        {
+          "quarter": "2022-Q4",
+          "total_revenue_mm": 2438,
+          "ai_revenue_mm": 85,
+          "headcount": 33156,
+          "revenue_per_employee": 73.5,
+          "ai_pct": 3.49,
+          "relabeling_index": 1.0,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2023-Q1",
+          "total_revenue_mm": 2490,
+          "ai_revenue_mm": 118,
+          "headcount": 33080,
+          "revenue_per_employee": 75.3,
+          "ai_pct": 4.74,
+          "relabeling_index": 18.2,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2023-Q2",
+          "total_revenue_mm": 2547,
+          "ai_revenue_mm": 121,
+          "headcount": 33122,
+          "revenue_per_employee": 76.9,
+          "ai_pct": 4.75,
+          "relabeling_index": 1.11,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2023-Q3",
+          "total_revenue_mm": 2622,
+          "ai_revenue_mm": 140,
+          "headcount": 33423,
+          "revenue_per_employee": 78.4,
+          "ai_pct": 5.34,
+          "relabeling_index": 5.33,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2023-Q4",
+          "total_revenue_mm": 2631,
+          "ai_revenue_mm": 162,
+          "headcount": 33596,
+          "revenue_per_employee": 78.3,
+          "ai_pct": 6.16,
+          "relabeling_index": 45.78,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2024-Q1",
+          "total_revenue_mm": 2596,
+          "ai_revenue_mm": 197,
+          "headcount": 33352,
+          "revenue_per_employee": 77.8,
+          "ai_pct": 7.59,
+          "relabeling_index": 0,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2024-Q2",
+          "total_revenue_mm": 2631,
+          "ai_revenue_mm": 240,
+          "headcount": 33690,
+          "revenue_per_employee": 78.1,
+          "ai_pct": 9.12,
+          "relabeling_index": 16.19,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2024-Q3",
+          "total_revenue_mm": 2688,
+          "ai_revenue_mm": 272,
+          "headcount": 33612,
+          "revenue_per_employee": 80.0,
+          "ai_pct": 10.12,
+          "relabeling_index": 6.15,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2024-Q4",
+          "total_revenue_mm": 2739,
+          "ai_revenue_mm": 308,
+          "headcount": 33780,
+          "revenue_per_employee": 81.1,
+          "ai_pct": 11.24,
+          "relabeling_index": 6.98,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2025-Q1",
+          "total_revenue_mm": 2708,
+          "ai_revenue_mm": 349,
+          "headcount": 33845,
+          "revenue_per_employee": 80.0,
+          "ai_pct": 12.89,
+          "relabeling_index": 0,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2025-Q2",
+          "total_revenue_mm": 2777,
+          "ai_revenue_mm": 394,
+          "headcount": 34034,
+          "revenue_per_employee": 81.6,
+          "ai_pct": 14.19,
+          "relabeling_index": 5.06,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2025-Q3",
+          "total_revenue_mm": 2817,
+          "ai_revenue_mm": 455,
+          "headcount": 33977,
+          "revenue_per_employee": 82.9,
+          "ai_pct": 16.15,
+          "relabeling_index": 10.75,
+          "relabeling_flag": true
+        },
+        {
+          "quarter": "2025-Q4",
+          "total_revenue_mm": 2760,
+          "ai_revenue_mm": 497,
+          "headcount": 34108,
+          "revenue_per_employee": 80.9,
+          "ai_pct": 18.01,
+          "relabeling_index": 0,
+          "relabeling_flag": false
+        }
+      ]
+    }
+  },
+  "aggregate": [
+    {
+      "quarter": "2022-Q4",
+      "total_ai_revenue_mm": 779,
+      "avg_ai_pct": 2.2,
+      "avg_relabeling_index": 1.0,
+      "avg_rev_per_employee": 30.1,
+      "firms_flagged_relabeling": 0
+    },
+    {
+      "quarter": "2023-Q1",
+      "total_ai_revenue_mm": 867,
+      "avg_ai_pct": 2.6,
+      "avg_relabeling_index": 17.7,
+      "avg_rev_per_employee": 30.2,
+      "firms_flagged_relabeling": 4
+    },
+    {
+      "quarter": "2023-Q2",
+      "total_ai_revenue_mm": 934,
+      "avg_ai_pct": 2.7,
+      "avg_relabeling_index": 30.3,
+      "avg_rev_per_employee": 30.6,
+      "firms_flagged_relabeling": 5
+    },
+    {
+      "quarter": "2023-Q3",
+      "total_ai_revenue_mm": 1126,
+      "avg_ai_pct": 3.2,
+      "avg_relabeling_index": 25.2,
+      "avg_rev_per_employee": 31.1,
+      "firms_flagged_relabeling": 6
+    },
+    {
+      "quarter": "2023-Q4",
+      "total_ai_revenue_mm": 1374,
+      "avg_ai_pct": 4.0,
+      "avg_relabeling_index": 58.6,
+      "avg_rev_per_employee": 31.2,
+      "firms_flagged_relabeling": 6
+    },
+    {
+      "quarter": "2024-Q1",
+      "total_ai_revenue_mm": 1749,
+      "avg_ai_pct": 4.8,
+      "avg_relabeling_index": 12.2,
+      "avg_rev_per_employee": 31.5,
+      "firms_flagged_relabeling": 6
+    },
+    {
+      "quarter": "2024-Q2",
+      "total_ai_revenue_mm": 2076,
+      "avg_ai_pct": 5.7,
+      "avg_relabeling_index": 5.8,
+      "avg_rev_per_employee": 31.4,
+      "firms_flagged_relabeling": 4
+    },
+    {
+      "quarter": "2024-Q3",
+      "total_ai_revenue_mm": 2439,
+      "avg_ai_pct": 6.5,
+      "avg_relabeling_index": 29.1,
+      "avg_rev_per_employee": 31.9,
+      "firms_flagged_relabeling": 8
+    },
+    {
+      "quarter": "2024-Q4",
+      "total_ai_revenue_mm": 2840,
+      "avg_ai_pct": 7.7,
+      "avg_relabeling_index": 6.5,
+      "avg_rev_per_employee": 32.1,
+      "firms_flagged_relabeling": 4
+    },
+    {
+      "quarter": "2025-Q1",
+      "total_ai_revenue_mm": 3325,
+      "avg_ai_pct": 8.9,
+      "avg_relabeling_index": 9.8,
+      "avg_rev_per_employee": 31.9,
+      "firms_flagged_relabeling": 5
+    },
+    {
+      "quarter": "2025-Q2",
+      "total_ai_revenue_mm": 3921,
+      "avg_ai_pct": 10.2,
+      "avg_relabeling_index": 4.9,
+      "avg_rev_per_employee": 32.5,
+      "firms_flagged_relabeling": 4
+    },
+    {
+      "quarter": "2025-Q3",
+      "total_ai_revenue_mm": 4492,
+      "avg_ai_pct": 11.7,
+      "avg_relabeling_index": 12.0,
+      "avg_rev_per_employee": 32.9,
+      "firms_flagged_relabeling": 6
+    },
+    {
+      "quarter": "2025-Q4",
+      "total_ai_revenue_mm": 5033,
+      "avg_ai_pct": 13.0,
+      "avg_relabeling_index": 8.7,
+      "avg_rev_per_employee": 32.6,
+      "firms_flagged_relabeling": 4
+    }
+  ]
+}

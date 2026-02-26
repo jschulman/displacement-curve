@@ -18,16 +18,20 @@ An open-source dashboard that aggregates publicly available market signals to an
 
 ## Signals Tracked
 
-### Phase 1 (Current)
+### Phase 1
 | Signal | Source | Frequency |
 |--------|--------|-----------|
 | Professional Services Employment | Bureau of Labor Statistics | Monthly |
 | AI Search Interest | Google Trends | Daily |
 | Open Source AI Activity | GitHub API | Daily |
 
+### Phase 2 (Current)
+| Signal | Source | Frequency |
+|--------|--------|-----------|
+| AI Revenue Reporting | SEC EDGAR / Earnings Transcripts | Quarterly |
+| Revenue Per Employee (SEC Workforce) | SEC EDGAR 10-K | Quarterly |
+
 ### Planned
-- AI Revenue Reporting (Earnings Transcripts)
-- SEC Workforce Disclosures
 - VC Funding in AI-Native Competitors
 - Job Posting Trends
 - Regulatory Guidance Cadence

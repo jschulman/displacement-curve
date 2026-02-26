@@ -1,0 +1,317 @@
+{
+  "metadata": {
+    "source": "SEC EDGAR 10-K/10-Q",
+    "last_updated": "2026-02-26",
+    "mock": true
+  },
+  "firms": {
+    "ACN": {
+      "name": "Accenture",
+      "ticker": "ACN",
+      "annual": [
+        {
+          "year": 2022,
+          "total_headcount": 737855,
+          "contractor_pct": 12.8
+        },
+        {
+          "year": 2023,
+          "total_headcount": 732840,
+          "contractor_pct": 13.5
+        },
+        {
+          "year": 2024,
+          "total_headcount": 729965,
+          "contractor_pct": 15.4
+        },
+        {
+          "year": 2025,
+          "total_headcount": 725120,
+          "contractor_pct": 16.7
+        }
+      ]
+    },
+    "CTSH": {
+      "name": "Cognizant",
+      "ticker": "CTSH",
+      "annual": [
+        {
+          "year": 2022,
+          "total_headcount": 350893,
+          "contractor_pct": 10.1
+        },
+        {
+          "year": 2023,
+          "total_headcount": 347978,
+          "contractor_pct": 11.6
+        },
+        {
+          "year": 2024,
+          "total_headcount": 343941,
+          "contractor_pct": 12.9
+        },
+        {
+          "year": 2025,
+          "total_headcount": 340112,
+          "contractor_pct": 14.5
+        }
+      ]
+    },
+    "INFY": {
+      "name": "Infosys",
+      "ticker": "INFY",
+      "annual": [
+        {
+          "year": 2022,
+          "total_headcount": 346138,
+          "contractor_pct": 9.7
+        },
+        {
+          "year": 2023,
+          "total_headcount": 342834,
+          "contractor_pct": 10.8
+        },
+        {
+          "year": 2024,
+          "total_headcount": 340184,
+          "contractor_pct": 12.6
+        },
+        {
+          "year": 2025,
+          "total_headcount": 337134,
+          "contractor_pct": 13.8
+        }
+      ]
+    },
+    "WIT": {
+      "name": "Wipro",
+      "ticker": "WIT",
+      "annual": [
+        {
+          "year": 2022,
+          "total_headcount": 258017,
+          "contractor_pct": 11.0
+        },
+        {
+          "year": 2023,
+          "total_headcount": 252880,
+          "contractor_pct": 12.4
+        },
+        {
+          "year": 2024,
+          "total_headcount": 248972,
+          "contractor_pct": 14.0
+        },
+        {
+          "year": 2025,
+          "total_headcount": 244912,
+          "contractor_pct": 15.0
+        }
+      ]
+    },
+    "EPAM": {
+      "name": "EPAM Systems",
+      "ticker": "EPAM",
+      "annual": [
+        {
+          "year": 2022,
+          "total_headcount": 54995,
+          "contractor_pct": 8.3
+        },
+        {
+          "year": 2023,
+          "total_headcount": 54239,
+          "contractor_pct": 9.7
+        },
+        {
+          "year": 2024,
+          "total_headcount": 53277,
+          "contractor_pct": 11.7
+        },
+        {
+          "year": 2025,
+          "total_headcount": 52114,
+          "contractor_pct": 13.4
+        }
+      ]
+    },
+    "GLOB": {
+      "name": "Globant",
+      "ticker": "GLOB",
+      "annual": [
+        {
+          "year": 2022,
+          "total_headcount": 27194,
+          "contractor_pct": 7.4
+        },
+        {
+          "year": 2023,
+          "total_headcount": 27398,
+          "contractor_pct": 8.2
+        },
+        {
+          "year": 2024,
+          "total_headcount": 27831,
+          "contractor_pct": 9.0
+        },
+        {
+          "year": 2025,
+          "total_headcount": 28432,
+          "contractor_pct": 10.5
+        }
+      ]
+    },
+    "IT": {
+      "name": "Gartner",
+      "ticker": "IT",
+      "annual": [
+        {
+          "year": 2022,
+          "total_headcount": 18940,
+          "contractor_pct": 7.1
+        },
+        {
+          "year": 2023,
+          "total_headcount": 19590,
+          "contractor_pct": 7.4
+        },
+        {
+          "year": 2024,
+          "total_headcount": 19890,
+          "contractor_pct": 8.2
+        },
+        {
+          "year": 2025,
+          "total_headcount": 20090,
+          "contractor_pct": 9.1
+        }
+      ]
+    },
+    "BAH": {
+      "name": "Booz Allen Hamilton",
+      "ticker": "BAH",
+      "annual": [
+        {
+          "year": 2022,
+          "total_headcount": 32837,
+          "contractor_pct": 13.7
+        },
+        {
+          "year": 2023,
+          "total_headcount": 33531,
+          "contractor_pct": 15.3
+        },
+        {
+          "year": 2024,
+          "total_headcount": 33982,
+          "contractor_pct": 16.7
+        },
+        {
+          "year": 2025,
+          "total_headcount": 34214,
+          "contractor_pct": 17.5
+        }
+      ]
+    },
+    "KFRC": {
+      "name": "Kforce",
+      "ticker": "KFRC",
+      "annual": [
+        {
+          "year": 2022,
+          "total_headcount": 8117,
+          "contractor_pct": 21.8
+        },
+        {
+          "year": 2023,
+          "total_headcount": 7759,
+          "contractor_pct": 24.4
+        },
+        {
+          "year": 2024,
+          "total_headcount": 7822,
+          "contractor_pct": 27.2
+        },
+        {
+          "year": 2025,
+          "total_headcount": 7639,
+          "contractor_pct": 29.3
+        }
+      ]
+    },
+    "RHI": {
+      "name": "Robert Half",
+      "ticker": "RHI",
+      "annual": [
+        {
+          "year": 2022,
+          "total_headcount": 14314,
+          "contractor_pct": 18.6
+        },
+        {
+          "year": 2023,
+          "total_headcount": 13661,
+          "contractor_pct": 20.9
+        },
+        {
+          "year": 2024,
+          "total_headcount": 13172,
+          "contractor_pct": 23.2
+        },
+        {
+          "year": 2025,
+          "total_headcount": 12666,
+          "contractor_pct": 24.7
+        }
+      ]
+    },
+    "MAN": {
+      "name": "ManpowerGroup",
+      "ticker": "MAN",
+      "annual": [
+        {
+          "year": 2022,
+          "total_headcount": 28121,
+          "contractor_pct": 19.9
+        },
+        {
+          "year": 2023,
+          "total_headcount": 26990,
+          "contractor_pct": 22.0
+        },
+        {
+          "year": 2024,
+          "total_headcount": 26256,
+          "contractor_pct": 24.4
+        },
+        {
+          "year": 2025,
+          "total_headcount": 25546,
+          "contractor_pct": 26.8
+        }
+      ]
+    }
+  },
+  "aggregate": [
+    {
+      "year": 2022,
+      "total_headcount": 1877421,
+      "avg_contractor_pct": 12.8
+    },
+    {
+      "year": 2023,
+      "total_headcount": 1859700,
+      "avg_contractor_pct": 14.2
+    },
+    {
+      "year": 2024,
+      "total_headcount": 1845292,
+      "avg_contractor_pct": 15.9
+    },
+    {
+      "year": 2025,
+      "total_headcount": 1827979,
+      "avg_contractor_pct": 17.4
+    }
+  ]
+}

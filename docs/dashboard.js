@@ -11,6 +11,8 @@
     employment: "data/bls/processed/employment.json",
     trends: "data/trends/processed/search_interest.json",
     github: "data/github/processed/activity.json",
+    earnings: "data/earnings/processed/revenue.json",
+    workforce: "data/sec/processed/workforce.json",
   };
 
   // ---- Fallback sample data ----
@@ -250,11 +252,41 @@
         { date: "2024-12", new_repos: 515, cumulative_stars: 198000 },
       ],
     },
+    earnings: {
+      metadata: {
+        source: "SEC EDGAR / Earnings Transcripts",
+        last_updated: "2026-02-26",
+        mock: true,
+      },
+      firms: {},
+      aggregate: [
+        { quarter: "2022-Q4", total_ai_revenue_mm: 1250, avg_ai_pct: 2.8, avg_relabeling_index: 1.2, avg_rev_per_employee: 19.5 },
+        { quarter: "2023-Q1", total_ai_revenue_mm: 1380, avg_ai_pct: 3.1, avg_relabeling_index: 1.3, avg_rev_per_employee: 20.1 },
+        { quarter: "2023-Q2", total_ai_revenue_mm: 1520, avg_ai_pct: 3.5, avg_relabeling_index: 1.4, avg_rev_per_employee: 20.8 },
+        { quarter: "2023-Q3", total_ai_revenue_mm: 1800, avg_ai_pct: 4.1, avg_relabeling_index: 1.5, avg_rev_per_employee: 21.5 },
+        { quarter: "2023-Q4", total_ai_revenue_mm: 2100, avg_ai_pct: 4.8, avg_relabeling_index: 1.6, avg_rev_per_employee: 22.0 },
+        { quarter: "2024-Q1", total_ai_revenue_mm: 2450, avg_ai_pct: 5.5, avg_relabeling_index: 1.7, avg_rev_per_employee: 22.8 },
+      ],
+    },
+    workforce: {
+      metadata: {
+        source: "SEC EDGAR 10-K/10-Q",
+        last_updated: "2026-02-26",
+        mock: true,
+      },
+      firms: {},
+      aggregate: [
+        { year: 2022, total_headcount: 1805000, avg_contractor_pct: 11.2 },
+        { year: 2023, total_headcount: 1780000, avg_contractor_pct: 12.5 },
+        { year: 2024, total_headcount: 1750000, avg_contractor_pct: 13.8 },
+        { year: 2025, total_headcount: 1720000, avg_contractor_pct: 14.5 },
+      ],
+    },
   };
 
   // ---- State ----
   let state = {
-    data: { employment: null, trends: null, github: null },
+    data: { employment: null, trends: null, github: null, earnings: null, workforce: null },
     expandedSignal: null,
     sparkCharts: {},
     expandedChart: null,
@@ -479,6 +511,52 @@
     };
   }
 
+  function getEarningsSummary(earningsData) {
+    if (!earningsData || !earningsData.aggregate || earningsData.aggregate.length === 0) return null;
+
+    var sorted = earningsData.aggregate.slice().sort(function(a, b) {
+      return a.quarter.localeCompare(b.quarter);
+    });
+
+    var trailing = last(sorted, 8);
+    var latest = sorted[sorted.length - 1];
+    var prev = sorted.length >= 2 ? sorted[sorted.length - 2] : null;
+    var mom = prev ? latest.total_ai_revenue_mm - prev.total_ai_revenue_mm : 0;
+
+    return {
+      value: latest.total_ai_revenue_mm,
+      formatted: "$" + formatCompact(latest.total_ai_revenue_mm) + "M",
+      mom: mom,
+      momFormatted: (mom >= 0 ? "+" : "") + "$" + Math.abs(mom) + "M QoQ",
+      date: latest.quarter,
+      sparkLabels: trailing.map(function(d) { return d.quarter; }),
+      sparkData: trailing.map(function(d) { return d.total_ai_revenue_mm; }),
+    };
+  }
+
+  function getWorkforceSummary(earningsData) {
+    if (!earningsData || !earningsData.aggregate || earningsData.aggregate.length === 0) return null;
+
+    var sorted = earningsData.aggregate.slice().sort(function(a, b) {
+      return a.quarter.localeCompare(b.quarter);
+    });
+
+    var trailing = last(sorted, 8);
+    var latest = sorted[sorted.length - 1];
+    var prev = sorted.length >= 2 ? sorted[sorted.length - 2] : null;
+    var mom = prev ? (latest.avg_rev_per_employee - prev.avg_rev_per_employee) : 0;
+
+    return {
+      value: latest.avg_rev_per_employee,
+      formatted: "$" + latest.avg_rev_per_employee.toFixed(1) + "K",
+      mom: mom,
+      momFormatted: (mom >= 0 ? "+" : "") + "$" + Math.abs(mom).toFixed(1) + "K QoQ",
+      date: latest.quarter,
+      sparkLabels: trailing.map(function(d) { return d.quarter; }),
+      sparkData: trailing.map(function(d) { return d.avg_rev_per_employee; }),
+    };
+  }
+
   // ---- Card Rendering ----
 
   function renderCard(signal, summary) {
@@ -505,6 +583,8 @@
     if (signal === "employment") sparkColor = "#58a6ff";
     if (signal === "trends") sparkColor = "#d2a8ff";
     if (signal === "github") sparkColor = "#3fb950";
+    if (signal === "earnings") sparkColor = "#f0883e";
+    if (signal === "workforce") sparkColor = "#f85149";
 
     createSparkline(
       "spark-" + signal,
@@ -748,6 +828,189 @@
     });
   }
 
+  function renderExpandedEarnings(earningsData) {
+    var ctx = document.getElementById("expanded-chart");
+    if (state.expandedChart) state.expandedChart.destroy();
+
+    var firms = earningsData.firms || {};
+    var firmKeys = Object.keys(firms);
+    var colors = ["#58a6ff", "#3fb950", "#d2a8ff", "#f0883e", "#f85149", "#79c0ff", "#d29922", "#a5d6ff"];
+    var datasets = [];
+    var allQuarters = {};
+
+    firmKeys.forEach(function(key, i) {
+      var firm = firms[key];
+      var quarterly = (firm.quarterly || []).slice().sort(function(a, b) {
+        return a.quarter.localeCompare(b.quarter);
+      });
+      quarterly.forEach(function(q) { allQuarters[q.quarter] = true; });
+      var dataMap = {};
+      quarterly.forEach(function(q) { dataMap[q.quarter] = q.ai_revenue_mm; });
+
+      datasets.push({
+        label: firm.name || key,
+        data: [], // will be filled after we know all quarters
+        borderColor: colors[i % colors.length],
+        backgroundColor: "transparent",
+        borderWidth: 2,
+        pointRadius: 2,
+        tension: 0.3,
+        spanGaps: true,
+        _dataMap: dataMap,
+      });
+    });
+
+    var quarters = Object.keys(allQuarters).sort();
+    datasets.forEach(function(ds) {
+      ds.data = quarters.map(function(q) { return ds._dataMap[q] || null; });
+      delete ds._dataMap;
+    });
+
+    state.expandedChart = new Chart(ctx, {
+      type: "line",
+      data: { labels: quarters, datasets: datasets },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: true,
+            position: "top",
+            labels: { usePointStyle: true, pointStyle: "line", padding: 16 },
+          },
+          tooltip: {
+            mode: "index",
+            intersect: false,
+            callbacks: {
+              label: function(ctx) {
+                return ctx.dataset.label + ": $" + (ctx.parsed.y != null ? ctx.parsed.y : "--") + "M";
+              },
+            },
+          },
+        },
+        scales: {
+          x: {
+            title: { display: true, text: "Quarter" },
+            grid: { color: "rgba(48, 54, 61, 0.5)" },
+          },
+          y: {
+            title: { display: true, text: "AI Revenue ($M)" },
+            grid: { color: "rgba(48, 54, 61, 0.5)" },
+          },
+        },
+        interaction: { mode: "index", intersect: false },
+      },
+    });
+  }
+
+  function renderExpandedWorkforce(earningsData, workforceData) {
+    var ctx = document.getElementById("expanded-chart");
+    if (state.expandedChart) state.expandedChart.destroy();
+
+    // Headcount bars from workforce aggregate (annual)
+    var wfAgg = (workforceData && workforceData.aggregate) || [];
+    var wfSorted = wfAgg.slice().sort(function(a, b) { return a.year - b.year; });
+    var headcountLabels = wfSorted.map(function(d) { return String(d.year); });
+    var headcountData = wfSorted.map(function(d) { return d.total_headcount; });
+
+    // Rev per employee line from earnings aggregate (quarterly)
+    var eAgg = (earningsData && earningsData.aggregate) || [];
+    var eSorted = eAgg.slice().sort(function(a, b) { return a.quarter.localeCompare(b.quarter); });
+    var rpeLabels = eSorted.map(function(d) { return d.quarter; });
+    var rpeData = eSorted.map(function(d) { return d.avg_rev_per_employee; });
+
+    // Merge all labels (years + quarters) in order
+    var allLabels = [];
+    var labelSet = {};
+    headcountLabels.concat(rpeLabels).forEach(function(l) {
+      if (!labelSet[l]) { allLabels.push(l); labelSet[l] = true; }
+    });
+    allLabels.sort();
+
+    // Map data to merged labels
+    var hcMap = {};
+    wfSorted.forEach(function(d) { hcMap[String(d.year)] = d.total_headcount; });
+    var rpeMap = {};
+    eSorted.forEach(function(d) { rpeMap[d.quarter] = d.avg_rev_per_employee; });
+
+    state.expandedChart = new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: allLabels,
+        datasets: [
+          {
+            type: "bar",
+            label: "Headcount",
+            data: allLabels.map(function(l) { return hcMap[l] || null; }),
+            backgroundColor: "rgba(88, 166, 255, 0.4)",
+            borderColor: "#58a6ff",
+            borderWidth: 1,
+            yAxisID: "y",
+            order: 2,
+          },
+          {
+            type: "line",
+            label: "Rev/Employee ($K)",
+            data: allLabels.map(function(l) { return rpeMap[l] || null; }),
+            borderColor: "#f85149",
+            backgroundColor: "transparent",
+            borderWidth: 2,
+            pointRadius: 3,
+            tension: 0.3,
+            yAxisID: "y1",
+            order: 1,
+            spanGaps: true,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: true,
+            position: "top",
+            labels: { usePointStyle: true, padding: 16 },
+          },
+          tooltip: {
+            mode: "index",
+            intersect: false,
+            callbacks: {
+              label: function(ctx) {
+                if (ctx.dataset.label === "Headcount") {
+                  return ctx.dataset.label + ": " + formatNumber(ctx.parsed.y);
+                }
+                return ctx.dataset.label + ": $" + (ctx.parsed.y != null ? ctx.parsed.y.toFixed(1) : "--") + "K";
+              },
+            },
+          },
+        },
+        scales: {
+          x: {
+            title: { display: true, text: "Period" },
+            grid: { color: "rgba(48, 54, 61, 0.5)" },
+          },
+          y: {
+            type: "linear",
+            position: "left",
+            title: { display: true, text: "Headcount" },
+            grid: { color: "rgba(48, 54, 61, 0.5)" },
+            ticks: {
+              callback: function(value) { return formatCompact(value); },
+            },
+          },
+          y1: {
+            type: "linear",
+            position: "right",
+            title: { display: true, text: "Rev/Employee ($K)" },
+            grid: { drawOnChartArea: false },
+          },
+        },
+        interaction: { mode: "index", intersect: false },
+      },
+    });
+  }
+
   // ---- Expand / Collapse ----
 
   function expandSignal(signal) {
@@ -776,6 +1039,8 @@
       employment: "Professional Services Employment (BLS)",
       trends: "AI Search Interest (Google Trends)",
       github: "Open Source AI Activity (GitHub)",
+      earnings: "AI Revenue Reporting (SEC/Earnings)",
+      workforce: "Revenue Per Employee (SEC 10-K)",
     };
     titleEl.textContent = titles[signal] || signal;
 
@@ -786,6 +1051,8 @@
     if (signal === "employment") renderExpandedEmployment(data);
     else if (signal === "trends") renderExpandedTrends(data);
     else if (signal === "github") renderExpandedGithub(data);
+    else if (signal === "earnings") renderExpandedEarnings(data);
+    else if (signal === "workforce") renderExpandedWorkforce(state.data.earnings, state.data.workforce);
 
     // Scroll to expanded section
     section.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -828,12 +1095,22 @@
         console.warn("GitHub data fetch failed, using fallback.");
         return FALLBACK.github;
       }),
+      fetchJSON(DATA_PATHS.earnings).catch(function () {
+        console.warn("Earnings data fetch failed, using fallback.");
+        return FALLBACK.earnings;
+      }),
+      fetchJSON(DATA_PATHS.workforce).catch(function () {
+        console.warn("Workforce data fetch failed, using fallback.");
+        return FALLBACK.workforce;
+      }),
     ];
 
     Promise.all(promises).then(function (results) {
       state.data.employment = results[0];
       state.data.trends = results[1];
       state.data.github = results[2];
+      state.data.earnings = results[3];
+      state.data.workforce = results[4];
       render();
     });
   }
@@ -843,7 +1120,7 @@
   function render() {
     // Update last-updated from metadata
     var dates = [];
-    ["employment", "trends", "github"].forEach(function (key) {
+    ["employment", "trends", "github", "earnings", "workforce"].forEach(function (key) {
       var d = state.data[key];
       if (d && d.metadata && d.metadata.last_updated) {
         dates.push(d.metadata.last_updated);
@@ -865,6 +1142,12 @@
 
     var ghSummary = getGithubSummary(state.data.github);
     renderCard("github", ghSummary);
+
+    var earningsSummary = getEarningsSummary(state.data.earnings);
+    renderCard("earnings", earningsSummary);
+
+    var workforceSummary = getWorkforceSummary(state.data.earnings);
+    renderCard("workforce", workforceSummary);
   }
 
   // ---- Event Binding ----
