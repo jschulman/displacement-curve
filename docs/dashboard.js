@@ -415,7 +415,7 @@
     // Build date-indexed composite
     var dateMap = {};
     catKeys.forEach(function (key) {
-      var catData = categories[key].data || categories[key];
+      var catData = categories[key].composite || categories[key].data || categories[key];
       if (Array.isArray(catData)) {
         catData.forEach(function (point) {
           if (!dateMap[point.date]) {
@@ -454,25 +454,28 @@
   }
 
   function getGithubSummary(ghData) {
-    if (!ghData || !ghData.monthly || ghData.monthly.length === 0) return null;
+    var monthly = ghData && (ghData.monthly || ghData.aggregate);
+    if (!monthly || monthly.length === 0) return null;
 
-    var sorted = ghData.monthly.slice().sort(function (a, b) {
+    var sorted = monthly.slice().sort(function (a, b) {
       return a.date.localeCompare(b.date);
     });
 
     var trailing12 = last(sorted, 12);
     var latest = sorted[sorted.length - 1];
     var prev = sorted.length >= 2 ? sorted[sorted.length - 2] : null;
-    var momRepos = prev ? latest.new_repos - prev.new_repos : 0;
+    var reposKey = latest.new_repos != null ? "new_repos" : "total_new_repos";
+    var starsKey = latest.cumulative_stars != null ? "cumulative_stars" : "total_stars";
+    var momRepos = prev ? latest[reposKey] - prev[reposKey] : 0;
 
     return {
-      value: latest.cumulative_stars,
-      formatted: formatStars(latest.cumulative_stars) + " \u2605",
+      value: latest[starsKey],
+      formatted: formatStars(latest[starsKey]) + " \u2605",
       mom: momRepos,
       momFormatted: (momRepos >= 0 ? "+" : "") + momRepos + " repos",
       date: latest.date,
       sparkLabels: trailing12.map(function (d) { return d.date; }),
-      sparkData: trailing12.map(function (d) { return d.cumulative_stars; }),
+      sparkData: trailing12.map(function (d) { return d[starsKey]; }),
     };
   }
 
@@ -598,7 +601,7 @@
     // Collect all dates
     var allDates = {};
     catKeys.forEach(function (key) {
-      var catData = categories[key].data || categories[key];
+      var catData = categories[key].composite || categories[key].data || categories[key];
       if (Array.isArray(catData)) {
         catData.forEach(function (d) { allDates[d.date] = true; });
       }
@@ -606,7 +609,7 @@
     var dates = Object.keys(allDates).sort();
 
     catKeys.forEach(function (key, i) {
-      var catData = categories[key].data || categories[key];
+      var catData = categories[key].composite || categories[key].data || categories[key];
       var dataMap = {};
       if (Array.isArray(catData)) {
         catData.forEach(function (d) { dataMap[d.date] = d.value; });
@@ -646,7 +649,6 @@
             title: { display: true, text: "Search Interest Index" },
             grid: { color: "rgba(48, 54, 61, 0.5)" },
             min: 0,
-            max: 100,
           },
         },
         interaction: { mode: "index", intersect: false },
@@ -658,13 +660,16 @@
     var ctx = document.getElementById("expanded-chart");
     if (state.expandedChart) state.expandedChart.destroy();
 
-    var sorted = (ghData.monthly || []).slice().sort(function (a, b) {
+    var monthly = ghData.monthly || ghData.aggregate || [];
+    var sorted = monthly.slice().sort(function (a, b) {
       return a.date.localeCompare(b.date);
     });
 
+    var reposKey = sorted.length > 0 && sorted[0].new_repos != null ? "new_repos" : "total_new_repos";
+    var starsKey = sorted.length > 0 && sorted[0].cumulative_stars != null ? "cumulative_stars" : "total_stars";
     var labels = sorted.map(function (d) { return d.date; });
-    var newRepos = sorted.map(function (d) { return d.new_repos; });
-    var cumStars = sorted.map(function (d) { return d.cumulative_stars; });
+    var newRepos = sorted.map(function (d) { return d[reposKey]; });
+    var cumStars = sorted.map(function (d) { return d[starsKey]; });
 
     state.expandedChart = new Chart(ctx, {
       type: "bar",
