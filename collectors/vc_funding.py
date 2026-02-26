@@ -60,7 +60,7 @@ AI_KEYWORDS = [
 MAX_RETRIES = 3
 RETRY_DELAY = 5  # seconds
 
-USER_AGENT = "DisplacementCurve/1.0 (research@example.com)"
+USER_AGENT = "DisplacementCurve/1.0 (secedgar@1to3.co)"
 
 
 # ---------------------------------------------------------------------------

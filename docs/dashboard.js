@@ -685,20 +685,44 @@
       return a.quarter.localeCompare(b.quarter);
     });
 
-    var trailing = last(sorted, 8);
-    var latest = sorted[sorted.length - 1];
-    var prev = sorted.length >= 2 ? sorted[sorted.length - 2] : null;
-    var mom = prev ? latest.total_ai_revenue_mm - prev.total_ai_revenue_mm : 0;
+    // Filter to entries with revenue per employee data (real data may lack ai_revenue)
+    var withData = sorted.filter(function(d) {
+      return d.avg_rev_per_employee != null || d.total_ai_revenue_mm != null;
+    });
+    if (withData.length === 0) return null;
 
-    return {
-      value: latest.total_ai_revenue_mm,
-      formatted: "$" + formatCompact(latest.total_ai_revenue_mm) + "M",
-      mom: mom,
-      momFormatted: (mom >= 0 ? "+" : "") + "$" + Math.abs(mom) + "M QoQ",
-      date: latest.quarter,
-      sparkLabels: trailing.map(function(d) { return d.quarter; }),
-      sparkData: trailing.map(function(d) { return d.total_ai_revenue_mm; }),
-    };
+    var trailing = last(withData, 8);
+    var latest = withData[withData.length - 1];
+    var prev = withData.length >= 2 ? withData[withData.length - 2] : null;
+
+    // Prefer total_ai_revenue_mm, fall back to avg_rev_per_employee for display
+    var val = latest.total_ai_revenue_mm;
+    if (val != null) {
+      var mom = prev && prev.total_ai_revenue_mm != null ? val - prev.total_ai_revenue_mm : 0;
+      return {
+        value: val,
+        formatted: "$" + formatCompact(val) + "M",
+        mom: mom,
+        momFormatted: (mom >= 0 ? "+" : "") + "$" + Math.abs(mom) + "M QoQ",
+        date: latest.quarter,
+        sparkLabels: trailing.map(function(d) { return d.quarter; }),
+        sparkData: trailing.map(function(d) { return d.total_ai_revenue_mm || 0; }),
+      };
+    } else {
+      // Fall back to rev per employee as the card metric
+      var rpe = latest.avg_rev_per_employee || 0;
+      var prevRpe = prev && prev.avg_rev_per_employee != null ? prev.avg_rev_per_employee : rpe;
+      var mom = rpe - prevRpe;
+      return {
+        value: rpe,
+        formatted: "$" + rpe.toFixed(0) + "K/emp",
+        mom: mom,
+        momFormatted: (mom >= 0 ? "+" : "") + "$" + Math.abs(mom).toFixed(1) + "K QoQ",
+        date: latest.quarter,
+        sparkLabels: trailing.map(function(d) { return d.quarter; }),
+        sparkData: trailing.map(function(d) { return d.avg_rev_per_employee || 0; }),
+      };
+    }
   }
 
   function getWorkforceSummary(earningsData) {
@@ -708,9 +732,13 @@
       return a.quarter.localeCompare(b.quarter);
     });
 
-    var trailing = last(sorted, 8);
-    var latest = sorted[sorted.length - 1];
-    var prev = sorted.length >= 2 ? sorted[sorted.length - 2] : null;
+    // Filter to entries with rev per employee data
+    var withData = sorted.filter(function(d) { return d.avg_rev_per_employee != null; });
+    if (withData.length === 0) return null;
+
+    var trailing = last(withData, 8);
+    var latest = withData[withData.length - 1];
+    var prev = withData.length >= 2 ? withData[withData.length - 2] : null;
     var mom = prev ? (latest.avg_rev_per_employee - prev.avg_rev_per_employee) : 0;
 
     return {
@@ -720,7 +748,7 @@
       momFormatted: (mom >= 0 ? "+" : "") + "$" + Math.abs(mom).toFixed(1) + "K QoQ",
       date: latest.quarter,
       sparkLabels: trailing.map(function(d) { return d.quarter; }),
-      sparkData: trailing.map(function(d) { return d.avg_rev_per_employee; }),
+      sparkData: trailing.map(function(d) { return d.avg_rev_per_employee || 0; }),
     };
   }
 
@@ -1104,7 +1132,7 @@
 
     valEl.textContent = summary.formatted;
     var chg = changeArrow(summary.mom);
-    changeEl.textContent = chg.arrow + " " + summary.momFormatted + " MoM";
+    changeEl.textContent = chg.arrow + " " + summary.momFormatted;
     changeEl.className = "card-change " + chg.cls;
     updatedEl.textContent = "Updated " + formatDate(summary.date);
 

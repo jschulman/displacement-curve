@@ -2,7 +2,7 @@
   "metadata": {
     "source": "Federal Regulators RSS",
     "last_updated": "2026-02-26",
-    "mock": true
+    "mock": false
   },
   "regulators": {
     "fed": {
@@ -10,81 +10,81 @@
       "quarterly": [
         {
           "quarter": "2022-Q4",
-          "document_count": 1,
+          "document_count": 0,
           "enforcement_count": 0,
-          "guidance_count": 1
+          "guidance_count": 0
         },
         {
           "quarter": "2023-Q1",
-          "document_count": 2,
+          "document_count": 0,
           "enforcement_count": 0,
           "guidance_count": 0
         },
         {
           "quarter": "2023-Q2",
-          "document_count": 1,
+          "document_count": 0,
           "enforcement_count": 0,
-          "guidance_count": 1
+          "guidance_count": 0
         },
         {
           "quarter": "2023-Q3",
-          "document_count": 2,
-          "enforcement_count": 1,
-          "guidance_count": 1
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         },
         {
           "quarter": "2023-Q4",
-          "document_count": 1,
+          "document_count": 0,
           "enforcement_count": 0,
-          "guidance_count": 1
+          "guidance_count": 0
         },
         {
           "quarter": "2024-Q1",
-          "document_count": 3,
+          "document_count": 0,
           "enforcement_count": 0,
-          "guidance_count": 2
+          "guidance_count": 0
         },
         {
           "quarter": "2024-Q2",
-          "document_count": 2,
+          "document_count": 0,
           "enforcement_count": 0,
-          "guidance_count": 2
+          "guidance_count": 0
         },
         {
           "quarter": "2024-Q3",
-          "document_count": 3,
-          "enforcement_count": 1,
-          "guidance_count": 2
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         },
         {
           "quarter": "2024-Q4",
-          "document_count": 4,
-          "enforcement_count": 1,
-          "guidance_count": 3
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         },
         {
           "quarter": "2025-Q1",
-          "document_count": 6,
-          "enforcement_count": 1,
-          "guidance_count": 4
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         },
         {
           "quarter": "2025-Q2",
-          "document_count": 6,
-          "enforcement_count": 1,
-          "guidance_count": 5
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         },
         {
           "quarter": "2025-Q3",
-          "document_count": 7,
-          "enforcement_count": 2,
-          "guidance_count": 5
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         },
         {
           "quarter": "2025-Q4",
-          "document_count": 8,
-          "enforcement_count": 2,
-          "guidance_count": 6
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         }
       ]
     },
@@ -93,81 +93,81 @@
       "quarterly": [
         {
           "quarter": "2022-Q4",
-          "document_count": 1,
+          "document_count": 0,
           "enforcement_count": 0,
-          "guidance_count": 1
+          "guidance_count": 0
         },
         {
           "quarter": "2023-Q1",
-          "document_count": 1,
+          "document_count": 0,
           "enforcement_count": 0,
-          "guidance_count": 1
+          "guidance_count": 0
         },
         {
           "quarter": "2023-Q2",
-          "document_count": 1,
+          "document_count": 0,
           "enforcement_count": 0,
-          "guidance_count": 1
+          "guidance_count": 0
         },
         {
           "quarter": "2023-Q3",
-          "document_count": 2,
+          "document_count": 0,
           "enforcement_count": 0,
-          "guidance_count": 2
+          "guidance_count": 0
         },
         {
           "quarter": "2023-Q4",
-          "document_count": 2,
+          "document_count": 0,
           "enforcement_count": 0,
-          "guidance_count": 1
+          "guidance_count": 0
         },
         {
           "quarter": "2024-Q1",
-          "document_count": 2,
+          "document_count": 0,
           "enforcement_count": 0,
-          "guidance_count": 2
+          "guidance_count": 0
         },
         {
           "quarter": "2024-Q2",
-          "document_count": 3,
-          "enforcement_count": 1,
-          "guidance_count": 2
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         },
         {
           "quarter": "2024-Q3",
-          "document_count": 3,
-          "enforcement_count": 1,
-          "guidance_count": 2
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         },
         {
           "quarter": "2024-Q4",
-          "document_count": 4,
-          "enforcement_count": 1,
-          "guidance_count": 3
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         },
         {
           "quarter": "2025-Q1",
-          "document_count": 6,
-          "enforcement_count": 2,
-          "guidance_count": 4
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         },
         {
           "quarter": "2025-Q2",
-          "document_count": 6,
-          "enforcement_count": 3,
-          "guidance_count": 3
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         },
         {
           "quarter": "2025-Q3",
-          "document_count": 7,
-          "enforcement_count": 2,
-          "guidance_count": 5
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         },
         {
           "quarter": "2025-Q4",
-          "document_count": 7,
-          "enforcement_count": 3,
-          "guidance_count": 4
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         }
       ]
     },
@@ -206,51 +206,51 @@
         },
         {
           "quarter": "2024-Q1",
-          "document_count": 2,
+          "document_count": 0,
           "enforcement_count": 0,
           "guidance_count": 0
         },
         {
           "quarter": "2024-Q2",
-          "document_count": 1,
+          "document_count": 0,
           "enforcement_count": 0,
-          "guidance_count": 1
+          "guidance_count": 0
         },
         {
           "quarter": "2024-Q3",
-          "document_count": 2,
+          "document_count": 0,
           "enforcement_count": 0,
-          "guidance_count": 1
+          "guidance_count": 0
         },
         {
           "quarter": "2024-Q4",
-          "document_count": 3,
-          "enforcement_count": 1,
-          "guidance_count": 2
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         },
         {
           "quarter": "2025-Q1",
-          "document_count": 2,
+          "document_count": 0,
           "enforcement_count": 0,
-          "guidance_count": 2
+          "guidance_count": 0
         },
         {
           "quarter": "2025-Q2",
-          "document_count": 4,
-          "enforcement_count": 1,
-          "guidance_count": 3
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         },
         {
           "quarter": "2025-Q3",
-          "document_count": 5,
-          "enforcement_count": 1,
-          "guidance_count": 4
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         },
         {
           "quarter": "2025-Q4",
-          "document_count": 5,
-          "enforcement_count": 1,
-          "guidance_count": 4
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         }
       ]
     },
@@ -259,81 +259,81 @@
       "quarterly": [
         {
           "quarter": "2022-Q4",
-          "document_count": 1,
+          "document_count": 0,
           "enforcement_count": 0,
-          "guidance_count": 1
+          "guidance_count": 0
         },
         {
           "quarter": "2023-Q1",
-          "document_count": 1,
+          "document_count": 0,
           "enforcement_count": 0,
-          "guidance_count": 1
+          "guidance_count": 0
         },
         {
           "quarter": "2023-Q2",
-          "document_count": 1,
+          "document_count": 0,
           "enforcement_count": 0,
-          "guidance_count": 1
+          "guidance_count": 0
         },
         {
           "quarter": "2023-Q3",
-          "document_count": 2,
+          "document_count": 0,
           "enforcement_count": 0,
-          "guidance_count": 2
+          "guidance_count": 0
         },
         {
           "quarter": "2023-Q4",
-          "document_count": 1,
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
+        },
+        {
+          "quarter": "2024-Q1",
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
+        },
+        {
+          "quarter": "2024-Q2",
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
+        },
+        {
+          "quarter": "2024-Q3",
+          "document_count": 3,
           "enforcement_count": 0,
           "guidance_count": 1
         },
         {
-          "quarter": "2024-Q1",
-          "document_count": 2,
-          "enforcement_count": 0,
-          "guidance_count": 2
-        },
-        {
-          "quarter": "2024-Q2",
+          "quarter": "2024-Q4",
           "document_count": 3,
           "enforcement_count": 0,
-          "guidance_count": 3
-        },
-        {
-          "quarter": "2024-Q3",
-          "document_count": 2,
-          "enforcement_count": 0,
-          "guidance_count": 2
-        },
-        {
-          "quarter": "2024-Q4",
-          "document_count": 4,
-          "enforcement_count": 0,
-          "guidance_count": 2
+          "guidance_count": 0
         },
         {
           "quarter": "2025-Q1",
-          "document_count": 4,
-          "enforcement_count": 1,
-          "guidance_count": 2
+          "document_count": 2,
+          "enforcement_count": 0,
+          "guidance_count": 0
         },
         {
           "quarter": "2025-Q2",
-          "document_count": 5,
-          "enforcement_count": 1,
-          "guidance_count": 2
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         },
         {
           "quarter": "2025-Q3",
-          "document_count": 6,
-          "enforcement_count": 2,
-          "guidance_count": 4
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         },
         {
           "quarter": "2025-Q4",
-          "document_count": 6,
-          "enforcement_count": 2,
-          "guidance_count": 4
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         }
       ]
     },
@@ -342,81 +342,81 @@
       "quarterly": [
         {
           "quarter": "2022-Q4",
-          "document_count": 2,
+          "document_count": 0,
           "enforcement_count": 0,
-          "guidance_count": 2
+          "guidance_count": 0
         },
         {
           "quarter": "2023-Q1",
-          "document_count": 2,
+          "document_count": 0,
           "enforcement_count": 0,
-          "guidance_count": 2
+          "guidance_count": 0
         },
         {
           "quarter": "2023-Q2",
-          "document_count": 2,
+          "document_count": 0,
           "enforcement_count": 0,
-          "guidance_count": 2
+          "guidance_count": 0
         },
         {
           "quarter": "2023-Q3",
-          "document_count": 3,
-          "enforcement_count": 1,
-          "guidance_count": 2
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         },
         {
           "quarter": "2023-Q4",
-          "document_count": 4,
-          "enforcement_count": 1,
-          "guidance_count": 3
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         },
         {
           "quarter": "2024-Q1",
-          "document_count": 4,
-          "enforcement_count": 1,
-          "guidance_count": 3
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         },
         {
           "quarter": "2024-Q2",
-          "document_count": 4,
-          "enforcement_count": 1,
-          "guidance_count": 3
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         },
         {
           "quarter": "2024-Q3",
-          "document_count": 6,
-          "enforcement_count": 2,
-          "guidance_count": 4
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         },
         {
           "quarter": "2024-Q4",
-          "document_count": 6,
-          "enforcement_count": 2,
-          "guidance_count": 4
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         },
         {
           "quarter": "2025-Q1",
-          "document_count": 7,
-          "enforcement_count": 2,
-          "guidance_count": 5
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         },
         {
           "quarter": "2025-Q2",
-          "document_count": 9,
-          "enforcement_count": 3,
-          "guidance_count": 6
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         },
         {
           "quarter": "2025-Q3",
-          "document_count": 10,
-          "enforcement_count": 4,
-          "guidance_count": 6
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         },
         {
           "quarter": "2025-Q4",
-          "document_count": 11,
-          "enforcement_count": 4,
-          "guidance_count": 7
+          "document_count": 1,
+          "enforcement_count": 0,
+          "guidance_count": 0
         }
       ]
     },
@@ -425,81 +425,81 @@
       "quarterly": [
         {
           "quarter": "2022-Q4",
-          "document_count": 2,
+          "document_count": 0,
           "enforcement_count": 0,
-          "guidance_count": 1
+          "guidance_count": 0
         },
         {
           "quarter": "2023-Q1",
-          "document_count": 1,
+          "document_count": 0,
           "enforcement_count": 0,
-          "guidance_count": 1
+          "guidance_count": 0
         },
         {
           "quarter": "2023-Q2",
-          "document_count": 2,
+          "document_count": 0,
           "enforcement_count": 0,
-          "guidance_count": 1
+          "guidance_count": 0
         },
         {
           "quarter": "2023-Q3",
-          "document_count": 2,
+          "document_count": 0,
           "enforcement_count": 0,
-          "guidance_count": 1
+          "guidance_count": 0
         },
         {
           "quarter": "2023-Q4",
-          "document_count": 3,
+          "document_count": 0,
           "enforcement_count": 0,
-          "guidance_count": 2
+          "guidance_count": 0
         },
         {
           "quarter": "2024-Q1",
-          "document_count": 4,
-          "enforcement_count": 1,
-          "guidance_count": 3
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         },
         {
           "quarter": "2024-Q2",
-          "document_count": 4,
-          "enforcement_count": 1,
-          "guidance_count": 3
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         },
         {
           "quarter": "2024-Q3",
-          "document_count": 5,
-          "enforcement_count": 1,
-          "guidance_count": 4
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         },
         {
           "quarter": "2024-Q4",
-          "document_count": 7,
-          "enforcement_count": 2,
-          "guidance_count": 5
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         },
         {
           "quarter": "2025-Q1",
-          "document_count": 8,
-          "enforcement_count": 2,
-          "guidance_count": 6
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         },
         {
           "quarter": "2025-Q2",
-          "document_count": 10,
-          "enforcement_count": 2,
-          "guidance_count": 6
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         },
         {
           "quarter": "2025-Q3",
-          "document_count": 11,
-          "enforcement_count": 3,
-          "guidance_count": 8
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         },
         {
           "quarter": "2025-Q4",
-          "document_count": 12,
-          "enforcement_count": 3,
-          "guidance_count": 9
+          "document_count": 0,
+          "enforcement_count": 0,
+          "guidance_count": 0
         }
       ]
     },
@@ -508,81 +508,81 @@
       "quarterly": [
         {
           "quarter": "2022-Q4",
-          "document_count": 1,
+          "document_count": 0,
           "enforcement_count": 0,
-          "guidance_count": 1
+          "guidance_count": 0
         },
         {
           "quarter": "2023-Q1",
-          "document_count": 1,
+          "document_count": 0,
           "enforcement_count": 0,
-          "guidance_count": 1
+          "guidance_count": 0
         },
         {
           "quarter": "2023-Q2",
-          "document_count": 2,
+          "document_count": 0,
           "enforcement_count": 0,
-          "guidance_count": 2
+          "guidance_count": 0
         },
         {
           "quarter": "2023-Q3",
-          "document_count": 1,
+          "document_count": 0,
           "enforcement_count": 0,
-          "guidance_count": 1
+          "guidance_count": 0
         },
         {
           "quarter": "2023-Q4",
-          "document_count": 2,
+          "document_count": 0,
           "enforcement_count": 0,
-          "guidance_count": 2
+          "guidance_count": 0
         },
         {
           "quarter": "2024-Q1",
-          "document_count": 2,
+          "document_count": 0,
           "enforcement_count": 0,
-          "guidance_count": 2
+          "guidance_count": 0
         },
         {
           "quarter": "2024-Q2",
-          "document_count": 3,
+          "document_count": 0,
           "enforcement_count": 0,
-          "guidance_count": 3
+          "guidance_count": 0
         },
         {
           "quarter": "2024-Q3",
-          "document_count": 3,
+          "document_count": 0,
           "enforcement_count": 0,
-          "guidance_count": 3
+          "guidance_count": 0
         },
         {
           "quarter": "2024-Q4",
-          "document_count": 3,
+          "document_count": 0,
           "enforcement_count": 0,
-          "guidance_count": 3
+          "guidance_count": 0
         },
         {
           "quarter": "2025-Q1",
-          "document_count": 5,
+          "document_count": 0,
           "enforcement_count": 0,
-          "guidance_count": 4
+          "guidance_count": 0
         },
         {
           "quarter": "2025-Q2",
-          "document_count": 4,
+          "document_count": 1,
           "enforcement_count": 0,
-          "guidance_count": 4
+          "guidance_count": 0
         },
         {
           "quarter": "2025-Q3",
           "document_count": 6,
           "enforcement_count": 0,
-          "guidance_count": 5
+          "guidance_count": 3
         },
         {
           "quarter": "2025-Q4",
-          "document_count": 6,
+          "document_count": 3,
           "enforcement_count": 0,
-          "guidance_count": 6
+          "guidance_count": 0
         }
       ]
     }
@@ -590,68 +590,68 @@
   "aggregate": [
     {
       "quarter": "2022-Q4",
-      "total_documents": 8,
-      "cumulative_documents": 8
+      "total_documents": 0,
+      "cumulative_documents": 0
     },
     {
       "quarter": "2023-Q1",
-      "total_documents": 8,
-      "cumulative_documents": 16
+      "total_documents": 0,
+      "cumulative_documents": 0
     },
     {
       "quarter": "2023-Q2",
-      "total_documents": 9,
-      "cumulative_documents": 25
+      "total_documents": 0,
+      "cumulative_documents": 0
     },
     {
       "quarter": "2023-Q3",
-      "total_documents": 12,
-      "cumulative_documents": 37
+      "total_documents": 0,
+      "cumulative_documents": 0
     },
     {
       "quarter": "2023-Q4",
-      "total_documents": 13,
-      "cumulative_documents": 50
+      "total_documents": 0,
+      "cumulative_documents": 0
     },
     {
       "quarter": "2024-Q1",
-      "total_documents": 19,
-      "cumulative_documents": 69
+      "total_documents": 0,
+      "cumulative_documents": 0
     },
     {
       "quarter": "2024-Q2",
-      "total_documents": 20,
-      "cumulative_documents": 89
+      "total_documents": 0,
+      "cumulative_documents": 0
     },
     {
       "quarter": "2024-Q3",
-      "total_documents": 24,
-      "cumulative_documents": 113
+      "total_documents": 3,
+      "cumulative_documents": 3
     },
     {
       "quarter": "2024-Q4",
-      "total_documents": 31,
-      "cumulative_documents": 144
+      "total_documents": 3,
+      "cumulative_documents": 6
     },
     {
       "quarter": "2025-Q1",
-      "total_documents": 38,
-      "cumulative_documents": 182
+      "total_documents": 2,
+      "cumulative_documents": 8
     },
     {
       "quarter": "2025-Q2",
-      "total_documents": 44,
-      "cumulative_documents": 226
+      "total_documents": 1,
+      "cumulative_documents": 9
     },
     {
       "quarter": "2025-Q3",
-      "total_documents": 52,
-      "cumulative_documents": 278
+      "total_documents": 6,
+      "cumulative_documents": 15
     },
     {
       "quarter": "2025-Q4",
-      "total_documents": 55,
-      "cumulative_documents": 333
+      "total_documents": 4,
+      "cumulative_documents": 19
     }
   ]
 }

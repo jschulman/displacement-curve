@@ -220,7 +220,7 @@ def save_json(data, path):
 def main():
     parser = argparse.ArgumentParser(description="GitHub Activity Data Collector")
     parser.add_argument("--mock", action="store_true", help="Generate mock data instead of calling GitHub API")
-    parser.add_argument("--token", type=str, default=None, help="GitHub personal access token (optional, raises rate limit)")
+    parser.add_argument("--token", type=str, default=os.environ.get("GITHUB_TOKEN"), help="GitHub personal access token (optional, raises rate limit)")
     args = parser.parse_args()
 
     print("GitHub Activity Collector")

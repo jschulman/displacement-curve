@@ -48,7 +48,7 @@ PROCESSED_DIR = os.path.join(BASE_DIR, "data", "regulatory", "processed")
 
 MAX_RETRIES = 3
 RETRY_DELAY = 5  # seconds
-USER_AGENT = "DisplacementCurve/1.0 (research@example.com)"
+USER_AGENT = "DisplacementCurve/1.0 (secedgar@1to3.co)"
 
 # RSS / Atom feed URLs for each regulator
 REGULATOR_FEEDS = {
@@ -131,13 +131,20 @@ REGULATOR_FEEDS = {
 # ---------------------------------------------------------------------------
 
 def fetch_feed(url):
-    """Fetch and parse an RSS/Atom feed."""
+    """Fetch and parse an RSS/Atom feed with timeout."""
     if feedparser is None:
         print("  WARNING: feedparser not installed. Install with: pip install feedparser")
         return []
 
     try:
-        feed = feedparser.parse(url)
+        # Use requests with timeout first, then parse content
+        if requests is not None:
+            headers = {"User-Agent": USER_AGENT}
+            resp = requests.get(url, headers=headers, timeout=10)
+            resp.raise_for_status()
+            feed = feedparser.parse(resp.content)
+        else:
+            feed = feedparser.parse(url)
         return feed.entries
     except Exception as exc:
         print(f"  ERROR parsing feed {url}: {exc}")

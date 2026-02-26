@@ -111,6 +111,12 @@ def extract_monthly_employment(data):
     if data and "monthly" in data:
         for entry in data["monthly"]:
             values[entry["date"]] = entry.get("total_employment", entry.get("employment", 0))
+    elif data and "series" in data:
+        # Real BLS data: series.CES5000000001.data[].{date, value}
+        for sid, series in data["series"].items():
+            if sid == "CES5000000001":
+                for entry in series.get("data", []):
+                    values[entry["date"]] = entry["value"]
     elif data and "aggregate" in data:
         for entry in data["aggregate"]:
             values[entry.get("date", "")] = entry.get("total_employment", 0)
@@ -128,7 +134,9 @@ def extract_monthly_rev_per_employee(data):
                 continue
             year = int(q[:4])
             qn = int(q[-1])
-            rev_pe = entry.get("avg_rev_per_employee", 0)
+            rev_pe = entry.get("avg_rev_per_employee")
+            if rev_pe is None:
+                continue
             # Assign to each month in the quarter
             for m in range(1, 4):
                 month_num = (qn - 1) * 3 + m
@@ -147,7 +155,7 @@ def extract_monthly_vc_funding(data):
                 continue
             year = int(q[:4])
             qn = int(q[-1])
-            funding = entry.get("total_funding_mm", 0)
+            funding = entry.get("total_funding_mm") or 0
             for m in range(1, 4):
                 month_num = (qn - 1) * 3 + m
                 date_str = f"{year}-{month_num:02d}"
@@ -160,7 +168,9 @@ def extract_monthly_job_ratio(data):
     values = {}
     if data and "monthly" in data:
         for entry in data["monthly"]:
-            values[entry["date"]] = entry.get("ai_to_traditional_ratio", 0)
+            val = entry.get("ai_to_traditional_ratio")
+            if val is not None:
+                values[entry["date"]] = val
     return values
 
 

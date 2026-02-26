@@ -15,8 +15,10 @@ jobs:
           python-version: '3.12'
       - name: Install dependencies
         run: pip install -r requirements.txt
-      - name: Collect job postings data
-        run: python collectors/job_postings.py
+      - name: Collect job postings data (BLS JOLTS)
+        run: python collectors/job_postings.py --api-key "$BLS_API_KEY"
+        env:
+          BLS_API_KEY: ${{ secrets.BLS_API_KEY }}
       - name: Collect regulatory guidance data
         run: python collectors/regulatory_tracker.py
       - name: Recompute composite displacement index

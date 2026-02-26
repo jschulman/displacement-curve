@@ -1,1837 +1,538 @@
 {
   "metadata": {
-    "source": "Indeed Hiring Lab / LinkedIn",
+    "source": "BLS JOLTS",
     "last_updated": "2026-02-26",
-    "mock": true
+    "mock": false
   },
   "monthly": [
     {
+      "date": "2022-01",
+      "total_postings_idx": 97.4,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.974,
+      "job_openings": 2096.0,
+      "hires": 1266.0,
+      "separations": 1257.0,
+      "quits": 795.0
+    },
+    {
+      "date": "2022-02",
+      "total_postings_idx": 109.2,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 1.092,
+      "job_openings": 2348.0,
+      "hires": 1388.0,
+      "separations": 1251.0,
+      "quits": 756.0
+    },
+    {
+      "date": "2022-03",
+      "total_postings_idx": 114.1,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 1.141,
+      "job_openings": 2454.0,
+      "hires": 1357.0,
+      "separations": 1270.0,
+      "quits": 797.0
+    },
+    {
+      "date": "2022-04",
+      "total_postings_idx": 107.8,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 1.078,
+      "job_openings": 2318.0,
+      "hires": 1307.0,
+      "separations": 1200.0,
+      "quits": 819.0
+    },
+    {
+      "date": "2022-05",
+      "total_postings_idx": 103.5,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 1.035,
+      "job_openings": 2226.0,
+      "hires": 1344.0,
+      "separations": 1244.0,
+      "quits": 777.0
+    },
+    {
+      "date": "2022-06",
+      "total_postings_idx": 106.1,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 1.061,
+      "job_openings": 2282.0,
+      "hires": 1277.0,
+      "separations": 1221.0,
+      "quits": 753.0
+    },
+    {
+      "date": "2022-07",
+      "total_postings_idx": 97.7,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.977,
+      "job_openings": 2101.0,
+      "hires": 1277.0,
+      "separations": 1194.0,
+      "quits": 781.0
+    },
+    {
+      "date": "2022-08",
+      "total_postings_idx": 83.0,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.83,
+      "job_openings": 1785.0,
+      "hires": 1183.0,
+      "separations": 1160.0,
+      "quits": 697.0
+    },
+    {
+      "date": "2022-09",
+      "total_postings_idx": 99.2,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.992,
+      "job_openings": 2134.0,
+      "hires": 1181.0,
+      "separations": 1116.0,
+      "quits": 753.0
+    },
+    {
+      "date": "2022-10",
+      "total_postings_idx": 83.5,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.835,
+      "job_openings": 1797.0,
+      "hires": 1148.0,
+      "separations": 1119.0,
+      "quits": 655.0
+    },
+    {
       "date": "2022-11",
-      "total_postings_idx": 99.5,
-      "ai_postings_pct": 3.1,
-      "traditional_pct": 72.1,
-      "ai_to_traditional_ratio": 0.043
+      "total_postings_idx": 100.0,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 1.0,
+      "job_openings": 2151.0,
+      "hires": 1126.0,
+      "separations": 1143.0,
+      "quits": 725.0
     },
     {
       "date": "2022-12",
-      "total_postings_idx": 99.7,
-      "ai_postings_pct": 2.9,
-      "traditional_pct": 71.6,
-      "ai_to_traditional_ratio": 0.041
+      "total_postings_idx": 99.3,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.993,
+      "job_openings": 2136.0,
+      "hires": 1067.0,
+      "separations": 1109.0,
+      "quits": 709.0
     },
     {
       "date": "2023-01",
-      "total_postings_idx": 101.4,
-      "ai_postings_pct": 3.2,
-      "traditional_pct": 71.2,
-      "ai_to_traditional_ratio": 0.045
+      "total_postings_idx": 94.3,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.943,
+      "job_openings": 2028.0,
+      "hires": 1088.0,
+      "separations": 1104.0,
+      "quits": 529.0
     },
     {
       "date": "2023-02",
-      "total_postings_idx": 100.4,
-      "ai_postings_pct": 3.5,
-      "traditional_pct": 70.6,
-      "ai_to_traditional_ratio": 0.05
+      "total_postings_idx": 84.8,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.848,
+      "job_openings": 1824.0,
+      "hires": 1062.0,
+      "separations": 1033.0,
+      "quits": 621.0
     },
     {
       "date": "2023-03",
-      "total_postings_idx": 101.8,
-      "ai_postings_pct": 3.3,
-      "traditional_pct": 70.8,
-      "ai_to_traditional_ratio": 0.047
+      "total_postings_idx": 83.4,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.834,
+      "job_openings": 1794.0,
+      "hires": 1064.0,
+      "separations": 1072.0,
+      "quits": 624.0
     },
     {
       "date": "2023-04",
-      "total_postings_idx": 101.6,
-      "ai_postings_pct": 4.1,
-      "traditional_pct": 70.4,
-      "ai_to_traditional_ratio": 0.058
+      "total_postings_idx": 84.0,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.84,
+      "job_openings": 1806.0,
+      "hires": 1178.0,
+      "separations": 1075.0,
+      "quits": 595.0
     },
     {
       "date": "2023-05",
-      "total_postings_idx": 102.4,
-      "ai_postings_pct": 3.5,
-      "traditional_pct": 68.6,
-      "ai_to_traditional_ratio": 0.051
+      "total_postings_idx": 75.0,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.75,
+      "job_openings": 1613.0,
+      "hires": 1039.0,
+      "separations": 974.0,
+      "quits": 633.0
     },
     {
       "date": "2023-06",
-      "total_postings_idx": 102.5,
-      "ai_postings_pct": 4.0,
-      "traditional_pct": 69.1,
-      "ai_to_traditional_ratio": 0.058
+      "total_postings_idx": 71.0,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.71,
+      "job_openings": 1527.0,
+      "hires": 1043.0,
+      "separations": 1086.0,
+      "quits": 585.0
     },
     {
       "date": "2023-07",
-      "total_postings_idx": 103.8,
-      "ai_postings_pct": 4.4,
-      "traditional_pct": 68.9,
-      "ai_to_traditional_ratio": 0.064
+      "total_postings_idx": 57.8,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.578,
+      "job_openings": 1243.0,
+      "hires": 1018.0,
+      "separations": 1091.0,
+      "quits": 604.0
     },
     {
       "date": "2023-08",
-      "total_postings_idx": 103.2,
-      "ai_postings_pct": 4.7,
-      "traditional_pct": 67.3,
-      "ai_to_traditional_ratio": 0.07
+      "total_postings_idx": 72.8,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.728,
+      "job_openings": 1565.0,
+      "hires": 1030.0,
+      "separations": 1064.0,
+      "quits": 604.0
     },
     {
       "date": "2023-09",
-      "total_postings_idx": 101.3,
-      "ai_postings_pct": 4.8,
-      "traditional_pct": 67.3,
-      "ai_to_traditional_ratio": 0.071
+      "total_postings_idx": 70.2,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.702,
+      "job_openings": 1511.0,
+      "hires": 1002.0,
+      "separations": 1037.0,
+      "quits": 602.0
     },
     {
       "date": "2023-10",
-      "total_postings_idx": 102.6,
-      "ai_postings_pct": 5.1,
-      "traditional_pct": 66.3,
-      "ai_to_traditional_ratio": 0.077
+      "total_postings_idx": 69.8,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.698,
+      "job_openings": 1501.0,
+      "hires": 1060.0,
+      "separations": 1109.0,
+      "quits": 651.0
     },
     {
       "date": "2023-11",
-      "total_postings_idx": 105.0,
-      "ai_postings_pct": 5.4,
-      "traditional_pct": 67.1,
-      "ai_to_traditional_ratio": 0.08
+      "total_postings_idx": 64.1,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.641,
+      "job_openings": 1379.0,
+      "hires": 880.0,
+      "separations": 959.0,
+      "quits": 585.0
     },
     {
       "date": "2023-12",
-      "total_postings_idx": 102.6,
-      "ai_postings_pct": 6.2,
-      "traditional_pct": 65.3,
-      "ai_to_traditional_ratio": 0.095
+      "total_postings_idx": 65.3,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.653,
+      "job_openings": 1405.0,
+      "hires": 1064.0,
+      "separations": 1049.0,
+      "quits": 547.0
     },
     {
       "date": "2024-01",
-      "total_postings_idx": 104.7,
-      "ai_postings_pct": 6.2,
-      "traditional_pct": 65.1,
-      "ai_to_traditional_ratio": 0.095
+      "total_postings_idx": 67.1,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.671,
+      "job_openings": 1443.0,
+      "hires": 1037.0,
+      "separations": 1060.0,
+      "quits": 476.0
     },
     {
       "date": "2024-02",
-      "total_postings_idx": 105.8,
-      "ai_postings_pct": 6.6,
-      "traditional_pct": 65.1,
-      "ai_to_traditional_ratio": 0.101
+      "total_postings_idx": 65.0,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.65,
+      "job_openings": 1399.0,
+      "hires": 1057.0,
+      "separations": 1047.0,
+      "quits": 588.0
     },
     {
       "date": "2024-03",
-      "total_postings_idx": 104.9,
-      "ai_postings_pct": 7.1,
-      "traditional_pct": 64.6,
-      "ai_to_traditional_ratio": 0.11
+      "total_postings_idx": 59.1,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.591,
+      "job_openings": 1272.0,
+      "hires": 1099.0,
+      "separations": 1097.0,
+      "quits": 686.0
     },
     {
       "date": "2024-04",
-      "total_postings_idx": 106.2,
-      "ai_postings_pct": 7.5,
-      "traditional_pct": 63.6,
-      "ai_to_traditional_ratio": 0.118
+      "total_postings_idx": 59.9,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.599,
+      "job_openings": 1289.0,
+      "hires": 1025.0,
+      "separations": 943.0,
+      "quits": 504.0
     },
     {
       "date": "2024-05",
-      "total_postings_idx": 106.5,
-      "ai_postings_pct": 7.8,
-      "traditional_pct": 63.6,
-      "ai_to_traditional_ratio": 0.123
+      "total_postings_idx": 60.5,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.605,
+      "job_openings": 1302.0,
+      "hires": 1027.0,
+      "separations": 948.0,
+      "quits": 495.0
     },
     {
       "date": "2024-06",
-      "total_postings_idx": 105.9,
-      "ai_postings_pct": 8.5,
-      "traditional_pct": 63.3,
-      "ai_to_traditional_ratio": 0.134
+      "total_postings_idx": 52.6,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.526,
+      "job_openings": 1131.0,
+      "hires": 927.0,
+      "separations": 953.0,
+      "quits": 580.0
     },
     {
       "date": "2024-07",
-      "total_postings_idx": 107.1,
-      "ai_postings_pct": 8.6,
-      "traditional_pct": 63.1,
-      "ai_to_traditional_ratio": 0.136
+      "total_postings_idx": 63.6,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.636,
+      "job_openings": 1367.0,
+      "hires": 927.0,
+      "separations": 957.0,
+      "quits": 536.0
     },
     {
       "date": "2024-08",
-      "total_postings_idx": 105.1,
-      "ai_postings_pct": 9.0,
-      "traditional_pct": 61.9,
-      "ai_to_traditional_ratio": 0.145
+      "total_postings_idx": 61.9,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.619,
+      "job_openings": 1332.0,
+      "hires": 1010.0,
+      "separations": 1078.0,
+      "quits": 572.0
     },
     {
       "date": "2024-09",
-      "total_postings_idx": 107.7,
-      "ai_postings_pct": 9.5,
-      "traditional_pct": 61.5,
-      "ai_to_traditional_ratio": 0.154
+      "total_postings_idx": 60.8,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.608,
+      "job_openings": 1308.0,
+      "hires": 1044.0,
+      "separations": 1068.0,
+      "quits": 508.0
     },
     {
       "date": "2024-10",
-      "total_postings_idx": 107.0,
-      "ai_postings_pct": 10.6,
-      "traditional_pct": 62.0,
-      "ai_to_traditional_ratio": 0.171
+      "total_postings_idx": 63.1,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.631,
+      "job_openings": 1358.0,
+      "hires": 968.0,
+      "separations": 1043.0,
+      "quits": 558.0
     },
     {
       "date": "2024-11",
-      "total_postings_idx": 108.3,
-      "ai_postings_pct": 10.3,
-      "traditional_pct": 61.4,
-      "ai_to_traditional_ratio": 0.168
+      "total_postings_idx": 80.6,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.806,
+      "job_openings": 1733.0,
+      "hires": 962.0,
+      "separations": 963.0,
+      "quits": 481.0
     },
     {
       "date": "2024-12",
-      "total_postings_idx": 108.2,
-      "ai_postings_pct": 11.3,
-      "traditional_pct": 60.6,
-      "ai_to_traditional_ratio": 0.186
+      "total_postings_idx": 63.4,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.634,
+      "job_openings": 1364.0,
+      "hires": 935.0,
+      "separations": 919.0,
+      "quits": 535.0
     },
     {
       "date": "2025-01",
-      "total_postings_idx": 106.9,
-      "ai_postings_pct": 11.6,
-      "traditional_pct": 60.3,
-      "ai_to_traditional_ratio": 0.192
+      "total_postings_idx": 56.3,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.563,
+      "job_openings": 1211.0,
+      "hires": 962.0,
+      "separations": 1038.0,
+      "quits": 589.0
     },
     {
       "date": "2025-02",
-      "total_postings_idx": 110.0,
-      "ai_postings_pct": 12.0,
-      "traditional_pct": 61.2,
-      "ai_to_traditional_ratio": 0.196
+      "total_postings_idx": 62.1,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.621,
+      "job_openings": 1336.0,
+      "hires": 1056.0,
+      "separations": 1023.0,
+      "quits": 576.0
     },
     {
       "date": "2025-03",
-      "total_postings_idx": 109.0,
-      "ai_postings_pct": 12.8,
-      "traditional_pct": 59.8,
-      "ai_to_traditional_ratio": 0.214
+      "total_postings_idx": 58.1,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.581,
+      "job_openings": 1249.0,
+      "hires": 1042.0,
+      "separations": 988.0,
+      "quits": 558.0
     },
     {
       "date": "2025-04",
-      "total_postings_idx": 109.3,
-      "ai_postings_pct": 12.8,
-      "traditional_pct": 59.3,
-      "ai_to_traditional_ratio": 0.216
+      "total_postings_idx": 64.4,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.644,
+      "job_openings": 1386.0,
+      "hires": 1112.0,
+      "separations": 1063.0,
+      "quits": 545.0
     },
     {
       "date": "2025-05",
-      "total_postings_idx": 109.9,
-      "ai_postings_pct": 13.7,
-      "traditional_pct": 58.1,
-      "ai_to_traditional_ratio": 0.236
+      "total_postings_idx": 60.5,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.605,
+      "job_openings": 1302.0,
+      "hires": 1069.0,
+      "separations": 1000.0,
+      "quits": 528.0
     },
     {
       "date": "2025-06",
-      "total_postings_idx": 110.0,
-      "ai_postings_pct": 14.3,
-      "traditional_pct": 57.9,
-      "ai_to_traditional_ratio": 0.247
+      "total_postings_idx": 63.5,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.635,
+      "job_openings": 1365.0,
+      "hires": 1010.0,
+      "separations": 1016.0,
+      "quits": 404.0
     },
     {
       "date": "2025-07",
-      "total_postings_idx": 109.3,
-      "ai_postings_pct": 15.3,
-      "traditional_pct": 56.5,
-      "ai_to_traditional_ratio": 0.271
+      "total_postings_idx": 59.2,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.592,
+      "job_openings": 1274.0,
+      "hires": 1032.0,
+      "separations": 1059.0,
+      "quits": 595.0
     },
     {
       "date": "2025-08",
-      "total_postings_idx": 109.8,
-      "ai_postings_pct": 16.1,
-      "traditional_pct": 57.4,
-      "ai_to_traditional_ratio": 0.28
+      "total_postings_idx": 57.4,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.574,
+      "job_openings": 1235.0,
+      "hires": 1015.0,
+      "separations": 1076.0,
+      "quits": 574.0
     },
     {
       "date": "2025-09",
-      "total_postings_idx": 110.5,
-      "ai_postings_pct": 16.4,
-      "traditional_pct": 56.2,
-      "ai_to_traditional_ratio": 0.292
+      "total_postings_idx": 69.8,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.698,
+      "job_openings": 1502.0,
+      "hires": 1030.0,
+      "separations": 1122.0,
+      "quits": 571.0
     },
     {
       "date": "2025-10",
-      "total_postings_idx": 110.5,
-      "ai_postings_pct": 16.6,
-      "traditional_pct": 56.2,
-      "ai_to_traditional_ratio": 0.295
+      "total_postings_idx": 60.4,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.604,
+      "job_openings": 1300.0,
+      "hires": 1008.0,
+      "separations": 1031.0,
+      "quits": 543.0
     },
     {
       "date": "2025-11",
-      "total_postings_idx": 113.2,
-      "ai_postings_pct": 17.8,
-      "traditional_pct": 55.3,
-      "ai_to_traditional_ratio": 0.322
+      "total_postings_idx": 59.2,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.592,
+      "job_openings": 1273.0,
+      "hires": 992.0,
+      "separations": 1074.0,
+      "quits": 514.0
     },
     {
       "date": "2025-12",
-      "total_postings_idx": 111.4,
-      "ai_postings_pct": 18.6,
-      "traditional_pct": 55.2,
-      "ai_to_traditional_ratio": 0.337
+      "total_postings_idx": 47.2,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "ai_to_traditional_ratio": 0.472,
+      "job_openings": 1016.0,
+      "hires": 940.0,
+      "separations": 862.0,
+      "quits": 363.0
     }
   ],
-  "firms": {
-    "ACN": {
-      "name": "Accenture",
-      "monthly": [
-        {
-          "date": "2022-11",
-          "ai_roles": 13,
-          "traditional_roles": 360
-        },
-        {
-          "date": "2022-12",
-          "ai_roles": 11,
-          "traditional_roles": 341
-        },
-        {
-          "date": "2023-01",
-          "ai_roles": 10,
-          "traditional_roles": 348
-        },
-        {
-          "date": "2023-02",
-          "ai_roles": 13,
-          "traditional_roles": 307
-        },
-        {
-          "date": "2023-03",
-          "ai_roles": 15,
-          "traditional_roles": 332
-        },
-        {
-          "date": "2023-04",
-          "ai_roles": 18,
-          "traditional_roles": 314
-        },
-        {
-          "date": "2023-05",
-          "ai_roles": 21,
-          "traditional_roles": 338
-        },
-        {
-          "date": "2023-06",
-          "ai_roles": 16,
-          "traditional_roles": 332
-        },
-        {
-          "date": "2023-07",
-          "ai_roles": 26,
-          "traditional_roles": 330
-        },
-        {
-          "date": "2023-08",
-          "ai_roles": 27,
-          "traditional_roles": 292
-        },
-        {
-          "date": "2023-09",
-          "ai_roles": 30,
-          "traditional_roles": 297
-        },
-        {
-          "date": "2023-10",
-          "ai_roles": 32,
-          "traditional_roles": 308
-        },
-        {
-          "date": "2023-11",
-          "ai_roles": 35,
-          "traditional_roles": 325
-        },
-        {
-          "date": "2023-12",
-          "ai_roles": 39,
-          "traditional_roles": 307
-        },
-        {
-          "date": "2024-01",
-          "ai_roles": 41,
-          "traditional_roles": 301
-        },
-        {
-          "date": "2024-02",
-          "ai_roles": 51,
-          "traditional_roles": 312
-        },
-        {
-          "date": "2024-03",
-          "ai_roles": 51,
-          "traditional_roles": 303
-        },
-        {
-          "date": "2024-04",
-          "ai_roles": 50,
-          "traditional_roles": 306
-        },
-        {
-          "date": "2024-05",
-          "ai_roles": 61,
-          "traditional_roles": 281
-        },
-        {
-          "date": "2024-06",
-          "ai_roles": 66,
-          "traditional_roles": 314
-        },
-        {
-          "date": "2024-07",
-          "ai_roles": 74,
-          "traditional_roles": 271
-        },
-        {
-          "date": "2024-08",
-          "ai_roles": 78,
-          "traditional_roles": 289
-        },
-        {
-          "date": "2024-09",
-          "ai_roles": 80,
-          "traditional_roles": 279
-        },
-        {
-          "date": "2024-10",
-          "ai_roles": 87,
-          "traditional_roles": 291
-        },
-        {
-          "date": "2024-11",
-          "ai_roles": 93,
-          "traditional_roles": 264
-        },
-        {
-          "date": "2024-12",
-          "ai_roles": 97,
-          "traditional_roles": 284
-        },
-        {
-          "date": "2025-01",
-          "ai_roles": 107,
-          "traditional_roles": 285
-        },
-        {
-          "date": "2025-02",
-          "ai_roles": 111,
-          "traditional_roles": 258
-        },
-        {
-          "date": "2025-03",
-          "ai_roles": 115,
-          "traditional_roles": 256
-        },
-        {
-          "date": "2025-04",
-          "ai_roles": 122,
-          "traditional_roles": 264
-        },
-        {
-          "date": "2025-05",
-          "ai_roles": 129,
-          "traditional_roles": 255
-        },
-        {
-          "date": "2025-06",
-          "ai_roles": 141,
-          "traditional_roles": 242
-        },
-        {
-          "date": "2025-07",
-          "ai_roles": 150,
-          "traditional_roles": 271
-        },
-        {
-          "date": "2025-08",
-          "ai_roles": 152,
-          "traditional_roles": 268
-        },
-        {
-          "date": "2025-09",
-          "ai_roles": 160,
-          "traditional_roles": 237
-        },
-        {
-          "date": "2025-10",
-          "ai_roles": 168,
-          "traditional_roles": 251
-        },
-        {
-          "date": "2025-11",
-          "ai_roles": 174,
-          "traditional_roles": 233
-        },
-        {
-          "date": "2025-12",
-          "ai_roles": 182,
-          "traditional_roles": 246
-        }
-      ]
-    },
-    "CTSH": {
-      "name": "Cognizant",
-      "monthly": [
-        {
-          "date": "2022-11",
-          "ai_roles": 10,
-          "traditional_roles": 283
-        },
-        {
-          "date": "2022-12",
-          "ai_roles": 9,
-          "traditional_roles": 286
-        },
-        {
-          "date": "2023-01",
-          "ai_roles": 9,
-          "traditional_roles": 280
-        },
-        {
-          "date": "2023-02",
-          "ai_roles": 7,
-          "traditional_roles": 271
-        },
-        {
-          "date": "2023-03",
-          "ai_roles": 9,
-          "traditional_roles": 284
-        },
-        {
-          "date": "2023-04",
-          "ai_roles": 12,
-          "traditional_roles": 262
-        },
-        {
-          "date": "2023-05",
-          "ai_roles": 13,
-          "traditional_roles": 280
-        },
-        {
-          "date": "2023-06",
-          "ai_roles": 11,
-          "traditional_roles": 287
-        },
-        {
-          "date": "2023-07",
-          "ai_roles": 17,
-          "traditional_roles": 275
-        },
-        {
-          "date": "2023-08",
-          "ai_roles": 18,
-          "traditional_roles": 273
-        },
-        {
-          "date": "2023-09",
-          "ai_roles": 21,
-          "traditional_roles": 244
-        },
-        {
-          "date": "2023-10",
-          "ai_roles": 25,
-          "traditional_roles": 234
-        },
-        {
-          "date": "2023-11",
-          "ai_roles": 24,
-          "traditional_roles": 242
-        },
-        {
-          "date": "2023-12",
-          "ai_roles": 26,
-          "traditional_roles": 258
-        },
-        {
-          "date": "2024-01",
-          "ai_roles": 26,
-          "traditional_roles": 272
-        },
-        {
-          "date": "2024-02",
-          "ai_roles": 32,
-          "traditional_roles": 246
-        },
-        {
-          "date": "2024-03",
-          "ai_roles": 34,
-          "traditional_roles": 255
-        },
-        {
-          "date": "2024-04",
-          "ai_roles": 35,
-          "traditional_roles": 248
-        },
-        {
-          "date": "2024-05",
-          "ai_roles": 40,
-          "traditional_roles": 229
-        },
-        {
-          "date": "2024-06",
-          "ai_roles": 45,
-          "traditional_roles": 252
-        },
-        {
-          "date": "2024-07",
-          "ai_roles": 46,
-          "traditional_roles": 233
-        },
-        {
-          "date": "2024-08",
-          "ai_roles": 46,
-          "traditional_roles": 245
-        },
-        {
-          "date": "2024-09",
-          "ai_roles": 55,
-          "traditional_roles": 237
-        },
-        {
-          "date": "2024-10",
-          "ai_roles": 56,
-          "traditional_roles": 242
-        },
-        {
-          "date": "2024-11",
-          "ai_roles": 62,
-          "traditional_roles": 240
-        },
-        {
-          "date": "2024-12",
-          "ai_roles": 68,
-          "traditional_roles": 229
-        },
-        {
-          "date": "2025-01",
-          "ai_roles": 70,
-          "traditional_roles": 229
-        },
-        {
-          "date": "2025-02",
-          "ai_roles": 80,
-          "traditional_roles": 232
-        },
-        {
-          "date": "2025-03",
-          "ai_roles": 78,
-          "traditional_roles": 228
-        },
-        {
-          "date": "2025-04",
-          "ai_roles": 86,
-          "traditional_roles": 218
-        },
-        {
-          "date": "2025-05",
-          "ai_roles": 96,
-          "traditional_roles": 201
-        },
-        {
-          "date": "2025-06",
-          "ai_roles": 97,
-          "traditional_roles": 209
-        },
-        {
-          "date": "2025-07",
-          "ai_roles": 105,
-          "traditional_roles": 225
-        },
-        {
-          "date": "2025-08",
-          "ai_roles": 110,
-          "traditional_roles": 201
-        },
-        {
-          "date": "2025-09",
-          "ai_roles": 111,
-          "traditional_roles": 209
-        },
-        {
-          "date": "2025-10",
-          "ai_roles": 121,
-          "traditional_roles": 218
-        },
-        {
-          "date": "2025-11",
-          "ai_roles": 124,
-          "traditional_roles": 184
-        },
-        {
-          "date": "2025-12",
-          "ai_roles": 131,
-          "traditional_roles": 199
-        }
-      ]
-    },
-    "INFY": {
-      "name": "Infosys",
-      "monthly": [
-        {
-          "date": "2022-11",
-          "ai_roles": 8,
-          "traditional_roles": 234
-        },
-        {
-          "date": "2022-12",
-          "ai_roles": 7,
-          "traditional_roles": 258
-        },
-        {
-          "date": "2023-01",
-          "ai_roles": 3,
-          "traditional_roles": 277
-        },
-        {
-          "date": "2023-02",
-          "ai_roles": 5,
-          "traditional_roles": 254
-        },
-        {
-          "date": "2023-03",
-          "ai_roles": 11,
-          "traditional_roles": 246
-        },
-        {
-          "date": "2023-04",
-          "ai_roles": 10,
-          "traditional_roles": 266
-        },
-        {
-          "date": "2023-05",
-          "ai_roles": 9,
-          "traditional_roles": 240
-        },
-        {
-          "date": "2023-06",
-          "ai_roles": 10,
-          "traditional_roles": 262
-        },
-        {
-          "date": "2023-07",
-          "ai_roles": 10,
-          "traditional_roles": 252
-        },
-        {
-          "date": "2023-08",
-          "ai_roles": 15,
-          "traditional_roles": 255
-        },
-        {
-          "date": "2023-09",
-          "ai_roles": 14,
-          "traditional_roles": 242
-        },
-        {
-          "date": "2023-10",
-          "ai_roles": 17,
-          "traditional_roles": 246
-        },
-        {
-          "date": "2023-11",
-          "ai_roles": 20,
-          "traditional_roles": 225
-        },
-        {
-          "date": "2023-12",
-          "ai_roles": 23,
-          "traditional_roles": 237
-        },
-        {
-          "date": "2024-01",
-          "ai_roles": 24,
-          "traditional_roles": 246
-        },
-        {
-          "date": "2024-02",
-          "ai_roles": 22,
-          "traditional_roles": 231
-        },
-        {
-          "date": "2024-03",
-          "ai_roles": 28,
-          "traditional_roles": 231
-        },
-        {
-          "date": "2024-04",
-          "ai_roles": 32,
-          "traditional_roles": 232
-        },
-        {
-          "date": "2024-05",
-          "ai_roles": 31,
-          "traditional_roles": 212
-        },
-        {
-          "date": "2024-06",
-          "ai_roles": 35,
-          "traditional_roles": 215
-        },
-        {
-          "date": "2024-07",
-          "ai_roles": 35,
-          "traditional_roles": 237
-        },
-        {
-          "date": "2024-08",
-          "ai_roles": 43,
-          "traditional_roles": 219
-        },
-        {
-          "date": "2024-09",
-          "ai_roles": 45,
-          "traditional_roles": 241
-        },
-        {
-          "date": "2024-10",
-          "ai_roles": 48,
-          "traditional_roles": 221
-        },
-        {
-          "date": "2024-11",
-          "ai_roles": 52,
-          "traditional_roles": 214
-        },
-        {
-          "date": "2024-12",
-          "ai_roles": 57,
-          "traditional_roles": 216
-        },
-        {
-          "date": "2025-01",
-          "ai_roles": 59,
-          "traditional_roles": 215
-        },
-        {
-          "date": "2025-02",
-          "ai_roles": 64,
-          "traditional_roles": 221
-        },
-        {
-          "date": "2025-03",
-          "ai_roles": 65,
-          "traditional_roles": 199
-        },
-        {
-          "date": "2025-04",
-          "ai_roles": 72,
-          "traditional_roles": 205
-        },
-        {
-          "date": "2025-05",
-          "ai_roles": 74,
-          "traditional_roles": 224
-        },
-        {
-          "date": "2025-06",
-          "ai_roles": 80,
-          "traditional_roles": 209
-        },
-        {
-          "date": "2025-07",
-          "ai_roles": 84,
-          "traditional_roles": 195
-        },
-        {
-          "date": "2025-08",
-          "ai_roles": 92,
-          "traditional_roles": 191
-        },
-        {
-          "date": "2025-09",
-          "ai_roles": 93,
-          "traditional_roles": 189
-        },
-        {
-          "date": "2025-10",
-          "ai_roles": 98,
-          "traditional_roles": 191
-        },
-        {
-          "date": "2025-11",
-          "ai_roles": 105,
-          "traditional_roles": 203
-        },
-        {
-          "date": "2025-12",
-          "ai_roles": 111,
-          "traditional_roles": 203
-        }
-      ]
-    },
-    "WIT": {
-      "name": "Wipro",
-      "monthly": [
-        {
-          "date": "2022-11",
-          "ai_roles": 4,
-          "traditional_roles": 217
-        },
-        {
-          "date": "2022-12",
-          "ai_roles": 3,
-          "traditional_roles": 237
-        },
-        {
-          "date": "2023-01",
-          "ai_roles": 7,
-          "traditional_roles": 210
-        },
-        {
-          "date": "2023-02",
-          "ai_roles": 8,
-          "traditional_roles": 221
-        },
-        {
-          "date": "2023-03",
-          "ai_roles": 9,
-          "traditional_roles": 216
-        },
-        {
-          "date": "2023-04",
-          "ai_roles": 7,
-          "traditional_roles": 219
-        },
-        {
-          "date": "2023-05",
-          "ai_roles": 6,
-          "traditional_roles": 199
-        },
-        {
-          "date": "2023-06",
-          "ai_roles": 11,
-          "traditional_roles": 214
-        },
-        {
-          "date": "2023-07",
-          "ai_roles": 14,
-          "traditional_roles": 207
-        },
-        {
-          "date": "2023-08",
-          "ai_roles": 10,
-          "traditional_roles": 205
-        },
-        {
-          "date": "2023-09",
-          "ai_roles": 17,
-          "traditional_roles": 203
-        },
-        {
-          "date": "2023-10",
-          "ai_roles": 18,
-          "traditional_roles": 213
-        },
-        {
-          "date": "2023-11",
-          "ai_roles": 17,
-          "traditional_roles": 208
-        },
-        {
-          "date": "2023-12",
-          "ai_roles": 17,
-          "traditional_roles": 198
-        },
-        {
-          "date": "2024-01",
-          "ai_roles": 19,
-          "traditional_roles": 200
-        },
-        {
-          "date": "2024-02",
-          "ai_roles": 23,
-          "traditional_roles": 194
-        },
-        {
-          "date": "2024-03",
-          "ai_roles": 23,
-          "traditional_roles": 193
-        },
-        {
-          "date": "2024-04",
-          "ai_roles": 25,
-          "traditional_roles": 189
-        },
-        {
-          "date": "2024-05",
-          "ai_roles": 27,
-          "traditional_roles": 194
-        },
-        {
-          "date": "2024-06",
-          "ai_roles": 31,
-          "traditional_roles": 209
-        },
-        {
-          "date": "2024-07",
-          "ai_roles": 33,
-          "traditional_roles": 181
-        },
-        {
-          "date": "2024-08",
-          "ai_roles": 36,
-          "traditional_roles": 193
-        },
-        {
-          "date": "2024-09",
-          "ai_roles": 38,
-          "traditional_roles": 178
-        },
-        {
-          "date": "2024-10",
-          "ai_roles": 42,
-          "traditional_roles": 169
-        },
-        {
-          "date": "2024-11",
-          "ai_roles": 46,
-          "traditional_roles": 192
-        },
-        {
-          "date": "2024-12",
-          "ai_roles": 50,
-          "traditional_roles": 161
-        },
-        {
-          "date": "2025-01",
-          "ai_roles": 50,
-          "traditional_roles": 199
-        },
-        {
-          "date": "2025-02",
-          "ai_roles": 50,
-          "traditional_roles": 173
-        },
-        {
-          "date": "2025-03",
-          "ai_roles": 58,
-          "traditional_roles": 162
-        },
-        {
-          "date": "2025-04",
-          "ai_roles": 60,
-          "traditional_roles": 170
-        },
-        {
-          "date": "2025-05",
-          "ai_roles": 64,
-          "traditional_roles": 158
-        },
-        {
-          "date": "2025-06",
-          "ai_roles": 69,
-          "traditional_roles": 160
-        },
-        {
-          "date": "2025-07",
-          "ai_roles": 69,
-          "traditional_roles": 168
-        },
-        {
-          "date": "2025-08",
-          "ai_roles": 78,
-          "traditional_roles": 180
-        },
-        {
-          "date": "2025-09",
-          "ai_roles": 76,
-          "traditional_roles": 178
-        },
-        {
-          "date": "2025-10",
-          "ai_roles": 85,
-          "traditional_roles": 167
-        },
-        {
-          "date": "2025-11",
-          "ai_roles": 85,
-          "traditional_roles": 152
-        },
-        {
-          "date": "2025-12",
-          "ai_roles": 89,
-          "traditional_roles": 160
-        }
-      ]
-    },
-    "EPAM": {
-      "name": "EPAM Systems",
-      "monthly": [
-        {
-          "date": "2022-11",
-          "ai_roles": 3,
-          "traditional_roles": 112
-        },
-        {
-          "date": "2022-12",
-          "ai_roles": 4,
-          "traditional_roles": 118
-        },
-        {
-          "date": "2023-01",
-          "ai_roles": 3,
-          "traditional_roles": 116
-        },
-        {
-          "date": "2023-02",
-          "ai_roles": 4,
-          "traditional_roles": 121
-        },
-        {
-          "date": "2023-03",
-          "ai_roles": 3,
-          "traditional_roles": 108
-        },
-        {
-          "date": "2023-04",
-          "ai_roles": 4,
-          "traditional_roles": 114
-        },
-        {
-          "date": "2023-05",
-          "ai_roles": 5,
-          "traditional_roles": 116
-        },
-        {
-          "date": "2023-06",
-          "ai_roles": 6,
-          "traditional_roles": 109
-        },
-        {
-          "date": "2023-07",
-          "ai_roles": 6,
-          "traditional_roles": 111
-        },
-        {
-          "date": "2023-08",
-          "ai_roles": 6,
-          "traditional_roles": 112
-        },
-        {
-          "date": "2023-09",
-          "ai_roles": 7,
-          "traditional_roles": 104
-        },
-        {
-          "date": "2023-10",
-          "ai_roles": 8,
-          "traditional_roles": 113
-        },
-        {
-          "date": "2023-11",
-          "ai_roles": 8,
-          "traditional_roles": 110
-        },
-        {
-          "date": "2023-12",
-          "ai_roles": 11,
-          "traditional_roles": 103
-        },
-        {
-          "date": "2024-01",
-          "ai_roles": 11,
-          "traditional_roles": 110
-        },
-        {
-          "date": "2024-02",
-          "ai_roles": 12,
-          "traditional_roles": 103
-        },
-        {
-          "date": "2024-03",
-          "ai_roles": 14,
-          "traditional_roles": 101
-        },
-        {
-          "date": "2024-04",
-          "ai_roles": 14,
-          "traditional_roles": 102
-        },
-        {
-          "date": "2024-05",
-          "ai_roles": 16,
-          "traditional_roles": 94
-        },
-        {
-          "date": "2024-06",
-          "ai_roles": 19,
-          "traditional_roles": 101
-        },
-        {
-          "date": "2024-07",
-          "ai_roles": 20,
-          "traditional_roles": 105
-        },
-        {
-          "date": "2024-08",
-          "ai_roles": 19,
-          "traditional_roles": 105
-        },
-        {
-          "date": "2024-09",
-          "ai_roles": 23,
-          "traditional_roles": 100
-        },
-        {
-          "date": "2024-10",
-          "ai_roles": 23,
-          "traditional_roles": 110
-        },
-        {
-          "date": "2024-11",
-          "ai_roles": 26,
-          "traditional_roles": 100
-        },
-        {
-          "date": "2024-12",
-          "ai_roles": 27,
-          "traditional_roles": 92
-        },
-        {
-          "date": "2025-01",
-          "ai_roles": 30,
-          "traditional_roles": 92
-        },
-        {
-          "date": "2025-02",
-          "ai_roles": 33,
-          "traditional_roles": 102
-        },
-        {
-          "date": "2025-03",
-          "ai_roles": 33,
-          "traditional_roles": 91
-        },
-        {
-          "date": "2025-04",
-          "ai_roles": 36,
-          "traditional_roles": 86
-        },
-        {
-          "date": "2025-05",
-          "ai_roles": 38,
-          "traditional_roles": 87
-        },
-        {
-          "date": "2025-06",
-          "ai_roles": 41,
-          "traditional_roles": 90
-        },
-        {
-          "date": "2025-07",
-          "ai_roles": 43,
-          "traditional_roles": 92
-        },
-        {
-          "date": "2025-08",
-          "ai_roles": 46,
-          "traditional_roles": 96
-        },
-        {
-          "date": "2025-09",
-          "ai_roles": 48,
-          "traditional_roles": 86
-        },
-        {
-          "date": "2025-10",
-          "ai_roles": 49,
-          "traditional_roles": 89
-        },
-        {
-          "date": "2025-11",
-          "ai_roles": 54,
-          "traditional_roles": 87
-        },
-        {
-          "date": "2025-12",
-          "ai_roles": 56,
-          "traditional_roles": 74
-        }
-      ]
-    },
-    "GLOB": {
-      "name": "Globant",
-      "monthly": [
-        {
-          "date": "2022-11",
-          "ai_roles": 2,
-          "traditional_roles": 83
-        },
-        {
-          "date": "2022-12",
-          "ai_roles": 2,
-          "traditional_roles": 76
-        },
-        {
-          "date": "2023-01",
-          "ai_roles": 2,
-          "traditional_roles": 79
-        },
-        {
-          "date": "2023-02",
-          "ai_roles": 2,
-          "traditional_roles": 76
-        },
-        {
-          "date": "2023-03",
-          "ai_roles": 3,
-          "traditional_roles": 77
-        },
-        {
-          "date": "2023-04",
-          "ai_roles": 3,
-          "traditional_roles": 72
-        },
-        {
-          "date": "2023-05",
-          "ai_roles": 2,
-          "traditional_roles": 75
-        },
-        {
-          "date": "2023-06",
-          "ai_roles": 1,
-          "traditional_roles": 76
-        },
-        {
-          "date": "2023-07",
-          "ai_roles": 4,
-          "traditional_roles": 73
-        },
-        {
-          "date": "2023-08",
-          "ai_roles": 5,
-          "traditional_roles": 74
-        },
-        {
-          "date": "2023-09",
-          "ai_roles": 5,
-          "traditional_roles": 77
-        },
-        {
-          "date": "2023-10",
-          "ai_roles": 6,
-          "traditional_roles": 78
-        },
-        {
-          "date": "2023-11",
-          "ai_roles": 8,
-          "traditional_roles": 76
-        },
-        {
-          "date": "2023-12",
-          "ai_roles": 6,
-          "traditional_roles": 76
-        },
-        {
-          "date": "2024-01",
-          "ai_roles": 7,
-          "traditional_roles": 76
-        },
-        {
-          "date": "2024-02",
-          "ai_roles": 6,
-          "traditional_roles": 74
-        },
-        {
-          "date": "2024-03",
-          "ai_roles": 10,
-          "traditional_roles": 73
-        },
-        {
-          "date": "2024-04",
-          "ai_roles": 9,
-          "traditional_roles": 66
-        },
-        {
-          "date": "2024-05",
-          "ai_roles": 13,
-          "traditional_roles": 73
-        },
-        {
-          "date": "2024-06",
-          "ai_roles": 13,
-          "traditional_roles": 70
-        },
-        {
-          "date": "2024-07",
-          "ai_roles": 13,
-          "traditional_roles": 70
-        },
-        {
-          "date": "2024-08",
-          "ai_roles": 14,
-          "traditional_roles": 74
-        },
-        {
-          "date": "2024-09",
-          "ai_roles": 15,
-          "traditional_roles": 71
-        },
-        {
-          "date": "2024-10",
-          "ai_roles": 16,
-          "traditional_roles": 68
-        },
-        {
-          "date": "2024-11",
-          "ai_roles": 19,
-          "traditional_roles": 66
-        },
-        {
-          "date": "2024-12",
-          "ai_roles": 20,
-          "traditional_roles": 68
-        },
-        {
-          "date": "2025-01",
-          "ai_roles": 21,
-          "traditional_roles": 64
-        },
-        {
-          "date": "2025-02",
-          "ai_roles": 23,
-          "traditional_roles": 60
-        },
-        {
-          "date": "2025-03",
-          "ai_roles": 25,
-          "traditional_roles": 66
-        },
-        {
-          "date": "2025-04",
-          "ai_roles": 26,
-          "traditional_roles": 68
-        },
-        {
-          "date": "2025-05",
-          "ai_roles": 28,
-          "traditional_roles": 62
-        },
-        {
-          "date": "2025-06",
-          "ai_roles": 30,
-          "traditional_roles": 59
-        },
-        {
-          "date": "2025-07",
-          "ai_roles": 31,
-          "traditional_roles": 59
-        },
-        {
-          "date": "2025-08",
-          "ai_roles": 34,
-          "traditional_roles": 59
-        },
-        {
-          "date": "2025-09",
-          "ai_roles": 38,
-          "traditional_roles": 63
-        },
-        {
-          "date": "2025-10",
-          "ai_roles": 39,
-          "traditional_roles": 64
-        },
-        {
-          "date": "2025-11",
-          "ai_roles": 40,
-          "traditional_roles": 61
-        },
-        {
-          "date": "2025-12",
-          "ai_roles": 41,
-          "traditional_roles": 64
-        }
-      ]
-    },
-    "IT": {
-      "name": "Gartner",
-      "monthly": [
-        {
-          "date": "2022-11",
-          "ai_roles": 3,
-          "traditional_roles": 91
-        },
-        {
-          "date": "2022-12",
-          "ai_roles": 2,
-          "traditional_roles": 91
-        },
-        {
-          "date": "2023-01",
-          "ai_roles": 4,
-          "traditional_roles": 85
-        },
-        {
-          "date": "2023-02",
-          "ai_roles": 5,
-          "traditional_roles": 85
-        },
-        {
-          "date": "2023-03",
-          "ai_roles": 6,
-          "traditional_roles": 91
-        },
-        {
-          "date": "2023-04",
-          "ai_roles": 5,
-          "traditional_roles": 92
-        },
-        {
-          "date": "2023-05",
-          "ai_roles": 5,
-          "traditional_roles": 92
-        },
-        {
-          "date": "2023-06",
-          "ai_roles": 7,
-          "traditional_roles": 93
-        },
-        {
-          "date": "2023-07",
-          "ai_roles": 8,
-          "traditional_roles": 83
-        },
-        {
-          "date": "2023-08",
-          "ai_roles": 8,
-          "traditional_roles": 87
-        },
-        {
-          "date": "2023-09",
-          "ai_roles": 11,
-          "traditional_roles": 86
-        },
-        {
-          "date": "2023-10",
-          "ai_roles": 11,
-          "traditional_roles": 90
-        },
-        {
-          "date": "2023-11",
-          "ai_roles": 13,
-          "traditional_roles": 85
-        },
-        {
-          "date": "2023-12",
-          "ai_roles": 13,
-          "traditional_roles": 88
-        },
-        {
-          "date": "2024-01",
-          "ai_roles": 14,
-          "traditional_roles": 81
-        },
-        {
-          "date": "2024-02",
-          "ai_roles": 15,
-          "traditional_roles": 86
-        },
-        {
-          "date": "2024-03",
-          "ai_roles": 16,
-          "traditional_roles": 83
-        },
-        {
-          "date": "2024-04",
-          "ai_roles": 20,
-          "traditional_roles": 88
-        },
-        {
-          "date": "2024-05",
-          "ai_roles": 20,
-          "traditional_roles": 88
-        },
-        {
-          "date": "2024-06",
-          "ai_roles": 20,
-          "traditional_roles": 80
-        },
-        {
-          "date": "2024-07",
-          "ai_roles": 24,
-          "traditional_roles": 75
-        },
-        {
-          "date": "2024-08",
-          "ai_roles": 24,
-          "traditional_roles": 81
-        },
-        {
-          "date": "2024-09",
-          "ai_roles": 27,
-          "traditional_roles": 77
-        },
-        {
-          "date": "2024-10",
-          "ai_roles": 28,
-          "traditional_roles": 81
-        },
-        {
-          "date": "2024-11",
-          "ai_roles": 30,
-          "traditional_roles": 86
-        },
-        {
-          "date": "2024-12",
-          "ai_roles": 33,
-          "traditional_roles": 80
-        },
-        {
-          "date": "2025-01",
-          "ai_roles": 34,
-          "traditional_roles": 78
-        },
-        {
-          "date": "2025-02",
-          "ai_roles": 36,
-          "traditional_roles": 75
-        },
-        {
-          "date": "2025-03",
-          "ai_roles": 40,
-          "traditional_roles": 71
-        },
-        {
-          "date": "2025-04",
-          "ai_roles": 39,
-          "traditional_roles": 75
-        },
-        {
-          "date": "2025-05",
-          "ai_roles": 42,
-          "traditional_roles": 78
-        },
-        {
-          "date": "2025-06",
-          "ai_roles": 44,
-          "traditional_roles": 70
-        },
-        {
-          "date": "2025-07",
-          "ai_roles": 47,
-          "traditional_roles": 68
-        },
-        {
-          "date": "2025-08",
-          "ai_roles": 50,
-          "traditional_roles": 79
-        },
-        {
-          "date": "2025-09",
-          "ai_roles": 53,
-          "traditional_roles": 69
-        },
-        {
-          "date": "2025-10",
-          "ai_roles": 53,
-          "traditional_roles": 80
-        },
-        {
-          "date": "2025-11",
-          "ai_roles": 58,
-          "traditional_roles": 74
-        },
-        {
-          "date": "2025-12",
-          "ai_roles": 59,
-          "traditional_roles": 68
-        }
-      ]
-    },
-    "BAH": {
-      "name": "Booz Allen Hamilton",
-      "monthly": [
-        {
-          "date": "2022-11",
-          "ai_roles": 7,
-          "traditional_roles": 181
-        },
-        {
-          "date": "2022-12",
-          "ai_roles": 10,
-          "traditional_roles": 172
-        },
-        {
-          "date": "2023-01",
-          "ai_roles": 7,
-          "traditional_roles": 164
-        },
-        {
-          "date": "2023-02",
-          "ai_roles": 13,
-          "traditional_roles": 172
-        },
-        {
-          "date": "2023-03",
-          "ai_roles": 13,
-          "traditional_roles": 179
-        },
-        {
-          "date": "2023-04",
-          "ai_roles": 18,
-          "traditional_roles": 164
-        },
-        {
-          "date": "2023-05",
-          "ai_roles": 16,
-          "traditional_roles": 177
-        },
-        {
-          "date": "2023-06",
-          "ai_roles": 14,
-          "traditional_roles": 179
-        },
-        {
-          "date": "2023-07",
-          "ai_roles": 22,
-          "traditional_roles": 172
-        },
-        {
-          "date": "2023-08",
-          "ai_roles": 22,
-          "traditional_roles": 169
-        },
-        {
-          "date": "2023-09",
-          "ai_roles": 24,
-          "traditional_roles": 175
-        },
-        {
-          "date": "2023-10",
-          "ai_roles": 19,
-          "traditional_roles": 157
-        },
-        {
-          "date": "2023-11",
-          "ai_roles": 29,
-          "traditional_roles": 174
-        },
-        {
-          "date": "2023-12",
-          "ai_roles": 30,
-          "traditional_roles": 149
-        },
-        {
-          "date": "2024-01",
-          "ai_roles": 37,
-          "traditional_roles": 171
-        },
-        {
-          "date": "2024-02",
-          "ai_roles": 40,
-          "traditional_roles": 154
-        },
-        {
-          "date": "2024-03",
-          "ai_roles": 45,
-          "traditional_roles": 158
-        },
-        {
-          "date": "2024-04",
-          "ai_roles": 42,
-          "traditional_roles": 149
-        },
-        {
-          "date": "2024-05",
-          "ai_roles": 51,
-          "traditional_roles": 140
-        },
-        {
-          "date": "2024-06",
-          "ai_roles": 51,
-          "traditional_roles": 157
-        },
-        {
-          "date": "2024-07",
-          "ai_roles": 57,
-          "traditional_roles": 166
-        },
-        {
-          "date": "2024-08",
-          "ai_roles": 65,
-          "traditional_roles": 141
-        },
-        {
-          "date": "2024-09",
-          "ai_roles": 70,
-          "traditional_roles": 150
-        },
-        {
-          "date": "2024-10",
-          "ai_roles": 66,
-          "traditional_roles": 148
-        },
-        {
-          "date": "2024-11",
-          "ai_roles": 75,
-          "traditional_roles": 161
-        },
-        {
-          "date": "2024-12",
-          "ai_roles": 80,
-          "traditional_roles": 145
-        },
-        {
-          "date": "2025-01",
-          "ai_roles": 83,
-          "traditional_roles": 139
-        },
-        {
-          "date": "2025-02",
-          "ai_roles": 87,
-          "traditional_roles": 147
-        },
-        {
-          "date": "2025-03",
-          "ai_roles": 91,
-          "traditional_roles": 138
-        },
-        {
-          "date": "2025-04",
-          "ai_roles": 96,
-          "traditional_roles": 122
-        },
-        {
-          "date": "2025-05",
-          "ai_roles": 100,
-          "traditional_roles": 145
-        },
-        {
-          "date": "2025-06",
-          "ai_roles": 106,
-          "traditional_roles": 138
-        },
-        {
-          "date": "2025-07",
-          "ai_roles": 103,
-          "traditional_roles": 142
-        },
-        {
-          "date": "2025-08",
-          "ai_roles": 111,
-          "traditional_roles": 139
-        },
-        {
-          "date": "2025-09",
-          "ai_roles": 119,
-          "traditional_roles": 134
-        },
-        {
-          "date": "2025-10",
-          "ai_roles": 127,
-          "traditional_roles": 135
-        },
-        {
-          "date": "2025-11",
-          "ai_roles": 136,
-          "traditional_roles": 132
-        },
-        {
-          "date": "2025-12",
-          "ai_roles": 142,
-          "traditional_roles": 112
-        }
-      ]
-    }
-  }
+  "firms": {}
 }

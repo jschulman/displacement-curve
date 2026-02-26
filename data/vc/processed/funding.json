@@ -2,7 +2,7 @@
   "metadata": {
     "source": "SEC EDGAR Form D",
     "last_updated": "2026-02-26",
-    "mock": true
+    "mock": false
   },
   "categories": {
     "ai_audit": {
@@ -10,68 +10,68 @@
       "quarterly": [
         {
           "quarter": "2022-Q4",
-          "funding_mm": 11.7,
-          "deal_count": 3
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2023-Q1",
-          "funding_mm": 13.4,
-          "deal_count": 3
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2023-Q2",
-          "funding_mm": 19.0,
-          "deal_count": 4
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2023-Q3",
-          "funding_mm": 31.1,
-          "deal_count": 2
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2023-Q4",
-          "funding_mm": 48.7,
-          "deal_count": 3
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2024-Q1",
-          "funding_mm": 54.9,
-          "deal_count": 4
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2024-Q2",
-          "funding_mm": 88.9,
-          "deal_count": 4
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2024-Q3",
-          "funding_mm": 102.0,
-          "deal_count": 6
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2024-Q4",
-          "funding_mm": 130.2,
-          "deal_count": 7
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2025-Q1",
-          "funding_mm": 125.4,
-          "deal_count": 10
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2025-Q2",
-          "funding_mm": 207.7,
-          "deal_count": 10
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2025-Q3",
-          "funding_mm": 199.5,
-          "deal_count": 13
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2025-Q4",
-          "funding_mm": 276.3,
-          "deal_count": 14
+          "funding_mm": 0.0,
+          "deal_count": 0
         }
       ]
     },
@@ -80,68 +80,68 @@
       "quarterly": [
         {
           "quarter": "2022-Q4",
-          "funding_mm": 19.4,
-          "deal_count": 2
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2023-Q1",
-          "funding_mm": 19.2,
-          "deal_count": 5
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2023-Q2",
-          "funding_mm": 28.7,
-          "deal_count": 2
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2023-Q3",
-          "funding_mm": 43.6,
-          "deal_count": 5
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2023-Q4",
-          "funding_mm": 60.8,
-          "deal_count": 5
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2024-Q1",
-          "funding_mm": 78.0,
-          "deal_count": 7
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2024-Q2",
-          "funding_mm": 121.4,
-          "deal_count": 7
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2024-Q3",
-          "funding_mm": 137.4,
-          "deal_count": 8
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2024-Q4",
-          "funding_mm": 182.3,
-          "deal_count": 10
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2025-Q1",
-          "funding_mm": 189.3,
-          "deal_count": 11
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2025-Q2",
-          "funding_mm": 258.2,
-          "deal_count": 13
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2025-Q3",
-          "funding_mm": 287.3,
-          "deal_count": 15
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2025-Q4",
-          "funding_mm": 341.2,
-          "deal_count": 17
+          "funding_mm": 0.0,
+          "deal_count": 0
         }
       ]
     },
@@ -150,68 +150,68 @@
       "quarterly": [
         {
           "quarter": "2022-Q4",
-          "funding_mm": 23.0,
-          "deal_count": 3
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2023-Q1",
-          "funding_mm": 30.3,
-          "deal_count": 5
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2023-Q2",
-          "funding_mm": 43.7,
-          "deal_count": 5
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2023-Q3",
-          "funding_mm": 55.2,
-          "deal_count": 5
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2023-Q4",
-          "funding_mm": 77.0,
-          "deal_count": 7
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2024-Q1",
-          "funding_mm": 121.4,
-          "deal_count": 8
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2024-Q2",
-          "funding_mm": 133.8,
-          "deal_count": 10
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2024-Q3",
-          "funding_mm": 200.0,
-          "deal_count": 12
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2024-Q4",
-          "funding_mm": 210.7,
-          "deal_count": 13
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2025-Q1",
-          "funding_mm": 271.7,
-          "deal_count": 12
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2025-Q2",
-          "funding_mm": 302.9,
-          "deal_count": 17
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2025-Q3",
-          "funding_mm": 342.7,
-          "deal_count": 19
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2025-Q4",
-          "funding_mm": 367.8,
-          "deal_count": 21
+          "funding_mm": 0.0,
+          "deal_count": 0
         }
       ]
     },
@@ -220,68 +220,68 @@
       "quarterly": [
         {
           "quarter": "2022-Q4",
-          "funding_mm": 7.5,
-          "deal_count": 2
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2023-Q1",
-          "funding_mm": 8.1,
-          "deal_count": 2
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2023-Q2",
-          "funding_mm": 11.9,
-          "deal_count": 1
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2023-Q3",
-          "funding_mm": 18.9,
-          "deal_count": 1
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2023-Q4",
-          "funding_mm": 24.3,
-          "deal_count": 1
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2024-Q1",
-          "funding_mm": 40.8,
-          "deal_count": 4
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2024-Q2",
-          "funding_mm": 57.5,
-          "deal_count": 4
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2024-Q3",
-          "funding_mm": 67.1,
-          "deal_count": 5
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2024-Q4",
-          "funding_mm": 100.5,
-          "deal_count": 5
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2025-Q1",
-          "funding_mm": 120.2,
-          "deal_count": 5
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2025-Q2",
-          "funding_mm": 158.0,
-          "deal_count": 8
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2025-Q3",
-          "funding_mm": 176.5,
-          "deal_count": 9
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2025-Q4",
-          "funding_mm": 193.8,
-          "deal_count": 9
+          "funding_mm": 0.0,
+          "deal_count": 0
         }
       ]
     },
@@ -290,68 +290,68 @@
       "quarterly": [
         {
           "quarter": "2022-Q4",
-          "funding_mm": 15.1,
-          "deal_count": 3
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2023-Q1",
-          "funding_mm": 17.1,
-          "deal_count": 2
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2023-Q2",
-          "funding_mm": 20.1,
-          "deal_count": 3
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2023-Q3",
-          "funding_mm": 39.2,
-          "deal_count": 3
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2023-Q4",
-          "funding_mm": 48.5,
-          "deal_count": 4
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2024-Q1",
-          "funding_mm": 57.6,
-          "deal_count": 4
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2024-Q2",
-          "funding_mm": 99.5,
-          "deal_count": 5
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2024-Q3",
-          "funding_mm": 115.2,
-          "deal_count": 8
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2024-Q4",
-          "funding_mm": 126.2,
-          "deal_count": 8
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2025-Q1",
-          "funding_mm": 179.0,
-          "deal_count": 9
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2025-Q2",
-          "funding_mm": 221.6,
-          "deal_count": 13
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2025-Q3",
-          "funding_mm": 287.5,
-          "deal_count": 14
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2025-Q4",
-          "funding_mm": 334.8,
-          "deal_count": 16
+          "funding_mm": 0.0,
+          "deal_count": 0
         }
       ]
     },
@@ -360,68 +360,68 @@
       "quarterly": [
         {
           "quarter": "2022-Q4",
-          "funding_mm": 28.0,
-          "deal_count": 4
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2023-Q1",
-          "funding_mm": 38.7,
-          "deal_count": 6
+          "funding_mm": 0.0,
+          "deal_count": 0
         },
         {
           "quarter": "2023-Q2",
-          "funding_mm": 54.0,
-          "deal_count": 5
+          "funding_mm": 2.0,
+          "deal_count": 2
         },
         {
           "quarter": "2023-Q3",
-          "funding_mm": 80.6,
-          "deal_count": 6
+          "funding_mm": 2.0,
+          "deal_count": 2
         },
         {
           "quarter": "2023-Q4",
-          "funding_mm": 136.3,
-          "deal_count": 9
+          "funding_mm": 2.0,
+          "deal_count": 2
         },
         {
           "quarter": "2024-Q1",
-          "funding_mm": 170.7,
-          "deal_count": 11
+          "funding_mm": 1.0,
+          "deal_count": 1
         },
         {
           "quarter": "2024-Q2",
-          "funding_mm": 224.9,
-          "deal_count": 13
+          "funding_mm": 2.0,
+          "deal_count": 2
         },
         {
           "quarter": "2024-Q3",
-          "funding_mm": 281.5,
-          "deal_count": 13
+          "funding_mm": 1.0,
+          "deal_count": 1
         },
         {
           "quarter": "2024-Q4",
-          "funding_mm": 339.4,
-          "deal_count": 17
+          "funding_mm": 3.0,
+          "deal_count": 3
         },
         {
           "quarter": "2025-Q1",
-          "funding_mm": 358.6,
-          "deal_count": 21
+          "funding_mm": 2.0,
+          "deal_count": 2
         },
         {
           "quarter": "2025-Q2",
-          "funding_mm": 455.0,
-          "deal_count": 23
+          "funding_mm": 5.0,
+          "deal_count": 5
         },
         {
           "quarter": "2025-Q3",
-          "funding_mm": 591.6,
-          "deal_count": 28
+          "funding_mm": 2.0,
+          "deal_count": 2
         },
         {
           "quarter": "2025-Q4",
-          "funding_mm": 600.8,
-          "deal_count": 30
+          "funding_mm": 9.0,
+          "deal_count": 9
         }
       ]
     }
@@ -429,81 +429,81 @@
   "aggregate": [
     {
       "quarter": "2022-Q4",
-      "total_funding_mm": 104.7,
-      "total_deals": 17,
-      "cumulative_mm": 104.7
+      "total_funding_mm": 0.0,
+      "total_deals": 0,
+      "cumulative_mm": 0.0
     },
     {
       "quarter": "2023-Q1",
-      "total_funding_mm": 126.8,
-      "total_deals": 23,
-      "cumulative_mm": 231.5
+      "total_funding_mm": 0.0,
+      "total_deals": 0,
+      "cumulative_mm": 0.0
     },
     {
       "quarter": "2023-Q2",
-      "total_funding_mm": 177.4,
-      "total_deals": 20,
-      "cumulative_mm": 408.9
+      "total_funding_mm": 2.0,
+      "total_deals": 2,
+      "cumulative_mm": 2.0
     },
     {
       "quarter": "2023-Q3",
-      "total_funding_mm": 268.6,
-      "total_deals": 22,
-      "cumulative_mm": 677.5
+      "total_funding_mm": 2.0,
+      "total_deals": 2,
+      "cumulative_mm": 4.0
     },
     {
       "quarter": "2023-Q4",
-      "total_funding_mm": 395.6,
-      "total_deals": 29,
-      "cumulative_mm": 1073.1
+      "total_funding_mm": 2.0,
+      "total_deals": 2,
+      "cumulative_mm": 6.0
     },
     {
       "quarter": "2024-Q1",
-      "total_funding_mm": 523.4,
-      "total_deals": 38,
-      "cumulative_mm": 1596.5
+      "total_funding_mm": 1.0,
+      "total_deals": 1,
+      "cumulative_mm": 7.0
     },
     {
       "quarter": "2024-Q2",
-      "total_funding_mm": 726.0,
-      "total_deals": 43,
-      "cumulative_mm": 2322.5
+      "total_funding_mm": 2.0,
+      "total_deals": 2,
+      "cumulative_mm": 9.0
     },
     {
       "quarter": "2024-Q3",
-      "total_funding_mm": 903.2,
-      "total_deals": 52,
-      "cumulative_mm": 3225.7
+      "total_funding_mm": 1.0,
+      "total_deals": 1,
+      "cumulative_mm": 10.0
     },
     {
       "quarter": "2024-Q4",
-      "total_funding_mm": 1089.3,
-      "total_deals": 60,
-      "cumulative_mm": 4315.0
+      "total_funding_mm": 3.0,
+      "total_deals": 3,
+      "cumulative_mm": 13.0
     },
     {
       "quarter": "2025-Q1",
-      "total_funding_mm": 1244.2,
-      "total_deals": 68,
-      "cumulative_mm": 5559.2
+      "total_funding_mm": 2.0,
+      "total_deals": 2,
+      "cumulative_mm": 15.0
     },
     {
       "quarter": "2025-Q2",
-      "total_funding_mm": 1603.4,
-      "total_deals": 84,
-      "cumulative_mm": 7162.6
+      "total_funding_mm": 5.0,
+      "total_deals": 5,
+      "cumulative_mm": 20.0
     },
     {
       "quarter": "2025-Q3",
-      "total_funding_mm": 1885.1,
-      "total_deals": 98,
-      "cumulative_mm": 9047.7
+      "total_funding_mm": 2.0,
+      "total_deals": 2,
+      "cumulative_mm": 22.0
     },
     {
       "quarter": "2025-Q4",
-      "total_funding_mm": 2114.7,
-      "total_deals": 107,
-      "cumulative_mm": 11162.4
+      "total_funding_mm": 9.0,
+      "total_deals": 9,
+      "cumulative_mm": 31.0
     }
   ]
 }

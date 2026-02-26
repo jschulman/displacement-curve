@@ -9,3 +9,6 @@ dist/
 build/
 .pytest_cache/
 .DS_Store
+
+# Raw API responses (large, regenerable)
+data/*/raw/
