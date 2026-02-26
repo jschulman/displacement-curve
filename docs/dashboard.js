@@ -483,6 +483,11 @@
 
   function formatDate(dateStr) {
     if (!dateStr) return "--";
+    // Handle quarterly format like "2025-Q4"
+    var qMatch = dateStr.match(/^(\d{4})-Q(\d)$/);
+    if (qMatch) {
+      return "Q" + qMatch[2] + " " + qMatch[1];
+    }
     var parts = dateStr.split("-");
     var months = [
       "Jan", "Feb", "Mar", "Apr", "May", "Jun",
