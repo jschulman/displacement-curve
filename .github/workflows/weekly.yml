@@ -5,6 +5,9 @@ on:
     - cron: '0 12 * * 1'  # Every Monday at noon UTC
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   collect-weekly:
     runs-on: ubuntu-latest

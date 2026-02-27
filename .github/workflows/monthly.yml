@@ -5,6 +5,9 @@ on:
     - cron: '0 12 8 * *'  # 8th of each month at noon UTC (after BLS release)
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   collect-bls:
     runs-on: ubuntu-latest
