@@ -1,7 +1,7 @@
 {
   "metadata": {
     "source": "Federal Regulators RSS",
-    "last_updated": "2026-02-26",
+    "last_updated": "2026-03-02",
     "mock": false
   },
   "regulators": {
@@ -414,7 +414,7 @@
         },
         {
           "quarter": "2025-Q4",
-          "document_count": 1,
+          "document_count": 0,
           "enforcement_count": 0,
           "guidance_count": 0
         }
@@ -650,8 +650,8 @@
     },
     {
       "quarter": "2025-Q4",
-      "total_documents": 4,
-      "cumulative_documents": 19
+      "total_documents": 3,
+      "cumulative_documents": 18
     }
   ]
 }
