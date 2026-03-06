@@ -56,6 +56,8 @@ CATEGORIES = {
 }
 
 RATE_LIMIT_SECONDS = 2  # pytrends gets blocked easily
+MAX_RETRIES = 3
+RETRY_BACKOFF_BASE = 30  # seconds; doubles each retry
 
 
 # ---------------------------------------------------------------------------
@@ -83,7 +85,8 @@ def fetch_trends_data():
         sys.exit(1)
 
     pytrends = TrendReq(hl="en-US", tz=360)
-    timeframe = "2022-11-01 2026-02-28"
+    end_date = datetime.utcnow().strftime("%Y-%m-%d")
+    timeframe = f"2022-11-01 {end_date}"
     raw_results = {}
 
     for cat_name, terms in CATEGORIES.items():
@@ -92,8 +95,24 @@ def fetch_trends_data():
 
         for term in terms:
             print(f"    Term: {term}")
-            pytrends.build_payload([term], cat=0, timeframe=timeframe, geo="US")
-            df = pytrends.interest_over_time()
+            success = False
+            for attempt in range(MAX_RETRIES):
+                try:
+                    pytrends.build_payload([term], cat=0, timeframe=timeframe, geo="US")
+                    df = pytrends.interest_over_time()
+                    success = True
+                    break
+                except Exception as e:
+                    wait = RETRY_BACKOFF_BASE * (2 ** attempt)
+                    print(f"    Attempt {attempt + 1}/{MAX_RETRIES} failed: {e}")
+                    if attempt < MAX_RETRIES - 1:
+                        print(f"    Retrying in {wait}s...")
+                        time.sleep(wait)
+
+            if not success:
+                print(f"    WARNING: All retries failed for '{term}', skipping")
+                cat_raw[term] = []
+                continue
 
             if df.empty:
                 print(f"    WARNING: No data for '{term}'")
@@ -205,14 +224,30 @@ def main():
 
     if args.mock:
         processed = generate_mock()
+        save_json(processed, os.path.join(PROCESSED_DIR, "search_interest.json"))
+        print("\nGoogle Trends collection complete.")
     else:
-        raw = fetch_trends_data()
-        raw_path = os.path.join(RAW_DIR, f"trends_raw_{datetime.utcnow().strftime('%Y%m%d_%H%M%S')}.json")
-        save_json(raw, raw_path)
-        processed = process_trends_raw(raw)
+        try:
+            raw = fetch_trends_data()
+            # Check if we got any actual data
+            has_data = any(
+                any(points for points in cat.values())
+                for cat in raw.values()
+            )
+            if not has_data:
+                print("\nWARNING: No data retrieved from Google Trends (likely rate-limited).")
+                print("Keeping existing data. Exiting gracefully.")
+                sys.exit(0)
 
-    save_json(processed, os.path.join(PROCESSED_DIR, "search_interest.json"))
-    print("\nGoogle Trends collection complete.")
+            raw_path = os.path.join(RAW_DIR, f"trends_raw_{datetime.utcnow().strftime('%Y%m%d_%H%M%S')}.json")
+            save_json(raw, raw_path)
+            processed = process_trends_raw(raw)
+            save_json(processed, os.path.join(PROCESSED_DIR, "search_interest.json"))
+            print("\nGoogle Trends collection complete.")
+        except Exception as e:
+            print(f"\nERROR: Google Trends collection failed: {e}")
+            print("Keeping existing data. Exiting gracefully.")
+            sys.exit(0)
 
 
 if __name__ == "__main__":

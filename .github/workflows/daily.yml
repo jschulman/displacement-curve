@@ -19,6 +19,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Collect Google Trends data
+        continue-on-error: true
         run: python collectors/google_trends.py
       - name: Collect GitHub Activity data
         run: python collectors/github_activity.py
@@ -28,7 +29,7 @@ jobs:
         run: |
           mkdir -p docs/data/bls/processed docs/data/trends/processed docs/data/github/processed
           cp data/bls/processed/*.json docs/data/bls/processed/ 2>/dev/null || true
-          cp data/trends/processed/*.json docs/data/trends/processed/
+          cp data/trends/processed/*.json docs/data/trends/processed/ 2>/dev/null || true
           cp data/github/processed/*.json docs/data/github/processed/
       - name: Commit and push
         run: |
