@@ -1,7 +1,7 @@
 {
   "metadata": {
     "source": "Displacement Curve Composite",
-    "last_updated": "2026-03-02",
+    "last_updated": "2026-03-09",
     "mock": false,
     "version": "1.0"
   },
@@ -61,14 +61,14 @@
     },
     {
       "date": "2022-12",
-      "score": 30.1,
+      "score": 30.0,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
         "employment": {
           "raw_value": 3092.0,
-          "normalized": 8.2,
-          "weighted": 2.05
+          "normalized": 7.6,
+          "weighted": 1.9
         },
         "rev_per_employee": {
           "raw_value": 285.5,
@@ -105,14 +105,14 @@
     },
     {
       "date": "2023-01",
-      "score": 16.3,
+      "score": 16.0,
       "phase": "Pre-disruption",
       "phase_range": "0-25",
       "components": {
         "employment": {
           "raw_value": 3061.0,
-          "normalized": 19.2,
-          "weighted": 4.8
+          "normalized": 17.8,
+          "weighted": 4.45
         },
         "rev_per_employee": {
           "raw_value": 76.8,
@@ -149,14 +149,14 @@
     },
     {
       "date": "2023-02",
-      "score": 15.3,
+      "score": 14.9,
       "phase": "Pre-disruption",
       "phase_range": "0-25",
       "components": {
         "employment": {
           "raw_value": 3048.0,
-          "normalized": 23.8,
-          "weighted": 5.95
+          "normalized": 22.1,
+          "weighted": 5.53
         },
         "rev_per_employee": {
           "raw_value": 76.8,
@@ -193,14 +193,14 @@
     },
     {
       "date": "2023-03",
-      "score": 15.0,
+      "score": 14.5,
       "phase": "Pre-disruption",
       "phase_range": "0-25",
       "components": {
         "employment": {
           "raw_value": 3049.0,
-          "normalized": 23.5,
-          "weighted": 5.88
+          "normalized": 21.8,
+          "weighted": 5.45
         },
         "rev_per_employee": {
           "raw_value": 76.8,
@@ -237,14 +237,14 @@
     },
     {
       "date": "2023-04",
-      "score": 18.9,
+      "score": 18.5,
       "phase": "Pre-disruption",
       "phase_range": "0-25",
       "components": {
         "employment": {
           "raw_value": 3043.0,
-          "normalized": 25.6,
-          "weighted": 6.4
+          "normalized": 23.8,
+          "weighted": 5.95
         },
         "rev_per_employee": {
           "raw_value": 76.6,
@@ -281,14 +281,14 @@
     },
     {
       "date": "2023-05",
-      "score": 17.7,
+      "score": 17.2,
       "phase": "Pre-disruption",
       "phase_range": "0-25",
       "components": {
         "employment": {
           "raw_value": 3034.0,
-          "normalized": 28.8,
-          "weighted": 7.2
+          "normalized": 26.7,
+          "weighted": 6.67
         },
         "rev_per_employee": {
           "raw_value": 76.6,
@@ -325,14 +325,14 @@
     },
     {
       "date": "2023-06",
-      "score": 18.0,
+      "score": 17.4,
       "phase": "Pre-disruption",
       "phase_range": "0-25",
       "components": {
         "employment": {
           "raw_value": 3021.0,
-          "normalized": 33.5,
-          "weighted": 8.38
+          "normalized": 31.0,
+          "weighted": 7.75
         },
         "rev_per_employee": {
           "raw_value": 76.6,
@@ -369,14 +369,14 @@
     },
     {
       "date": "2023-07",
-      "score": 16.6,
+      "score": 15.8,
       "phase": "Pre-disruption",
       "phase_range": "0-25",
       "components": {
         "employment": {
           "raw_value": 3001.0,
-          "normalized": 40.6,
-          "weighted": 10.15
+          "normalized": 37.6,
+          "weighted": 9.4
         },
         "rev_per_employee": {
           "raw_value": 73.2,
@@ -413,14 +413,14 @@
     },
     {
       "date": "2023-08",
-      "score": 21.7,
+      "score": 20.8,
       "phase": "Pre-disruption",
       "phase_range": "0-25",
       "components": {
         "employment": {
           "raw_value": 2981.0,
-          "normalized": 47.7,
-          "weighted": 11.93
+          "normalized": 44.2,
+          "weighted": 11.05
         },
         "rev_per_employee": {
           "raw_value": 73.2,
@@ -457,14 +457,14 @@
     },
     {
       "date": "2023-09",
-      "score": 21.6,
+      "score": 20.7,
       "phase": "Pre-disruption",
       "phase_range": "0-25",
       "components": {
         "employment": {
           "raw_value": 2975.0,
-          "normalized": 49.8,
-          "weighted": 12.45
+          "normalized": 46.2,
+          "weighted": 11.55
         },
         "rev_per_employee": {
           "raw_value": 73.2,
@@ -501,14 +501,14 @@
     },
     {
       "date": "2023-10",
-      "score": 39.7,
+      "score": 38.6,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
         "employment": {
           "raw_value": 2951.0,
-          "normalized": 58.4,
-          "weighted": 14.6
+          "normalized": 54.1,
+          "weighted": 13.53
         },
         "rev_per_employee": {
           "raw_value": 290.2,
@@ -545,14 +545,14 @@
     },
     {
       "date": "2023-11",
-      "score": 37.4,
+      "score": 36.5,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
         "employment": {
           "raw_value": 2962.0,
-          "normalized": 54.4,
-          "weighted": 13.6
+          "normalized": 50.5,
+          "weighted": 12.62
         },
         "rev_per_employee": {
           "raw_value": 290.2,
@@ -589,14 +589,14 @@
     },
     {
       "date": "2023-12",
-      "score": 37.6,
+      "score": 36.7,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
         "employment": {
           "raw_value": 2963.0,
-          "normalized": 54.1,
-          "weighted": 13.53
+          "normalized": 50.2,
+          "weighted": 12.55
         },
         "rev_per_employee": {
           "raw_value": 290.2,
@@ -633,14 +633,14 @@
     },
     {
       "date": "2024-01",
-      "score": 20.9,
+      "score": 20.0,
       "phase": "Pre-disruption",
       "phase_range": "0-25",
       "components": {
         "employment": {
           "raw_value": 2963.0,
-          "normalized": 54.1,
-          "weighted": 13.53
+          "normalized": 50.2,
+          "weighted": 12.55
         },
         "rev_per_employee": {
           "raw_value": 81.4,
@@ -677,14 +677,14 @@
     },
     {
       "date": "2024-02",
-      "score": 20.9,
+      "score": 19.9,
       "phase": "Pre-disruption",
       "phase_range": "0-25",
       "components": {
         "employment": {
           "raw_value": 2958.0,
-          "normalized": 55.9,
-          "weighted": 13.97
+          "normalized": 51.8,
+          "weighted": 12.95
         },
         "rev_per_employee": {
           "raw_value": 81.4,
@@ -721,14 +721,14 @@
     },
     {
       "date": "2024-03",
-      "score": 20.2,
+      "score": 19.2,
       "phase": "Pre-disruption",
       "phase_range": "0-25",
       "components": {
         "employment": {
           "raw_value": 2951.0,
-          "normalized": 58.4,
-          "weighted": 14.6
+          "normalized": 54.1,
+          "weighted": 13.53
         },
         "rev_per_employee": {
           "raw_value": 81.4,
@@ -765,14 +765,14 @@
     },
     {
       "date": "2024-04",
-      "score": 23.0,
+      "score": 21.9,
       "phase": "Pre-disruption",
       "phase_range": "0-25",
       "components": {
         "employment": {
           "raw_value": 2940.0,
-          "normalized": 62.3,
-          "weighted": 15.57
+          "normalized": 57.8,
+          "weighted": 14.45
         },
         "rev_per_employee": {
           "raw_value": 80.6,
@@ -809,14 +809,14 @@
     },
     {
       "date": "2024-05",
-      "score": 24.0,
+      "score": 22.8,
       "phase": "Pre-disruption",
       "phase_range": "0-25",
       "components": {
         "employment": {
           "raw_value": 2930.0,
-          "normalized": 65.8,
-          "weighted": 16.45
+          "normalized": 61.1,
+          "weighted": 15.28
         },
         "rev_per_employee": {
           "raw_value": 80.6,
@@ -853,14 +853,14 @@
     },
     {
       "date": "2024-06",
-      "score": 22.2,
+      "score": 21.1,
       "phase": "Pre-disruption",
       "phase_range": "0-25",
       "components": {
         "employment": {
           "raw_value": 2930.0,
-          "normalized": 65.8,
-          "weighted": 16.45
+          "normalized": 61.1,
+          "weighted": 15.28
         },
         "rev_per_employee": {
           "raw_value": 80.6,
@@ -897,14 +897,14 @@
     },
     {
       "date": "2024-07",
-      "score": 24.7,
+      "score": 23.4,
       "phase": "Pre-disruption",
       "phase_range": "0-25",
       "components": {
         "employment": {
           "raw_value": 2917.0,
-          "normalized": 70.5,
-          "weighted": 17.62
+          "normalized": 65.3,
+          "weighted": 16.32
         },
         "rev_per_employee": {
           "raw_value": 76.0,
@@ -941,14 +941,14 @@
     },
     {
       "date": "2024-08",
-      "score": 25.0,
+      "score": 23.7,
       "phase": "Pre-disruption",
       "phase_range": "0-25",
       "components": {
         "employment": {
           "raw_value": 2909.0,
-          "normalized": 73.3,
-          "weighted": 18.32
+          "normalized": 68.0,
+          "weighted": 17.0
         },
         "rev_per_employee": {
           "raw_value": 76.0,
@@ -985,14 +985,14 @@
     },
     {
       "date": "2024-09",
-      "score": 25.3,
-      "phase": "Productivity",
-      "phase_range": "26-50",
+      "score": 23.9,
+      "phase": "Pre-disruption",
+      "phase_range": "0-25",
       "components": {
         "employment": {
           "raw_value": 2903.0,
-          "normalized": 75.4,
-          "weighted": 18.85
+          "normalized": 70.0,
+          "weighted": 17.5
         },
         "rev_per_employee": {
           "raw_value": 76.0,
@@ -1029,14 +1029,14 @@
     },
     {
       "date": "2024-10",
-      "score": 48.8,
+      "score": 47.4,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
         "employment": {
           "raw_value": 2887.0,
-          "normalized": 81.1,
-          "weighted": 20.27
+          "normalized": 75.2,
+          "weighted": 18.8
         },
         "rev_per_employee": {
           "raw_value": 311.8,
@@ -1073,14 +1073,14 @@
     },
     {
       "date": "2024-11",
-      "score": 52.9,
+      "score": 51.4,
       "phase": "Erosion",
       "phase_range": "51-75",
       "components": {
         "employment": {
           "raw_value": 2885.0,
-          "normalized": 81.9,
-          "weighted": 20.48
+          "normalized": 75.9,
+          "weighted": 18.98
         },
         "rev_per_employee": {
           "raw_value": 311.8,
@@ -1117,14 +1117,14 @@
     },
     {
       "date": "2024-12",
-      "score": 48.2,
+      "score": 46.8,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
         "employment": {
           "raw_value": 2895.0,
-          "normalized": 78.3,
-          "weighted": 19.57
+          "normalized": 72.6,
+          "weighted": 18.15
         },
         "rev_per_employee": {
           "raw_value": 311.8,
@@ -1161,14 +1161,14 @@
     },
     {
       "date": "2025-01",
-      "score": 30.2,
+      "score": 28.7,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
         "employment": {
           "raw_value": 2877.0,
-          "normalized": 84.7,
-          "weighted": 21.18
+          "normalized": 78.5,
+          "weighted": 19.62
         },
         "rev_per_employee": {
           "raw_value": 83.8,
@@ -1205,14 +1205,14 @@
     },
     {
       "date": "2025-02",
-      "score": 31.6,
+      "score": 30.1,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
         "employment": {
           "raw_value": 2876.0,
-          "normalized": 85.1,
-          "weighted": 21.27
+          "normalized": 78.9,
+          "weighted": 19.73
         },
         "rev_per_employee": {
           "raw_value": 83.8,
@@ -1249,14 +1249,14 @@
     },
     {
       "date": "2025-03",
-      "score": 31.5,
+      "score": 29.9,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
         "employment": {
           "raw_value": 2867.0,
-          "normalized": 88.3,
-          "weighted": 22.07
+          "normalized": 81.8,
+          "weighted": 20.45
         },
         "rev_per_employee": {
           "raw_value": 83.8,
@@ -1293,14 +1293,14 @@
     },
     {
       "date": "2025-04",
-      "score": 38.7,
+      "score": 37.1,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
         "employment": {
           "raw_value": 2865.0,
-          "normalized": 89.0,
-          "weighted": 22.25
+          "normalized": 82.5,
+          "weighted": 20.62
         },
         "rev_per_employee": {
           "raw_value": 87.9,
@@ -1337,14 +1337,14 @@
     },
     {
       "date": "2025-05",
-      "score": 37.9,
+      "score": 36.3,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
         "employment": {
           "raw_value": 2864.0,
-          "normalized": 89.3,
-          "weighted": 22.32
+          "normalized": 82.8,
+          "weighted": 20.7
         },
         "rev_per_employee": {
           "raw_value": 87.9,
@@ -1381,14 +1381,14 @@
     },
     {
       "date": "2025-06",
-      "score": 38.7,
+      "score": 37.1,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
         "employment": {
           "raw_value": 2863.0,
-          "normalized": 89.7,
-          "weighted": 22.43
+          "normalized": 83.2,
+          "weighted": 20.8
         },
         "rev_per_employee": {
           "raw_value": 87.9,
@@ -1425,14 +1425,14 @@
     },
     {
       "date": "2025-07",
-      "score": 34.1,
+      "score": 32.4,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
         "employment": {
           "raw_value": 2861.0,
-          "normalized": 90.4,
-          "weighted": 22.6
+          "normalized": 83.8,
+          "weighted": 20.95
         },
         "rev_per_employee": {
           "raw_value": 81.3,
@@ -1469,14 +1469,14 @@
     },
     {
       "date": "2025-08",
-      "score": 33.8,
+      "score": 32.1,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
         "employment": {
           "raw_value": 2860.0,
-          "normalized": 90.7,
-          "weighted": 22.68
+          "normalized": 84.2,
+          "weighted": 21.05
         },
         "rev_per_employee": {
           "raw_value": 81.3,
@@ -1513,14 +1513,14 @@
     },
     {
       "date": "2025-09",
-      "score": 36.6,
+      "score": 35.0,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
         "employment": {
           "raw_value": 2859.0,
-          "normalized": 91.1,
-          "weighted": 22.77
+          "normalized": 84.5,
+          "weighted": 21.12
         },
         "rev_per_employee": {
           "raw_value": 81.3,
@@ -1557,14 +1557,14 @@
     },
     {
       "date": "2025-10",
-      "score": 66.2,
+      "score": 64.6,
       "phase": "Erosion",
       "phase_range": "51-75",
       "components": {
         "employment": {
           "raw_value": 2853.0,
-          "normalized": 93.2,
-          "weighted": 23.3
+          "normalized": 86.5,
+          "weighted": 21.62
         },
         "rev_per_employee": {
           "raw_value": 334.6,
@@ -1601,14 +1601,14 @@
     },
     {
       "date": "2025-11",
-      "score": 66.4,
+      "score": 64.7,
       "phase": "Erosion",
       "phase_range": "51-75",
       "components": {
         "employment": {
           "raw_value": 2848.0,
-          "normalized": 95.0,
-          "weighted": 23.75
+          "normalized": 88.1,
+          "weighted": 22.02
         },
         "rev_per_employee": {
           "raw_value": 334.6,
@@ -1645,14 +1645,14 @@
     },
     {
       "date": "2025-12",
-      "score": 63.9,
+      "score": 62.5,
       "phase": "Erosion",
       "phase_range": "51-75",
       "components": {
         "employment": {
-          "raw_value": 2846.0,
-          "normalized": 95.7,
-          "weighted": 23.93
+          "raw_value": 2842.0,
+          "normalized": 90.1,
+          "weighted": 22.52
         },
         "rev_per_employee": {
           "raw_value": 334.6,
