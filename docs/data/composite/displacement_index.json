@@ -1,7 +1,7 @@
 {
   "metadata": {
     "source": "Displacement Curve Composite",
-    "last_updated": "2026-03-30",
+    "last_updated": "2026-04-06",
     "mock": false,
     "version": "1.0"
   },
@@ -933,15 +933,15 @@
         },
         "regulatory": {
           "raw_value": 3,
-          "normalized": 16.7,
-          "weighted": 0.83
+          "normalized": 17.6,
+          "weighted": 0.88
         }
       },
       "trend": "up"
     },
     {
       "date": "2024-08",
-      "score": 22.7,
+      "score": 22.8,
       "phase": "Pre-disruption",
       "phase_range": "0-25",
       "components": {
@@ -977,8 +977,8 @@
         },
         "regulatory": {
           "raw_value": 3,
-          "normalized": 16.7,
-          "weighted": 0.83
+          "normalized": 17.6,
+          "weighted": 0.88
         }
       },
       "trend": "up"
@@ -1021,15 +1021,15 @@
         },
         "regulatory": {
           "raw_value": 3,
-          "normalized": 16.7,
-          "weighted": 0.83
+          "normalized": 17.6,
+          "weighted": 0.88
         }
       },
       "trend": "flat"
     },
     {
       "date": "2024-10",
-      "score": 45.5,
+      "score": 45.6,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
@@ -1065,15 +1065,15 @@
         },
         "regulatory": {
           "raw_value": 6,
-          "normalized": 33.3,
-          "weighted": 1.67
+          "normalized": 35.3,
+          "weighted": 1.76
         }
       },
       "trend": "up"
     },
     {
       "date": "2024-11",
-      "score": 48.5,
+      "score": 48.6,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
@@ -1109,15 +1109,15 @@
         },
         "regulatory": {
           "raw_value": 6,
-          "normalized": 33.3,
-          "weighted": 1.67
+          "normalized": 35.3,
+          "weighted": 1.76
         }
       },
       "trend": "up"
     },
     {
       "date": "2024-12",
-      "score": 45.3,
+      "score": 45.4,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
@@ -1153,15 +1153,15 @@
         },
         "regulatory": {
           "raw_value": 6,
-          "normalized": 33.3,
-          "weighted": 1.67
+          "normalized": 35.3,
+          "weighted": 1.76
         }
       },
       "trend": "down"
     },
     {
       "date": "2025-01",
-      "score": 28.4,
+      "score": 28.5,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
@@ -1197,15 +1197,15 @@
         },
         "regulatory": {
           "raw_value": 8,
-          "normalized": 44.4,
-          "weighted": 2.22
+          "normalized": 47.1,
+          "weighted": 2.35
         }
       },
       "trend": "down"
     },
     {
       "date": "2025-02",
-      "score": 28.2,
+      "score": 28.3,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
@@ -1241,15 +1241,15 @@
         },
         "regulatory": {
           "raw_value": 8,
-          "normalized": 44.4,
-          "weighted": 2.22
+          "normalized": 47.1,
+          "weighted": 2.35
         }
       },
       "trend": "flat"
     },
     {
       "date": "2025-03",
-      "score": 28.7,
+      "score": 28.9,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
@@ -1285,15 +1285,15 @@
         },
         "regulatory": {
           "raw_value": 8,
-          "normalized": 44.4,
-          "weighted": 2.22
+          "normalized": 47.1,
+          "weighted": 2.35
         }
       },
-      "trend": "flat"
+      "trend": "up"
     },
     {
       "date": "2025-04",
-      "score": 35.9,
+      "score": 35.8,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
@@ -1328,16 +1328,16 @@
           "weighted": 0.0
         },
         "regulatory": {
-          "raw_value": 9,
-          "normalized": 50.0,
-          "weighted": 2.5
+          "raw_value": 8,
+          "normalized": 47.1,
+          "weighted": 2.35
         }
       },
       "trend": "up"
     },
     {
       "date": "2025-05",
-      "score": 34.7,
+      "score": 34.6,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
@@ -1372,16 +1372,16 @@
           "weighted": 0.0
         },
         "regulatory": {
-          "raw_value": 9,
-          "normalized": 50.0,
-          "weighted": 2.5
+          "raw_value": 8,
+          "normalized": 47.1,
+          "weighted": 2.35
         }
       },
       "trend": "down"
     },
     {
       "date": "2025-06",
-      "score": 36.0,
+      "score": 35.9,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
@@ -1416,16 +1416,16 @@
           "weighted": 0.0
         },
         "regulatory": {
-          "raw_value": 9,
-          "normalized": 50.0,
-          "weighted": 2.5
+          "raw_value": 8,
+          "normalized": 47.1,
+          "weighted": 2.35
         }
       },
       "trend": "up"
     },
     {
       "date": "2025-07",
-      "score": 31.4,
+      "score": 31.3,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
@@ -1460,16 +1460,16 @@
           "weighted": 0.0
         },
         "regulatory": {
-          "raw_value": 15,
-          "normalized": 83.3,
-          "weighted": 4.17
+          "raw_value": 14,
+          "normalized": 82.4,
+          "weighted": 4.12
         }
       },
       "trend": "down"
     },
     {
       "date": "2025-08",
-      "score": 29.9,
+      "score": 29.8,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
@@ -1504,9 +1504,9 @@
           "weighted": 0.0
         },
         "regulatory": {
-          "raw_value": 15,
-          "normalized": 83.3,
-          "weighted": 4.17
+          "raw_value": 14,
+          "normalized": 82.4,
+          "weighted": 4.12
         }
       },
       "trend": "down"
@@ -1548,9 +1548,9 @@
           "weighted": 0.0
         },
         "regulatory": {
-          "raw_value": 15,
-          "normalized": 83.3,
-          "weighted": 4.17
+          "raw_value": 14,
+          "normalized": 82.4,
+          "weighted": 4.12
         }
       },
       "trend": "up"
@@ -1592,7 +1592,7 @@
           "weighted": 0.0
         },
         "regulatory": {
-          "raw_value": 18,
+          "raw_value": 17,
           "normalized": 100.0,
           "weighted": 5.0
         }
@@ -1636,7 +1636,7 @@
           "weighted": 0.0
         },
         "regulatory": {
-          "raw_value": 18,
+          "raw_value": 17,
           "normalized": 100.0,
           "weighted": 5.0
         }
@@ -1680,7 +1680,7 @@
           "weighted": 0.0
         },
         "regulatory": {
-          "raw_value": 18,
+          "raw_value": 17,
           "normalized": 100.0,
           "weighted": 5.0
         }
