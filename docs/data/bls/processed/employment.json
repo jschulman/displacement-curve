@@ -1,7 +1,7 @@
 {
   "metadata": {
     "source": "BLS CES",
-    "last_updated": "2026-03-08",
+    "last_updated": "2026-04-08",
     "mock": false
   },
   "series": {
@@ -218,11 +218,15 @@
         },
         {
           "date": "2026-01",
-          "value": 2823.0
+          "value": 2815.0
         },
         {
           "date": "2026-02",
-          "value": 2812.0
+          "value": 2794.0
+        },
+        {
+          "date": "2026-03",
+          "value": 2791.0
         }
       ]
     }
