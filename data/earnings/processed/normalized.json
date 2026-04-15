@@ -1,7 +1,7 @@
 {
   "metadata": {
     "source": "SEC EDGAR XBRL",
-    "last_updated": "2026-02-26",
+    "last_updated": "2026-04-15",
     "mock": false,
     "normalized": true,
     "relabeling_threshold": 3.0
@@ -643,6 +643,16 @@
         {
           "quarter": "2026-Q1",
           "total_revenue_mm": 18742.1,
+          "ai_revenue_mm": null,
+          "headcount": null,
+          "revenue_per_employee": null,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2026-Q2",
+          "total_revenue_mm": 18044.1,
           "ai_revenue_mm": null,
           "headcount": null,
           "revenue_per_employee": null,
@@ -1399,6 +1409,16 @@
           "ai_pct": null,
           "relabeling_index": null,
           "relabeling_flag": false
+        },
+        {
+          "quarter": "2025-Q4",
+          "total_revenue_mm": 5457.1,
+          "ai_revenue_mm": null,
+          "headcount": null,
+          "revenue_per_employee": null,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
         }
       ]
     },
@@ -1478,6 +1498,16 @@
         {
           "quarter": "2024-Q4",
           "total_revenue_mm": 2415.7,
+          "ai_revenue_mm": null,
+          "headcount": null,
+          "revenue_per_employee": null,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2025-Q4",
+          "total_revenue_mm": 2454.9,
           "ai_revenue_mm": null,
           "headcount": null,
           "revenue_per_employee": null,
