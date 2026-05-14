@@ -109,9 +109,16 @@ def process_jolts_data(raw_data):
     """
     Transform raw BLS JOLTS API response into standard job postings schema.
 
-    Indexes job openings to baseline month (Nov 2022 = 100) for
-    total_postings_idx, and computes ai_to_traditional_ratio as
-    job_openings / baseline_openings (labor demand ratio).
+    JOLTS publishes total openings/hires/separations/quits for the
+    Professional and Business Services sector. It does NOT break openings
+    down by AI vs traditional roles. Earlier code computed a field called
+    ai_to_traditional_ratio = openings / baseline_openings — which was just
+    total_postings_idx / 100 in disguise, despite the name implying an AI
+    breakdown. That field is now called openings_index and documented as
+    a labor-demand index, not an AI-vs-traditional ratio.
+
+    Indexes job openings to baseline month (Nov 2022 = 1.0) for
+    openings_index, and 100 for total_postings_idx.
     """
     # Parse each series into {date: value} dicts
     series_data = {}
@@ -166,17 +173,17 @@ def process_jolts_data(raw_data):
         # Index to baseline
         if jo is not None and baseline_openings:
             total_postings_idx = round((jo / baseline_openings) * 100, 1)
-            ai_to_trad_ratio = round(jo / baseline_openings, 3)
+            openings_index = round(jo / baseline_openings, 3)
         else:
             total_postings_idx = None
-            ai_to_trad_ratio = None
+            openings_index = None
 
         monthly.append({
             "date": date_label,
             "total_postings_idx": total_postings_idx,
             "ai_postings_pct": None,
             "traditional_pct": None,
-            "ai_to_traditional_ratio": ai_to_trad_ratio,
+            "openings_index": openings_index,
             "job_openings": jo,
             "hires": hi,
             "separations": sep,

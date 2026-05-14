@@ -782,19 +782,27 @@
       return a.date.localeCompare(b.date);
     });
 
+    // Field is openings_index in current data; legacy data still has it
+    // under the old (misleading) name ai_to_traditional_ratio.
+    function idx(entry) {
+      return entry.openings_index != null ? entry.openings_index : entry.ai_to_traditional_ratio;
+    }
+
     var trailing = last(sorted, 12);
     var latest = sorted[sorted.length - 1];
     var prev = sorted.length >= 2 ? sorted[sorted.length - 2] : null;
-    var mom = prev ? latest.ai_to_traditional_ratio - prev.ai_to_traditional_ratio : 0;
+    var latestVal = idx(latest);
+    var prevVal = prev ? idx(prev) : null;
+    var mom = prevVal != null && latestVal != null ? latestVal - prevVal : 0;
 
     return {
-      value: latest.ai_to_traditional_ratio,
-      formatted: latest.ai_to_traditional_ratio.toFixed(3) + "x",
+      value: latestVal,
+      formatted: latestVal != null ? latestVal.toFixed(3) + "x" : "--",
       mom: mom,
       momFormatted: (mom >= 0 ? "+" : "") + mom.toFixed(3) + " MoM",
       date: latest.date,
       sparkLabels: trailing.map(function(d) { return d.date; }),
-      sparkData: trailing.map(function(d) { return d.ai_to_traditional_ratio; }),
+      sparkData: trailing.map(idx),
     };
   }
 

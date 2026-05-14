@@ -225,11 +225,16 @@ def extract_monthly_vc_funding(data):
 
 
 def extract_monthly_job_ratio(data):
-    """Extract AI-to-traditional job ratio from postings data."""
+    """Extract the JOLTS openings index from postings data. JOLTS doesn't
+    publish an AI-vs-traditional breakdown, so this is really a labor-demand
+    index keyed to Nov 2022 = 1.0. Reads `openings_index` (current) and
+    falls back to `ai_to_traditional_ratio` (legacy name)."""
     values = {}
     if data and "monthly" in data:
         for entry in data["monthly"]:
-            val = entry.get("ai_to_traditional_ratio")
+            val = entry.get("openings_index")
+            if val is None:
+                val = entry.get("ai_to_traditional_ratio")
             if val is not None:
                 values[entry["date"]] = val
     return values

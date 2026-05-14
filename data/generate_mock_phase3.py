@@ -291,7 +291,7 @@ def generate_job_postings():
             "total_postings_idx": total_idx,
             "ai_postings_pct": ai_pct,
             "traditional_pct": trad_pct,
-            "ai_to_traditional_ratio": ratio,
+            "openings_index": ratio,
         })
 
     return {

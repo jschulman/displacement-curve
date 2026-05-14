@@ -310,14 +310,32 @@ Structural shifts in hiring patterns across professional services. Tracks the ra
 
 ### Metrics
 
-- **AI Postings %:** Percentage of job postings requiring AI/ML skills
-- **Traditional Postings %:** Percentage of traditional (non-AI) role postings
-- **AI-to-Traditional Ratio:** Direct ratio of AI to traditional postings (key displacement indicator)
-- **Total Postings Index:** Overall posting volume indexed to baseline
+- **Openings Index:** Total openings in Professional & Business Services indexed to Nov 2022 = 1.0 (sourced from BLS JOLTS, `JTS540099000000000JOL`)
+- **Total Postings Index:** Same value, scaled to baseline = 100, for chart-friendly display
+- **Hires / Separations / Quits:** Raw JOLTS series for context
+
+### A note on what this signal cannot measure
+
+The METHODOLOGY originally described an "AI vs traditional postings ratio,"
+but JOLTS does not publish an AI / non-AI breakdown of openings. The
+underlying data is the total number of professional-services openings; a
+true AI-vs-traditional breakdown would require a different source (Indeed
+Hiring Lab text-keyword counts, LinkedIn Economic Graph, Lightcast, etc.).
+Until such a source is added, this signal functions as a labor-demand
+proxy: declining openings → softening demand for professional-services
+labor, which is consistent with — but not direct evidence of — displacement.
+
+The collector's output field is `openings_index`. Legacy data may still
+carry the name `ai_to_traditional_ratio`; consumers read whichever is
+present.
 
 ### Interpretation
 
-A rising AI-to-traditional ratio indicates firms are structurally shifting their workforce composition toward AI skills. When AI postings rise while traditional postings decline, it signals active displacement of traditional roles rather than net new hiring.
+Falling `openings_index` alongside flat or rising hires-to-openings rates
+indicates demand softening (firms posting fewer roles but still filling
+what they post). A demand softening that lingers across multiple quarters
+is one of the canonical leading indicators of structural change in a
+sector.
 
 ---
 
