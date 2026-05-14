@@ -229,21 +229,58 @@ def extract_monthly_job_ratio(data):
 
 
 def extract_monthly_trends(data):
-    """Extract Google Trends search interest."""
+    """Extract Google Trends search interest, averaging across category
+    composites. The trends collector outputs
+    {categories: {<cat>: {composite: [{date, value}]}}} — no top-level array."""
     values = {}
-    if data and "monthly" in data:
+    if not data:
+        return values
+
+    categories = data.get("categories", {})
+    if categories:
+        by_date = {}
+        for cat_data in categories.values():
+            composite = cat_data.get("composite") or cat_data.get("data") or []
+            for point in composite:
+                date = point.get("date")
+                val = point.get("value")
+                if date and val is not None:
+                    by_date.setdefault(date, []).append(val)
+        for date, vals in by_date.items():
+            values[date] = round(sum(vals) / len(vals), 1)
+        return values
+
+    # Fall back to legacy shapes used in some mock files
+    if "monthly" in data:
         for entry in data["monthly"]:
             values[entry["date"]] = entry.get("interest", entry.get("value", 0))
-    elif data and "aggregate" in data:
+    elif "aggregate" in data:
         for entry in data["aggregate"]:
             values[entry.get("date", "")] = entry.get("interest", 0)
     return values
 
 
 def extract_monthly_github(data):
-    """Extract GitHub activity index."""
+    """Extract GitHub activity index from the aggregate cumulative-stars series.
+    The github collector outputs
+    {categories: {...}, aggregate: [{date, total_new_repos, total_stars, ...}]}.
+    The composite previously looked only at a non-existent top-level `monthly`
+    key, so this signal contributed zero to every score."""
     values = {}
-    if data and "monthly" in data:
+    if not data:
+        return values
+
+    agg = data.get("aggregate", [])
+    if agg:
+        for entry in agg:
+            date = entry.get("date")
+            stars = entry.get("total_stars")
+            if date and stars is not None:
+                values[date] = stars
+        return values
+
+    # Legacy / mock shape
+    if "monthly" in data:
         for entry in data["monthly"]:
             values[entry["date"]] = entry.get("activity_index", entry.get("stars", 0))
     return values
