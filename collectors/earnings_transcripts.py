@@ -229,42 +229,45 @@ def _extract_revenue_quarterly(facts):
     return best
 
 
+# Unit keys that EDGAR uses for employee counts. See sec_workforce.py for
+# the rationale — we explicitly avoid falling through to arbitrary unit keys
+# because that would let currency-denominated values bleed into headcount.
+HEADCOUNT_UNIT_KEYS = ("pure", "employee", "employees", "shares", "Person", "items", "number")
+
+
+def _collect_headcount_entries(tag_data):
+    """Return the entries list for a headcount XBRL tag, trying known unit keys."""
+    if not tag_data:
+        return []
+    units = tag_data.get("units", {})
+    for key in HEADCOUNT_UNIT_KEYS:
+        if units.get(key):
+            return units[key]
+    for unit_entries in units.values():
+        if not unit_entries:
+            continue
+        sample = unit_entries[0].get("val")
+        if isinstance(sample, (int, float)) and 100 <= sample <= 10_000_000:
+            return unit_entries
+    return []
+
+
 def _extract_headcount(facts):
     """
-    Extract headcount data from XBRL facts.
+    Extract quarterly headcount data from XBRL facts.
 
-    Checks dei:EntityNumberOfEmployees first, then
-    ifrs-full:NumberOfEmployees for foreign filers.
+    Tries BOTH dei:EntityNumberOfEmployees and ifrs-full:NumberOfEmployees
+    (foreign filers often only populate the IFRS tag) and merges results.
 
     Returns dict mapping 'YYYY-QN' to headcount value.
     """
     all_facts = facts.get("facts", {})
+
     entries = []
-
-    # Try dei:EntityNumberOfEmployees first
-    dei = all_facts.get("dei", {})
-    tag_data = dei.get(HEADCOUNT_TAG)
-    if tag_data:
-        units = tag_data.get("units", {})
-        entries = units.get("pure", []) or units.get("number", []) or units.get("employee", [])
-        if not entries:
-            for unit_key, unit_entries in units.items():
-                if unit_entries:
-                    entries = unit_entries
-                    break
-
-    # Fall back to ifrs-full:NumberOfEmployees
-    if not entries:
-        ifrs = all_facts.get("ifrs-full", {})
-        tag_data = ifrs.get(HEADCOUNT_TAG_IFRS)
-        if tag_data:
-            units = tag_data.get("units", {})
-            entries = units.get("pure", []) or units.get("number", [])
-            if not entries:
-                for unit_key, unit_entries in units.items():
-                    if unit_entries:
-                        entries = unit_entries
-                        break
+    entries.extend(_collect_headcount_entries(all_facts.get("dei", {}).get(HEADCOUNT_TAG)))
+    entries.extend(
+        _collect_headcount_entries(all_facts.get("ifrs-full", {}).get(HEADCOUNT_TAG_IFRS))
+    )
 
     headcount_map = {}
     for entry in entries:
@@ -274,8 +277,11 @@ def _extract_headcount(facts):
         if fy is None or val is None:
             continue
 
-        # Filter out obviously wrong values (e.g., old filings with tiny numbers)
-        if int(val) < 100:
+        try:
+            val_int = int(val)
+        except (TypeError, ValueError):
+            continue
+        if not 100 <= val_int <= 10_000_000:
             continue
 
         if fp == "FY":
@@ -285,7 +291,7 @@ def _extract_headcount(facts):
         else:
             continue
 
-        headcount_map[key] = int(val)
+        headcount_map[key] = val_int
 
     return headcount_map
 
