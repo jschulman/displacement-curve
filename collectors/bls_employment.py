@@ -5,12 +5,12 @@ BLS Employment Data Collector for the Displacement Curve.
 Fetches Current Employment Statistics (CES) data from the Bureau of Labor
 Statistics Public Data API v2 (API key required, 500 queries/day).
 
-Series tracked:
-  CES5541200001 - Accounting & Tax Preparation
-  CES5541600001 - Management & Technical Consulting
-  CES5541100001 - Legal Services
-  CES5541500001 - Computer Systems Design
-  CES5000000001 - Total Professional & Business Services
+Series tracked (all seasonally adjusted, "all employees, thousands"):
+  CES6054120001 - Accounting, Tax Prep, Bookkeeping & Payroll
+  CES6054160001 - Management, Scientific & Technical Consulting
+  CES6054110001 - Legal Services
+  CES6054150001 - Computer Systems Design & Related Services
+  CES6000000001 - Total Professional and Business Services (supersector 60)
 
 Usage:
   python collectors/bls_employment.py              # live API
@@ -23,7 +23,7 @@ import json
 import os
 import sys
 import time
-from datetime import datetime
+from datetime import datetime, timezone
 
 import requests
 
@@ -32,17 +32,20 @@ import requests
 # ---------------------------------------------------------------------------
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-RAW_DIR = os.path.join(BASE_DIR, "data", "bls", "raw")
-PROCESSED_DIR = os.path.join(BASE_DIR, "data", "bls", "processed")
+# Tests redirect writes via DC_DATA_DIR so unit-test runs don't clobber the
+# live data tree. Defaults to the project's data/ for normal CLI use.
+DATA_DIR = os.environ.get("DC_DATA_DIR") or os.path.join(BASE_DIR, "data")
+RAW_DIR = os.path.join(DATA_DIR, "bls", "raw")
+PROCESSED_DIR = os.path.join(DATA_DIR, "bls", "processed")
 
 BLS_API_URL = "https://api.bls.gov/publicAPI/v2/timeseries/data/"
 
 SERIES = {
-    "CES5541200001": "Accounting & Tax Preparation",
-    "CES5541600001": "Management & Technical Consulting",
-    "CES5541100001": "Legal Services",
-    "CES5541500001": "Computer Systems Design",
-    "CES5000000001": "Total Professional & Business Services",
+    "CES6054120001": "Accounting & Tax Preparation",
+    "CES6054160001": "Management & Technical Consulting",
+    "CES6054110001": "Legal Services",
+    "CES6054150001": "Computer Systems Design",
+    "CES6000000001": "Total Professional & Business Services",
 }
 
 MAX_RETRIES = 3
@@ -113,7 +116,7 @@ def process_bls_response(raw_data):
     return {
         "metadata": {
             "source": "BLS CES",
-            "last_updated": datetime.utcnow().strftime("%Y-%m-%d"),
+            "last_updated": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
             "mock": False,
         },
         "series": series_output,
@@ -158,7 +161,8 @@ def main():
     parser = argparse.ArgumentParser(description="BLS Employment Data Collector")
     parser.add_argument("--mock", action="store_true", help="Generate mock data instead of calling API")
     parser.add_argument("--start-year", type=int, default=2022, help="Start year (default: 2022)")
-    parser.add_argument("--end-year", type=int, default=2026, help="End year (default: 2026)")
+    parser.add_argument("--end-year", type=int, default=datetime.now(timezone.utc).year,
+                        help="End year (default: current UTC year)")
     parser.add_argument("--api-key", type=str, default=os.environ.get("BLS_API_KEY"), help="BLS API v2 key (or set BLS_API_KEY env var)")
     args = parser.parse_args()
 
@@ -172,7 +176,7 @@ def main():
     else:
         raw = fetch_bls_data(list(SERIES.keys()), args.start_year, args.end_year, args.api_key)
         # Save raw response
-        raw_path = os.path.join(RAW_DIR, f"bls_raw_{datetime.utcnow().strftime('%Y%m%d_%H%M%S')}.json")
+        raw_path = os.path.join(RAW_DIR, f"bls_raw_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')}.json")
         save_json(raw, raw_path)
         processed = process_bls_response(raw)
 

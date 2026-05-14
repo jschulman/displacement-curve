@@ -21,6 +21,9 @@ from datetime import datetime
 # ---------------------------------------------------------------------------
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+# Tests redirect writes via DC_DATA_DIR so unit-test runs don't clobber the
+# live data tree. Defaults to data/ (the project's data root).
+OUTPUT_ROOT = os.environ.get("DC_DATA_DIR") or SCRIPT_DIR
 START_YEAR, START_MONTH = 2022, 11
 END_YEAR, END_MONTH = 2026, 2
 
@@ -64,7 +67,7 @@ def generate_bls_data():
     """Generate realistic BLS CES employment data (thousands)."""
 
     series_config = {
-        "CES5541200001": {
+        "CES6054120001": {
             "name": "Accounting & Tax Preparation",
             "base": 1055.0,
             "monthly_growth": 0.0012,
@@ -72,7 +75,7 @@ def generate_bls_data():
             "seasonal_amp": 8.0,
             "noise_std": 1.5,
         },
-        "CES5541600001": {
+        "CES6054160001": {
             "name": "Management & Technical Consulting",
             "base": 1610.0,
             "monthly_growth": 0.0018,
@@ -80,7 +83,7 @@ def generate_bls_data():
             "seasonal_amp": 6.0,
             "noise_std": 2.0,
         },
-        "CES5541100001": {
+        "CES6054110001": {
             "name": "Legal Services",
             "base": 1155.0,
             "monthly_growth": 0.0004,  # very flat
@@ -88,7 +91,7 @@ def generate_bls_data():
             "seasonal_amp": 3.0,
             "noise_std": 1.2,
         },
-        "CES5541500001": {
+        "CES6054150001": {
             "name": "Computer Systems Design",
             "base": 2105.0,
             "monthly_growth": 0.0025,
@@ -97,7 +100,7 @@ def generate_bls_data():
             "seasonal_amp": 5.0,
             "noise_std": 3.0,
         },
-        "CES5000000001": {
+        "CES6000000001": {
             "name": "Total Professional & Business Services",
             "base": 22520.0,
             "monthly_growth": 0.0010,
@@ -316,7 +319,7 @@ def generate_github_data():
 # ---------------------------------------------------------------------------
 
 def write_json(data, rel_path):
-    path = os.path.join(SCRIPT_DIR, rel_path)
+    path = os.path.join(OUTPUT_ROOT, rel_path)
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w") as f:
         json.dump(data, f, indent=2)

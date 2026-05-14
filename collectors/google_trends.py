@@ -16,7 +16,7 @@ import json
 import os
 import sys
 import time
-from datetime import datetime
+from datetime import datetime, timezone
 
 # pytrends is optional at import time so --mock works without it
 try:
@@ -29,8 +29,9 @@ except ImportError:
 # ---------------------------------------------------------------------------
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-RAW_DIR = os.path.join(BASE_DIR, "data", "trends", "raw")
-PROCESSED_DIR = os.path.join(BASE_DIR, "data", "trends", "processed")
+DATA_DIR = os.environ.get("DC_DATA_DIR") or os.path.join(BASE_DIR, "data")
+RAW_DIR = os.path.join(DATA_DIR, "trends", "raw")
+PROCESSED_DIR = os.path.join(DATA_DIR, "trends", "processed")
 
 CATEGORIES = {
     "ai_adoption": [
@@ -85,7 +86,7 @@ def fetch_trends_data():
         sys.exit(1)
 
     pytrends = TrendReq(hl="en-US", tz=360)
-    end_date = datetime.utcnow().strftime("%Y-%m-%d")
+    end_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     timeframe = f"2022-11-01 {end_date}"
     raw_results = {}
 
@@ -180,7 +181,7 @@ def process_trends_raw(raw_results):
     return {
         "metadata": {
             "source": "Google Trends",
-            "last_updated": datetime.utcnow().strftime("%Y-%m-%d"),
+            "last_updated": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
             "mock": False,
             "baseline": "2023-01 = 100",
         },
@@ -239,7 +240,7 @@ def main():
                 print("Keeping existing data. Exiting gracefully.")
                 sys.exit(0)
 
-            raw_path = os.path.join(RAW_DIR, f"trends_raw_{datetime.utcnow().strftime('%Y%m%d_%H%M%S')}.json")
+            raw_path = os.path.join(RAW_DIR, f"trends_raw_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')}.json")
             save_json(raw, raw_path)
             processed = process_trends_raw(raw)
             save_json(processed, os.path.join(PROCESSED_DIR, "search_interest.json"))

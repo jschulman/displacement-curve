@@ -24,6 +24,7 @@ import random
 # ---------------------------------------------------------------------------
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+OUTPUT_ROOT = os.environ.get("DC_DATA_DIR") or SCRIPT_DIR
 
 # 13 quarters: 2022-Q4 through 2025-Q4
 QUARTERS = []
@@ -58,7 +59,7 @@ def smooth_growth(start, end, n, curvature=1.5):
 
 def write_json(data, rel_path):
     """Write JSON data to a path relative to this script's directory."""
-    path = os.path.join(SCRIPT_DIR, rel_path)
+    path = os.path.join(OUTPUT_ROOT, rel_path)
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w") as f:
         json.dump(data, f, indent=2)
@@ -290,7 +291,7 @@ def generate_job_postings():
             "total_postings_idx": total_idx,
             "ai_postings_pct": ai_pct,
             "traditional_pct": trad_pct,
-            "ai_to_traditional_ratio": ratio,
+            "openings_index": ratio,
         })
 
     return {

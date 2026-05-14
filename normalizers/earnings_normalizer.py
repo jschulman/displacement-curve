@@ -23,8 +23,9 @@ import sys
 # ---------------------------------------------------------------------------
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-INPUT_PATH = os.path.join(BASE_DIR, "data", "earnings", "processed", "revenue.json")
-OUTPUT_PATH = os.path.join(BASE_DIR, "data", "earnings", "processed", "normalized.json")
+DATA_DIR = os.environ.get("DC_DATA_DIR") or os.path.join(BASE_DIR, "data")
+INPUT_PATH = os.path.join(DATA_DIR, "earnings", "processed", "revenue.json")
+OUTPUT_PATH = os.path.join(DATA_DIR, "earnings", "processed", "normalized.json")
 
 RELABELING_THRESHOLD = 3.0  # Growth rate ratio above this = likely relabeling
 

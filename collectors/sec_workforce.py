@@ -19,7 +19,7 @@ import json
 import os
 import sys
 import time
-from datetime import datetime
+from datetime import datetime, timezone
 
 import requests
 
@@ -28,8 +28,9 @@ import requests
 # ---------------------------------------------------------------------------
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-RAW_DIR = os.path.join(BASE_DIR, "data", "sec", "raw")
-PROCESSED_DIR = os.path.join(BASE_DIR, "data", "sec", "processed")
+DATA_DIR = os.environ.get("DC_DATA_DIR") or os.path.join(BASE_DIR, "data")
+RAW_DIR = os.path.join(DATA_DIR, "sec", "raw")
+PROCESSED_DIR = os.path.join(DATA_DIR, "sec", "processed")
 
 TICKERS_IT = ["ACN", "CTSH", "INFY", "WIT", "EPAM", "GLOB", "IT", "BAH"]
 TICKERS_STAFFING = ["KFRC", "RHI", "MAN"]
@@ -120,45 +121,56 @@ def fetch_workforce_from_edgar(tickers):
     return raw_data
 
 
+# Unit keys that EDGAR uses for employee counts. "pure" is by far the most
+# common for dei:EntityNumberOfEmployees; older or foreign filings may use
+# any of the others. We deliberately do NOT fall through to arbitrary unit
+# keys (e.g. USD) since those carry currency amounts, not headcount.
+HEADCOUNT_UNIT_KEYS = ("pure", "employee", "employees", "shares", "Person", "items", "number")
+
+
+def _collect_headcount_entries(tag_data):
+    """Return the entries list for a headcount XBRL tag, trying known unit keys."""
+    if not tag_data:
+        return []
+    units = tag_data.get("units", {})
+    for key in HEADCOUNT_UNIT_KEYS:
+        if units.get(key):
+            return units[key]
+    # Last resort: pick the unit whose values look like employee counts
+    # (integers in the 100..10_000_000 range). Skip anything that looks
+    # like currency.
+    for unit_entries in units.values():
+        if not unit_entries:
+            continue
+        sample = unit_entries[0].get("val")
+        if isinstance(sample, (int, float)) and 100 <= sample <= 10_000_000:
+            return unit_entries
+    return []
+
+
 def _extract_annual_headcount(facts):
     """
-    Extract annual headcount from XBRL tags.
+    Extract annual headcount from XBRL company facts.
 
-    Checks dei:EntityNumberOfEmployees first, then
-    ifrs-full:NumberOfEmployees for foreign filers.
-    Filters to annual filings (fp = 'FY').
+    Tries BOTH dei:EntityNumberOfEmployees and ifrs-full:NumberOfEmployees
+    (foreign filers like Infosys/Wipro often only populate the IFRS tag) and
+    merges the results, keeping the most recently filed value per fiscal year.
 
-    Returns list of {year, total_headcount} dicts.
+    Accepts fp=FY (US domestic 10-K) and fp=Q4 (sometimes used by foreign
+    20-F/40-F filers for the year-end snapshot). Filters out implausible
+    values: under 100 (likely stale or wrong) or over 10M (likely currency
+    bleeding through from a mis-tagged unit).
+
+    Returns list of {year, total_headcount, contractor_pct} dicts.
     """
     all_facts = facts.get("facts", {})
+
     entries = []
+    entries.extend(_collect_headcount_entries(all_facts.get("dei", {}).get(HEADCOUNT_TAG)))
+    entries.extend(
+        _collect_headcount_entries(all_facts.get("ifrs-full", {}).get(HEADCOUNT_TAG_IFRS))
+    )
 
-    # Try dei:EntityNumberOfEmployees first
-    dei = all_facts.get("dei", {})
-    tag_data = dei.get(HEADCOUNT_TAG)
-    if tag_data:
-        units = tag_data.get("units", {})
-        entries = units.get("pure", []) or units.get("employee", [])
-        if not entries:
-            for unit_key, unit_entries in units.items():
-                if unit_entries:
-                    entries = unit_entries
-                    break
-
-    # Fall back to ifrs-full:NumberOfEmployees
-    if not entries:
-        ifrs = all_facts.get("ifrs-full", {})
-        tag_data = ifrs.get(HEADCOUNT_TAG_IFRS)
-        if tag_data:
-            units = tag_data.get("units", {})
-            entries = units.get("pure", []) or units.get("number", [])
-            if not entries:
-                for unit_key, unit_entries in units.items():
-                    if unit_entries:
-                        entries = unit_entries
-                        break
-
-    # Filter to annual (FY) filings, deduplicate by year (keep latest)
     yearly = {}
     for entry in entries:
         fy = entry.get("fy")
@@ -168,30 +180,30 @@ def _extract_annual_headcount(facts):
 
         if fy is None or val is None:
             continue
-
-        # Only annual filings
-        if fp != "FY":
+        if fp not in ("FY", "Q4"):
             continue
 
-        # Filter out obviously wrong values
-        if int(val) < 100:
+        try:
+            val_int = int(val)
+        except (TypeError, ValueError):
+            continue
+        if not 100 <= val_int <= 10_000_000:
             continue
 
         year = int(fy)
-        # Keep the most recently filed value for each fiscal year
-        if year not in yearly or filed > yearly[year]["filed"]:
-            yearly[year] = {"year": year, "total_headcount": int(val), "filed": filed}
+        existing = yearly.get(year)
+        # FY takes precedence over Q4; otherwise keep the most recently filed.
+        if existing is None:
+            yearly[year] = {"year": year, "total_headcount": val_int, "filed": filed, "fp": fp}
+        elif existing["fp"] != "FY" and fp == "FY":
+            yearly[year] = {"year": year, "total_headcount": val_int, "filed": filed, "fp": fp}
+        elif existing["fp"] == fp and filed > existing["filed"]:
+            yearly[year] = {"year": year, "total_headcount": val_int, "filed": filed, "fp": fp}
 
-    # Convert to sorted list, drop the filed date
-    result = []
-    for year in sorted(yearly.keys()):
-        result.append({
-            "year": yearly[year]["year"],
-            "total_headcount": yearly[year]["total_headcount"],
-            "contractor_pct": None,  # Not available in XBRL
-        })
-
-    return result
+    return [
+        {"year": yearly[y]["year"], "total_headcount": yearly[y]["total_headcount"], "contractor_pct": None}
+        for y in sorted(yearly.keys())
+    ]
 
 
 def process_workforce_data(raw_data):
@@ -233,7 +245,7 @@ def process_workforce_data(raw_data):
     return {
         "metadata": {
             "source": "SEC EDGAR XBRL",
-            "last_updated": datetime.utcnow().strftime("%Y-%m-%d"),
+            "last_updated": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
             "mock": False,
         },
         "firms": firms,
@@ -283,7 +295,7 @@ def main():
         # Save raw response
         raw_path = os.path.join(
             RAW_DIR,
-            f"workforce_raw_{datetime.utcnow().strftime('%Y%m%d_%H%M%S')}.json",
+            f"workforce_raw_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')}.json",
         )
         save_json(raw, raw_path)
         processed = process_workforce_data(raw)

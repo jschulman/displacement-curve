@@ -17,7 +17,7 @@ import json
 import os
 import sys
 import time
-from datetime import datetime
+from datetime import datetime, timezone
 
 import requests
 
@@ -26,8 +26,9 @@ import requests
 # ---------------------------------------------------------------------------
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-RAW_DIR = os.path.join(BASE_DIR, "data", "github", "raw")
-PROCESSED_DIR = os.path.join(BASE_DIR, "data", "github", "processed")
+DATA_DIR = os.environ.get("DC_DATA_DIR") or os.path.join(BASE_DIR, "data")
+RAW_DIR = os.path.join(DATA_DIR, "github", "raw")
+PROCESSED_DIR = os.path.join(DATA_DIR, "github", "processed")
 
 GITHUB_API = "https://api.github.com"
 SEARCH_REPOS = f"{GITHUB_API}/search/repositories"
@@ -48,8 +49,13 @@ RETRY_DELAY = 5
 # Date helpers
 # ---------------------------------------------------------------------------
 
-def month_ranges(start_year=2022, start_month=11, end_year=2026, end_month=2):
-    """Yield (year, month, start_date, end_date) for each month in range."""
+def month_ranges(start_year=2022, start_month=11, end_year=None, end_month=None):
+    """Yield (year, month, start_date, end_date) for each month in range.
+    Defaults to running from 2022-11 through the current UTC month."""
+    if end_year is None or end_month is None:
+        now = datetime.now(timezone.utc)
+        end_year = end_year if end_year is not None else now.year
+        end_month = end_month if end_month is not None else now.month
     y, m = start_year, start_month
     while (y, m) <= (end_year, end_month):
         start = f"{y}-{m:02d}-01"
@@ -183,7 +189,7 @@ def process_github_raw(raw_categories):
     return {
         "metadata": {
             "source": "GitHub API",
-            "last_updated": datetime.utcnow().strftime("%Y-%m-%d"),
+            "last_updated": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
             "mock": False,
         },
         "categories": raw_categories,
@@ -235,7 +241,7 @@ def main():
         processed = generate_mock()
     else:
         raw = fetch_github_data(token=args.token)
-        raw_path = os.path.join(RAW_DIR, f"github_raw_{datetime.utcnow().strftime('%Y%m%d_%H%M%S')}.json")
+        raw_path = os.path.join(RAW_DIR, f"github_raw_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')}.json")
         save_json(raw, raw_path)
         processed = process_github_raw(raw)
 

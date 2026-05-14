@@ -23,7 +23,7 @@ import json
 import os
 import sys
 import time
-from datetime import datetime
+from datetime import datetime, timezone
 
 import requests
 
@@ -32,8 +32,9 @@ import requests
 # ---------------------------------------------------------------------------
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-RAW_DIR = os.path.join(BASE_DIR, "data", "jobs", "raw")
-PROCESSED_DIR = os.path.join(BASE_DIR, "data", "jobs", "processed")
+DATA_DIR = os.environ.get("DC_DATA_DIR") or os.path.join(BASE_DIR, "data")
+RAW_DIR = os.path.join(DATA_DIR, "jobs", "raw")
+PROCESSED_DIR = os.path.join(DATA_DIR, "jobs", "processed")
 
 BLS_API_URL = "https://api.bls.gov/publicAPI/v2/timeseries/data/"
 
@@ -108,9 +109,16 @@ def process_jolts_data(raw_data):
     """
     Transform raw BLS JOLTS API response into standard job postings schema.
 
-    Indexes job openings to baseline month (Nov 2022 = 100) for
-    total_postings_idx, and computes ai_to_traditional_ratio as
-    job_openings / baseline_openings (labor demand ratio).
+    JOLTS publishes total openings/hires/separations/quits for the
+    Professional and Business Services sector. It does NOT break openings
+    down by AI vs traditional roles. Earlier code computed a field called
+    ai_to_traditional_ratio = openings / baseline_openings — which was just
+    total_postings_idx / 100 in disguise, despite the name implying an AI
+    breakdown. That field is now called openings_index and documented as
+    a labor-demand index, not an AI-vs-traditional ratio.
+
+    Indexes job openings to baseline month (Nov 2022 = 1.0) for
+    openings_index, and 100 for total_postings_idx.
     """
     # Parse each series into {date: value} dicts
     series_data = {}
@@ -165,17 +173,17 @@ def process_jolts_data(raw_data):
         # Index to baseline
         if jo is not None and baseline_openings:
             total_postings_idx = round((jo / baseline_openings) * 100, 1)
-            ai_to_trad_ratio = round(jo / baseline_openings, 3)
+            openings_index = round(jo / baseline_openings, 3)
         else:
             total_postings_idx = None
-            ai_to_trad_ratio = None
+            openings_index = None
 
         monthly.append({
             "date": date_label,
             "total_postings_idx": total_postings_idx,
             "ai_postings_pct": None,
             "traditional_pct": None,
-            "ai_to_traditional_ratio": ai_to_trad_ratio,
+            "openings_index": openings_index,
             "job_openings": jo,
             "hires": hi,
             "separations": sep,
@@ -185,7 +193,7 @@ def process_jolts_data(raw_data):
     return {
         "metadata": {
             "source": "BLS JOLTS",
-            "last_updated": datetime.utcnow().strftime("%Y-%m-%d"),
+            "last_updated": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
             "mock": False,
         },
         "monthly": monthly,
@@ -234,7 +242,8 @@ def main():
     parser = argparse.ArgumentParser(description="Job Postings Collector (BLS JOLTS)")
     parser.add_argument("--mock", action="store_true", help="Generate mock data instead of calling API")
     parser.add_argument("--start-year", type=int, default=2022, help="Start year (default: 2022)")
-    parser.add_argument("--end-year", type=int, default=2025, help="End year (default: 2025)")
+    parser.add_argument("--end-year", type=int, default=datetime.now(timezone.utc).year,
+                        help="End year (default: current UTC year)")
     parser.add_argument("--api-key", type=str, default=os.environ.get("BLS_API_KEY"),
                         help="BLS API v2 key (or set BLS_API_KEY env var)")
     args = parser.parse_args()
@@ -249,7 +258,7 @@ def main():
     else:
         raw = fetch_jolts_data(list(JOLTS_SERIES.keys()), args.start_year, args.end_year, args.api_key)
         # Save raw response
-        raw_path = os.path.join(RAW_DIR, f"jolts_raw_{datetime.utcnow().strftime('%Y%m%d_%H%M%S')}.json")
+        raw_path = os.path.join(RAW_DIR, f"jolts_raw_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')}.json")
         save_json(raw, raw_path)
         processed = process_jolts_data(raw)
 

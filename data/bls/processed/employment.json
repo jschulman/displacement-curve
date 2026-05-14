@@ -2,7 +2,9 @@
   "metadata": {
     "source": "BLS CES",
     "last_updated": "2026-05-08",
-    "mock": false
+    "mock": false,
+    "pending_id_recollection": true,
+    "note": "Series key renamed CES5000000001 -> CES6000000001 (supersector fix). Values are stale Information-sector data until next BLS API collection."
   },
   "series": {
     "CES5541200001": {
@@ -21,7 +23,7 @@
       "name": "Computer Systems Design",
       "data": []
     },
-    "CES5000000001": {
+    "CES6000000001": {
       "name": "Total Professional & Business Services",
       "data": [
         {

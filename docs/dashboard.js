@@ -19,433 +19,6 @@
     composite: "data/composite/displacement_index.json",
   };
 
-  // ---- Fallback sample data ----
-  // Used when fetch fails (dev/offline). First/last 3 points per signal.
-  const FALLBACK = {
-    employment: {
-      metadata: {
-        source: "BLS",
-        last_updated: "2025-12-01",
-        series_id: "CES5000000001",
-      },
-      series: {
-        CES5000000001: {
-          name: "Professional and Business Services",
-          data: [
-            { date: "2022-11", value: 22872 },
-            { date: "2022-12", value: 22911 },
-            { date: "2023-01", value: 22943 },
-            { date: "2023-02", value: 22980 },
-            { date: "2023-03", value: 22998 },
-            { date: "2023-04", value: 23010 },
-            { date: "2023-05", value: 23020 },
-            { date: "2023-06", value: 23048 },
-            { date: "2023-07", value: 23060 },
-            { date: "2023-08", value: 23075 },
-            { date: "2023-09", value: 23088 },
-            { date: "2023-10", value: 23100 },
-            { date: "2023-11", value: 23105 },
-            { date: "2023-12", value: 23110 },
-            { date: "2024-01", value: 23090 },
-            { date: "2024-02", value: 23070 },
-            { date: "2024-03", value: 23085 },
-            { date: "2024-04", value: 23095 },
-            { date: "2024-05", value: 23100 },
-            { date: "2024-06", value: 23110 },
-            { date: "2024-07", value: 23120 },
-            { date: "2024-08", value: 23130 },
-            { date: "2024-09", value: 23140 },
-            { date: "2024-10", value: 23148 },
-            { date: "2024-11", value: 23142 },
-            { date: "2024-12", value: 23150 },
-          ],
-        },
-        CES5051000001: {
-          name: "Professional, Scientific, and Technical Services",
-          data: [
-            { date: "2022-11", value: 10200 },
-            { date: "2023-06", value: 10350 },
-            { date: "2024-12", value: 10520 },
-          ],
-        },
-        CES5054100001: {
-          name: "Computer Systems Design",
-          data: [
-            { date: "2022-11", value: 2180 },
-            { date: "2023-06", value: 2210 },
-            { date: "2024-12", value: 2240 },
-          ],
-        },
-        CES5054000001: {
-          name: "Computer and Mathematical Occupations",
-          data: [
-            { date: "2022-11", value: 2000 },
-            { date: "2023-06", value: 2025 },
-            { date: "2024-12", value: 2048 },
-          ],
-        },
-        CES5056000001: {
-          name: "Administrative and Support Services",
-          data: [
-            { date: "2022-11", value: 8900 },
-            { date: "2023-06", value: 8950 },
-            { date: "2024-12", value: 8980 },
-          ],
-        },
-      },
-    },
-    trends: {
-      metadata: {
-        source: "Google Trends",
-        last_updated: "2025-12-15",
-      },
-      categories: {
-        "ai coding tools": {
-          data: [
-            { date: "2022-11", value: 12 },
-            { date: "2022-12", value: 18 },
-            { date: "2023-01", value: 25 },
-            { date: "2023-02", value: 30 },
-            { date: "2023-03", value: 33 },
-            { date: "2023-04", value: 35 },
-            { date: "2023-05", value: 38 },
-            { date: "2023-06", value: 40 },
-            { date: "2023-07", value: 42 },
-            { date: "2023-08", value: 44 },
-            { date: "2023-09", value: 47 },
-            { date: "2023-10", value: 50 },
-            { date: "2023-11", value: 52 },
-            { date: "2023-12", value: 55 },
-            { date: "2024-01", value: 58 },
-            { date: "2024-02", value: 60 },
-            { date: "2024-03", value: 62 },
-            { date: "2024-04", value: 63 },
-            { date: "2024-05", value: 65 },
-            { date: "2024-06", value: 68 },
-            { date: "2024-07", value: 70 },
-            { date: "2024-08", value: 72 },
-            { date: "2024-09", value: 75 },
-            { date: "2024-10", value: 78 },
-            { date: "2024-11", value: 80 },
-            { date: "2024-12", value: 82 },
-          ],
-        },
-        "ai replacing jobs": {
-          data: [
-            { date: "2022-11", value: 8 },
-            { date: "2022-12", value: 15 },
-            { date: "2023-01", value: 45 },
-            { date: "2023-02", value: 55 },
-            { date: "2023-03", value: 48 },
-            { date: "2023-04", value: 42 },
-            { date: "2023-05", value: 38 },
-            { date: "2023-06", value: 35 },
-            { date: "2023-07", value: 33 },
-            { date: "2023-08", value: 32 },
-            { date: "2023-09", value: 34 },
-            { date: "2023-10", value: 36 },
-            { date: "2023-11", value: 38 },
-            { date: "2023-12", value: 40 },
-            { date: "2024-01", value: 42 },
-            { date: "2024-02", value: 44 },
-            { date: "2024-03", value: 48 },
-            { date: "2024-04", value: 50 },
-            { date: "2024-05", value: 52 },
-            { date: "2024-06", value: 55 },
-            { date: "2024-07", value: 58 },
-            { date: "2024-08", value: 60 },
-            { date: "2024-09", value: 62 },
-            { date: "2024-10", value: 65 },
-            { date: "2024-11", value: 68 },
-            { date: "2024-12", value: 70 },
-          ],
-        },
-        "chatgpt alternatives": {
-          data: [
-            { date: "2022-11", value: 0 },
-            { date: "2022-12", value: 5 },
-            { date: "2023-01", value: 60 },
-            { date: "2023-02", value: 72 },
-            { date: "2023-03", value: 55 },
-            { date: "2023-04", value: 45 },
-            { date: "2023-05", value: 40 },
-            { date: "2023-06", value: 38 },
-            { date: "2023-07", value: 36 },
-            { date: "2023-08", value: 35 },
-            { date: "2023-09", value: 34 },
-            { date: "2023-10", value: 33 },
-            { date: "2023-11", value: 35 },
-            { date: "2023-12", value: 38 },
-            { date: "2024-01", value: 40 },
-            { date: "2024-02", value: 42 },
-            { date: "2024-03", value: 44 },
-            { date: "2024-04", value: 45 },
-            { date: "2024-05", value: 48 },
-            { date: "2024-06", value: 50 },
-            { date: "2024-07", value: 52 },
-            { date: "2024-08", value: 55 },
-            { date: "2024-09", value: 58 },
-            { date: "2024-10", value: 60 },
-            { date: "2024-11", value: 62 },
-            { date: "2024-12", value: 64 },
-          ],
-        },
-        "ai automation": {
-          data: [
-            { date: "2022-11", value: 15 },
-            { date: "2022-12", value: 20 },
-            { date: "2023-01", value: 35 },
-            { date: "2023-02", value: 40 },
-            { date: "2023-03", value: 38 },
-            { date: "2023-04", value: 36 },
-            { date: "2023-05", value: 35 },
-            { date: "2023-06", value: 34 },
-            { date: "2023-07", value: 33 },
-            { date: "2023-08", value: 34 },
-            { date: "2023-09", value: 36 },
-            { date: "2023-10", value: 38 },
-            { date: "2023-11", value: 40 },
-            { date: "2023-12", value: 42 },
-            { date: "2024-01", value: 44 },
-            { date: "2024-02", value: 46 },
-            { date: "2024-03", value: 48 },
-            { date: "2024-04", value: 50 },
-            { date: "2024-05", value: 52 },
-            { date: "2024-06", value: 55 },
-            { date: "2024-07", value: 58 },
-            { date: "2024-08", value: 60 },
-            { date: "2024-09", value: 62 },
-            { date: "2024-10", value: 65 },
-            { date: "2024-11", value: 68 },
-            { date: "2024-12", value: 72 },
-          ],
-        },
-      },
-    },
-    github: {
-      metadata: {
-        source: "GitHub",
-        last_updated: "2025-12-20",
-      },
-      monthly: [
-        { date: "2022-11", new_repos: 120, cumulative_stars: 45000 },
-        { date: "2022-12", new_repos: 180, cumulative_stars: 52000 },
-        { date: "2023-01", new_repos: 310, cumulative_stars: 68000 },
-        { date: "2023-02", new_repos: 350, cumulative_stars: 78000 },
-        { date: "2023-03", new_repos: 380, cumulative_stars: 88000 },
-        { date: "2023-04", new_repos: 360, cumulative_stars: 96000 },
-        { date: "2023-05", new_repos: 340, cumulative_stars: 103000 },
-        { date: "2023-06", new_repos: 320, cumulative_stars: 110000 },
-        { date: "2023-07", new_repos: 330, cumulative_stars: 116000 },
-        { date: "2023-08", new_repos: 340, cumulative_stars: 122000 },
-        { date: "2023-09", new_repos: 355, cumulative_stars: 128000 },
-        { date: "2023-10", new_repos: 370, cumulative_stars: 134000 },
-        { date: "2023-11", new_repos: 390, cumulative_stars: 140000 },
-        { date: "2023-12", new_repos: 410, cumulative_stars: 146000 },
-        { date: "2024-01", new_repos: 430, cumulative_stars: 152000 },
-        { date: "2024-02", new_repos: 445, cumulative_stars: 157000 },
-        { date: "2024-03", new_repos: 460, cumulative_stars: 162000 },
-        { date: "2024-04", new_repos: 450, cumulative_stars: 166000 },
-        { date: "2024-05", new_repos: 465, cumulative_stars: 170000 },
-        { date: "2024-06", new_repos: 480, cumulative_stars: 174000 },
-        { date: "2024-07", new_repos: 490, cumulative_stars: 178000 },
-        { date: "2024-08", new_repos: 500, cumulative_stars: 182000 },
-        { date: "2024-09", new_repos: 510, cumulative_stars: 186000 },
-        { date: "2024-10", new_repos: 520, cumulative_stars: 190000 },
-        { date: "2024-11", new_repos: 505, cumulative_stars: 194000 },
-        { date: "2024-12", new_repos: 515, cumulative_stars: 198000 },
-      ],
-    },
-    earnings: {
-      metadata: {
-        source: "SEC EDGAR / Earnings Transcripts",
-        last_updated: "2026-02-26",
-        mock: true,
-      },
-      firms: {},
-      aggregate: [
-        { quarter: "2022-Q4", total_ai_revenue_mm: 1250, avg_ai_pct: 2.8, avg_relabeling_index: 1.2, avg_rev_per_employee: 19.5 },
-        { quarter: "2023-Q1", total_ai_revenue_mm: 1380, avg_ai_pct: 3.1, avg_relabeling_index: 1.3, avg_rev_per_employee: 20.1 },
-        { quarter: "2023-Q2", total_ai_revenue_mm: 1520, avg_ai_pct: 3.5, avg_relabeling_index: 1.4, avg_rev_per_employee: 20.8 },
-        { quarter: "2023-Q3", total_ai_revenue_mm: 1800, avg_ai_pct: 4.1, avg_relabeling_index: 1.5, avg_rev_per_employee: 21.5 },
-        { quarter: "2023-Q4", total_ai_revenue_mm: 2100, avg_ai_pct: 4.8, avg_relabeling_index: 1.6, avg_rev_per_employee: 22.0 },
-        { quarter: "2024-Q1", total_ai_revenue_mm: 2450, avg_ai_pct: 5.5, avg_relabeling_index: 1.7, avg_rev_per_employee: 22.8 },
-      ],
-    },
-    workforce: {
-      metadata: {
-        source: "SEC EDGAR 10-K/10-Q",
-        last_updated: "2026-02-26",
-        mock: true,
-      },
-      firms: {},
-      aggregate: [
-        { year: 2022, total_headcount: 1805000, avg_contractor_pct: 11.2 },
-        { year: 2023, total_headcount: 1780000, avg_contractor_pct: 12.5 },
-        { year: 2024, total_headcount: 1750000, avg_contractor_pct: 13.8 },
-        { year: 2025, total_headcount: 1720000, avg_contractor_pct: 14.5 },
-      ],
-    },
-    vc: {
-      metadata: { source: "SEC Form D", last_updated: "2026-02-26", mock: true },
-      categories: {
-        ai_audit: { name: "AI-Native Audit/Accounting", quarterly: [
-          { quarter: "2023-Q1", funding_mm: 52.0, deal_count: 4 },
-          { quarter: "2023-Q2", funding_mm: 60.0, deal_count: 5 },
-          { quarter: "2023-Q3", funding_mm: 68.0, deal_count: 5 },
-          { quarter: "2023-Q4", funding_mm: 75.0, deal_count: 6 },
-          { quarter: "2024-Q1", funding_mm: 85.0, deal_count: 7 },
-          { quarter: "2024-Q2", funding_mm: 95.0, deal_count: 8 },
-        ]},
-        ai_legal: { name: "AI Legal Services", quarterly: [
-          { quarter: "2023-Q1", funding_mm: 40.0, deal_count: 3 },
-          { quarter: "2023-Q2", funding_mm: 48.0, deal_count: 4 },
-          { quarter: "2023-Q3", funding_mm: 55.0, deal_count: 4 },
-          { quarter: "2023-Q4", funding_mm: 62.0, deal_count: 5 },
-          { quarter: "2024-Q1", funding_mm: 70.0, deal_count: 6 },
-          { quarter: "2024-Q2", funding_mm: 80.0, deal_count: 7 },
-        ]},
-        ai_consulting: { name: "AI Consulting/Strategy", quarterly: [
-          { quarter: "2023-Q1", funding_mm: 35.0, deal_count: 3 },
-          { quarter: "2023-Q2", funding_mm: 42.0, deal_count: 3 },
-          { quarter: "2023-Q3", funding_mm: 50.0, deal_count: 4 },
-          { quarter: "2023-Q4", funding_mm: 58.0, deal_count: 5 },
-          { quarter: "2024-Q1", funding_mm: 65.0, deal_count: 5 },
-          { quarter: "2024-Q2", funding_mm: 72.0, deal_count: 6 },
-        ]},
-        ai_compliance: { name: "AI Compliance/Regulatory", quarterly: [
-          { quarter: "2023-Q1", funding_mm: 20.0, deal_count: 2 },
-          { quarter: "2023-Q2", funding_mm: 25.0, deal_count: 2 },
-          { quarter: "2023-Q3", funding_mm: 30.0, deal_count: 3 },
-          { quarter: "2023-Q4", funding_mm: 35.0, deal_count: 3 },
-          { quarter: "2024-Q1", funding_mm: 42.0, deal_count: 4 },
-          { quarter: "2024-Q2", funding_mm: 50.0, deal_count: 5 },
-        ]},
-        ai_staffing: { name: "AI-Native Staffing", quarterly: [
-          { quarter: "2023-Q1", funding_mm: 15.0, deal_count: 2 },
-          { quarter: "2023-Q2", funding_mm: 18.0, deal_count: 2 },
-          { quarter: "2023-Q3", funding_mm: 22.0, deal_count: 2 },
-          { quarter: "2023-Q4", funding_mm: 28.0, deal_count: 3 },
-          { quarter: "2024-Q1", funding_mm: 35.0, deal_count: 3 },
-          { quarter: "2024-Q2", funding_mm: 42.0, deal_count: 4 },
-        ]},
-        horizontal_ai: { name: "Horizontal AI Agents", quarterly: [
-          { quarter: "2023-Q1", funding_mm: 80.0, deal_count: 6 },
-          { quarter: "2023-Q2", funding_mm: 95.0, deal_count: 7 },
-          { quarter: "2023-Q3", funding_mm: 110.0, deal_count: 8 },
-          { quarter: "2023-Q4", funding_mm: 130.0, deal_count: 9 },
-          { quarter: "2024-Q1", funding_mm: 150.0, deal_count: 10 },
-          { quarter: "2024-Q2", funding_mm: 175.0, deal_count: 12 },
-        ]},
-      },
-      aggregate: [
-        { quarter: "2023-Q1", total_funding_mm: 242.0, total_deals: 20, cumulative_mm: 242.0 },
-        { quarter: "2023-Q2", total_funding_mm: 288.0, total_deals: 23, cumulative_mm: 530.0 },
-        { quarter: "2023-Q3", total_funding_mm: 335.0, total_deals: 26, cumulative_mm: 865.0 },
-        { quarter: "2023-Q4", total_funding_mm: 388.0, total_deals: 31, cumulative_mm: 1253.0 },
-        { quarter: "2024-Q1", total_funding_mm: 447.0, total_deals: 35, cumulative_mm: 1700.0 },
-        { quarter: "2024-Q2", total_funding_mm: 514.0, total_deals: 42, cumulative_mm: 2214.0 },
-      ],
-    },
-    jobs: {
-      metadata: { source: "Indeed Hiring Lab / LinkedIn", last_updated: "2026-02-26", mock: true },
-      monthly: [
-        { date: "2024-01", total_postings_idx: 105.0, ai_postings_pct: 5.8, traditional_pct: 68.2, ai_to_traditional_ratio: 0.085 },
-        { date: "2024-02", total_postings_idx: 106.0, ai_postings_pct: 6.1, traditional_pct: 67.5, ai_to_traditional_ratio: 0.090 },
-        { date: "2024-03", total_postings_idx: 107.0, ai_postings_pct: 6.5, traditional_pct: 66.8, ai_to_traditional_ratio: 0.097 },
-        { date: "2024-04", total_postings_idx: 108.0, ai_postings_pct: 6.9, traditional_pct: 66.0, ai_to_traditional_ratio: 0.105 },
-        { date: "2024-05", total_postings_idx: 109.0, ai_postings_pct: 7.2, traditional_pct: 65.3, ai_to_traditional_ratio: 0.110 },
-        { date: "2024-06", total_postings_idx: 110.0, ai_postings_pct: 7.6, traditional_pct: 64.5, ai_to_traditional_ratio: 0.118 },
-      ],
-      firms: {},
-    },
-    regulatory: {
-      regulators: {
-        fed: { name: "Federal Reserve", quarterly: [
-          { quarter: "2022-Q4", document_count: 2, enforcement_count: 0, guidance_count: 2 },
-          { quarter: "2023-Q1", document_count: 3, enforcement_count: 0, guidance_count: 3 },
-          { quarter: "2023-Q2", document_count: 4, enforcement_count: 1, guidance_count: 3 },
-          { quarter: "2023-Q3", document_count: 5, enforcement_count: 1, guidance_count: 4 },
-          { quarter: "2023-Q4", document_count: 6, enforcement_count: 1, guidance_count: 5 },
-          { quarter: "2024-Q1", document_count: 7, enforcement_count: 2, guidance_count: 5 },
-        ]},
-        occ: { name: "OCC", quarterly: [
-          { quarter: "2022-Q4", document_count: 1, enforcement_count: 0, guidance_count: 1 },
-          { quarter: "2023-Q1", document_count: 2, enforcement_count: 0, guidance_count: 2 },
-          { quarter: "2023-Q2", document_count: 2, enforcement_count: 0, guidance_count: 2 },
-          { quarter: "2023-Q3", document_count: 3, enforcement_count: 1, guidance_count: 2 },
-          { quarter: "2023-Q4", document_count: 4, enforcement_count: 1, guidance_count: 3 },
-          { quarter: "2024-Q1", document_count: 5, enforcement_count: 1, guidance_count: 4 },
-        ]},
-        fdic: { name: "FDIC", quarterly: [
-          { quarter: "2022-Q4", document_count: 1, enforcement_count: 0, guidance_count: 1 },
-          { quarter: "2023-Q1", document_count: 1, enforcement_count: 0, guidance_count: 1 },
-          { quarter: "2023-Q2", document_count: 2, enforcement_count: 0, guidance_count: 2 },
-          { quarter: "2023-Q3", document_count: 2, enforcement_count: 0, guidance_count: 2 },
-          { quarter: "2023-Q4", document_count: 3, enforcement_count: 0, guidance_count: 3 },
-          { quarter: "2024-Q1", document_count: 4, enforcement_count: 1, guidance_count: 3 },
-        ]},
-        cfpb: { name: "CFPB", quarterly: [
-          { quarter: "2022-Q4", document_count: 1, enforcement_count: 0, guidance_count: 1 },
-          { quarter: "2023-Q1", document_count: 2, enforcement_count: 1, guidance_count: 1 },
-          { quarter: "2023-Q2", document_count: 2, enforcement_count: 1, guidance_count: 1 },
-          { quarter: "2023-Q3", document_count: 3, enforcement_count: 1, guidance_count: 2 },
-          { quarter: "2023-Q4", document_count: 3, enforcement_count: 1, guidance_count: 2 },
-          { quarter: "2024-Q1", document_count: 4, enforcement_count: 2, guidance_count: 2 },
-        ]},
-        sec: { name: "SEC", quarterly: [
-          { quarter: "2022-Q4", document_count: 2, enforcement_count: 0, guidance_count: 2 },
-          { quarter: "2023-Q1", document_count: 3, enforcement_count: 1, guidance_count: 2 },
-          { quarter: "2023-Q2", document_count: 4, enforcement_count: 1, guidance_count: 3 },
-          { quarter: "2023-Q3", document_count: 5, enforcement_count: 2, guidance_count: 3 },
-          { quarter: "2023-Q4", document_count: 6, enforcement_count: 2, guidance_count: 4 },
-          { quarter: "2024-Q1", document_count: 8, enforcement_count: 3, guidance_count: 5 },
-        ]},
-        eu: { name: "EU AI Act", quarterly: [
-          { quarter: "2022-Q4", document_count: 1, enforcement_count: 0, guidance_count: 1 },
-          { quarter: "2023-Q1", document_count: 2, enforcement_count: 0, guidance_count: 2 },
-          { quarter: "2023-Q2", document_count: 3, enforcement_count: 0, guidance_count: 3 },
-          { quarter: "2023-Q3", document_count: 4, enforcement_count: 0, guidance_count: 4 },
-          { quarter: "2023-Q4", document_count: 5, enforcement_count: 0, guidance_count: 5 },
-          { quarter: "2024-Q1", document_count: 7, enforcement_count: 1, guidance_count: 6 },
-        ]},
-        nist: { name: "NIST", quarterly: [
-          { quarter: "2022-Q4", document_count: 0, enforcement_count: 0, guidance_count: 0 },
-          { quarter: "2023-Q1", document_count: 1, enforcement_count: 0, guidance_count: 1 },
-          { quarter: "2023-Q2", document_count: 2, enforcement_count: 0, guidance_count: 2 },
-          { quarter: "2023-Q3", document_count: 3, enforcement_count: 0, guidance_count: 3 },
-          { quarter: "2023-Q4", document_count: 4, enforcement_count: 0, guidance_count: 4 },
-          { quarter: "2024-Q1", document_count: 5, enforcement_count: 0, guidance_count: 5 },
-        ]},
-      },
-      aggregate: [
-        { quarter: "2022-Q4", total_documents: 8, cumulative_documents: 8 },
-        { quarter: "2023-Q1", total_documents: 14, cumulative_documents: 22 },
-        { quarter: "2023-Q2", total_documents: 19, cumulative_documents: 41 },
-        { quarter: "2023-Q3", total_documents: 25, cumulative_documents: 66 },
-        { quarter: "2023-Q4", total_documents: 31, cumulative_documents: 97 },
-        { quarter: "2024-Q1", total_documents: 40, cumulative_documents: 137 },
-      ],
-    },
-    composite: {
-      weights: { employment: 0.25, rev_per_employee: 0.20, vc_funding: 0.15, job_ratio: 0.15, trends: 0.10, github: 0.10, regulatory: 0.05 },
-      monthly: [
-        { date: "2022-11", score: 18.5, phase: "Pre-disruption", phase_range: "0-25", components: { employment: { raw_value: 1580.2, normalized: 15, weighted: 3.75 } }, trend: "flat" },
-        { date: "2023-03", score: 22.1, phase: "Pre-disruption", phase_range: "0-25", components: { employment: { raw_value: 1590.0, normalized: 18, weighted: 4.5 } }, trend: "up" },
-        { date: "2023-07", score: 28.4, phase: "Productivity", phase_range: "26-50", components: { employment: { raw_value: 1600.0, normalized: 22, weighted: 5.5 } }, trend: "up" },
-        { date: "2023-11", score: 33.2, phase: "Productivity", phase_range: "26-50", components: { employment: { raw_value: 1605.0, normalized: 28, weighted: 7.0 } }, trend: "up" },
-        { date: "2024-03", score: 37.8, phase: "Productivity", phase_range: "26-50", components: { employment: { raw_value: 1608.0, normalized: 32, weighted: 8.0 } }, trend: "up" },
-        { date: "2024-07", score: 41.5, phase: "Productivity", phase_range: "26-50", components: { employment: { raw_value: 1612.0, normalized: 36, weighted: 9.0 } }, trend: "up" },
-      ],
-      events: [
-        { date: "2022-11", label: "ChatGPT Launch", type: "ai_release" },
-        { date: "2023-03", label: "GPT-4 Release", type: "ai_release" },
-        { date: "2023-07", label: "Claude 2", type: "ai_release" },
-        { date: "2024-03", label: "Claude 3 / Devin", type: "ai_release" },
-      ],
-    },
-  };
-
   // ---- State ----
   let state = {
     data: { employment: null, trends: null, github: null, earnings: null, workforce: null, vc: null, jobs: null, regulatory: null, composite: null },
@@ -563,8 +136,8 @@
   // ---- Data Extraction Helpers ----
 
   function getEmploymentSummary(empData) {
-    // Primary series: CES5000000001 (Professional & Business Services total)
-    var primaryKey = "CES5000000001";
+    // Primary series: CES6000000001 (Professional & Business Services total)
+    var primaryKey = "CES6000000001";
     var series = null;
 
     if (empData && empData.series) {
@@ -782,19 +355,27 @@
       return a.date.localeCompare(b.date);
     });
 
+    // Field is openings_index in current data; legacy data still has it
+    // under the old (misleading) name ai_to_traditional_ratio.
+    function idx(entry) {
+      return entry.openings_index != null ? entry.openings_index : entry.ai_to_traditional_ratio;
+    }
+
     var trailing = last(sorted, 12);
     var latest = sorted[sorted.length - 1];
     var prev = sorted.length >= 2 ? sorted[sorted.length - 2] : null;
-    var mom = prev ? latest.ai_to_traditional_ratio - prev.ai_to_traditional_ratio : 0;
+    var latestVal = idx(latest);
+    var prevVal = prev ? idx(prev) : null;
+    var mom = prevVal != null && latestVal != null ? latestVal - prevVal : 0;
 
     return {
-      value: latest.ai_to_traditional_ratio,
-      formatted: latest.ai_to_traditional_ratio.toFixed(3) + "x",
+      value: latestVal,
+      formatted: latestVal != null ? latestVal.toFixed(3) + "x" : "--",
       mom: mom,
       momFormatted: (mom >= 0 ? "+" : "") + mom.toFixed(3) + " MoM",
       date: latest.date,
       sparkLabels: trailing.map(function(d) { return d.date; }),
-      sparkData: trailing.map(function(d) { return d.ai_to_traditional_ratio; }),
+      sparkData: trailing.map(idx),
     };
   }
 
@@ -907,15 +488,48 @@
       return Math.round(sum / trendWindow * 10) / 10;
     });
 
-    // Build event point data
-    var eventPoints = [];
-    var eventLabelsMap = {};
+    // Build event point data.
+    // - Two events sharing a date used to collide on eventLabelsMap; now we
+    //   accumulate labels into an array and join with " · " in the tooltip.
+    // - Events dated past the last available month (e.g. layoff
+    //   announcements happening after the most recent BLS print) used to
+    //   silently disappear because labels.indexOf(ev.date) returned -1.
+    //   We snap those to the last label and prefix the rendered label with
+    //   "(M)" so the reader knows the marker is anchored to the rightmost
+    //   point rather than its true date.
+    var lastLabel = labels[labels.length - 1];
+    var eventLabelsMap = {};   // labelDate -> [string]
+    var eventPositions = {};   // labelDate -> score y
+
     events.forEach(function(ev) {
-      var idx = labels.indexOf(ev.date);
-      if (idx >= 0) {
-        eventPoints.push({ x: ev.date, y: scores[idx] });
-        eventLabelsMap[ev.date] = ev.label;
+      var targetLabel = ev.date;
+      var idx = labels.indexOf(targetLabel);
+      if (idx < 0) {
+        if (ev.date > lastLabel) {
+          targetLabel = lastLabel;
+          idx = labels.length - 1;
+        } else {
+          // Event predates the series start — drop it
+          return;
+        }
       }
+      var label = ev.label;
+      if (targetLabel !== ev.date) {
+        label = label + " (" + ev.date + ")";
+      }
+      if (!eventLabelsMap[targetLabel]) eventLabelsMap[targetLabel] = [];
+      eventLabelsMap[targetLabel].push(label);
+      eventPositions[targetLabel] = scores[idx];
+    });
+
+    var eventDataArr = labels.map(function(lbl) {
+      return eventPositions[lbl] != null ? eventPositions[lbl] : null;
+    });
+    var eventLabelArr = labels.map(function(lbl) {
+      return eventLabelsMap[lbl] ? eventLabelsMap[lbl].join(" · ") : null;
+    });
+    var eventRadiusArr = labels.map(function(lbl) {
+      return eventPositions[lbl] != null ? 6 : 0;
     });
 
     timelineChart = new Chart(ctx, {
@@ -948,20 +562,15 @@
           },
           {
             label: "Events",
-            data: labels.map(function(lbl) {
-              var ev = eventPoints.find(function(p) { return p.x === lbl; });
-              return ev ? ev.y : null;
-            }),
+            data: eventDataArr,
             borderColor: "transparent",
             backgroundColor: "#f0883e",
-            pointRadius: labels.map(function(lbl) {
-              return eventPoints.some(function(p) { return p.x === lbl; }) ? 6 : 0;
-            }),
+            pointRadius: eventRadiusArr,
             pointHoverRadius: 8,
             pointStyle: "circle",
             showLine: false,
             spanGaps: false,
-            _eventLabels: labels.map(function(lbl) { return eventLabelsMap[lbl] || null; }),
+            _eventLabels: eventLabelArr,
           },
         ],
       },
@@ -1054,22 +663,6 @@
       }],
     });
 
-    // The events dataset needs to use the same x-axis labels.
-    // Re-map event points properly to label indices
-    var eventData = labels.map(function(label) {
-      var match = events.find(function(ev) { return ev.date === label; });
-      if (match) {
-        var scoreIdx = labels.indexOf(label);
-        return scores[scoreIdx];
-      }
-      return null;
-    });
-    timelineChart.data.datasets[1].data = eventData;
-    timelineChart.data.datasets[1]._eventLabels = labels.map(function(label) {
-      var match = events.find(function(ev) { return ev.date === label; });
-      return match ? match.label : null;
-    });
-    timelineChart.update("none");
   }
 
   // ---- Expanded Regulatory Chart ----
@@ -1207,7 +800,7 @@
         data: sorted.map(function (d) { return { x: d.date, y: d.value }; }),
         borderColor: colors[i % colors.length],
         backgroundColor: "transparent",
-        borderWidth: key === "CES5000000001" ? 3 : 1.5,
+        borderWidth: key === "CES6000000001" ? 3 : 1.5,
         pointRadius: 2,
         tension: 0.3,
       });
@@ -1826,42 +1419,15 @@
 
   function loadData() {
     var promises = [
-      fetchJSON(DATA_PATHS.employment).catch(function () {
-        console.warn("Employment data fetch failed, using fallback.");
-        return FALLBACK.employment;
-      }),
-      fetchJSON(DATA_PATHS.trends).catch(function () {
-        console.warn("Trends data fetch failed, using fallback.");
-        return FALLBACK.trends;
-      }),
-      fetchJSON(DATA_PATHS.github).catch(function () {
-        console.warn("GitHub data fetch failed, using fallback.");
-        return FALLBACK.github;
-      }),
-      fetchJSON(DATA_PATHS.earnings).catch(function () {
-        console.warn("Earnings data fetch failed, using fallback.");
-        return FALLBACK.earnings;
-      }),
-      fetchJSON(DATA_PATHS.workforce).catch(function () {
-        console.warn("Workforce data fetch failed, using fallback.");
-        return FALLBACK.workforce;
-      }),
-      fetchJSON(DATA_PATHS.vc).catch(function () {
-        console.warn("VC funding data fetch failed, using fallback.");
-        return FALLBACK.vc;
-      }),
-      fetchJSON(DATA_PATHS.jobs).catch(function () {
-        console.warn("Jobs data fetch failed, using fallback.");
-        return FALLBACK.jobs;
-      }),
-      fetchJSON(DATA_PATHS.regulatory).catch(function () {
-        console.warn("Regulatory data fetch failed, using fallback.");
-        return FALLBACK.regulatory;
-      }),
-      fetchJSON(DATA_PATHS.composite).catch(function () {
-        console.warn("Composite data fetch failed, using fallback.");
-        return FALLBACK.composite;
-      }),
+      fetchJSON(DATA_PATHS.employment).catch(function () { console.warn("Employment data unavailable; signal will show no data."); return null; }),
+      fetchJSON(DATA_PATHS.trends).catch(function () { console.warn("Trends data unavailable; signal will show no data."); return null; }),
+      fetchJSON(DATA_PATHS.github).catch(function () { console.warn("GitHub data unavailable; signal will show no data."); return null; }),
+      fetchJSON(DATA_PATHS.earnings).catch(function () { console.warn("Earnings data unavailable; signal will show no data."); return null; }),
+      fetchJSON(DATA_PATHS.workforce).catch(function () { console.warn("Workforce data unavailable; signal will show no data."); return null; }),
+      fetchJSON(DATA_PATHS.vc).catch(function () { console.warn("VC funding data unavailable; signal will show no data."); return null; }),
+      fetchJSON(DATA_PATHS.jobs).catch(function () { console.warn("Jobs data unavailable; signal will show no data."); return null; }),
+      fetchJSON(DATA_PATHS.regulatory).catch(function () { console.warn("Regulatory data unavailable; signal will show no data."); return null; }),
+      fetchJSON(DATA_PATHS.composite).catch(function () { console.warn("Composite data unavailable; signal will show no data."); return null; }),
     ];
 
     Promise.all(promises).then(function (results) {

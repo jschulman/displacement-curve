@@ -30,14 +30,15 @@ import argparse
 import json
 import os
 import sys
-from datetime import datetime
+from datetime import datetime, timezone
 
 # ---------------------------------------------------------------------------
 # Constants
 # ---------------------------------------------------------------------------
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATA_DIR = os.path.join(BASE_DIR, "data")
+# Tests redirect reads/writes via DC_DATA_DIR; defaults to project data/.
+DATA_DIR = os.environ.get("DC_DATA_DIR") or os.path.join(BASE_DIR, "data")
 OUTPUT_PATH = os.path.join(DATA_DIR, "composite", "displacement_index.json")
 
 # Signal source files
@@ -70,14 +71,68 @@ EVENTS = [
     {"date": "2024-11", "label": "GPT-4o Launch", "type": "ai_release"},
     {"date": "2025-02", "label": "Claude 3.5 Opus", "type": "ai_release"},
     {"date": "2025-06", "label": "Accenture AI Revenue $3B", "type": "earnings"},
+    # Layoff events use an attribution_quality field to distinguish narrative-led
+    # announcements from those corroborated by financial signals. See
+    # METHODOLOGY.md: "Corporate AI Layoff Attribution".
+    {
+        "date": "2026-05",
+        "label": "Coinbase -700 (14%) cites AI",
+        "type": "layoff",
+        "attribution_quality": "marketing",
+    },
+    {
+        "date": "2026-05",
+        "label": "Cloudflare -1,100 (~20%) AI restructuring",
+        "type": "layoff",
+        "attribution_quality": "validated",
+    },
 ]
 
-# 38 months: 2022-11 through 2025-12
-MONTHS = []
-for year in range(2022, 2026):
-    start_m = 11 if year == 2022 else 1
-    for m in range(start_m, 13):
-        MONTHS.append(f"{year}-{m:02d}")
+# Monthly axis starts 2022-11 (ChatGPT public release). The end month is
+# determined dynamically from the latest signal data so the composite rolls
+# forward automatically as new BLS / earnings / etc. arrive.
+SERIES_START = "2022-11"
+
+
+def _month_iter(start, end):
+    """Yield 'YYYY-MM' strings from start through end inclusive."""
+    sy, sm = int(start[:4]), int(start[5:7])
+    ey, em = int(end[:4]), int(end[5:7])
+    y, m = sy, sm
+    while (y, m) <= (ey, em):
+        yield f"{y}-{m:02d}"
+        m += 1
+        if m == 13:
+            m = 1
+            y += 1
+
+
+def _build_months(raw_series):
+    """Latest month is anchored to BLS employment (the foundational monthly
+    signal). Slower-cadence series are forward-filled in _forward_fill so the
+    composite stays computable through the most recent BLS print."""
+    employment = raw_series.get("employment", {})
+    if not employment:
+        return []
+    latest = max(employment.keys())
+    return list(_month_iter(SERIES_START, latest))
+
+
+def _forward_fill(series, months):
+    """Return a new dict that carries the most recent value forward into any
+    month in `months` after the series' last observation. Lower-cadence
+    signals (quarterly VC funding, regulatory, earnings) would otherwise drop
+    to 0 once BLS data extends past their last quarter."""
+    if not series:
+        return {}
+    sorted_dates = sorted(series.keys())
+    filled = dict(series)
+    last_known = sorted_dates[-1]
+    last_val = series[last_known]
+    for m in months:
+        if m > last_known and m not in filled:
+            filled[m] = last_val
+    return filled
 
 
 def get_phase(score):
@@ -112,11 +167,17 @@ def extract_monthly_employment(data):
         for entry in data["monthly"]:
             values[entry["date"]] = entry.get("total_employment", entry.get("employment", 0))
     elif data and "series" in data:
-        # Real BLS data: series.CES5000000001.data[].{date, value}
-        for sid, series in data["series"].items():
-            if sid == "CES5000000001":
-                for entry in series.get("data", []):
-                    values[entry["date"]] = entry["value"]
+        # Real BLS data: series.CES6000000001.data[].{date, value}.
+        # CES6000000001 = supersector 60 "Professional and Business Services",
+        # all employees in thousands, seasonally adjusted. Earlier code keyed
+        # on CES5000000001 which is supersector 50 (Information) — wrong by
+        # roughly 7x. CES5000000001 is accepted as a fallback for any data
+        # collected before the ID fix.
+        series_map = data["series"]
+        chosen = series_map.get("CES6000000001") or series_map.get("CES5000000001")
+        if chosen:
+            for entry in chosen.get("data", []):
+                values[entry["date"]] = entry["value"]
     elif data and "aggregate" in data:
         for entry in data["aggregate"]:
             values[entry.get("date", "")] = entry.get("total_employment", 0)
@@ -164,32 +225,74 @@ def extract_monthly_vc_funding(data):
 
 
 def extract_monthly_job_ratio(data):
-    """Extract AI-to-traditional job ratio from postings data."""
+    """Extract the JOLTS openings index from postings data. JOLTS doesn't
+    publish an AI-vs-traditional breakdown, so this is really a labor-demand
+    index keyed to Nov 2022 = 1.0. Reads `openings_index` (current) and
+    falls back to `ai_to_traditional_ratio` (legacy name)."""
     values = {}
     if data and "monthly" in data:
         for entry in data["monthly"]:
-            val = entry.get("ai_to_traditional_ratio")
+            val = entry.get("openings_index")
+            if val is None:
+                val = entry.get("ai_to_traditional_ratio")
             if val is not None:
                 values[entry["date"]] = val
     return values
 
 
 def extract_monthly_trends(data):
-    """Extract Google Trends search interest."""
+    """Extract Google Trends search interest, averaging across category
+    composites. The trends collector outputs
+    {categories: {<cat>: {composite: [{date, value}]}}} — no top-level array."""
     values = {}
-    if data and "monthly" in data:
+    if not data:
+        return values
+
+    categories = data.get("categories", {})
+    if categories:
+        by_date = {}
+        for cat_data in categories.values():
+            composite = cat_data.get("composite") or cat_data.get("data") or []
+            for point in composite:
+                date = point.get("date")
+                val = point.get("value")
+                if date and val is not None:
+                    by_date.setdefault(date, []).append(val)
+        for date, vals in by_date.items():
+            values[date] = round(sum(vals) / len(vals), 1)
+        return values
+
+    # Fall back to legacy shapes used in some mock files
+    if "monthly" in data:
         for entry in data["monthly"]:
             values[entry["date"]] = entry.get("interest", entry.get("value", 0))
-    elif data and "aggregate" in data:
+    elif "aggregate" in data:
         for entry in data["aggregate"]:
             values[entry.get("date", "")] = entry.get("interest", 0)
     return values
 
 
 def extract_monthly_github(data):
-    """Extract GitHub activity index."""
+    """Extract GitHub activity index from the aggregate cumulative-stars series.
+    The github collector outputs
+    {categories: {...}, aggregate: [{date, total_new_repos, total_stars, ...}]}.
+    The composite previously looked only at a non-existent top-level `monthly`
+    key, so this signal contributed zero to every score."""
     values = {}
-    if data and "monthly" in data:
+    if not data:
+        return values
+
+    agg = data.get("aggregate", [])
+    if agg:
+        for entry in agg:
+            date = entry.get("date")
+            stars = entry.get("total_stars")
+            if date and stars is not None:
+                values[date] = stars
+        return values
+
+    # Legacy / mock shape
+    if "monthly" in data:
         for entry in data["monthly"]:
             values[entry["date"]] = entry.get("activity_index", entry.get("stars", 0))
     return values
@@ -264,11 +367,25 @@ def compute_composite_from_signals():
         norm_series[key], lo, hi = normalize_series(raw_series.get(key, {}), invert=invert)
         print(f"    {key} range: {lo:.1f} - {hi:.1f} {'(inverted)' if invert else ''}")
 
-    # Build monthly composite
+    # Build monthly composite. Anchor the month axis to BLS, then forward-fill
+    # slower-cadence signals so months past their last reported quarter still
+    # contribute their most recent value rather than dropping to 0.
+    months = _build_months(raw_series)
+    print(f"  Month axis: {months[0]} .. {months[-1]} ({len(months)} months)")
+
+    for key in raw_series:
+        raw_series[key] = _forward_fill(raw_series[key], months)
+
+    # Re-normalize after forward-fill so normalized lookups stay in range.
+    norm_series = {}
+    for key in WEIGHTS:
+        invert = (key == "employment")
+        norm_series[key], _, _ = normalize_series(raw_series.get(key, {}), invert=invert)
+
     monthly = []
     prev_score = None
 
-    for date_label in MONTHS:
+    for date_label in months:
         components = {}
         score = 0.0
 
@@ -310,7 +427,7 @@ def compute_composite_from_signals():
     return {
         "metadata": {
             "source": "Displacement Curve Composite",
-            "last_updated": datetime.utcnow().strftime("%Y-%m-%d"),
+            "last_updated": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
             "mock": False,
             "version": "1.0",
         },

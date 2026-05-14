@@ -21,11 +21,20 @@ This document describes the data sources, collection methods, and processing for
 
 | Series ID | Description |
 |-----------|-------------|
-| CES5541200001 | Accounting, Tax Preparation, Bookkeeping, Payroll Services |
-| CES5541600001 | Management, Scientific, and Technical Consulting |
-| CES5541100001 | Legal Services |
-| CES5541500001 | Computer Systems Design and Related Services |
-| CES5000000001 | Total Professional and Business Services |
+| CES6054120001 | Accounting, Tax Preparation, Bookkeeping, Payroll Services |
+| CES6054160001 | Management, Scientific, and Technical Consulting |
+| CES6054110001 | Legal Services |
+| CES6054150001 | Computer Systems Design and Related Services |
+| CES6000000001 | Total Professional and Business Services (supersector 60) |
+
+All series are seasonally adjusted "all employees, thousands". Before May
+2026 the project used IDs starting with `55` (Financial Activities
+supersector) and `50` (Information supersector), which returned either
+empty results or the wrong sector entirely; the headline "Professional
+Services Employment" number was tracking the Information supersector
+(~3 million workers) rather than the much larger Professional and
+Business Services supersector (~22 million workers). Verified against
+FRED: CES6054120001, CES6054160001, CES6054150001, CES6000000001.
 
 ### Processing
 - Raw BLS API responses saved to `data/bls/raw/`
@@ -161,6 +170,87 @@ Rising AI revenue alongside flat or declining headcount is the core displacement
 
 SEC filings provide the most reliable headcount data. Declining headcount at IT services firms while revenue grows indicates productivity gains (potentially AI-driven). Staffing firms (KFRC, RHI, MAN) serve as a canary — declining placements suggest reduced demand for human labor.
 
+### Staffing Canary Status
+
+As of May 2026, the staffing-firm canary panels (KFRC, RHI, MAN) carry empty
+`annual` arrays in `data/sec/processed/workforce.json`. The 10-K collector has
+not yet been pointed at those tickers. Until the canary is populated, treat
+its absence as "no signal," not "no displacement" — the slot is reserved, not
+disproved.
+
+---
+
+## Signal 5b: Corporate AI Layoff Attribution
+
+**Source:** Public layoff announcements, 10-Q filings, post-announcement
+financial disclosures.
+**Update Cadence:** Event-driven.
+
+### Why This Exists
+
+Through 2025-2026, "AI" has become a load-bearing word in layoff press
+releases. A December 2025 survey of 1,000 hiring managers found 59% admit they
+emphasize AI in layoff announcements because it "plays better with
+stakeholders" than admitting weak demand or over-hiring. Oxford Economics has
+characterized the pattern as "convenient corporate fiction." Treating every
+AI-attributed layoff as a displacement data point would import that
+narrative noise directly into the composite.
+
+This signal does not feed the composite. It flags layoff events on the
+timeline with an **attribution quality** label, so readers can distinguish
+narrative-led announcements from those corroborated by financial signals.
+
+### Attribution Quality Categories
+
+| Quality | Definition | Treatment |
+|---------|------------|-----------|
+| `validated` | AI cited AND ≥2 of: rising revenue per remaining employee, measurable internal AI usage data, prior AI-tied product disclosures in 10-Q, stock-price impact suggesting the market took it as real | Annotated on the curve; counts toward "displacement" reading |
+| `marketing` | AI cited primarily in CEO memo / press release without corroborating financial disclosure | Annotated on the curve as a separate marker; does not count toward displacement reading |
+| `mixed` | Some corroboration but layoff also overlaps with broader restructuring, sector headwinds, or a missed quarter | Annotated; treated as ambiguous |
+
+### Worked Examples
+
+**Coinbase — 2026-05-05 — `marketing`.** 700 layoffs (~14% of workforce).
+CEO Brian Armstrong's 6:55 AM email framed the cut as becoming "lean, fast,
+and AI-native" and was paired with a "tiny teams" / player-coach
+restructuring. Crypto-sector headwinds and prior cost-cutting cycles at
+Coinbase make AI an over-determined explanation. Scale AI's Jason Droege and
+other observers explicitly flagged it as an "AI excuse" framing. No
+disclosed internal AI usage metrics tied to the affected roles.
+
+**Cloudflare — 2026-05-07/08 — `validated`.** 1,100 layoffs (~20% of
+workforce); first mass layoff in the company's 16-year history.
+Corroborating signals: (a) disclosed >600% increase in internal AI usage in
+the prior three months with role-level mapping ("roles AI agents are already
+performing"); (b) record-high revenue announced in the same earnings call,
+ruling out demand collapse as the driver; (c) ~24% stock drop on the news,
+indicating the market read the restructuring as substantive rather than
+cosmetic; (d) CEO's stated expectation that headcount returns to growth in
+2027 — consistent with a productivity step-change, not a demand cut.
+
+### Method
+
+Each layoff event is recorded in the `events` array of
+`data/composite/displacement_index.json` with:
+
+```
+{
+  "date": "YYYY-MM",
+  "label": "<Company> -N (X%) ...",
+  "type": "layoff",
+  "attribution_quality": "validated" | "marketing" | "mixed"
+}
+```
+
+### Interpretation
+
+A rising count of `validated` layoffs at firms with **growing** revenue is
+the cleanest direct evidence of displacement (productivity gain absorbed by
+headcount reduction rather than reinvested in hiring). A rising count of
+`marketing` layoffs is a signal about narrative, not labor — useful context
+for why the discourse runs ahead of the BLS prints, but not evidence of
+displacement on its own.
+
 ---
 
 ## Signal 6: VC Funding in AI Services
@@ -220,14 +310,32 @@ Structural shifts in hiring patterns across professional services. Tracks the ra
 
 ### Metrics
 
-- **AI Postings %:** Percentage of job postings requiring AI/ML skills
-- **Traditional Postings %:** Percentage of traditional (non-AI) role postings
-- **AI-to-Traditional Ratio:** Direct ratio of AI to traditional postings (key displacement indicator)
-- **Total Postings Index:** Overall posting volume indexed to baseline
+- **Openings Index:** Total openings in Professional & Business Services indexed to Nov 2022 = 1.0 (sourced from BLS JOLTS, `JTS540099000000000JOL`)
+- **Total Postings Index:** Same value, scaled to baseline = 100, for chart-friendly display
+- **Hires / Separations / Quits:** Raw JOLTS series for context
+
+### A note on what this signal cannot measure
+
+The METHODOLOGY originally described an "AI vs traditional postings ratio,"
+but JOLTS does not publish an AI / non-AI breakdown of openings. The
+underlying data is the total number of professional-services openings; a
+true AI-vs-traditional breakdown would require a different source (Indeed
+Hiring Lab text-keyword counts, LinkedIn Economic Graph, Lightcast, etc.).
+Until such a source is added, this signal functions as a labor-demand
+proxy: declining openings → softening demand for professional-services
+labor, which is consistent with — but not direct evidence of — displacement.
+
+The collector's output field is `openings_index`. Legacy data may still
+carry the name `ai_to_traditional_ratio`; consumers read whichever is
+present.
 
 ### Interpretation
 
-A rising AI-to-traditional ratio indicates firms are structurally shifting their workforce composition toward AI skills. When AI postings rise while traditional postings decline, it signals active displacement of traditional roles rather than net new hiring.
+Falling `openings_index` alongside flat or rising hires-to-openings rates
+indicates demand softening (firms posting fewer roles but still filling
+what they post). A demand softening that lingers across multiple quarters
+is one of the canonical leading indicators of structural change in a
+sector.
 
 ---
 
@@ -299,4 +407,4 @@ Each signal is normalized to a 0-100 scale relative to its observed range over t
 
 ---
 
-*Last updated: February 2026*
+*Last updated: May 2026*
