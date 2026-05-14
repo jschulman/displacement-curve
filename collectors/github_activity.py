@@ -48,8 +48,13 @@ RETRY_DELAY = 5
 # Date helpers
 # ---------------------------------------------------------------------------
 
-def month_ranges(start_year=2022, start_month=11, end_year=2026, end_month=2):
-    """Yield (year, month, start_date, end_date) for each month in range."""
+def month_ranges(start_year=2022, start_month=11, end_year=None, end_month=None):
+    """Yield (year, month, start_date, end_date) for each month in range.
+    Defaults to running from 2022-11 through the current UTC month."""
+    if end_year is None or end_month is None:
+        now = datetime.utcnow()
+        end_year = end_year if end_year is not None else now.year
+        end_month = end_month if end_month is not None else now.month
     y, m = start_year, start_month
     while (y, m) <= (end_year, end_month):
         start = f"{y}-{m:02d}-01"

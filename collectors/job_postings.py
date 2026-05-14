@@ -234,7 +234,8 @@ def main():
     parser = argparse.ArgumentParser(description="Job Postings Collector (BLS JOLTS)")
     parser.add_argument("--mock", action="store_true", help="Generate mock data instead of calling API")
     parser.add_argument("--start-year", type=int, default=2022, help="Start year (default: 2022)")
-    parser.add_argument("--end-year", type=int, default=2025, help="End year (default: 2025)")
+    parser.add_argument("--end-year", type=int, default=datetime.utcnow().year,
+                        help="End year (default: current UTC year)")
     parser.add_argument("--api-key", type=str, default=os.environ.get("BLS_API_KEY"),
                         help="BLS API v2 key (or set BLS_API_KEY env var)")
     args = parser.parse_args()

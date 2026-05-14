@@ -300,7 +300,8 @@ def main():
     parser = argparse.ArgumentParser(description="Regulatory Guidance Tracker")
     parser.add_argument("--mock", action="store_true", help="Generate mock data instead of scanning feeds")
     parser.add_argument("--start-year", type=int, default=2022, help="Start year (default: 2022)")
-    parser.add_argument("--end-year", type=int, default=2025, help="End year (default: 2025)")
+    parser.add_argument("--end-year", type=int, default=datetime.utcnow().year,
+                        help="End year (default: current UTC year)")
     args = parser.parse_args()
 
     print("Regulatory Guidance Tracker")
