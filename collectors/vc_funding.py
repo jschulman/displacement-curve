@@ -155,12 +155,16 @@ def process_edgar_filings(filings, start_year, end_year):
         "horizontal_ai": "Horizontal AI Agents",
     }
 
-    # Initialize buckets
-    buckets = {cat: {q: {"funding_mm": 0.0, "deal_count": 0} for q in quarters} for cat in cat_keys}
+    # Initialize buckets. unknown_amount_deals is tracked so we never silently
+    # fabricate a dollar value: filings whose Form D doesn't expose
+    # offeringAmount count toward deal_count but NOT toward funding_mm.
+    buckets = {
+        cat: {q: {"funding_mm": 0.0, "deal_count": 0, "unknown_amount_deals": 0} for q in quarters}
+        for cat in cat_keys
+    }
 
     for filing in filings:
         cat = classify_filing(filing)
-        # Extract date and amount from filing (simplified)
         source = filing.get("_source", {})
         filed_date = source.get("file_date", "")
         if not filed_date:
@@ -174,11 +178,14 @@ def process_edgar_filings(filings, start_year, end_year):
         if q_label not in buckets[cat]:
             continue
 
-        # Attempt to extract offering amount (Form D specific)
-        amount_mm = source.get("offeringAmount", 0) / 1_000_000 if source.get("offeringAmount") else 1.0
-
-        buckets[cat][q_label]["funding_mm"] = round(buckets[cat][q_label]["funding_mm"] + amount_mm, 1)
-        buckets[cat][q_label]["deal_count"] += 1
+        bucket = buckets[cat][q_label]
+        offering = source.get("offeringAmount")
+        if offering is None:
+            # Don't fabricate: log the deal but leave funding_mm untouched.
+            bucket["unknown_amount_deals"] += 1
+        else:
+            bucket["funding_mm"] = round(bucket["funding_mm"] + offering / 1_000_000, 1)
+        bucket["deal_count"] += 1
 
     # Build output
     categories = {}
@@ -189,6 +196,7 @@ def process_edgar_filings(filings, start_year, end_year):
                 "quarter": q,
                 "funding_mm": buckets[cat][q]["funding_mm"],
                 "deal_count": buckets[cat][q]["deal_count"],
+                "unknown_amount_deals": buckets[cat][q]["unknown_amount_deals"],
             })
         categories[cat] = {"name": cat_names[cat], "quarterly": quarterly}
 
@@ -198,11 +206,13 @@ def process_edgar_filings(filings, start_year, end_year):
     for q in quarters:
         total_funding = round(sum(buckets[cat][q]["funding_mm"] for cat in cat_keys), 1)
         total_deals = sum(buckets[cat][q]["deal_count"] for cat in cat_keys)
+        total_unknown = sum(buckets[cat][q]["unknown_amount_deals"] for cat in cat_keys)
         cumulative = round(cumulative + total_funding, 1)
         aggregate.append({
             "quarter": q,
             "total_funding_mm": total_funding,
             "total_deals": total_deals,
+            "unknown_amount_deals": total_unknown,
             "cumulative_mm": cumulative,
         })
 
