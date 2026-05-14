@@ -28,8 +28,9 @@ import requests
 # ---------------------------------------------------------------------------
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-RAW_DIR = os.path.join(BASE_DIR, "data", "sec", "raw")
-PROCESSED_DIR = os.path.join(BASE_DIR, "data", "sec", "processed")
+DATA_DIR = os.environ.get("DC_DATA_DIR") or os.path.join(BASE_DIR, "data")
+RAW_DIR = os.path.join(DATA_DIR, "sec", "raw")
+PROCESSED_DIR = os.path.join(DATA_DIR, "sec", "processed")
 
 TICKERS_IT = ["ACN", "CTSH", "INFY", "WIT", "EPAM", "GLOB", "IT", "BAH"]
 TICKERS_STAFFING = ["KFRC", "RHI", "MAN"]

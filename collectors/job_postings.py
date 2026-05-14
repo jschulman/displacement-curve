@@ -32,8 +32,9 @@ import requests
 # ---------------------------------------------------------------------------
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-RAW_DIR = os.path.join(BASE_DIR, "data", "jobs", "raw")
-PROCESSED_DIR = os.path.join(BASE_DIR, "data", "jobs", "processed")
+DATA_DIR = os.environ.get("DC_DATA_DIR") or os.path.join(BASE_DIR, "data")
+RAW_DIR = os.path.join(DATA_DIR, "jobs", "raw")
+PROCESSED_DIR = os.path.join(DATA_DIR, "jobs", "processed")
 
 BLS_API_URL = "https://api.bls.gov/publicAPI/v2/timeseries/data/"
 

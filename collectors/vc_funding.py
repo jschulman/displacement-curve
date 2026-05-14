@@ -33,8 +33,9 @@ import requests
 # ---------------------------------------------------------------------------
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-RAW_DIR = os.path.join(BASE_DIR, "data", "vc", "raw")
-PROCESSED_DIR = os.path.join(BASE_DIR, "data", "vc", "processed")
+DATA_DIR = os.environ.get("DC_DATA_DIR") or os.path.join(BASE_DIR, "data")
+RAW_DIR = os.path.join(DATA_DIR, "vc", "raw")
+PROCESSED_DIR = os.path.join(DATA_DIR, "vc", "processed")
 
 EDGAR_FULL_TEXT_SEARCH = "https://efts.sec.gov/LATEST/search-index"
 EDGAR_FORM_D_SEARCH = "https://efts.sec.gov/LATEST/search-index"

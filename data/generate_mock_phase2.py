@@ -23,6 +23,7 @@ import random
 # ---------------------------------------------------------------------------
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+OUTPUT_ROOT = os.environ.get("DC_DATA_DIR") or SCRIPT_DIR
 
 QUARTERS = []
 for year in range(2022, 2026):
@@ -302,7 +303,7 @@ def generate_workforce_data():
 # ---------------------------------------------------------------------------
 
 def write_json(data, rel_path):
-    path = os.path.join(SCRIPT_DIR, rel_path)
+    path = os.path.join(OUTPUT_ROOT, rel_path)
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w") as f:
         json.dump(data, f, indent=2)

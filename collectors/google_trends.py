@@ -29,8 +29,9 @@ except ImportError:
 # ---------------------------------------------------------------------------
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-RAW_DIR = os.path.join(BASE_DIR, "data", "trends", "raw")
-PROCESSED_DIR = os.path.join(BASE_DIR, "data", "trends", "processed")
+DATA_DIR = os.environ.get("DC_DATA_DIR") or os.path.join(BASE_DIR, "data")
+RAW_DIR = os.path.join(DATA_DIR, "trends", "raw")
+PROCESSED_DIR = os.path.join(DATA_DIR, "trends", "processed")
 
 CATEGORIES = {
     "ai_adoption": [

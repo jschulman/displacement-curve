@@ -32,8 +32,11 @@ import requests
 # ---------------------------------------------------------------------------
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-RAW_DIR = os.path.join(BASE_DIR, "data", "bls", "raw")
-PROCESSED_DIR = os.path.join(BASE_DIR, "data", "bls", "processed")
+# Tests redirect writes via DC_DATA_DIR so unit-test runs don't clobber the
+# live data tree. Defaults to the project's data/ for normal CLI use.
+DATA_DIR = os.environ.get("DC_DATA_DIR") or os.path.join(BASE_DIR, "data")
+RAW_DIR = os.path.join(DATA_DIR, "bls", "raw")
+PROCESSED_DIR = os.path.join(DATA_DIR, "bls", "processed")
 
 BLS_API_URL = "https://api.bls.gov/publicAPI/v2/timeseries/data/"
 

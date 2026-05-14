@@ -43,8 +43,9 @@ except ImportError:
 # ---------------------------------------------------------------------------
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-RAW_DIR = os.path.join(BASE_DIR, "data", "regulatory", "raw")
-PROCESSED_DIR = os.path.join(BASE_DIR, "data", "regulatory", "processed")
+DATA_DIR = os.environ.get("DC_DATA_DIR") or os.path.join(BASE_DIR, "data")
+RAW_DIR = os.path.join(DATA_DIR, "regulatory", "raw")
+PROCESSED_DIR = os.path.join(DATA_DIR, "regulatory", "processed")
 
 MAX_RETRIES = 3
 RETRY_DELAY = 5  # seconds

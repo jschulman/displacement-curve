@@ -26,8 +26,9 @@ import requests
 # ---------------------------------------------------------------------------
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-RAW_DIR = os.path.join(BASE_DIR, "data", "github", "raw")
-PROCESSED_DIR = os.path.join(BASE_DIR, "data", "github", "processed")
+DATA_DIR = os.environ.get("DC_DATA_DIR") or os.path.join(BASE_DIR, "data")
+RAW_DIR = os.path.join(DATA_DIR, "github", "raw")
+PROCESSED_DIR = os.path.join(DATA_DIR, "github", "processed")
 
 GITHUB_API = "https://api.github.com"
 SEARCH_REPOS = f"{GITHUB_API}/search/repositories"

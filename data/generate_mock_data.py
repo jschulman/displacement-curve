@@ -21,6 +21,9 @@ from datetime import datetime
 # ---------------------------------------------------------------------------
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+# Tests redirect writes via DC_DATA_DIR so unit-test runs don't clobber the
+# live data tree. Defaults to data/ (the project's data root).
+OUTPUT_ROOT = os.environ.get("DC_DATA_DIR") or SCRIPT_DIR
 START_YEAR, START_MONTH = 2022, 11
 END_YEAR, END_MONTH = 2026, 2
 
@@ -316,7 +319,7 @@ def generate_github_data():
 # ---------------------------------------------------------------------------
 
 def write_json(data, rel_path):
-    path = os.path.join(SCRIPT_DIR, rel_path)
+    path = os.path.join(OUTPUT_ROOT, rel_path)
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w") as f:
         json.dump(data, f, indent=2)

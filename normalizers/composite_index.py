@@ -37,7 +37,8 @@ from datetime import datetime
 # ---------------------------------------------------------------------------
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATA_DIR = os.path.join(BASE_DIR, "data")
+# Tests redirect reads/writes via DC_DATA_DIR; defaults to project data/.
+DATA_DIR = os.environ.get("DC_DATA_DIR") or os.path.join(BASE_DIR, "data")
 OUTPUT_PATH = os.path.join(DATA_DIR, "composite", "displacement_index.json")
 
 # Signal source files
