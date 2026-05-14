@@ -19,7 +19,7 @@ import json
 import os
 import sys
 import time
-from datetime import datetime
+from datetime import datetime, timezone
 
 import requests
 
@@ -245,7 +245,7 @@ def process_workforce_data(raw_data):
     return {
         "metadata": {
             "source": "SEC EDGAR XBRL",
-            "last_updated": datetime.utcnow().strftime("%Y-%m-%d"),
+            "last_updated": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
             "mock": False,
         },
         "firms": firms,
@@ -295,7 +295,7 @@ def main():
         # Save raw response
         raw_path = os.path.join(
             RAW_DIR,
-            f"workforce_raw_{datetime.utcnow().strftime('%Y%m%d_%H%M%S')}.json",
+            f"workforce_raw_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')}.json",
         )
         save_json(raw, raw_path)
         processed = process_workforce_data(raw)

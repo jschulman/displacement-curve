@@ -23,7 +23,7 @@ import json
 import os
 import sys
 import time
-from datetime import datetime
+from datetime import datetime, timezone
 
 import requests
 
@@ -193,7 +193,7 @@ def process_jolts_data(raw_data):
     return {
         "metadata": {
             "source": "BLS JOLTS",
-            "last_updated": datetime.utcnow().strftime("%Y-%m-%d"),
+            "last_updated": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
             "mock": False,
         },
         "monthly": monthly,
@@ -242,7 +242,7 @@ def main():
     parser = argparse.ArgumentParser(description="Job Postings Collector (BLS JOLTS)")
     parser.add_argument("--mock", action="store_true", help="Generate mock data instead of calling API")
     parser.add_argument("--start-year", type=int, default=2022, help="Start year (default: 2022)")
-    parser.add_argument("--end-year", type=int, default=datetime.utcnow().year,
+    parser.add_argument("--end-year", type=int, default=datetime.now(timezone.utc).year,
                         help="End year (default: current UTC year)")
     parser.add_argument("--api-key", type=str, default=os.environ.get("BLS_API_KEY"),
                         help="BLS API v2 key (or set BLS_API_KEY env var)")
@@ -258,7 +258,7 @@ def main():
     else:
         raw = fetch_jolts_data(list(JOLTS_SERIES.keys()), args.start_year, args.end_year, args.api_key)
         # Save raw response
-        raw_path = os.path.join(RAW_DIR, f"jolts_raw_{datetime.utcnow().strftime('%Y%m%d_%H%M%S')}.json")
+        raw_path = os.path.join(RAW_DIR, f"jolts_raw_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')}.json")
         save_json(raw, raw_path)
         processed = process_jolts_data(raw)
 

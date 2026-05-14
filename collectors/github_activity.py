@@ -17,7 +17,7 @@ import json
 import os
 import sys
 import time
-from datetime import datetime
+from datetime import datetime, timezone
 
 import requests
 
@@ -53,7 +53,7 @@ def month_ranges(start_year=2022, start_month=11, end_year=None, end_month=None)
     """Yield (year, month, start_date, end_date) for each month in range.
     Defaults to running from 2022-11 through the current UTC month."""
     if end_year is None or end_month is None:
-        now = datetime.utcnow()
+        now = datetime.now(timezone.utc)
         end_year = end_year if end_year is not None else now.year
         end_month = end_month if end_month is not None else now.month
     y, m = start_year, start_month
@@ -189,7 +189,7 @@ def process_github_raw(raw_categories):
     return {
         "metadata": {
             "source": "GitHub API",
-            "last_updated": datetime.utcnow().strftime("%Y-%m-%d"),
+            "last_updated": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
             "mock": False,
         },
         "categories": raw_categories,
@@ -241,7 +241,7 @@ def main():
         processed = generate_mock()
     else:
         raw = fetch_github_data(token=args.token)
-        raw_path = os.path.join(RAW_DIR, f"github_raw_{datetime.utcnow().strftime('%Y%m%d_%H%M%S')}.json")
+        raw_path = os.path.join(RAW_DIR, f"github_raw_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')}.json")
         save_json(raw, raw_path)
         processed = process_github_raw(raw)
 

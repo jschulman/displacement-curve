@@ -26,7 +26,7 @@ import json
 import os
 import sys
 import time
-from datetime import datetime
+from datetime import datetime, timezone
 
 try:
     import requests
@@ -261,7 +261,7 @@ def scan_regulators(start_year=2022, end_year=2025):
     processed = {
         "metadata": {
             "source": "Federal Regulators RSS",
-            "last_updated": datetime.utcnow().strftime("%Y-%m-%d"),
+            "last_updated": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
             "mock": False,
         },
         "regulators": regulators,
@@ -301,7 +301,7 @@ def main():
     parser = argparse.ArgumentParser(description="Regulatory Guidance Tracker")
     parser.add_argument("--mock", action="store_true", help="Generate mock data instead of scanning feeds")
     parser.add_argument("--start-year", type=int, default=2022, help="Start year (default: 2022)")
-    parser.add_argument("--end-year", type=int, default=datetime.utcnow().year,
+    parser.add_argument("--end-year", type=int, default=datetime.now(timezone.utc).year,
                         help="End year (default: current UTC year)")
     args = parser.parse_args()
 
@@ -314,7 +314,7 @@ def main():
     else:
         processed, raw_entries = scan_regulators(args.start_year, args.end_year)
         # Save raw entries
-        ts = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
+        ts = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
         raw_path = os.path.join(RAW_DIR, f"regulatory_scan_{ts}.json")
         save_json(raw_entries, raw_path)
 

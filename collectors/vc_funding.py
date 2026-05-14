@@ -24,7 +24,7 @@ import json
 import os
 import sys
 import time
-from datetime import datetime
+from datetime import datetime, timezone
 
 import requests
 
@@ -219,7 +219,7 @@ def process_edgar_filings(filings, start_year, end_year):
     return {
         "metadata": {
             "source": "SEC EDGAR Form D",
-            "last_updated": datetime.utcnow().strftime("%Y-%m-%d"),
+            "last_updated": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
             "mock": False,
         },
         "categories": categories,
@@ -268,7 +268,7 @@ def main():
     parser = argparse.ArgumentParser(description="VC Funding Collector (SEC EDGAR Form D)")
     parser.add_argument("--mock", action="store_true", help="Generate mock data instead of calling API")
     parser.add_argument("--start-year", type=int, default=2022, help="Start year (default: 2022)")
-    parser.add_argument("--end-year", type=int, default=datetime.utcnow().year,
+    parser.add_argument("--end-year", type=int, default=datetime.now(timezone.utc).year,
                         help="End year (default: current UTC year)")
     args = parser.parse_args()
 
@@ -281,7 +281,7 @@ def main():
     else:
         raw_filings = fetch_edgar_form_d(args.start_year, args.end_year)
         # Save raw response
-        raw_path = os.path.join(RAW_DIR, f"edgar_formd_{datetime.utcnow().strftime('%Y%m%d_%H%M%S')}.json")
+        raw_path = os.path.join(RAW_DIR, f"edgar_formd_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')}.json")
         save_json(raw_filings, raw_path)
         processed = process_edgar_filings(raw_filings, args.start_year, args.end_year)
 

@@ -30,7 +30,7 @@ import argparse
 import json
 import os
 import sys
-from datetime import datetime
+from datetime import datetime, timezone
 
 # ---------------------------------------------------------------------------
 # Constants
@@ -427,7 +427,7 @@ def compute_composite_from_signals():
     return {
         "metadata": {
             "source": "Displacement Curve Composite",
-            "last_updated": datetime.utcnow().strftime("%Y-%m-%d"),
+            "last_updated": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
             "mock": False,
             "version": "1.0",
         },
