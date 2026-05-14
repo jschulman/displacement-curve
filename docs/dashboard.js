@@ -915,15 +915,48 @@
       return Math.round(sum / trendWindow * 10) / 10;
     });
 
-    // Build event point data
-    var eventPoints = [];
-    var eventLabelsMap = {};
+    // Build event point data.
+    // - Two events sharing a date used to collide on eventLabelsMap; now we
+    //   accumulate labels into an array and join with " · " in the tooltip.
+    // - Events dated past the last available month (e.g. layoff
+    //   announcements happening after the most recent BLS print) used to
+    //   silently disappear because labels.indexOf(ev.date) returned -1.
+    //   We snap those to the last label and prefix the rendered label with
+    //   "(M)" so the reader knows the marker is anchored to the rightmost
+    //   point rather than its true date.
+    var lastLabel = labels[labels.length - 1];
+    var eventLabelsMap = {};   // labelDate -> [string]
+    var eventPositions = {};   // labelDate -> score y
+
     events.forEach(function(ev) {
-      var idx = labels.indexOf(ev.date);
-      if (idx >= 0) {
-        eventPoints.push({ x: ev.date, y: scores[idx] });
-        eventLabelsMap[ev.date] = ev.label;
+      var targetLabel = ev.date;
+      var idx = labels.indexOf(targetLabel);
+      if (idx < 0) {
+        if (ev.date > lastLabel) {
+          targetLabel = lastLabel;
+          idx = labels.length - 1;
+        } else {
+          // Event predates the series start — drop it
+          return;
+        }
       }
+      var label = ev.label;
+      if (targetLabel !== ev.date) {
+        label = label + " (" + ev.date + ")";
+      }
+      if (!eventLabelsMap[targetLabel]) eventLabelsMap[targetLabel] = [];
+      eventLabelsMap[targetLabel].push(label);
+      eventPositions[targetLabel] = scores[idx];
+    });
+
+    var eventDataArr = labels.map(function(lbl) {
+      return eventPositions[lbl] != null ? eventPositions[lbl] : null;
+    });
+    var eventLabelArr = labels.map(function(lbl) {
+      return eventLabelsMap[lbl] ? eventLabelsMap[lbl].join(" · ") : null;
+    });
+    var eventRadiusArr = labels.map(function(lbl) {
+      return eventPositions[lbl] != null ? 6 : 0;
     });
 
     timelineChart = new Chart(ctx, {
@@ -956,20 +989,15 @@
           },
           {
             label: "Events",
-            data: labels.map(function(lbl) {
-              var ev = eventPoints.find(function(p) { return p.x === lbl; });
-              return ev ? ev.y : null;
-            }),
+            data: eventDataArr,
             borderColor: "transparent",
             backgroundColor: "#f0883e",
-            pointRadius: labels.map(function(lbl) {
-              return eventPoints.some(function(p) { return p.x === lbl; }) ? 6 : 0;
-            }),
+            pointRadius: eventRadiusArr,
             pointHoverRadius: 8,
             pointStyle: "circle",
             showLine: false,
             spanGaps: false,
-            _eventLabels: labels.map(function(lbl) { return eventLabelsMap[lbl] || null; }),
+            _eventLabels: eventLabelArr,
           },
         ],
       },
@@ -1062,22 +1090,6 @@
       }],
     });
 
-    // The events dataset needs to use the same x-axis labels.
-    // Re-map event points properly to label indices
-    var eventData = labels.map(function(label) {
-      var match = events.find(function(ev) { return ev.date === label; });
-      if (match) {
-        var scoreIdx = labels.indexOf(label);
-        return scores[scoreIdx];
-      }
-      return null;
-    });
-    timelineChart.data.datasets[1].data = eventData;
-    timelineChart.data.datasets[1]._eventLabels = labels.map(function(label) {
-      var match = events.find(function(ev) { return ev.date === label; });
-      return match ? match.label : null;
-    });
-    timelineChart.update("none");
   }
 
   // ---- Expanded Regulatory Chart ----
