@@ -167,11 +167,17 @@ def extract_monthly_employment(data):
         for entry in data["monthly"]:
             values[entry["date"]] = entry.get("total_employment", entry.get("employment", 0))
     elif data and "series" in data:
-        # Real BLS data: series.CES5000000001.data[].{date, value}
-        for sid, series in data["series"].items():
-            if sid == "CES5000000001":
-                for entry in series.get("data", []):
-                    values[entry["date"]] = entry["value"]
+        # Real BLS data: series.CES6000000001.data[].{date, value}.
+        # CES6000000001 = supersector 60 "Professional and Business Services",
+        # all employees in thousands, seasonally adjusted. Earlier code keyed
+        # on CES5000000001 which is supersector 50 (Information) — wrong by
+        # roughly 7x. CES5000000001 is accepted as a fallback for any data
+        # collected before the ID fix.
+        series_map = data["series"]
+        chosen = series_map.get("CES6000000001") or series_map.get("CES5000000001")
+        if chosen:
+            for entry in chosen.get("data", []):
+                values[entry["date"]] = entry["value"]
     elif data and "aggregate" in data:
         for entry in data["aggregate"]:
             values[entry.get("date", "")] = entry.get("total_employment", 0)

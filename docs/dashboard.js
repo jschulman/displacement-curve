@@ -26,10 +26,10 @@
       metadata: {
         source: "BLS",
         last_updated: "2025-12-01",
-        series_id: "CES5000000001",
+        series_id: "CES6000000001",
       },
       series: {
-        CES5000000001: {
+        CES6000000001: {
           name: "Professional and Business Services",
           data: [
             { date: "2022-11", value: 22872 },
@@ -563,8 +563,8 @@
   // ---- Data Extraction Helpers ----
 
   function getEmploymentSummary(empData) {
-    // Primary series: CES5000000001 (Professional & Business Services total)
-    var primaryKey = "CES5000000001";
+    // Primary series: CES6000000001 (Professional & Business Services total)
+    var primaryKey = "CES6000000001";
     var series = null;
 
     if (empData && empData.series) {
@@ -1207,7 +1207,7 @@
         data: sorted.map(function (d) { return { x: d.date, y: d.value }; }),
         borderColor: colors[i % colors.length],
         backgroundColor: "transparent",
-        borderWidth: key === "CES5000000001" ? 3 : 1.5,
+        borderWidth: key === "CES6000000001" ? 3 : 1.5,
         pointRadius: 2,
         tension: 0.3,
       });

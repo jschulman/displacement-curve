@@ -84,9 +84,13 @@ class TestMockDataGenerator(unittest.TestCase):
 
     def test_bls_series_ids(self):
         data = self._load_json("bls/processed/employment.json")
+        # All IDs live in BLS supersector 60 (Professional and Business
+        # Services). Previous code used supersector 55 (Financial Activities)
+        # and 50 (Information) IDs, which silently returned empty data or the
+        # wrong sector entirely.
         expected_ids = {
-            "CES5541200001", "CES5541600001", "CES5541100001",
-            "CES5541500001", "CES5000000001",
+            "CES6054120001", "CES6054160001", "CES6054110001",
+            "CES6054150001", "CES6000000001",
         }
         self.assertEqual(set(data["series"].keys()), expected_ids)
 
@@ -117,12 +121,12 @@ class TestMockDataGenerator(unittest.TestCase):
     def test_bls_value_ranges(self):
         """Verify values are in realistic BLS thousands range."""
         data = self._load_json("bls/processed/employment.json")
-        accounting = data["series"]["CES5541200001"]
+        accounting = data["series"]["CES6054120001"]
         vals = [p["value"] for p in accounting["data"]]
         self.assertTrue(all(900 < v < 1300 for v in vals),
                         f"Accounting values out of range: min={min(vals)}, max={max(vals)}")
 
-        total = data["series"]["CES5000000001"]
+        total = data["series"]["CES6000000001"]
         vals = [p["value"] for p in total["data"]]
         self.assertTrue(all(20000 < v < 25000 for v in vals),
                         f"Total P&BS values out of range: min={min(vals)}, max={max(vals)}")

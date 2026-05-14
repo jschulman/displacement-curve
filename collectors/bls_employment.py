@@ -5,12 +5,12 @@ BLS Employment Data Collector for the Displacement Curve.
 Fetches Current Employment Statistics (CES) data from the Bureau of Labor
 Statistics Public Data API v2 (API key required, 500 queries/day).
 
-Series tracked:
-  CES5541200001 - Accounting & Tax Preparation
-  CES5541600001 - Management & Technical Consulting
-  CES5541100001 - Legal Services
-  CES5541500001 - Computer Systems Design
-  CES5000000001 - Total Professional & Business Services
+Series tracked (all seasonally adjusted, "all employees, thousands"):
+  CES6054120001 - Accounting, Tax Prep, Bookkeeping & Payroll
+  CES6054160001 - Management, Scientific & Technical Consulting
+  CES6054110001 - Legal Services
+  CES6054150001 - Computer Systems Design & Related Services
+  CES6000000001 - Total Professional and Business Services (supersector 60)
 
 Usage:
   python collectors/bls_employment.py              # live API
@@ -41,11 +41,11 @@ PROCESSED_DIR = os.path.join(DATA_DIR, "bls", "processed")
 BLS_API_URL = "https://api.bls.gov/publicAPI/v2/timeseries/data/"
 
 SERIES = {
-    "CES5541200001": "Accounting & Tax Preparation",
-    "CES5541600001": "Management & Technical Consulting",
-    "CES5541100001": "Legal Services",
-    "CES5541500001": "Computer Systems Design",
-    "CES5000000001": "Total Professional & Business Services",
+    "CES6054120001": "Accounting & Tax Preparation",
+    "CES6054160001": "Management & Technical Consulting",
+    "CES6054110001": "Legal Services",
+    "CES6054150001": "Computer Systems Design",
+    "CES6000000001": "Total Professional & Business Services",
 }
 
 MAX_RETRIES = 3

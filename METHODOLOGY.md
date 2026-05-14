@@ -21,11 +21,20 @@ This document describes the data sources, collection methods, and processing for
 
 | Series ID | Description |
 |-----------|-------------|
-| CES5541200001 | Accounting, Tax Preparation, Bookkeeping, Payroll Services |
-| CES5541600001 | Management, Scientific, and Technical Consulting |
-| CES5541100001 | Legal Services |
-| CES5541500001 | Computer Systems Design and Related Services |
-| CES5000000001 | Total Professional and Business Services |
+| CES6054120001 | Accounting, Tax Preparation, Bookkeeping, Payroll Services |
+| CES6054160001 | Management, Scientific, and Technical Consulting |
+| CES6054110001 | Legal Services |
+| CES6054150001 | Computer Systems Design and Related Services |
+| CES6000000001 | Total Professional and Business Services (supersector 60) |
+
+All series are seasonally adjusted "all employees, thousands". Before May
+2026 the project used IDs starting with `55` (Financial Activities
+supersector) and `50` (Information supersector), which returned either
+empty results or the wrong sector entirely; the headline "Professional
+Services Employment" number was tracking the Information supersector
+(~3 million workers) rather than the much larger Professional and
+Business Services supersector (~22 million workers). Verified against
+FRED: CES6054120001, CES6054160001, CES6054150001, CES6000000001.
 
 ### Processing
 - Raw BLS API responses saved to `data/bls/raw/`

@@ -67,7 +67,7 @@ def generate_bls_data():
     """Generate realistic BLS CES employment data (thousands)."""
 
     series_config = {
-        "CES5541200001": {
+        "CES6054120001": {
             "name": "Accounting & Tax Preparation",
             "base": 1055.0,
             "monthly_growth": 0.0012,
@@ -75,7 +75,7 @@ def generate_bls_data():
             "seasonal_amp": 8.0,
             "noise_std": 1.5,
         },
-        "CES5541600001": {
+        "CES6054160001": {
             "name": "Management & Technical Consulting",
             "base": 1610.0,
             "monthly_growth": 0.0018,
@@ -83,7 +83,7 @@ def generate_bls_data():
             "seasonal_amp": 6.0,
             "noise_std": 2.0,
         },
-        "CES5541100001": {
+        "CES6054110001": {
             "name": "Legal Services",
             "base": 1155.0,
             "monthly_growth": 0.0004,  # very flat
@@ -91,7 +91,7 @@ def generate_bls_data():
             "seasonal_amp": 3.0,
             "noise_std": 1.2,
         },
-        "CES5541500001": {
+        "CES6054150001": {
             "name": "Computer Systems Design",
             "base": 2105.0,
             "monthly_growth": 0.0025,
@@ -100,7 +100,7 @@ def generate_bls_data():
             "seasonal_amp": 5.0,
             "noise_std": 3.0,
         },
-        "CES5000000001": {
+        "CES6000000001": {
             "name": "Total Professional & Business Services",
             "base": 22520.0,
             "monthly_growth": 0.0010,
