@@ -1,7 +1,7 @@
 {
   "metadata": {
     "source": "Displacement Curve Composite",
-    "last_updated": "2026-05-11",
+    "last_updated": "2026-05-14",
     "mock": false,
     "version": "1.0"
   },
@@ -1686,6 +1686,182 @@
         }
       },
       "trend": "down"
+    },
+    {
+      "date": "2026-01",
+      "score": 44.5,
+      "phase": "Productivity",
+      "phase_range": "26-50",
+      "components": {
+        "employment": {
+          "raw_value": 2815.0,
+          "normalized": 87.7,
+          "weighted": 21.93
+        },
+        "rev_per_employee": {
+          "raw_value": 87.5,
+          "normalized": 8.8,
+          "weighted": 1.76
+        },
+        "vc_funding": {
+          "raw_value": 3.0,
+          "normalized": 100.0,
+          "weighted": 15.0
+        },
+        "job_ratio": {
+          "raw_value": 0.551,
+          "normalized": 5.3,
+          "weighted": 0.79
+        },
+        "trends": {
+          "raw_value": 0,
+          "normalized": 0,
+          "weighted": 0.0
+        },
+        "github": {
+          "raw_value": 0,
+          "normalized": 0,
+          "weighted": 0.0
+        },
+        "regulatory": {
+          "raw_value": 17,
+          "normalized": 100.0,
+          "weighted": 5.0
+        }
+      },
+      "trend": "down"
+    },
+    {
+      "date": "2026-02",
+      "score": 46.1,
+      "phase": "Productivity",
+      "phase_range": "26-50",
+      "components": {
+        "employment": {
+          "raw_value": 2792.0,
+          "normalized": 94.4,
+          "weighted": 23.6
+        },
+        "rev_per_employee": {
+          "raw_value": 87.5,
+          "normalized": 8.8,
+          "weighted": 1.76
+        },
+        "vc_funding": {
+          "raw_value": 3.0,
+          "normalized": 100.0,
+          "weighted": 15.0
+        },
+        "job_ratio": {
+          "raw_value": 0.551,
+          "normalized": 5.3,
+          "weighted": 0.79
+        },
+        "trends": {
+          "raw_value": 0,
+          "normalized": 0,
+          "weighted": 0.0
+        },
+        "github": {
+          "raw_value": 0,
+          "normalized": 0,
+          "weighted": 0.0
+        },
+        "regulatory": {
+          "raw_value": 17,
+          "normalized": 100.0,
+          "weighted": 5.0
+        }
+      },
+      "trend": "up"
+    },
+    {
+      "date": "2026-03",
+      "score": 46.6,
+      "phase": "Productivity",
+      "phase_range": "26-50",
+      "components": {
+        "employment": {
+          "raw_value": 2786.0,
+          "normalized": 96.2,
+          "weighted": 24.05
+        },
+        "rev_per_employee": {
+          "raw_value": 87.5,
+          "normalized": 8.8,
+          "weighted": 1.76
+        },
+        "vc_funding": {
+          "raw_value": 3.0,
+          "normalized": 100.0,
+          "weighted": 15.0
+        },
+        "job_ratio": {
+          "raw_value": 0.551,
+          "normalized": 5.3,
+          "weighted": 0.79
+        },
+        "trends": {
+          "raw_value": 0,
+          "normalized": 0,
+          "weighted": 0.0
+        },
+        "github": {
+          "raw_value": 0,
+          "normalized": 0,
+          "weighted": 0.0
+        },
+        "regulatory": {
+          "raw_value": 17,
+          "normalized": 100.0,
+          "weighted": 5.0
+        }
+      },
+      "trend": "flat"
+    },
+    {
+      "date": "2026-04",
+      "score": 47.6,
+      "phase": "Productivity",
+      "phase_range": "26-50",
+      "components": {
+        "employment": {
+          "raw_value": 2773.0,
+          "normalized": 100.0,
+          "weighted": 25.0
+        },
+        "rev_per_employee": {
+          "raw_value": 88.9,
+          "normalized": 9.3,
+          "weighted": 1.86
+        },
+        "vc_funding": {
+          "raw_value": 3.0,
+          "normalized": 100.0,
+          "weighted": 15.0
+        },
+        "job_ratio": {
+          "raw_value": 0.551,
+          "normalized": 5.3,
+          "weighted": 0.79
+        },
+        "trends": {
+          "raw_value": 0,
+          "normalized": 0,
+          "weighted": 0.0
+        },
+        "github": {
+          "raw_value": 0,
+          "normalized": 0,
+          "weighted": 0.0
+        },
+        "regulatory": {
+          "raw_value": 17,
+          "normalized": 100.0,
+          "weighted": 5.0
+        }
+      },
+      "trend": "up"
     }
   ],
   "events": [
@@ -1728,6 +1904,18 @@
       "date": "2025-06",
       "label": "Accenture AI Revenue $3B",
       "type": "earnings"
+    },
+    {
+      "date": "2026-05",
+      "label": "Coinbase -700 (14%) cites AI",
+      "type": "layoff",
+      "attribution_quality": "marketing"
+    },
+    {
+      "date": "2026-05",
+      "label": "Cloudflare -1,100 (~20%) AI restructuring",
+      "type": "layoff",
+      "attribution_quality": "validated"
     }
   ]
 }

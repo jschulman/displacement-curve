@@ -70,14 +70,68 @@ EVENTS = [
     {"date": "2024-11", "label": "GPT-4o Launch", "type": "ai_release"},
     {"date": "2025-02", "label": "Claude 3.5 Opus", "type": "ai_release"},
     {"date": "2025-06", "label": "Accenture AI Revenue $3B", "type": "earnings"},
+    # Layoff events use an attribution_quality field to distinguish narrative-led
+    # announcements from those corroborated by financial signals. See
+    # METHODOLOGY.md: "Corporate AI Layoff Attribution".
+    {
+        "date": "2026-05",
+        "label": "Coinbase -700 (14%) cites AI",
+        "type": "layoff",
+        "attribution_quality": "marketing",
+    },
+    {
+        "date": "2026-05",
+        "label": "Cloudflare -1,100 (~20%) AI restructuring",
+        "type": "layoff",
+        "attribution_quality": "validated",
+    },
 ]
 
-# 38 months: 2022-11 through 2025-12
-MONTHS = []
-for year in range(2022, 2026):
-    start_m = 11 if year == 2022 else 1
-    for m in range(start_m, 13):
-        MONTHS.append(f"{year}-{m:02d}")
+# Monthly axis starts 2022-11 (ChatGPT public release). The end month is
+# determined dynamically from the latest signal data so the composite rolls
+# forward automatically as new BLS / earnings / etc. arrive.
+SERIES_START = "2022-11"
+
+
+def _month_iter(start, end):
+    """Yield 'YYYY-MM' strings from start through end inclusive."""
+    sy, sm = int(start[:4]), int(start[5:7])
+    ey, em = int(end[:4]), int(end[5:7])
+    y, m = sy, sm
+    while (y, m) <= (ey, em):
+        yield f"{y}-{m:02d}"
+        m += 1
+        if m == 13:
+            m = 1
+            y += 1
+
+
+def _build_months(raw_series):
+    """Latest month is anchored to BLS employment (the foundational monthly
+    signal). Slower-cadence series are forward-filled in _forward_fill so the
+    composite stays computable through the most recent BLS print."""
+    employment = raw_series.get("employment", {})
+    if not employment:
+        return []
+    latest = max(employment.keys())
+    return list(_month_iter(SERIES_START, latest))
+
+
+def _forward_fill(series, months):
+    """Return a new dict that carries the most recent value forward into any
+    month in `months` after the series' last observation. Lower-cadence
+    signals (quarterly VC funding, regulatory, earnings) would otherwise drop
+    to 0 once BLS data extends past their last quarter."""
+    if not series:
+        return {}
+    sorted_dates = sorted(series.keys())
+    filled = dict(series)
+    last_known = sorted_dates[-1]
+    last_val = series[last_known]
+    for m in months:
+        if m > last_known and m not in filled:
+            filled[m] = last_val
+    return filled
 
 
 def get_phase(score):
@@ -264,11 +318,25 @@ def compute_composite_from_signals():
         norm_series[key], lo, hi = normalize_series(raw_series.get(key, {}), invert=invert)
         print(f"    {key} range: {lo:.1f} - {hi:.1f} {'(inverted)' if invert else ''}")
 
-    # Build monthly composite
+    # Build monthly composite. Anchor the month axis to BLS, then forward-fill
+    # slower-cadence signals so months past their last reported quarter still
+    # contribute their most recent value rather than dropping to 0.
+    months = _build_months(raw_series)
+    print(f"  Month axis: {months[0]} .. {months[-1]} ({len(months)} months)")
+
+    for key in raw_series:
+        raw_series[key] = _forward_fill(raw_series[key], months)
+
+    # Re-normalize after forward-fill so normalized lookups stay in range.
+    norm_series = {}
+    for key in WEIGHTS:
+        invert = (key == "employment")
+        norm_series[key], _, _ = normalize_series(raw_series.get(key, {}), invert=invert)
+
     monthly = []
     prev_score = None
 
-    for date_label in MONTHS:
+    for date_label in months:
         components = {}
         score = 0.0
 
