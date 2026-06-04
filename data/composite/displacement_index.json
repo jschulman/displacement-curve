@@ -1622,8 +1622,8 @@
         },
         "regulatory": {
           "raw_value": 6,
-          "normalized": 24.0,
-          "weighted": 1.02
+          "normalized": 23.1,
+          "weighted": 0.98
         },
         "apprenticeship": {
           "raw_value": 5.7,
@@ -1671,8 +1671,8 @@
         },
         "regulatory": {
           "raw_value": 6,
-          "normalized": 24.0,
-          "weighted": 1.02
+          "normalized": 23.1,
+          "weighted": 0.98
         },
         "apprenticeship": {
           "raw_value": 5.7,
@@ -1720,8 +1720,8 @@
         },
         "regulatory": {
           "raw_value": 6,
-          "normalized": 24.0,
-          "weighted": 1.02
+          "normalized": 23.1,
+          "weighted": 0.98
         },
         "apprenticeship": {
           "raw_value": 5.7,
@@ -1733,7 +1733,7 @@
     },
     {
       "date": "2025-10",
-      "score": 60.1,
+      "score": 60.0,
       "phase": "Erosion",
       "phase_range": "51-75",
       "components": {
@@ -1769,8 +1769,8 @@
         },
         "regulatory": {
           "raw_value": 9,
-          "normalized": 36.0,
-          "weighted": 1.53
+          "normalized": 34.6,
+          "weighted": 1.47
         },
         "apprenticeship": {
           "raw_value": 5.7,
@@ -1818,8 +1818,8 @@
         },
         "regulatory": {
           "raw_value": 9,
-          "normalized": 36.0,
-          "weighted": 1.53
+          "normalized": 34.6,
+          "weighted": 1.47
         },
         "apprenticeship": {
           "raw_value": 5.7,
@@ -1867,8 +1867,8 @@
         },
         "regulatory": {
           "raw_value": 9,
-          "normalized": 36.0,
-          "weighted": 1.53
+          "normalized": 34.6,
+          "weighted": 1.47
         },
         "apprenticeship": {
           "raw_value": 5.7,
@@ -1880,7 +1880,7 @@
     },
     {
       "date": "2026-01",
-      "score": 48.0,
+      "score": 47.9,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
@@ -1916,8 +1916,8 @@
         },
         "regulatory": {
           "raw_value": 16,
-          "normalized": 64.0,
-          "weighted": 2.72
+          "normalized": 61.5,
+          "weighted": 2.61
         },
         "apprenticeship": {
           "raw_value": 5.7,
@@ -1929,7 +1929,7 @@
     },
     {
       "date": "2026-02",
-      "score": 52.2,
+      "score": 52.0,
       "phase": "Erosion",
       "phase_range": "51-75",
       "components": {
@@ -1965,8 +1965,8 @@
         },
         "regulatory": {
           "raw_value": 16,
-          "normalized": 64.0,
-          "weighted": 2.72
+          "normalized": 61.5,
+          "weighted": 2.61
         },
         "apprenticeship": {
           "raw_value": 5.7,
@@ -1978,7 +1978,7 @@
     },
     {
       "date": "2026-03",
-      "score": 52.9,
+      "score": 52.8,
       "phase": "Erosion",
       "phase_range": "51-75",
       "components": {
@@ -2014,8 +2014,8 @@
         },
         "regulatory": {
           "raw_value": 16,
-          "normalized": 64.0,
-          "weighted": 2.72
+          "normalized": 61.5,
+          "weighted": 2.61
         },
         "apprenticeship": {
           "raw_value": 5.7,
@@ -2062,7 +2062,7 @@
           "weighted": 8.4
         },
         "regulatory": {
-          "raw_value": 25,
+          "raw_value": 26,
           "normalized": 100.0,
           "weighted": 4.25
         },
