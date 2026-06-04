@@ -3,8 +3,9 @@
 Apprenticeship signal collector — youth share of professional-services employment.
 
 The apprenticeship collapse is a labor-DEMOGRAPHIC phenomenon, measured at the sector
-level (matching this composite's altitude), NOT scraped from per-firm job boards (entry
-hiring is off-platform for some firms — see METRIC-REDESIGN.md in displacement-signals).
+level (matching this composite's altitude) rather than from per-firm job postings —
+entry/campus hiring is recruited off the public experienced-hire boards for many firms,
+so a demographic measure is both more consistent and more authoritative.
 
 Source: Census ACS 1-year PUMS API (api.census.gov). Per year, pull person-level AGEP
 (age) + PWGTP (person weight) for the professional-services INDP industry codes, and

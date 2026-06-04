@@ -371,47 +371,45 @@ Accelerating regulatory output signals that AI displacement has become a policy 
 
 ## Signal 9: The Apprenticeship Collapse
 
-**Source:** `displacement-signals` engine (scans professional-services firms' public job postings)
-**Update Cadence:** Weekly
+**Source:** Census ACS 1-year PUMS (American Community Survey public-use microdata)
+**Update Cadence:** Annual (ACS 1-year releases each September; ~1-year lag)
 
 ### What It Measures
 
-The one thing every other signal here is blind to: **the seniority composition of
-hiring.** Signal 7 explicitly notes JOLTS cannot break openings down by level, and
-BLS headcount (Signal 1) is an aggregate. But the central claim of the displacement
-thesis for professional services — that AI eliminates the *junior* work first, and
-with it the apprenticeship that produces senior judgment — is only observable at the
-job-posting level.
+The one dimension every other signal here is blind to: the **age composition** of the
+professional-services workforce. JOLTS (Signal 7) cannot break hiring down by level,
+and BLS headcount (Signal 1) is an aggregate. But the core claim of the displacement
+thesis — that AI eliminates the *junior* work first, thinning the entry tier that
+produces tomorrow's seniors — shows up as a demographic shift: a falling share of
+young workers in the field, and a rising median age.
 
-This signal scans the public careers postings of a cohort of professional-services
-firms, classifies each posting's seniority from its title (entry / mid / senior),
-filters to US roles, and computes the **junior:senior ratio** (entry-tier postings ÷
-senior/review-tier postings). A healthy apprenticeship pipeline posts many entry
-roles per senior role; a falling ratio is the apprenticeship tier thinning.
-
-### Cohort
-
-Three buckets, so the signal is a contrast, not an absolute:
-
-- **Treatment** — firms whose business model *is* the audit/tax/advisory apprenticeship: Deloitte, EY, PwC, Accenture, Grant Thornton, Baker Tilly, Protiviti, RSM.
-- **Control** — a large non-professional-services white-collar employer (Walmart corporate), to separate the professional-services apprenticeship effect from generic white-collar hiring trends.
-- **Insulated** — professional services but structurally shielded from the collapse (e.g. Booz Allen: federal/cleared staff-augmentation, headcount-billed, slow AI adoption). Reported separately; excluded from the composite-feeding median.
-
-The headline value fed to the composite is the **treatment-cohort median junior:senior ratio.**
+This signal measures the **youth share of professional-services employment** — the
+percentage of workers under 25 (and under 35) across the knowledge-work professional
+services (legal; accounting/tax; computer-systems design; and management, scientific
+& technical consulting). A thinning apprenticeship shows up as that share declining
+while the workforce ages.
 
 ### Method
 
-- Postings pulled from each firm's public ATS (Workday, Oracle Recruiting, Avature, Radancy, SuccessFactors) — public endpoints only, robots-respecting.
-- Seniority classified from the posting title (every ATS encodes the level: "Audit Associate", "Senior Manager, Tax").
-- A separate **campus / early-career** pass captures the entry tier that experienced-hire boards route to dedicated portals, so the junior rung is measured directly rather than inferred.
+- Census ACS 1-year PUMS via the public API: person-level age (`AGEP`) and person
+  weight (`PWGTP`) for the professional-services industry codes (`INDP` 7270, 7280,
+  7380, 7390).
+- Compute the PWGTP-weighted share under 25 and under 35, plus the weighted median age,
+  for each year back to 2015.
+- The value fed to the composite is **crossover-progress**: how far the under-25 share
+  has fallen from its 2015–2019 baseline toward a 50%-of-baseline threshold (the point
+  at which the entry tier has structurally halved). It is deliberately **not** min-max
+  normalized — a near-flat series correctly contributes ~0 rather than being amplified
+  into a false reading.
 
 ### Interpretation
 
-The ratio **falls** as the apprenticeship thins, so the composite **inverts** it
-(lower ratio → higher displacement reading), the same treatment as employment. A
-single month normalizes to zero by construction; the signal becomes informative once
-the weekly snapshots accumulate a multi-month series. Because it leads the lagging
-BLS print, its newest points wait for the BLS-anchored month axis to extend.
+A falling youth share = the apprenticeship tier thinning, sector-wide. Through 2024 the
+share is essentially flat (~6% under 25, ~30% under 35, median age ~43) — consistent
+with the thesis timeline, which places the inflection later this decade. This signal
+also powers the **Apprenticeship Inflection Distance** estimate (when the college-hire
+job becomes the exception, not the norm). Its annual cadence and ~1-year lag make it a
+lagging *confirmation* signal, not an early warning.
 
 ---
 
