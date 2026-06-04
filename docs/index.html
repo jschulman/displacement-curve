@@ -74,40 +74,21 @@
         </div>
       </div>
 
-      <div class="card" data-signal="trends" id="card-trends">
+      <div class="card" data-signal="workforce" id="card-workforce">
         <div class="card-header">
-          <span class="card-icon" aria-hidden="true">&#x1F50D;</span>
-          <h2 class="card-title">AI Search Interest</h2>
-          <span class="card-source">Google Trends</span>
+          <span class="card-icon" aria-hidden="true">&#x1F465;</span>
+          <h2 class="card-title">Revenue Per Employee</h2>
+          <span class="card-source">SEC 10-K</span>
         </div>
         <div class="card-body">
-          <div class="card-value" id="val-trends">--</div>
-          <div class="card-change" id="change-trends">--</div>
+          <div class="card-value" id="val-workforce">--</div>
+          <div class="card-change" id="change-workforce">--</div>
           <div class="card-sparkline">
-            <canvas id="spark-trends" height="60"></canvas>
+            <canvas id="spark-workforce" height="60"></canvas>
           </div>
         </div>
         <div class="card-footer">
-          <span class="card-updated" id="updated-trends">--</span>
-          <span class="card-expand-hint">Click to expand</span>
-        </div>
-      </div>
-
-      <div class="card" data-signal="github" id="card-github">
-        <div class="card-header">
-          <span class="card-icon" aria-hidden="true">&#x2B50;</span>
-          <h2 class="card-title">Open Source AI Activity</h2>
-          <span class="card-source">GitHub</span>
-        </div>
-        <div class="card-body">
-          <div class="card-value" id="val-github">--</div>
-          <div class="card-change" id="change-github">--</div>
-          <div class="card-sparkline">
-            <canvas id="spark-github" height="60"></canvas>
-          </div>
-        </div>
-        <div class="card-footer">
-          <span class="card-updated" id="updated-github">--</span>
+          <span class="card-updated" id="updated-workforce">--</span>
           <span class="card-expand-hint">Click to expand</span>
         </div>
       </div>
@@ -131,21 +112,40 @@
         </div>
       </div>
 
-      <div class="card" data-signal="workforce" id="card-workforce">
+      <div class="card" data-signal="youth" id="card-youth">
         <div class="card-header">
-          <span class="card-icon" aria-hidden="true">&#x1F465;</span>
-          <h2 class="card-title">Revenue Per Employee</h2>
-          <span class="card-source">SEC 10-K</span>
+          <span class="card-icon" aria-hidden="true">&#x1F393;</span>
+          <h2 class="card-title">Apprenticeship Pipeline</h2>
+          <span class="card-source">Census ACS</span>
         </div>
         <div class="card-body">
-          <div class="card-value" id="val-workforce">--</div>
-          <div class="card-change" id="change-workforce">--</div>
+          <div class="card-value" id="val-youth">--</div>
+          <div class="card-change" id="change-youth">--</div>
           <div class="card-sparkline">
-            <canvas id="spark-workforce" height="60"></canvas>
+            <canvas id="spark-youth" height="60"></canvas>
           </div>
         </div>
         <div class="card-footer">
-          <span class="card-updated" id="updated-workforce">--</span>
+          <span class="card-updated" id="updated-youth">--</span>
+          <span class="card-expand-hint">Click to expand</span>
+        </div>
+      </div>
+
+      <div class="card" data-signal="jobs" id="card-jobs">
+        <div class="card-header">
+          <span class="card-icon" aria-hidden="true">&#x1F4CB;</span>
+          <h2 class="card-title">Professional-Services Hiring</h2>
+          <span class="card-source">BLS JOLTS</span>
+        </div>
+        <div class="card-body">
+          <div class="card-value" id="val-jobs">--</div>
+          <div class="card-change" id="change-jobs">--</div>
+          <div class="card-sparkline">
+            <canvas id="spark-jobs" height="60"></canvas>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="card-updated" id="updated-jobs">--</span>
           <span class="card-expand-hint">Click to expand</span>
         </div>
       </div>
@@ -169,40 +169,21 @@
         </div>
       </div>
 
-      <div class="card" data-signal="jobs" id="card-jobs">
+      <div class="card" data-signal="trends" id="card-trends">
         <div class="card-header">
-          <span class="card-icon" aria-hidden="true">&#x1F4CB;</span>
-          <h2 class="card-title">AI vs Traditional Hiring</h2>
-          <span class="card-source">Indeed / LinkedIn</span>
+          <span class="card-icon" aria-hidden="true">&#x1F50D;</span>
+          <h2 class="card-title">AI Search Interest</h2>
+          <span class="card-source">Google Trends</span>
         </div>
         <div class="card-body">
-          <div class="card-value" id="val-jobs">--</div>
-          <div class="card-change" id="change-jobs">--</div>
+          <div class="card-value" id="val-trends">--</div>
+          <div class="card-change" id="change-trends">--</div>
           <div class="card-sparkline">
-            <canvas id="spark-jobs" height="60"></canvas>
+            <canvas id="spark-trends" height="60"></canvas>
           </div>
         </div>
         <div class="card-footer">
-          <span class="card-updated" id="updated-jobs">--</span>
-          <span class="card-expand-hint">Click to expand</span>
-        </div>
-      </div>
-
-      <div class="card" data-signal="regulatory" id="card-regulatory">
-        <div class="card-header">
-          <span class="card-icon" aria-hidden="true">&#x2696;</span>
-          <h2 class="card-title">Regulatory Guidance</h2>
-          <span class="card-source">Fed / OCC / SEC</span>
-        </div>
-        <div class="card-body">
-          <div class="card-value" id="val-regulatory">--</div>
-          <div class="card-change" id="change-regulatory">--</div>
-          <div class="card-sparkline">
-            <canvas id="spark-regulatory" height="60"></canvas>
-          </div>
-        </div>
-        <div class="card-footer">
-          <span class="card-updated" id="updated-regulatory">--</span>
+          <span class="card-updated" id="updated-trends">--</span>
           <span class="card-expand-hint">Click to expand</span>
         </div>
       </div>

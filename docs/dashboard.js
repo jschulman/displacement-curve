@@ -18,11 +18,12 @@
     regulatory: "data/regulatory/processed/guidance.json",
     composite: "data/composite/displacement_index.json",
     inflection: "data/composite/inflection_distance.json",
+    youth: "data/apprenticeship/processed/collapse.json",
   };
 
   // ---- State ----
   let state = {
-    data: { employment: null, trends: null, github: null, earnings: null, workforce: null, vc: null, jobs: null, regulatory: null, composite: null, inflection: null },
+    data: { employment: null, trends: null, github: null, earnings: null, workforce: null, vc: null, jobs: null, regulatory: null, composite: null, inflection: null, youth: null },
     expandedSignal: null,
     sparkCharts: {},
     expandedChart: null,
@@ -377,6 +378,27 @@
       date: latest.date,
       sparkLabels: trailing.map(function(d) { return d.date; }),
       sparkData: trailing.map(idx),
+    };
+  }
+
+  // ---- Apprenticeship Pipeline (youth share of professional services, Census ACS) ----
+  function getYouthSummary(youthData) {
+    if (!youthData || !youthData.monthly || youthData.monthly.length === 0) return null;
+    var sorted = youthData.monthly.slice().sort(function (a, b) { return a.date.localeCompare(b.date); });
+    function pct(e) { var v = e.youth_share_u25 != null ? e.youth_share_u25 : e.value; return v != null ? v * 100 : null; }
+    var latest = sorted[sorted.length - 1];
+    var prev = sorted.length >= 2 ? sorted[sorted.length - 2] : null;
+    var latestVal = pct(latest);
+    var prevVal = prev ? pct(prev) : null;
+    var mom = (prevVal != null && latestVal != null) ? latestVal - prevVal : 0; // percentage points, YoY
+    return {
+      value: latestVal,
+      formatted: latestVal != null ? latestVal.toFixed(1) + "% under 25" : "--",
+      mom: mom,
+      momFormatted: (mom >= 0 ? "+" : "") + mom.toFixed(1) + " pt YoY",
+      date: latest.date,
+      sparkLabels: sorted.map(function (d) { return d.date; }),
+      sparkData: sorted.map(pct),
     };
   }
 
@@ -798,6 +820,7 @@
     if (signal === "workforce") sparkColor = "#f85149";
     if (signal === "vc") sparkColor = "#a371f7";
     if (signal === "jobs") sparkColor = "#d2a8ff";
+    if (signal === "youth") sparkColor = "#f0883e";
     if (signal === "regulatory") sparkColor = "#f0883e";
 
     createSparkline(
@@ -1369,6 +1392,43 @@
     });
   }
 
+  function renderExpandedYouth(youthData) {
+    var ctx = document.getElementById("expanded-chart");
+    if (state.expandedChart) state.expandedChart.destroy();
+    var rows = (youthData.monthly || []).slice().sort(function (a, b) { return a.date.localeCompare(b.date); });
+    var labels = rows.map(function (d) { return d.date.slice(0, 4); });
+    var u25 = rows.map(function (d) { return d.youth_share_u25 != null ? d.youth_share_u25 * 100 : null; });
+    var u35 = rows.map(function (d) { return d.youth_share_u35 != null ? d.youth_share_u35 * 100 : null; });
+    var base = rows.filter(function (d) { var y = d.date.slice(0, 4); return y >= "2015" && y <= "2019"; })
+      .map(function (d) { return d.youth_share_u25 * 100; });
+    var baseline = base.length ? base.reduce(function (a, b) { return a + b; }, 0) / base.length : null;
+    var threshold = baseline != null ? baseline * 0.5 : null;
+    state.expandedChart = new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: labels,
+        datasets: [
+          { label: "Under 25 (%)", data: u25, borderColor: "#f0883e", backgroundColor: "transparent", borderWidth: 2, pointRadius: 3, tension: 0.3 },
+          { label: "Under 35 (%)", data: u35, borderColor: "#58a6ff", backgroundColor: "transparent", borderWidth: 2, pointRadius: 3, tension: 0.3 },
+          { label: "Crossover (50% of baseline)", data: labels.map(function () { return threshold; }), borderColor: "#f85149", borderDash: [6, 4], backgroundColor: "transparent", borderWidth: 1.5, pointRadius: 0 },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: true, position: "top", labels: { usePointStyle: true, pointStyle: "line", padding: 16 } },
+          tooltip: { mode: "index", intersect: false, callbacks: { label: function (ctx) { return ctx.dataset.label + ": " + (ctx.parsed.y != null ? ctx.parsed.y.toFixed(1) : "--") + "%"; } } },
+        },
+        scales: {
+          x: { title: { display: true, text: "Year" }, grid: { color: "rgba(48, 54, 61, 0.5)" } },
+          y: { title: { display: true, text: "Share of professional-services workforce (%)" }, grid: { color: "rgba(48, 54, 61, 0.5)" } },
+        },
+        interaction: { mode: "index", intersect: false },
+      },
+    });
+  }
+
   // ---- Expand / Collapse ----
 
   function expandSignal(signal) {
@@ -1400,7 +1460,8 @@
       earnings: "AI Revenue Reporting (SEC/Earnings)",
       workforce: "Revenue Per Employee (SEC 10-K)",
       vc: "VC Funding: AI Services (SEC Form D)",
-      jobs: "AI vs Traditional Hiring (Indeed / LinkedIn)",
+      jobs: "Professional-Services Hiring (BLS JOLTS)",
+      youth: "Apprenticeship Pipeline — Youth Share (Census ACS)",
       regulatory: "Regulatory Guidance (Fed / OCC / SEC / EU / NIST)",
     };
     titleEl.textContent = titles[signal] || signal;
@@ -1416,6 +1477,7 @@
     else if (signal === "workforce") renderExpandedWorkforce(state.data.earnings, state.data.workforce);
     else if (signal === "vc") renderExpandedVc(data);
     else if (signal === "jobs") renderExpandedJobs(data);
+    else if (signal === "youth") renderExpandedYouth(data);
     else if (signal === "regulatory") renderExpandedRegulatory(data);
 
     // Scroll to expanded section
@@ -1457,6 +1519,7 @@
       fetchJSON(DATA_PATHS.regulatory).catch(function () { console.warn("Regulatory data unavailable; signal will show no data."); return null; }),
       fetchJSON(DATA_PATHS.composite).catch(function () { console.warn("Composite data unavailable; signal will show no data."); return null; }),
       fetchJSON(DATA_PATHS.inflection).catch(function () { console.warn("Inflection data unavailable; panel will hide."); return null; }),
+      fetchJSON(DATA_PATHS.youth).catch(function () { console.warn("Youth-share data unavailable; card will show no data."); return null; }),
     ];
 
     Promise.all(promises).then(function (results) {
@@ -1470,6 +1533,7 @@
       state.data.regulatory = results[7];
       state.data.composite = results[8];
       state.data.inflection = results[9];
+      state.data.youth = results[10];
       render();
     });
   }
@@ -1504,14 +1568,13 @@
     var trendsSummary = getTrendsSummary(state.data.trends);
     renderCard("trends", trendsSummary);
 
-    var ghSummary = getGithubSummary(state.data.github);
-    renderCard("github", ghSummary);
-
     var earningsSummary = getEarningsSummary(state.data.earnings);
     renderCard("earnings", earningsSummary);
 
     var workforceSummary = getWorkforceSummary(state.data.earnings);
     renderCard("workforce", workforceSummary);
+
+    renderCard("youth", getYouthSummary(state.data.youth));
 
     var vcSummary = getVcSummary(state.data.vc);
     renderCard("vc", vcSummary);
@@ -1519,8 +1582,8 @@
     var jobsSummary = getJobsSummary(state.data.jobs);
     renderCard("jobs", jobsSummary);
 
-    var regSummary = getRegulatorySummary(state.data.regulatory);
-    renderCard("regulatory", regSummary);
+    // GitHub + Regulatory cards removed from the dashboard (signals still feed the
+    // composite via the Python normalizer — dropping the card != dropping the data).
   }
 
   // ---- Event Binding ----
