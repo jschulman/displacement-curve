@@ -1,4 +1,4 @@
-name: Weekly Data Collection (Jobs + Regulatory + Composite)
+name: Weekly Data Collection (Jobs + Regulatory + Apprenticeship + Composite)
 
 on:
   schedule:
@@ -24,8 +24,14 @@ jobs:
           BLS_API_KEY: ${{ secrets.BLS_API_KEY }}
       - name: Collect regulatory guidance data
         run: python collectors/regulatory_tracker.py
+      - name: Collect apprenticeship youth-share (Census ACS)
+        run: python collectors/youth_share.py --years 2015-$(date -u +%Y)
+        env:
+          CENSUS_API_KEY: ${{ secrets.CENSUS_API_KEY }}
       - name: Recompute composite displacement index
         run: python normalizers/composite_index.py
+      - name: Compute Apprenticeship Inflection Distance
+        run: python normalizers/inflection_distance.py
       - name: Copy processed data to docs
         run: |
           mkdir -p docs/data/jobs/processed
@@ -34,6 +40,8 @@ jobs:
           cp data/regulatory/processed/*.json docs/data/regulatory/processed/
           mkdir -p docs/data/composite
           cp data/composite/*.json docs/data/composite/
+          mkdir -p docs/data/apprenticeship/processed
+          cp data/apprenticeship/processed/*.json docs/data/apprenticeship/processed/
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
