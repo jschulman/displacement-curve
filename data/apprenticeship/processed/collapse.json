@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "source": "Census ACS 1-year PUMS",
+    "signal": "professional_services_youth_share",
+    "description": "PWGTP-weighted share of professional-services employment (legal, accounting, computer systems design, mgmt/sci/tech consulting) under age 25. Falling = apprenticeship tier thinning. Composite inverts (lower share -> higher displacement).",
+    "indp_codes": [
+      "7270",
+      "7280",
+      "7380",
+      "7390"
+    ],
+    "invert": true,
+    "last_updated": "2024-01",
+    "mock": false
+  },
+  "monthly": [
+    {
+      "date": "2015-01",
+      "value": 0.0605,
+      "youth_share_u25": 0.0605,
+      "youth_share_u35": 0.2937,
+      "median_age": 44,
+      "weighted_employment": 7808252
+    },
+    {
+      "date": "2016-01",
+      "value": 0.0626,
+      "youth_share_u25": 0.0626,
+      "youth_share_u35": 0.3,
+      "median_age": 44,
+      "weighted_employment": 8031342
+    },
+    {
+      "date": "2017-01",
+      "value": 0.0598,
+      "youth_share_u25": 0.0598,
+      "youth_share_u35": 0.2952,
+      "median_age": 44,
+      "weighted_employment": 8341798
+    },
+    {
+      "date": "2018-01",
+      "value": 0.0608,
+      "youth_share_u25": 0.0608,
+      "youth_share_u35": 0.2974,
+      "median_age": 43,
+      "weighted_employment": 8641416
+    },
+    {
+      "date": "2019-01",
+      "value": 0.0599,
+      "youth_share_u25": 0.0599,
+      "youth_share_u35": 0.3038,
+      "median_age": 43,
+      "weighted_employment": 8784183
+    },
+    {
+      "date": "2021-01",
+      "value": 0.0577,
+      "youth_share_u25": 0.0577,
+      "youth_share_u35": 0.2949,
+      "median_age": 43,
+      "weighted_employment": 9697993
+    },
+    {
+      "date": "2022-01",
+      "value": 0.0624,
+      "youth_share_u25": 0.0624,
+      "youth_share_u35": 0.302,
+      "median_age": 43,
+      "weighted_employment": 10317498
+    },
+    {
+      "date": "2023-01",
+      "value": 0.0589,
+      "youth_share_u25": 0.0589,
+      "youth_share_u35": 0.303,
+      "median_age": 43,
+      "weighted_employment": 10461567
+    },
+    {
+      "date": "2024-01",
+      "value": 0.059,
+      "youth_share_u25": 0.059,
+      "youth_share_u35": 0.2996,
+      "median_age": 43,
+      "weighted_employment": 10908415
+    }
+  ]
+}

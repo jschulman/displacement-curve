@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "last_updated": "2026-06-04"
+  },
+  "crossover_definition": "youth share of professional-services employment falls to 50% of its 2015-2019 baseline",
+  "estimate": {
+    "anchor_year": 2030,
+    "base_years": 4,
+    "composite_modifier": 1.15,
+    "midpoint_years": 4.6,
+    "low_years": 4,
+    "high_years": 6,
+    "crossover_year_low": 2030,
+    "crossover_year_mid": 2031,
+    "crossover_year_high": 2032,
+    "modifiers": {
+      "progress": 1.4,
+      "trajectory": 1.15,
+      "hires": 0.9,
+      "composite": 0.9
+    }
+  },
+  "components": {
+    "crossover": {
+      "baseline": 6.07,
+      "threshold": 3.04,
+      "current": 5.9,
+      "current_year": "2024",
+      "progress_pct": 5.7,
+      "trajectory": "flat"
+    },
+    "hires_trajectory": {
+      "hires_index_latest": 0.812,
+      "trailing": 0.857,
+      "falling": true
+    },
+    "composite": {
+      "score": 63.6,
+      "phase": "Erosion"
+    }
+  },
+  "caveat": "Unlike Q-Day, this inflection is a choice, not physics. Firms can deliberately preserve the apprenticeship (the residency model). This is a trajectory on current behavior, not a fixed date \u2014 and the lagging demographic has not yet begun to move."
+}

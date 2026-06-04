@@ -17,11 +17,12 @@
     jobs: "data/jobs/processed/postings.json",
     regulatory: "data/regulatory/processed/guidance.json",
     composite: "data/composite/displacement_index.json",
+    inflection: "data/composite/inflection_distance.json",
   };
 
   // ---- State ----
   let state = {
-    data: { employment: null, trends: null, github: null, earnings: null, workforce: null, vc: null, jobs: null, regulatory: null, composite: null },
+    data: { employment: null, trends: null, github: null, earnings: null, workforce: null, vc: null, jobs: null, regulatory: null, composite: null, inflection: null },
     expandedSignal: null,
     sparkCharts: {},
     expandedChart: null,
@@ -456,6 +457,30 @@
     }
     trendEl.textContent = trendArrow + " Trend: " + trendLabel;
     trendEl.style.color = trendColor;
+  }
+
+  // ---- Apprenticeship Inflection Distance (analog of quantum-qanary Q-Day Distance) ----
+  function renderInflection(data) {
+    var el = document.getElementById("inflection-section");
+    if (!el) return;
+    if (!data || !data.estimate || !data.components || !data.components.crossover) {
+      el.style.display = "none";
+      return;
+    }
+    el.style.display = "";
+    var est = data.estimate;
+    var cx = data.components.crossover;
+    var set = function (id, txt) { var n = document.getElementById(id); if (n) n.textContent = txt; };
+    set("inflection-range", est.crossover_year_low + "–" + est.crossover_year_high);
+    set("inflection-mid", "midpoint " + est.crossover_year_mid + " · ~" + est.midpoint_years + " yrs out");
+    set("inflection-progress", cx.progress_pct + "% of the way there");
+    set("inflection-detail",
+      "Crossover = entry youth-share at " + cx.threshold + "% (50% of " + cx.baseline +
+      "% baseline). Now " + cx.current + "%, trajectory " + cx.trajectory + ".");
+    set("inflection-caveat", data.caveat || "");
+    // Progress bar width
+    var bar = document.getElementById("inflection-bar-fill");
+    if (bar) bar.style.width = Math.max(2, Math.min(100, cx.progress_pct)) + "%";
   }
 
   // ---- Timeline Chart ----
@@ -1428,6 +1453,7 @@
       fetchJSON(DATA_PATHS.jobs).catch(function () { console.warn("Jobs data unavailable; signal will show no data."); return null; }),
       fetchJSON(DATA_PATHS.regulatory).catch(function () { console.warn("Regulatory data unavailable; signal will show no data."); return null; }),
       fetchJSON(DATA_PATHS.composite).catch(function () { console.warn("Composite data unavailable; signal will show no data."); return null; }),
+      fetchJSON(DATA_PATHS.inflection).catch(function () { console.warn("Inflection data unavailable; panel will hide."); return null; }),
     ];
 
     Promise.all(promises).then(function (results) {
@@ -1440,6 +1466,7 @@
       state.data.jobs = results[6];
       state.data.regulatory = results[7];
       state.data.composite = results[8];
+      state.data.inflection = results[9];
       render();
     });
   }
@@ -1464,6 +1491,7 @@
 
     // Hero composite score
     renderHeroScore(state.data.composite);
+    renderInflection(state.data.inflection);
     renderTimeline(state.data.composite);
 
     // Render cards

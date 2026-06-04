@@ -178,12 +178,21 @@ def process_jolts_data(raw_data):
             total_postings_idx = None
             openings_index = None
 
+        # Hires rate (LEADING signal): hires indexed to baseline, and the
+        # hires-to-openings ratio. A falling hires_index alongside flat openings =
+        # firms posting but not filling = demand softening — leads headcount declines.
+        baseline_hires = series_data.get("hires", {}).get(BASELINE_DATE)
+        hires_index = round(hi / baseline_hires, 3) if (hi is not None and baseline_hires) else None
+        hires_to_openings = round(hi / jo, 3) if (hi is not None and jo) else None
+
         monthly.append({
             "date": date_label,
             "total_postings_idx": total_postings_idx,
             "ai_postings_pct": None,
             "traditional_pct": None,
             "openings_index": openings_index,
+            "hires_index": hires_index,
+            "hires_to_openings": hires_to_openings,
             "job_openings": jo,
             "hires": hi,
             "separations": sep,

@@ -369,21 +369,71 @@ Accelerating regulatory output signals that AI displacement has become a policy 
 
 ---
 
+## Signal 9: The Apprenticeship Collapse
+
+**Source:** `displacement-signals` engine (scans professional-services firms' public job postings)
+**Update Cadence:** Weekly
+
+### What It Measures
+
+The one thing every other signal here is blind to: **the seniority composition of
+hiring.** Signal 7 explicitly notes JOLTS cannot break openings down by level, and
+BLS headcount (Signal 1) is an aggregate. But the central claim of the displacement
+thesis for professional services — that AI eliminates the *junior* work first, and
+with it the apprenticeship that produces senior judgment — is only observable at the
+job-posting level.
+
+This signal scans the public careers postings of a cohort of professional-services
+firms, classifies each posting's seniority from its title (entry / mid / senior),
+filters to US roles, and computes the **junior:senior ratio** (entry-tier postings ÷
+senior/review-tier postings). A healthy apprenticeship pipeline posts many entry
+roles per senior role; a falling ratio is the apprenticeship tier thinning.
+
+### Cohort
+
+Three buckets, so the signal is a contrast, not an absolute:
+
+- **Treatment** — firms whose business model *is* the audit/tax/advisory apprenticeship: Deloitte, EY, PwC, Accenture, Grant Thornton, Baker Tilly, Protiviti, RSM.
+- **Control** — a large non-professional-services white-collar employer (Walmart corporate), to separate the professional-services apprenticeship effect from generic white-collar hiring trends.
+- **Insulated** — professional services but structurally shielded from the collapse (e.g. Booz Allen: federal/cleared staff-augmentation, headcount-billed, slow AI adoption). Reported separately; excluded from the composite-feeding median.
+
+The headline value fed to the composite is the **treatment-cohort median junior:senior ratio.**
+
+### Method
+
+- Postings pulled from each firm's public ATS (Workday, Oracle Recruiting, Avature, Radancy, SuccessFactors) — public endpoints only, robots-respecting.
+- Seniority classified from the posting title (every ATS encodes the level: "Audit Associate", "Senior Manager, Tax").
+- A separate **campus / early-career** pass captures the entry tier that experienced-hire boards route to dedicated portals, so the junior rung is measured directly rather than inferred.
+
+### Interpretation
+
+The ratio **falls** as the apprenticeship thins, so the composite **inverts** it
+(lower ratio → higher displacement reading), the same treatment as employment. A
+single month normalizes to zero by construction; the signal becomes informative once
+the weekly snapshots accumulate a multi-month series. Because it leads the lagging
+BLS print, its newest points wait for the BLS-anchored month axis to extend.
+
+---
+
 ## Composite Displacement Index
 
-The Composite Displacement Index synthesizes all eight signals into a single score (0-100) indicating where professional services stand on the displacement curve.
+The Composite Displacement Index synthesizes all nine signals into a single score (0-100) indicating where professional services stand on the displacement curve.
 
 ### Weights
 
+Adding the Apprenticeship Collapse signal (0.15) rescales the original seven by 0.85
+so the set still sums to 1.0 and the existing signals keep their relative importance.
+
 | Signal | Weight | Rationale |
 |--------|--------|-----------|
-| Professional Services Employment | 0.25 | The definitive lagging indicator of displacement |
-| Revenue Per Employee | 0.20 | Efficiency gains preceding headcount reduction |
-| VC Funding: AI Services | 0.15 | Capital conviction in AI-native replacements |
-| AI vs Traditional Hiring | 0.15 | Real-time labor market composition shift |
-| AI Search Interest | 0.10 | Cultural awareness and behavioral intent |
-| Open Source AI Activity | 0.10 | Developer tooling leading commercial products |
-| Regulatory Guidance | 0.05 | Policy response to displacement concerns |
+| Professional Services Employment | 0.2125 | The definitive lagging indicator of displacement |
+| Revenue Per Employee | 0.17 | Efficiency gains preceding headcount reduction |
+| VC Funding: AI Services | 0.1275 | Capital conviction in AI-native replacements |
+| AI vs Traditional Hiring | 0.1275 | Real-time labor market composition shift |
+| **Apprenticeship Collapse** | **0.15** | **Direct posting-level measure of the junior-tier thinning** |
+| AI Search Interest | 0.085 | Cultural awareness and behavioral intent |
+| Open Source AI Activity | 0.085 | Developer tooling leading commercial products |
+| Regulatory Guidance | 0.0425 | Policy response to displacement concerns |
 
 ### Normalization
 

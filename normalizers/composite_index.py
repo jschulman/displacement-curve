@@ -50,16 +50,22 @@ SIGNAL_FILES = {
     "trends":          os.path.join(DATA_DIR, "trends", "processed", "search_interest.json"),
     "github":          os.path.join(DATA_DIR, "github", "processed", "activity.json"),
     "regulatory":      os.path.join(DATA_DIR, "regulatory", "processed", "guidance.json"),
+    "apprenticeship":  os.path.join(DATA_DIR, "apprenticeship", "processed", "collapse.json"),
 }
 
+# Adding the apprenticeship signal (weight 0.15) rescales the original seven by
+# 0.85 so the set still sums to 1.0 and existing signals keep their relative
+# importance. apprenticeship is the only direct, posting-level measure of the
+# junior-tier collapse — see METHODOLOGY "Signal 7: The Apprenticeship Collapse".
 WEIGHTS = {
-    "employment": 0.25,
-    "rev_per_employee": 0.20,
-    "vc_funding": 0.15,
-    "job_ratio": 0.15,
-    "trends": 0.10,
-    "github": 0.10,
-    "regulatory": 0.05,
+    "employment": 0.2125,
+    "rev_per_employee": 0.17,
+    "vc_funding": 0.1275,
+    "job_ratio": 0.1275,
+    "trends": 0.085,
+    "github": 0.085,
+    "regulatory": 0.0425,
+    "apprenticeship": 0.15,
 }
 
 EVENTS = [
@@ -316,6 +322,36 @@ def extract_monthly_regulatory(data):
     return values
 
 
+def extract_monthly_apprenticeship(data):
+    """Apprenticeship signal = CROSSOVER-PROGRESS toward the inflection, on the Census
+    youth-share (data/apprenticeship/processed/collapse.json, youth_share_u25).
+
+    Returns a 0-100 scale = how far the youth share has fallen from its 2015-2019
+    baseline toward the 50% threshold ('the college hire is the exception'). 0 = at
+    baseline (apprenticeship intact), 100 = halved (crossover reached). This is the
+    SAME logic as the Apprenticeship Inflection Distance panel, so the composite stays
+    coherent with it. Crucially it is NOT min-max normalized downstream — a near-flat
+    youth share correctly contributes ~0, instead of being stretched into a false
+    high reading. Higher progress = more displacement (no inversion)."""
+    if not data or "monthly" not in data:
+        return {}
+    series = {}
+    for e in data["monthly"]:
+        v = e.get("youth_share_u25", e.get("value"))
+        if v is not None:
+            series[e["date"]] = v
+    if not series:
+        return {}
+    base = [v for k, v in series.items() if k[:4] in ("2015", "2016", "2017", "2018", "2019")]
+    baseline = (sum(base) / len(base)) if base else max(series.values())
+    span = baseline - baseline * 0.50  # baseline -> 50%-of-baseline threshold
+    out = {}
+    for date, v in series.items():
+        prog = 0.0 if span <= 0 else (baseline - v) / span * 100.0
+        out[date] = round(max(0.0, min(100.0, prog)), 1)
+    return out
+
+
 EXTRACTORS = {
     "employment": extract_monthly_employment,
     "rev_per_employee": extract_monthly_rev_per_employee,
@@ -324,6 +360,7 @@ EXTRACTORS = {
     "trends": extract_monthly_trends,
     "github": extract_monthly_github,
     "regulatory": extract_monthly_regulatory,
+    "apprenticeship": extract_monthly_apprenticeship,
 }
 
 
@@ -363,6 +400,13 @@ def compute_composite_from_signals():
     # Normalize each series to 0-100
     norm_series = {}
     for key in WEIGHTS:
+        if key == "apprenticeship":
+            # Already a 0-100 crossover-progress scale (see extractor). Do NOT min-max
+            # normalize: youth-share is near-flat, and min-max would amplify that noise
+            # into a false ~80/100 reading that contradicts the inflection panel.
+            norm_series[key] = {d: max(0.0, min(100.0, v)) for d, v in raw_series.get(key, {}).items()}
+            print(f"    {key}: crossover-progress (raw 0-100, no min-max)")
+            continue
         invert = (key == "employment")  # Lower headcount = higher displacement
         norm_series[key], lo, hi = normalize_series(raw_series.get(key, {}), invert=invert)
         print(f"    {key} range: {lo:.1f} - {hi:.1f} {'(inverted)' if invert else ''}")
@@ -379,6 +423,9 @@ def compute_composite_from_signals():
     # Re-normalize after forward-fill so normalized lookups stay in range.
     norm_series = {}
     for key in WEIGHTS:
+        if key == "apprenticeship":
+            norm_series[key] = {d: max(0.0, min(100.0, v)) for d, v in raw_series.get(key, {}).items()}
+            continue
         invert = (key == "employment")
         norm_series[key], _, _ = normalize_series(raw_series.get(key, {}), invert=invert)
 
