@@ -13,7 +13,7 @@ modal hire; it's the exception.
 Method (mirrors qday_distance.py — anchor-and-modify, NOT naive extrapolation, because
 the lagging demographic is still flat and would extrapolate to 'never'):
   - BASE anchor: forecast consensus for when AI structurally cuts entry professional
-    work (residency-thesis window + analyst future-of-work timelines).
+    work (analyst future-of-work timelines and AI-displacement forecasts).
   - MODIFIERS nudge the timeline:
       * crossover progress (how far youth-share has moved toward the 50% line)
       * youth-share trajectory (declining compresses; flat pushes out)
@@ -21,7 +21,7 @@ the lagging demographic is still flat and would extrapolate to 'never'):
       * composite displacement score / phase (Erosion+ compresses)
   - midpoint = base_years * weighted_composite_modifier; +/-30% band.
   - Caveat: unlike Q-Day, this inflection is a CHOICE, not physics — firms can preserve
-    the apprenticeship deliberately (the residency model). Treat as trajectory, not fate.
+    the entry-level pipeline deliberately. Treat as trajectory, not fate.
 
 Usage:
   python normalizers/inflection_distance.py
@@ -39,9 +39,9 @@ OUTPUT_DIR = os.path.join(DATA_DIR, "composite")
 # Forecast anchor — credible target years for the entry-hire inflection. The "vendor
 # roadmap consensus" analog. Externalize to data/forecasts/ later; embedded for now.
 FORECASTS = [
-    {"source": "Residency thesis — hiring slows", "year": 2028, "weight": 2.0},
-    {"source": "Residency thesis — AI-native cohort at manager", "year": 2030, "weight": 2.5},
-    {"source": "Residency thesis — pipeline crisis visible", "year": 2032, "weight": 2.0},
+    {"source": "AI-displacement forecast — entry hiring slows", "year": 2028, "weight": 2.0},
+    {"source": "AI-displacement forecast — AI-native cohort reaches management", "year": 2030, "weight": 2.5},
+    {"source": "AI-displacement forecast — pipeline gap visible", "year": 2032, "weight": 2.0},
     {"source": "Future-of-work analyst consensus (prof. services)", "year": 2031, "weight": 1.5},
 ]
 BASELINE_YEARS = ("2015", "2016", "2017", "2018", "2019")
@@ -186,10 +186,9 @@ def main():
         "crossover_definition": f"youth share of professional-services employment falls to {int(CROSSOVER_FRACTION*100)}% of its {BASELINE_YEARS[0]}-{BASELINE_YEARS[-1]} baseline",
         "estimate": est,
         "components": {"crossover": crossover, "hires_trajectory": hires, "composite": composite},
-        "caveat": ("Unlike Q-Day, this inflection is a choice, not physics. Firms can "
-                   "deliberately preserve the apprenticeship (the residency model). This is a "
-                   "trajectory on current behavior, not a fixed date — and the lagging "
-                   "demographic has not yet begun to move."),
+        "caveat": ("Unlike Q-Day, this inflection is a choice, not physics — firms can act to "
+                   "keep the entry-level pipeline open. This is a projection of current behavior, "
+                   "not a fixed date, and the lagging demographic has not yet begun to move."),
     }
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(os.path.join(OUTPUT_DIR, "inflection_distance.json"), "w", encoding="utf-8") as f:

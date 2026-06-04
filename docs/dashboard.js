@@ -474,10 +474,13 @@
     set("inflection-range", est.crossover_year_low + "–" + est.crossover_year_high);
     set("inflection-mid", "midpoint " + est.crossover_year_mid + " · ~" + est.midpoint_years + " yrs out");
     set("inflection-progress", cx.progress_pct + "% of the way there");
-    set("inflection-detail",
-      "Crossover = entry youth-share at " + cx.threshold + "% (50% of " + cx.baseline +
-      "% baseline). Now " + cx.current + "%, trajectory " + cx.trajectory + ".");
-    set("inflection-caveat", data.caveat || "");
+    var detail = "Today about " + cx.current + "% of professional-services workers are under 25 — " +
+      "roughly the same as before AI (2015–2019). The college hire becomes the exception once that " +
+      "share is cut in half (to about " + Math.round(cx.threshold) + "%). We're " + cx.progress_pct + "% of the way there";
+    detail += (cx.trajectory === "flat")
+      ? ", and it hasn't started moving yet — so treat this as a projection of the current path, not a fixed date."
+      : ".";
+    set("inflection-detail", detail);
     // Progress bar width
     var bar = document.getElementById("inflection-bar-fill");
     if (bar) bar.style.width = Math.max(2, Math.min(100, cx.progress_pct)) + "%";
