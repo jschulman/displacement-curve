@@ -797,6 +797,11 @@
     var changeEl = document.getElementById("change-" + signal);
     var updatedEl = document.getElementById("updated-" + signal);
 
+    // Defensive: if this card's elements aren't on the page (card removed, or a
+    // cached older script running against newer HTML), skip silently instead of
+    // throwing — one missing card must never halt the whole dashboard render.
+    if (!valEl || !changeEl || !updatedEl) return;
+
     if (!summary) {
       valEl.textContent = "Data unavailable";
       valEl.style.fontSize = "1rem";
