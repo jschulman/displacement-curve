@@ -1,7 +1,7 @@
 {
   "metadata": {
     "source": "SEC EDGAR Form D",
-    "last_updated": "2026-05-08",
+    "last_updated": "2026-06-08",
     "mock": false
   },
   "categories": {
@@ -11,67 +11,104 @@
         {
           "quarter": "2022-Q4",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2023-Q1",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2023-Q2",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2023-Q3",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2023-Q4",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2024-Q1",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2024-Q2",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2024-Q3",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2024-Q4",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2025-Q1",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2025-Q2",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2025-Q3",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2025-Q4",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
+        },
+        {
+          "quarter": "2026-Q1",
+          "funding_mm": 0.0,
+          "deal_count": 0,
+          "unknown_amount_deals": 0
+        },
+        {
+          "quarter": "2026-Q2",
+          "funding_mm": 0.0,
+          "deal_count": 0,
+          "unknown_amount_deals": 0
+        },
+        {
+          "quarter": "2026-Q3",
+          "funding_mm": 0.0,
+          "deal_count": 0,
+          "unknown_amount_deals": 0
+        },
+        {
+          "quarter": "2026-Q4",
+          "funding_mm": 0.0,
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         }
       ]
     },
@@ -81,67 +118,104 @@
         {
           "quarter": "2022-Q4",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2023-Q1",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2023-Q2",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2023-Q3",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2023-Q4",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2024-Q1",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2024-Q2",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2024-Q3",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2024-Q4",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2025-Q1",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2025-Q2",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2025-Q3",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2025-Q4",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
+        },
+        {
+          "quarter": "2026-Q1",
+          "funding_mm": 0.0,
+          "deal_count": 0,
+          "unknown_amount_deals": 0
+        },
+        {
+          "quarter": "2026-Q2",
+          "funding_mm": 0.0,
+          "deal_count": 0,
+          "unknown_amount_deals": 0
+        },
+        {
+          "quarter": "2026-Q3",
+          "funding_mm": 0.0,
+          "deal_count": 0,
+          "unknown_amount_deals": 0
+        },
+        {
+          "quarter": "2026-Q4",
+          "funding_mm": 0.0,
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         }
       ]
     },
@@ -151,67 +225,104 @@
         {
           "quarter": "2022-Q4",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2023-Q1",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2023-Q2",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2023-Q3",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2023-Q4",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2024-Q1",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2024-Q2",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2024-Q3",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2024-Q4",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2025-Q1",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2025-Q2",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2025-Q3",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2025-Q4",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
+        },
+        {
+          "quarter": "2026-Q1",
+          "funding_mm": 0.0,
+          "deal_count": 0,
+          "unknown_amount_deals": 0
+        },
+        {
+          "quarter": "2026-Q2",
+          "funding_mm": 0.0,
+          "deal_count": 0,
+          "unknown_amount_deals": 0
+        },
+        {
+          "quarter": "2026-Q3",
+          "funding_mm": 0.0,
+          "deal_count": 0,
+          "unknown_amount_deals": 0
+        },
+        {
+          "quarter": "2026-Q4",
+          "funding_mm": 0.0,
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         }
       ]
     },
@@ -221,67 +332,104 @@
         {
           "quarter": "2022-Q4",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2023-Q1",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2023-Q2",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2023-Q3",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2023-Q4",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2024-Q1",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2024-Q2",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2024-Q3",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2024-Q4",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2025-Q1",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2025-Q2",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2025-Q3",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2025-Q4",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
+        },
+        {
+          "quarter": "2026-Q1",
+          "funding_mm": 0.0,
+          "deal_count": 0,
+          "unknown_amount_deals": 0
+        },
+        {
+          "quarter": "2026-Q2",
+          "funding_mm": 0.0,
+          "deal_count": 0,
+          "unknown_amount_deals": 0
+        },
+        {
+          "quarter": "2026-Q3",
+          "funding_mm": 0.0,
+          "deal_count": 0,
+          "unknown_amount_deals": 0
+        },
+        {
+          "quarter": "2026-Q4",
+          "funding_mm": 0.0,
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         }
       ]
     },
@@ -291,67 +439,104 @@
         {
           "quarter": "2022-Q4",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2023-Q1",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2023-Q2",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2023-Q3",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2023-Q4",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2024-Q1",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2024-Q2",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2024-Q3",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2024-Q4",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2025-Q1",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2025-Q2",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2025-Q3",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2025-Q4",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
+        },
+        {
+          "quarter": "2026-Q1",
+          "funding_mm": 0.0,
+          "deal_count": 0,
+          "unknown_amount_deals": 0
+        },
+        {
+          "quarter": "2026-Q2",
+          "funding_mm": 0.0,
+          "deal_count": 0,
+          "unknown_amount_deals": 0
+        },
+        {
+          "quarter": "2026-Q3",
+          "funding_mm": 0.0,
+          "deal_count": 0,
+          "unknown_amount_deals": 0
+        },
+        {
+          "quarter": "2026-Q4",
+          "funding_mm": 0.0,
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         }
       ]
     },
@@ -361,67 +546,104 @@
         {
           "quarter": "2022-Q4",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2023-Q1",
           "funding_mm": 0.0,
-          "deal_count": 0
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         },
         {
           "quarter": "2023-Q2",
-          "funding_mm": 2.0,
-          "deal_count": 2
+          "funding_mm": 0.0,
+          "deal_count": 2,
+          "unknown_amount_deals": 2
         },
         {
           "quarter": "2023-Q3",
-          "funding_mm": 2.0,
-          "deal_count": 2
+          "funding_mm": 0.0,
+          "deal_count": 2,
+          "unknown_amount_deals": 2
         },
         {
           "quarter": "2023-Q4",
-          "funding_mm": 2.0,
-          "deal_count": 2
+          "funding_mm": 0.0,
+          "deal_count": 2,
+          "unknown_amount_deals": 2
         },
         {
           "quarter": "2024-Q1",
-          "funding_mm": 1.0,
-          "deal_count": 1
+          "funding_mm": 0.0,
+          "deal_count": 1,
+          "unknown_amount_deals": 1
         },
         {
           "quarter": "2024-Q2",
-          "funding_mm": 2.0,
-          "deal_count": 2
+          "funding_mm": 0.0,
+          "deal_count": 2,
+          "unknown_amount_deals": 2
         },
         {
           "quarter": "2024-Q3",
-          "funding_mm": 1.0,
-          "deal_count": 1
+          "funding_mm": 0.0,
+          "deal_count": 1,
+          "unknown_amount_deals": 1
         },
         {
           "quarter": "2024-Q4",
-          "funding_mm": 3.0,
-          "deal_count": 3
+          "funding_mm": 0.0,
+          "deal_count": 3,
+          "unknown_amount_deals": 3
         },
         {
           "quarter": "2025-Q1",
-          "funding_mm": 2.0,
-          "deal_count": 2
+          "funding_mm": 0.0,
+          "deal_count": 2,
+          "unknown_amount_deals": 2
         },
         {
           "quarter": "2025-Q2",
-          "funding_mm": 5.0,
-          "deal_count": 5
+          "funding_mm": 0.0,
+          "deal_count": 5,
+          "unknown_amount_deals": 5
         },
         {
           "quarter": "2025-Q3",
-          "funding_mm": 2.0,
-          "deal_count": 2
+          "funding_mm": 0.0,
+          "deal_count": 2,
+          "unknown_amount_deals": 2
         },
         {
           "quarter": "2025-Q4",
-          "funding_mm": 9.0,
-          "deal_count": 9
+          "funding_mm": 0.0,
+          "deal_count": 9,
+          "unknown_amount_deals": 9
+        },
+        {
+          "quarter": "2026-Q1",
+          "funding_mm": 0.0,
+          "deal_count": 4,
+          "unknown_amount_deals": 4
+        },
+        {
+          "quarter": "2026-Q2",
+          "funding_mm": 0.0,
+          "deal_count": 5,
+          "unknown_amount_deals": 5
+        },
+        {
+          "quarter": "2026-Q3",
+          "funding_mm": 0.0,
+          "deal_count": 0,
+          "unknown_amount_deals": 0
+        },
+        {
+          "quarter": "2026-Q4",
+          "funding_mm": 0.0,
+          "deal_count": 0,
+          "unknown_amount_deals": 0
         }
       ]
     }
@@ -431,79 +653,120 @@
       "quarter": "2022-Q4",
       "total_funding_mm": 0.0,
       "total_deals": 0,
+      "unknown_amount_deals": 0,
       "cumulative_mm": 0.0
     },
     {
       "quarter": "2023-Q1",
       "total_funding_mm": 0.0,
       "total_deals": 0,
+      "unknown_amount_deals": 0,
       "cumulative_mm": 0.0
     },
     {
       "quarter": "2023-Q2",
-      "total_funding_mm": 2.0,
+      "total_funding_mm": 0.0,
       "total_deals": 2,
-      "cumulative_mm": 2.0
+      "unknown_amount_deals": 2,
+      "cumulative_mm": 0.0
     },
     {
       "quarter": "2023-Q3",
-      "total_funding_mm": 2.0,
+      "total_funding_mm": 0.0,
       "total_deals": 2,
-      "cumulative_mm": 4.0
+      "unknown_amount_deals": 2,
+      "cumulative_mm": 0.0
     },
     {
       "quarter": "2023-Q4",
-      "total_funding_mm": 2.0,
+      "total_funding_mm": 0.0,
       "total_deals": 2,
-      "cumulative_mm": 6.0
+      "unknown_amount_deals": 2,
+      "cumulative_mm": 0.0
     },
     {
       "quarter": "2024-Q1",
-      "total_funding_mm": 1.0,
+      "total_funding_mm": 0.0,
       "total_deals": 1,
-      "cumulative_mm": 7.0
+      "unknown_amount_deals": 1,
+      "cumulative_mm": 0.0
     },
     {
       "quarter": "2024-Q2",
-      "total_funding_mm": 2.0,
+      "total_funding_mm": 0.0,
       "total_deals": 2,
-      "cumulative_mm": 9.0
+      "unknown_amount_deals": 2,
+      "cumulative_mm": 0.0
     },
     {
       "quarter": "2024-Q3",
-      "total_funding_mm": 1.0,
+      "total_funding_mm": 0.0,
       "total_deals": 1,
-      "cumulative_mm": 10.0
+      "unknown_amount_deals": 1,
+      "cumulative_mm": 0.0
     },
     {
       "quarter": "2024-Q4",
-      "total_funding_mm": 3.0,
+      "total_funding_mm": 0.0,
       "total_deals": 3,
-      "cumulative_mm": 13.0
+      "unknown_amount_deals": 3,
+      "cumulative_mm": 0.0
     },
     {
       "quarter": "2025-Q1",
-      "total_funding_mm": 2.0,
+      "total_funding_mm": 0.0,
       "total_deals": 2,
-      "cumulative_mm": 15.0
+      "unknown_amount_deals": 2,
+      "cumulative_mm": 0.0
     },
     {
       "quarter": "2025-Q2",
-      "total_funding_mm": 5.0,
+      "total_funding_mm": 0.0,
       "total_deals": 5,
-      "cumulative_mm": 20.0
+      "unknown_amount_deals": 5,
+      "cumulative_mm": 0.0
     },
     {
       "quarter": "2025-Q3",
-      "total_funding_mm": 2.0,
+      "total_funding_mm": 0.0,
       "total_deals": 2,
-      "cumulative_mm": 22.0
+      "unknown_amount_deals": 2,
+      "cumulative_mm": 0.0
     },
     {
       "quarter": "2025-Q4",
-      "total_funding_mm": 9.0,
+      "total_funding_mm": 0.0,
       "total_deals": 9,
-      "cumulative_mm": 31.0
+      "unknown_amount_deals": 9,
+      "cumulative_mm": 0.0
+    },
+    {
+      "quarter": "2026-Q1",
+      "total_funding_mm": 0.0,
+      "total_deals": 4,
+      "unknown_amount_deals": 4,
+      "cumulative_mm": 0.0
+    },
+    {
+      "quarter": "2026-Q2",
+      "total_funding_mm": 0.0,
+      "total_deals": 5,
+      "unknown_amount_deals": 5,
+      "cumulative_mm": 0.0
+    },
+    {
+      "quarter": "2026-Q3",
+      "total_funding_mm": 0.0,
+      "total_deals": 0,
+      "unknown_amount_deals": 0,
+      "cumulative_mm": 0.0
+    },
+    {
+      "quarter": "2026-Q4",
+      "total_funding_mm": 0.0,
+      "total_deals": 0,
+      "unknown_amount_deals": 0,
+      "cumulative_mm": 0.0
     }
   ]
 }
