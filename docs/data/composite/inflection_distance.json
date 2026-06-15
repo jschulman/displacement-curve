@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "last_updated": "2026-06-08"
+    "last_updated": "2026-06-15"
   },
   "crossover_definition": "youth share of professional-services employment falls to 50% of its 2015-2019 baseline",
   "estimate": {
     "anchor_year": 2030,
     "base_years": 4,
-    "composite_modifier": 1.15,
-    "midpoint_years": 4.6,
+    "composite_modifier": 1.165,
+    "midpoint_years": 4.7,
     "low_years": 4,
     "high_years": 6,
     "crossover_year_low": 2030,
@@ -17,7 +17,7 @@
       "progress": 1.4,
       "trajectory": 1.15,
       "hires": 0.9,
-      "composite": 0.9
+      "composite": 1.0
     }
   },
   "components": {
@@ -35,8 +35,8 @@
       "falling": true
     },
     "composite": {
-      "score": 63.5,
-      "phase": "Erosion"
+      "score": 41.9,
+      "phase": "Productivity"
     }
   },
   "caveat": "Unlike Q-Day, this inflection is a choice, not physics \u2014 firms can act to keep the entry-level pipeline open. This is a projection of current behavior, not a fixed date, and the lagging demographic has not yet begun to move."

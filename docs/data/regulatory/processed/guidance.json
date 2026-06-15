@@ -1,7 +1,7 @@
 {
   "metadata": {
     "source": "Federal Regulators RSS",
-    "last_updated": "2026-06-08",
+    "last_updated": "2026-06-15",
     "mock": false
   },
   "regulators": {
@@ -94,9 +94,9 @@
         },
         {
           "quarter": "2026-Q2",
-          "document_count": 3,
+          "document_count": 4,
           "enforcement_count": 0,
-          "guidance_count": 0
+          "guidance_count": 1
         },
         {
           "quarter": "2026-Q3",
@@ -516,13 +516,13 @@
         },
         {
           "quarter": "2026-Q1",
-          "document_count": 2,
+          "document_count": 1,
           "enforcement_count": 0,
           "guidance_count": 0
         },
         {
           "quarter": "2026-Q2",
-          "document_count": 7,
+          "document_count": 8,
           "enforcement_count": 0,
           "guidance_count": 2
         },
@@ -718,7 +718,7 @@
         },
         {
           "quarter": "2025-Q3",
-          "document_count": 6,
+          "document_count": 5,
           "enforcement_count": 0,
           "guidance_count": 3
         },
@@ -736,7 +736,7 @@
         },
         {
           "quarter": "2026-Q2",
-          "document_count": 2,
+          "document_count": 3,
           "enforcement_count": 0,
           "guidance_count": 0
         },
@@ -813,33 +813,33 @@
     },
     {
       "quarter": "2025-Q3",
-      "total_documents": 6,
-      "cumulative_documents": 6
+      "total_documents": 5,
+      "cumulative_documents": 5
     },
     {
       "quarter": "2025-Q4",
       "total_documents": 3,
-      "cumulative_documents": 9
+      "cumulative_documents": 8
     },
     {
       "quarter": "2026-Q1",
-      "total_documents": 6,
-      "cumulative_documents": 15
+      "total_documents": 5,
+      "cumulative_documents": 13
     },
     {
       "quarter": "2026-Q2",
-      "total_documents": 12,
-      "cumulative_documents": 27
+      "total_documents": 15,
+      "cumulative_documents": 28
     },
     {
       "quarter": "2026-Q3",
       "total_documents": 0,
-      "cumulative_documents": 27
+      "cumulative_documents": 28
     },
     {
       "quarter": "2026-Q4",
       "total_documents": 0,
-      "cumulative_documents": 27
+      "cumulative_documents": 28
     }
   ]
 }
