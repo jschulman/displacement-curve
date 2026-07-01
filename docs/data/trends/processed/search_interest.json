@@ -1,7 +1,7 @@
 {
   "metadata": {
     "source": "Google Trends",
-    "last_updated": "2026-06-30",
+    "last_updated": "2026-07-01",
     "mock": false,
     "baseline": "2023-01 = 100"
   },
@@ -59,15 +59,204 @@
         },
         {
           "date": "2023-09",
-          "value": 1.0
+          "value": 0.0
         },
         {
           "date": "2023-10",
-          "value": 1.0
+          "value": 0.0
         },
         {
           "date": "2023-11",
-          "value": 1.0
+          "value": 0.0
+        },
+        {
+          "date": "2023-12",
+          "value": 0.0
+        },
+        {
+          "date": "2024-01",
+          "value": 0.0
+        },
+        {
+          "date": "2024-02",
+          "value": 0.0
+        },
+        {
+          "date": "2024-03",
+          "value": 0.0
+        },
+        {
+          "date": "2024-04",
+          "value": 0.0
+        },
+        {
+          "date": "2024-05",
+          "value": 0.0
+        },
+        {
+          "date": "2024-06",
+          "value": 0.4
+        },
+        {
+          "date": "2024-07",
+          "value": 0.4
+        },
+        {
+          "date": "2024-08",
+          "value": 0.4
+        },
+        {
+          "date": "2024-09",
+          "value": 0.0
+        },
+        {
+          "date": "2024-10",
+          "value": 0.0
+        },
+        {
+          "date": "2024-11",
+          "value": 0.0
+        },
+        {
+          "date": "2024-12",
+          "value": 0.0
+        },
+        {
+          "date": "2025-01",
+          "value": 0.0
+        },
+        {
+          "date": "2025-02",
+          "value": 0.1
+        },
+        {
+          "date": "2025-03",
+          "value": 0.3
+        },
+        {
+          "date": "2025-04",
+          "value": 0.4
+        },
+        {
+          "date": "2025-05",
+          "value": 0.6
+        },
+        {
+          "date": "2025-06",
+          "value": 8.0
+        },
+        {
+          "date": "2025-07",
+          "value": 17.4
+        },
+        {
+          "date": "2025-08",
+          "value": 28.9
+        },
+        {
+          "date": "2025-09",
+          "value": 39.1
+        },
+        {
+          "date": "2025-10",
+          "value": 42.3
+        },
+        {
+          "date": "2025-11",
+          "value": 40.0
+        },
+        {
+          "date": "2025-12",
+          "value": 27.8
+        },
+        {
+          "date": "2026-01",
+          "value": 23.8
+        },
+        {
+          "date": "2026-02",
+          "value": 26.6
+        },
+        {
+          "date": "2026-03",
+          "value": 37.0
+        },
+        {
+          "date": "2026-04",
+          "value": 44.8
+        },
+        {
+          "date": "2026-05",
+          "value": 49.8
+        },
+        {
+          "date": "2026-06",
+          "value": 43.2
+        }
+      ]
+    },
+    "disruption_anxiety": {
+      "terms": [
+        "AI replacing consultants",
+        "AI replacing accountants",
+        "AI replacing lawyers"
+      ],
+      "composite": [
+        {
+          "date": "2022-10",
+          "value": 0.0
+        },
+        {
+          "date": "2022-11",
+          "value": 0.0
+        },
+        {
+          "date": "2022-12",
+          "value": 0.0
+        },
+        {
+          "date": "2023-01",
+          "value": 0.0
+        },
+        {
+          "date": "2023-02",
+          "value": 0.0
+        },
+        {
+          "date": "2023-03",
+          "value": 0.0
+        },
+        {
+          "date": "2023-04",
+          "value": 0.0
+        },
+        {
+          "date": "2023-05",
+          "value": 0.0
+        },
+        {
+          "date": "2023-06",
+          "value": 0.0
+        },
+        {
+          "date": "2023-07",
+          "value": 0.0
+        },
+        {
+          "date": "2023-08",
+          "value": 0.0
+        },
+        {
+          "date": "2023-09",
+          "value": 0.0
+        },
+        {
+          "date": "2023-10",
+          "value": 0.0
+        },
+        {
+          "date": "2023-11",
+          "value": 0.0
         },
         {
           "date": "2023-12",
@@ -103,15 +292,15 @@
         },
         {
           "date": "2024-08",
-          "value": 1.0
+          "value": 0.0
         },
         {
           "date": "2024-09",
-          "value": 1.0
+          "value": 0.0
         },
         {
           "date": "2024-10",
-          "value": 1.0
+          "value": 0.0
         },
         {
           "date": "2024-11",
@@ -143,65 +332,57 @@
         },
         {
           "date": "2025-06",
-          "value": 3.9
+          "value": 0.0
         },
         {
           "date": "2025-07",
-          "value": 10.0
+          "value": 0.0
         },
         {
           "date": "2025-08",
-          "value": 18.6
+          "value": 0.0
         },
         {
           "date": "2025-09",
-          "value": 26.8
+          "value": 0.0
         },
         {
           "date": "2025-10",
-          "value": 29.9
+          "value": 0.0
         },
         {
           "date": "2025-11",
-          "value": 31.7
+          "value": 0.0
         },
         {
           "date": "2025-12",
-          "value": 28.4
+          "value": 0.0
         },
         {
           "date": "2026-01",
-          "value": 31.0
+          "value": 0.0
         },
         {
           "date": "2026-02",
-          "value": 35.6
+          "value": 0.0
         },
         {
           "date": "2026-03",
-          "value": 49.2
+          "value": 3.3
         },
         {
           "date": "2026-04",
-          "value": 60.1
+          "value": 3.3
         },
         {
           "date": "2026-05",
-          "value": 70.5
+          "value": 3.3
         },
         {
           "date": "2026-06",
-          "value": 61.5
+          "value": 4.2
         }
       ]
-    },
-    "disruption_anxiety": {
-      "terms": [
-        "AI replacing consultants",
-        "AI replacing accountants",
-        "AI replacing lawyers"
-      ],
-      "composite": []
     },
     "upskilling": {
       "terms": [
@@ -240,15 +421,15 @@
         },
         {
           "date": "2023-05",
-          "value": 8.3
+          "value": 0.0
         },
         {
           "date": "2023-06",
-          "value": 8.3
+          "value": 0.0
         },
         {
           "date": "2023-07",
-          "value": 8.3
+          "value": 0.0
         },
         {
           "date": "2023-08",
@@ -340,55 +521,55 @@
         },
         {
           "date": "2025-06",
-          "value": 0.0
+          "value": 4.7
         },
         {
           "date": "2025-07",
-          "value": 0.0
+          "value": 10.4
         },
         {
           "date": "2025-08",
-          "value": 0.0
+          "value": 15.6
         },
         {
           "date": "2025-09",
-          "value": 0.0
+          "value": 21.4
         },
         {
           "date": "2025-10",
-          "value": 0.0
+          "value": 19.6
         },
         {
           "date": "2025-11",
-          "value": 0.0
+          "value": 18.6
         },
         {
           "date": "2025-12",
-          "value": 0.0
+          "value": 8.1
         },
         {
           "date": "2026-01",
-          "value": 0.0
+          "value": 8.3
         },
         {
           "date": "2026-02",
-          "value": 0.0
+          "value": 9.3
         },
         {
           "date": "2026-03",
-          "value": 0.0
+          "value": 18.5
         },
         {
           "date": "2026-04",
-          "value": 0.0
+          "value": 16.0
         },
         {
           "date": "2026-05",
-          "value": 0.0
+          "value": 22.9
         },
         {
           "date": "2026-06",
-          "value": 0.0
+          "value": 17.7
         }
       ]
     },
@@ -417,7 +598,7 @@
         },
         {
           "date": "2023-02",
-          "value": 0.5
+          "value": 0.0
         },
         {
           "date": "2023-03",
@@ -425,7 +606,7 @@
         },
         {
           "date": "2023-04",
-          "value": 0.8
+          "value": 0.5
         },
         {
           "date": "2023-05",
@@ -433,11 +614,11 @@
         },
         {
           "date": "2023-06",
-          "value": 0.5
+          "value": 0.0
         },
         {
           "date": "2023-07",
-          "value": 0.2
+          "value": 0.0
         },
         {
           "date": "2023-08",
@@ -449,23 +630,23 @@
         },
         {
           "date": "2023-10",
-          "value": 0.2
+          "value": 0.0
         },
         {
           "date": "2023-11",
-          "value": 0.2
+          "value": 0.0
         },
         {
           "date": "2023-12",
-          "value": 0.5
+          "value": 0.4
         },
         {
           "date": "2024-01",
-          "value": 0.3
+          "value": 0.4
         },
         {
           "date": "2024-02",
-          "value": 0.3
+          "value": 0.4
         },
         {
           "date": "2024-03",
@@ -473,27 +654,27 @@
         },
         {
           "date": "2024-04",
-          "value": 0.2
+          "value": 0.0
         },
         {
           "date": "2024-05",
-          "value": 0.2
+          "value": 0.0
         },
         {
           "date": "2024-06",
-          "value": 0.4
+          "value": 0.0
         },
         {
           "date": "2024-07",
-          "value": 0.2
+          "value": 0.5
         },
         {
           "date": "2024-08",
-          "value": 0.2
+          "value": 0.5
         },
         {
           "date": "2024-09",
-          "value": 0.0
+          "value": 0.5
         },
         {
           "date": "2024-10",
@@ -501,83 +682,83 @@
         },
         {
           "date": "2024-11",
-          "value": 0.0
+          "value": 1.0
         },
         {
           "date": "2024-12",
-          "value": 0.0
+          "value": 1.0
         },
         {
           "date": "2025-01",
-          "value": 0.3
+          "value": 1.0
         },
         {
           "date": "2025-02",
-          "value": 1.8
-        },
-        {
-          "date": "2025-03",
-          "value": 3.1
-        },
-        {
-          "date": "2025-04",
           "value": 3.7
         },
         {
+          "date": "2025-03",
+          "value": 5.3
+        },
+        {
+          "date": "2025-04",
+          "value": 7.6
+        },
+        {
           "date": "2025-05",
-          "value": 2.7
+          "value": 4.4
         },
         {
           "date": "2025-06",
-          "value": 7.1
+          "value": 9.2
         },
         {
           "date": "2025-07",
-          "value": 14.5
+          "value": 16.4
         },
         {
           "date": "2025-08",
-          "value": 22.4
-        },
-        {
-          "date": "2025-09",
-          "value": 28.5
-        },
-        {
-          "date": "2025-10",
-          "value": 28.3
-        },
-        {
-          "date": "2025-11",
-          "value": 28.7
-        },
-        {
-          "date": "2025-12",
           "value": 26.3
         },
         {
+          "date": "2025-09",
+          "value": 33.7
+        },
+        {
+          "date": "2025-10",
+          "value": 33.6
+        },
+        {
+          "date": "2025-11",
+          "value": 33.3
+        },
+        {
+          "date": "2025-12",
+          "value": 31.0
+        },
+        {
           "date": "2026-01",
-          "value": 31.6
+          "value": 38.1
         },
         {
           "date": "2026-02",
-          "value": 41.5
+          "value": 48.7
         },
         {
           "date": "2026-03",
-          "value": 53.5
+          "value": 58.8
         },
         {
           "date": "2026-04",
-          "value": 58.2
+          "value": 60.2
         },
         {
           "date": "2026-05",
-          "value": 57.4
+          "value": 59.4
         },
         {
           "date": "2026-06",
-          "value": 44.2
+          "value": 47.5
         }
       ]
     }
