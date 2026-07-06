@@ -1,0 +1,75 @@
+name: Deploy Pages
+
+# Deploys the static site in docs/ to GitHub Pages, retrying the deploy step
+# to ride out transient "Deployment failed, try again later" errors from the
+# Pages backend (the managed "Deploy from a branch" pipeline has no retry).
+#
+# Requires: Settings > Pages > Build and deployment > Source = "GitHub Actions".
+#
+# The data-collection workflows commit with the default GITHUB_TOKEN, whose
+# pushes do NOT trigger push-based workflows. So this deploy runs on their
+# completion (workflow_run) instead, plus manual dispatch.
+
+on:
+  workflow_run:
+    workflows:
+      - "Daily Data Collection"
+      - "Weekly Data Collection (Jobs + Regulatory + Apprenticeship + Composite)"
+      - "Monthly Data Collection"
+      - "Quarterly Data Collection"
+    types: [completed]
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy3.outputs.page_url || steps.deploy2.outputs.page_url || steps.deploy1.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload docs/ as Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - name: Deploy to GitHub Pages (attempt 1)
+        id: deploy1
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+
+      - name: Pause before retry
+        if: steps.deploy1.outcome == 'failure'
+        run: sleep 30
+
+      - name: Deploy to GitHub Pages (attempt 2)
+        id: deploy2
+        if: steps.deploy1.outcome == 'failure'
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+
+      - name: Pause before final retry
+        if: steps.deploy1.outcome == 'failure' && steps.deploy2.outcome == 'failure'
+        run: sleep 60
+
+      - name: Deploy to GitHub Pages (attempt 3)
+        id: deploy3
+        if: steps.deploy1.outcome == 'failure' && steps.deploy2.outcome == 'failure'
+        uses: actions/deploy-pages@v4
