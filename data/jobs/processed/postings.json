@@ -1,7 +1,7 @@
 {
   "metadata": {
     "source": "BLS JOLTS",
-    "last_updated": "2026-06-29",
+    "last_updated": "2026-07-06",
     "mock": false
   },
   "monthly": [
@@ -670,16 +670,29 @@
     },
     {
       "date": "2026-04",
-      "total_postings_idx": 81.0,
+      "total_postings_idx": 69.6,
       "ai_postings_pct": null,
       "traditional_pct": null,
-      "openings_index": 0.81,
-      "hires_index": 0.812,
-      "hires_to_openings": 0.544,
-      "job_openings": 1715.0,
-      "hires": 933.0,
-      "separations": 921.0,
-      "quits": 419.0
+      "openings_index": 0.696,
+      "hires_index": 0.831,
+      "hires_to_openings": 0.648,
+      "job_openings": 1473.0,
+      "hires": 955.0,
+      "separations": 943.0,
+      "quits": 436.0
+    },
+    {
+      "date": "2026-05",
+      "total_postings_idx": 70.1,
+      "ai_postings_pct": null,
+      "traditional_pct": null,
+      "openings_index": 0.701,
+      "hires_index": 0.836,
+      "hires_to_openings": 0.646,
+      "job_openings": 1485.0,
+      "hires": 960.0,
+      "separations": 923.0,
+      "quits": 460.0
     }
   ],
   "firms": {}
