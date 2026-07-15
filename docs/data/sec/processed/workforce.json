@@ -1,7 +1,7 @@
 {
   "metadata": {
     "source": "SEC EDGAR XBRL",
-    "last_updated": "2026-04-15",
+    "last_updated": "2026-07-15",
     "mock": false
   },
   "firms": {
@@ -83,6 +83,11 @@
           "year": 2025,
           "total_headcount": 35800,
           "contractor_pct": null
+        },
+        {
+          "year": 2026,
+          "total_headcount": 31500,
+          "contractor_pct": null
         }
       ]
     },
@@ -141,6 +146,11 @@
     {
       "year": 2025,
       "total_headcount": 35800,
+      "avg_contractor_pct": null
+    },
+    {
+      "year": 2026,
+      "total_headcount": 31500,
       "avg_contractor_pct": null
     }
   ]

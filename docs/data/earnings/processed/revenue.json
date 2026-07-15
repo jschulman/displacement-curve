@@ -1,7 +1,7 @@
 {
   "metadata": {
     "source": "SEC EDGAR XBRL",
-    "last_updated": "2026-04-15",
+    "last_updated": "2026-07-15",
     "mock": false
   },
   "firms": {
@@ -462,6 +462,13 @@
           "ai_revenue_mm": null,
           "headcount": null,
           "revenue_per_employee": null
+        },
+        {
+          "quarter": "2026-Q3",
+          "total_revenue_mm": 18718.1,
+          "ai_revenue_mm": null,
+          "headcount": null,
+          "revenue_per_employee": null
         }
       ]
     },
@@ -667,6 +674,13 @@
         {
           "quarter": "2025-Q4",
           "total_revenue_mm": 21108.0,
+          "ai_revenue_mm": null,
+          "headcount": null,
+          "revenue_per_employee": null
+        },
+        {
+          "quarter": "2026-Q1",
+          "total_revenue_mm": 5413.0,
           "ai_revenue_mm": null,
           "headcount": null,
           "revenue_per_employee": null
@@ -1000,6 +1014,13 @@
           "ai_revenue_mm": null,
           "headcount": null,
           "revenue_per_employee": null
+        },
+        {
+          "quarter": "2026-Q1",
+          "total_revenue_mm": 1400.1,
+          "ai_revenue_mm": null,
+          "headcount": null,
+          "revenue_per_employee": null
         }
       ]
     },
@@ -1297,6 +1318,13 @@
           "ai_revenue_mm": null,
           "headcount": null,
           "revenue_per_employee": null
+        },
+        {
+          "quarter": "2026-Q1",
+          "total_revenue_mm": 1511.0,
+          "ai_revenue_mm": null,
+          "headcount": null,
+          "revenue_per_employee": null
         }
       ]
     },
@@ -1519,6 +1547,13 @@
           "ai_revenue_mm": null,
           "headcount": 31600,
           "revenue_per_employee": 82.9
+        },
+        {
+          "quarter": "2026-Q4",
+          "total_revenue_mm": 11217.0,
+          "ai_revenue_mm": null,
+          "headcount": 31500,
+          "revenue_per_employee": 356.1
         }
       ]
     }
@@ -1992,6 +2027,13 @@
       "avg_ai_pct": null,
       "avg_relabeling_index": null,
       "avg_rev_per_employee": 82.9
+    },
+    {
+      "quarter": "2026-Q4",
+      "total_ai_revenue_mm": null,
+      "avg_ai_pct": null,
+      "avg_relabeling_index": null,
+      "avg_rev_per_employee": 356.1
     }
   ]
 }
