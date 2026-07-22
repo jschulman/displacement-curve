@@ -1,7 +1,7 @@
 {
   "metadata": {
     "source": "Google Trends",
-    "last_updated": "2026-07-21",
+    "last_updated": "2026-07-22",
     "mock": false,
     "baseline": "2023-01 = 100"
   },
@@ -11,6 +11,22 @@
         "AI agent for accounting",
         "AI audit tool",
         "AI compliance software"
+      ],
+      "composite": []
+    },
+    "disruption_anxiety": {
+      "terms": [
+        "AI replacing consultants",
+        "AI replacing accountants",
+        "AI replacing lawyers"
+      ],
+      "composite": []
+    },
+    "upskilling": {
+      "terms": [
+        "AI certification accounting",
+        "AI for CPAs",
+        "prompt engineering for consultants"
       ],
       "composite": [
         {
@@ -47,15 +63,15 @@
         },
         {
           "date": "2023-06",
-          "value": 0.0
+          "value": 1.7
         },
         {
           "date": "2023-07",
-          "value": 0.0
+          "value": 1.7
         },
         {
           "date": "2023-08",
-          "value": 0.0
+          "value": 1.7
         },
         {
           "date": "2023-09",
@@ -119,15 +135,15 @@
         },
         {
           "date": "2024-12",
-          "value": 0.0
+          "value": 2.1
         },
         {
           "date": "2025-01",
-          "value": 0.0
+          "value": 2.1
         },
         {
           "date": "2025-02",
-          "value": 0.0
+          "value": 2.1
         },
         {
           "date": "2025-03",
@@ -143,77 +159,61 @@
         },
         {
           "date": "2025-06",
-          "value": 12.2
+          "value": 1.7
         },
         {
           "date": "2025-07",
-          "value": 29.0
+          "value": 3.7
         },
         {
           "date": "2025-08",
-          "value": 44.0
+          "value": 3.7
         },
         {
           "date": "2025-09",
-          "value": 53.7
+          "value": 6.6
         },
         {
           "date": "2025-10",
-          "value": 51.3
+          "value": 4.7
         },
         {
           "date": "2025-11",
-          "value": 51.6
+          "value": 8.7
         },
         {
           "date": "2025-12",
-          "value": 33.9
+          "value": 11.3
         },
         {
           "date": "2026-01",
-          "value": 29.4
+          "value": 17.3
         },
         {
           "date": "2026-02",
-          "value": 30.0
+          "value": 16.8
         },
         {
           "date": "2026-03",
-          "value": 46.0
+          "value": 21.4
         },
         {
           "date": "2026-04",
-          "value": 54.6
+          "value": 31.3
         },
         {
           "date": "2026-05",
-          "value": 59.1
+          "value": 33.0
         },
         {
           "date": "2026-06",
-          "value": 61.8
+          "value": 30.3
         },
         {
           "date": "2026-07",
-          "value": 47.1
+          "value": 15.9
         }
       ]
-    },
-    "disruption_anxiety": {
-      "terms": [
-        "AI replacing consultants",
-        "AI replacing accountants",
-        "AI replacing lawyers"
-      ],
-      "composite": []
-    },
-    "upskilling": {
-      "terms": [
-        "AI certification accounting",
-        "AI for CPAs",
-        "prompt engineering for consultants"
-      ],
-      "composite": []
     },
     "tool_adoption": {
       "terms": [
