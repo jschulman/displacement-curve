@@ -1,0 +1,129 @@
+{
+  "as_of": "2026-07",
+  "gate": "pass",
+  "gate_scope": "all_scored",
+  "scored_failures": [],
+  "gating_failures": [],
+  "signals": {
+    "employment": {
+      "scored": true,
+      "ok": true,
+      "checks": {
+        "present": true,
+        "min_records": true,
+        "has_nonzero": true,
+        "fresh": true
+      },
+      "n_records": 54,
+      "n_nonzero": 54,
+      "newest": "2026-06",
+      "lag_months": 1,
+      "reason": "healthy"
+    },
+    "rev_per_employee": {
+      "scored": true,
+      "ok": true,
+      "checks": {
+        "present": true,
+        "min_records": true,
+        "has_nonzero": true,
+        "fresh": true
+      },
+      "n_records": 93,
+      "n_nonzero": 93,
+      "newest": "2026-06",
+      "lag_months": 1,
+      "reason": "healthy"
+    },
+    "job_ratio": {
+      "scored": true,
+      "ok": true,
+      "checks": {
+        "present": true,
+        "min_records": true,
+        "has_nonzero": true,
+        "fresh": true
+      },
+      "n_records": 53,
+      "n_nonzero": 53,
+      "newest": "2026-05",
+      "lag_months": 2,
+      "reason": "healthy"
+    },
+    "trends": {
+      "scored": true,
+      "ok": true,
+      "checks": {
+        "present": true,
+        "min_records": true,
+        "has_nonzero": true,
+        "fresh": true
+      },
+      "n_records": 46,
+      "n_nonzero": 25,
+      "newest": "2026-07",
+      "lag_months": 0,
+      "reason": "healthy"
+    },
+    "github": {
+      "scored": true,
+      "ok": true,
+      "checks": {
+        "present": true,
+        "min_records": true,
+        "has_nonzero": true,
+        "fresh": true
+      },
+      "n_records": 45,
+      "n_nonzero": 45,
+      "newest": "2026-07",
+      "lag_months": 0,
+      "reason": "healthy"
+    },
+    "regulatory": {
+      "scored": true,
+      "ok": true,
+      "checks": {
+        "present": true,
+        "min_records": true,
+        "has_nonzero": true,
+        "fresh": true
+      },
+      "n_records": 51,
+      "n_nonzero": 15,
+      "newest": "2026-07",
+      "lag_months": 0,
+      "reason": "healthy"
+    },
+    "apprenticeship": {
+      "scored": false,
+      "ok": true,
+      "checks": {
+        "present": true,
+        "min_records": true,
+        "has_nonzero": true,
+        "fresh": true
+      },
+      "n_records": 9,
+      "n_nonzero": 6,
+      "newest": "2024-01",
+      "lag_months": 30,
+      "reason": "healthy"
+    },
+    "vc_funding": {
+      "scored": false,
+      "ok": false,
+      "checks": {
+        "present": true,
+        "min_records": true,
+        "has_nonzero": false,
+        "fresh": true
+      },
+      "n_records": 51,
+      "n_nonzero": 0,
+      "newest": "2026-07",
+      "lag_months": 0,
+      "reason": "every value is zero \u2014 collector is producing nothing usable"
+    }
+  }
+}

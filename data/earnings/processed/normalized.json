@@ -1,7 +1,7 @@
 {
   "metadata": {
     "source": "SEC EDGAR XBRL",
-    "last_updated": "2026-07-15",
+    "last_updated": "2026-07-27",
     "mock": false,
     "normalized": true,
     "relabeling_threshold": 3.0
@@ -11,7 +11,47 @@
       "name": "Accenture",
       "quarterly": [
         {
-          "quarter": "2010-Q1",
+          "quarter": "2008-Q4",
+          "total_revenue_mm": 6470.6,
+          "ai_revenue_mm": null,
+          "headcount": null,
+          "revenue_per_employee": null,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2009-Q1",
+          "total_revenue_mm": 5657.6,
+          "ai_revenue_mm": null,
+          "headcount": null,
+          "revenue_per_employee": null,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2009-Q2",
+          "total_revenue_mm": 5537.3,
+          "ai_revenue_mm": null,
+          "headcount": null,
+          "revenue_per_employee": null,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2009-Q3",
+          "total_revenue_mm": 5505.4,
+          "ai_revenue_mm": null,
+          "headcount": null,
+          "revenue_per_employee": null,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2009-Q4",
           "total_revenue_mm": 5747.7,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -21,7 +61,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2010-Q2",
+          "quarter": "2010-Q1",
           "total_revenue_mm": 5537.8,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -31,7 +71,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2010-Q3",
+          "quarter": "2010-Q2",
           "total_revenue_mm": 5975.5,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -41,7 +81,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2010-Q4",
+          "quarter": "2010-Q3",
           "total_revenue_mm": 5833.1,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -51,7 +91,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2011-Q1",
+          "quarter": "2010-Q4",
           "total_revenue_mm": 6478.2,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -61,7 +101,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2011-Q2",
+          "quarter": "2011-Q1",
           "total_revenue_mm": 6496.3,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -71,7 +111,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2011-Q3",
+          "quarter": "2011-Q2",
           "total_revenue_mm": 7204.4,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -81,7 +121,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2011-Q4",
+          "quarter": "2011-Q3",
           "total_revenue_mm": 7174.1,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -91,7 +131,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2012-Q1",
+          "quarter": "2011-Q4",
           "total_revenue_mm": 7589.1,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -101,7 +141,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2012-Q2",
+          "quarter": "2012-Q1",
           "total_revenue_mm": 7259.8,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -111,7 +151,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2012-Q3",
+          "quarter": "2012-Q2",
           "total_revenue_mm": 7640.8,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -121,7 +161,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2012-Q4",
+          "quarter": "2012-Q3",
           "total_revenue_mm": 7288.3,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -131,7 +171,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2013-Q1",
+          "quarter": "2012-Q4",
           "total_revenue_mm": 7668.0,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -141,7 +181,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2013-Q2",
+          "quarter": "2013-Q1",
           "total_revenue_mm": 7493.3,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -151,7 +191,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2013-Q3",
+          "quarter": "2013-Q2",
           "total_revenue_mm": 7707.9,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -161,7 +201,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2013-Q4",
+          "quarter": "2013-Q3",
           "total_revenue_mm": 7525.0,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -171,7 +211,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2014-Q1",
+          "quarter": "2013-Q4",
           "total_revenue_mm": 7799.7,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -181,7 +221,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2014-Q2",
+          "quarter": "2014-Q1",
           "total_revenue_mm": 7567.5,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -191,7 +231,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2014-Q3",
+          "quarter": "2014-Q2",
           "total_revenue_mm": 8240.2,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -201,7 +241,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2014-Q4",
+          "quarter": "2014-Q3",
           "total_revenue_mm": 8267.3,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -211,7 +251,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2015-Q1",
+          "quarter": "2014-Q4",
           "total_revenue_mm": 8343.3,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -221,7 +261,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2015-Q2",
+          "quarter": "2015-Q1",
           "total_revenue_mm": 7931.6,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -231,7 +271,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2015-Q3",
+          "quarter": "2015-Q2",
           "total_revenue_mm": 8275.1,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -241,7 +281,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2015-Q4",
+          "quarter": "2015-Q3",
           "total_revenue_mm": 8364.5,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -251,7 +291,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2016-Q1",
+          "quarter": "2015-Q4",
           "total_revenue_mm": 8466.0,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -261,7 +301,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2016-Q2",
+          "quarter": "2016-Q1",
           "total_revenue_mm": 8397.1,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -271,7 +311,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2016-Q3",
+          "quarter": "2016-Q2",
           "total_revenue_mm": 8969.0,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -281,7 +321,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2016-Q4",
+          "quarter": "2016-Q3",
           "total_revenue_mm": 8965.6,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -291,7 +331,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2017-Q1",
+          "quarter": "2016-Q4",
           "total_revenue_mm": 9005.6,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -301,7 +341,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2017-Q2",
+          "quarter": "2017-Q1",
           "total_revenue_mm": 8762.2,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -311,7 +351,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2017-Q3",
+          "quarter": "2017-Q2",
           "total_revenue_mm": 9356.8,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -321,7 +361,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2017-Q4",
+          "quarter": "2017-Q3",
           "total_revenue_mm": 9640.9,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -331,8 +371,18 @@
           "relabeling_flag": false
         },
         {
+          "quarter": "2017-Q4",
+          "total_revenue_mm": 9884.3,
+          "ai_revenue_mm": null,
+          "headcount": null,
+          "revenue_per_employee": null,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
           "quarter": "2018-Q1",
-          "total_revenue_mm": 10054.5,
+          "total_revenue_mm": 9909.2,
           "ai_revenue_mm": null,
           "headcount": null,
           "revenue_per_employee": null,
@@ -342,7 +392,7 @@
         },
         {
           "quarter": "2018-Q2",
-          "total_revenue_mm": 10067.8,
+          "total_revenue_mm": 10695.0,
           "ai_revenue_mm": null,
           "headcount": null,
           "revenue_per_employee": null,
@@ -352,7 +402,7 @@
         },
         {
           "quarter": "2018-Q3",
-          "total_revenue_mm": 10838.9,
+          "total_revenue_mm": 10504.0,
           "ai_revenue_mm": null,
           "headcount": null,
           "revenue_per_employee": null,
@@ -362,7 +412,7 @@
         },
         {
           "quarter": "2018-Q4",
-          "total_revenue_mm": 10642.2,
+          "total_revenue_mm": 10605.5,
           "ai_revenue_mm": null,
           "headcount": null,
           "revenue_per_employee": null,
@@ -372,16 +422,6 @@
         },
         {
           "quarter": "2019-Q1",
-          "total_revenue_mm": 11359.0,
-          "ai_revenue_mm": null,
-          "headcount": null,
-          "revenue_per_employee": null,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2019-Q2",
           "total_revenue_mm": 10454.1,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -391,7 +431,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2019-Q3",
+          "quarter": "2019-Q2",
           "total_revenue_mm": 11099.7,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -401,7 +441,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2019-Q4",
+          "quarter": "2019-Q3",
           "total_revenue_mm": 11055.6,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -411,7 +451,17 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2020-Q2",
+          "quarter": "2019-Q4",
+          "total_revenue_mm": 11359.0,
+          "ai_revenue_mm": null,
+          "headcount": null,
+          "revenue_per_employee": null,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2020-Q1",
           "total_revenue_mm": 11141.5,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -421,7 +471,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2020-Q3",
+          "quarter": "2020-Q2",
           "total_revenue_mm": 10991.3,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -431,7 +481,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2020-Q4",
+          "quarter": "2020-Q3",
           "total_revenue_mm": 10835.3,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -441,7 +491,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2021-Q1",
+          "quarter": "2020-Q4",
           "total_revenue_mm": 11762.2,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -451,7 +501,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2021-Q2",
+          "quarter": "2021-Q1",
           "total_revenue_mm": 12088.1,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -461,7 +511,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2021-Q3",
+          "quarter": "2021-Q2",
           "total_revenue_mm": 13263.8,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -471,7 +521,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2021-Q4",
+          "quarter": "2021-Q3",
           "total_revenue_mm": 13419.3,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -481,7 +531,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2022-Q1",
+          "quarter": "2021-Q4",
           "total_revenue_mm": 14965.2,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -491,7 +541,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2022-Q2",
+          "quarter": "2022-Q1",
           "total_revenue_mm": 15046.7,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -501,7 +551,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2022-Q3",
+          "quarter": "2022-Q2",
           "total_revenue_mm": 16158.8,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -511,7 +561,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2022-Q4",
+          "quarter": "2022-Q3",
           "total_revenue_mm": 15423.7,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -521,7 +571,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2023-Q1",
+          "quarter": "2022-Q4",
           "total_revenue_mm": 15747.8,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -531,7 +581,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2023-Q2",
+          "quarter": "2023-Q1",
           "total_revenue_mm": 15814.2,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -541,7 +591,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2023-Q3",
+          "quarter": "2023-Q2",
           "total_revenue_mm": 16564.6,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -551,7 +601,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2023-Q4",
+          "quarter": "2023-Q3",
           "total_revenue_mm": 15985.2,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -561,7 +611,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2024-Q1",
+          "quarter": "2023-Q4",
           "total_revenue_mm": 16224.3,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -571,7 +621,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2024-Q2",
+          "quarter": "2024-Q1",
           "total_revenue_mm": 15799.5,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -581,7 +631,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2024-Q3",
+          "quarter": "2024-Q2",
           "total_revenue_mm": 16466.8,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -591,7 +641,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2024-Q4",
+          "quarter": "2024-Q3",
           "total_revenue_mm": 16405.8,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -601,7 +651,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2025-Q1",
+          "quarter": "2024-Q4",
           "total_revenue_mm": 17689.5,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -611,7 +661,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2025-Q2",
+          "quarter": "2025-Q1",
           "total_revenue_mm": 16659.3,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -621,7 +671,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2025-Q3",
+          "quarter": "2025-Q2",
           "total_revenue_mm": 17727.9,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -631,7 +681,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2025-Q4",
+          "quarter": "2025-Q3",
           "total_revenue_mm": 17596.3,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -641,7 +691,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2026-Q1",
+          "quarter": "2025-Q4",
           "total_revenue_mm": 18742.1,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -651,7 +701,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2026-Q2",
+          "quarter": "2026-Q1",
           "total_revenue_mm": 18044.1,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -661,7 +711,7 @@
           "relabeling_flag": false
         },
         {
-          "quarter": "2026-Q3",
+          "quarter": "2026-Q2",
           "total_revenue_mm": 18718.1,
           "ai_revenue_mm": null,
           "headcount": null,
@@ -675,6 +725,76 @@
     "CTSH": {
       "name": "Cognizant",
       "quarterly": [
+        {
+          "quarter": "2017-Q1",
+          "total_revenue_mm": 3546.0,
+          "ai_revenue_mm": null,
+          "headcount": null,
+          "revenue_per_employee": null,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2017-Q2",
+          "total_revenue_mm": 3670.0,
+          "ai_revenue_mm": null,
+          "headcount": null,
+          "revenue_per_employee": null,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2017-Q3",
+          "total_revenue_mm": 3766.0,
+          "ai_revenue_mm": null,
+          "headcount": null,
+          "revenue_per_employee": null,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2017-Q4",
+          "total_revenue_mm": 3828.0,
+          "ai_revenue_mm": null,
+          "headcount": null,
+          "revenue_per_employee": null,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2018-Q1",
+          "total_revenue_mm": 3912.0,
+          "ai_revenue_mm": null,
+          "headcount": null,
+          "revenue_per_employee": null,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2018-Q2",
+          "total_revenue_mm": 4006.0,
+          "ai_revenue_mm": null,
+          "headcount": null,
+          "revenue_per_employee": null,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2018-Q3",
+          "total_revenue_mm": 4078.0,
+          "ai_revenue_mm": null,
+          "headcount": null,
+          "revenue_per_employee": null,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
         {
           "quarter": "2018-Q4",
           "total_revenue_mm": 4129.0,
@@ -757,7 +877,7 @@
         },
         {
           "quarter": "2020-Q4",
-          "total_revenue_mm": 16652.0,
+          "total_revenue_mm": 4184.0,
           "ai_revenue_mm": null,
           "headcount": null,
           "revenue_per_employee": null,
@@ -797,7 +917,7 @@
         },
         {
           "quarter": "2021-Q4",
-          "total_revenue_mm": 18507.0,
+          "total_revenue_mm": 4777.0,
           "ai_revenue_mm": null,
           "headcount": null,
           "revenue_per_employee": null,
@@ -837,7 +957,7 @@
         },
         {
           "quarter": "2022-Q4",
-          "total_revenue_mm": 19428.0,
+          "total_revenue_mm": 4839.0,
           "ai_revenue_mm": null,
           "headcount": null,
           "revenue_per_employee": null,
@@ -877,7 +997,7 @@
         },
         {
           "quarter": "2023-Q4",
-          "total_revenue_mm": 19353.0,
+          "total_revenue_mm": 4758.0,
           "ai_revenue_mm": null,
           "headcount": null,
           "revenue_per_employee": null,
@@ -917,7 +1037,7 @@
         },
         {
           "quarter": "2024-Q4",
-          "total_revenue_mm": 19736.0,
+          "total_revenue_mm": 5082.0,
           "ai_revenue_mm": null,
           "headcount": null,
           "revenue_per_employee": null,
@@ -957,7 +1077,7 @@
         },
         {
           "quarter": "2025-Q4",
-          "total_revenue_mm": 21108.0,
+          "total_revenue_mm": 5333.0,
           "ai_revenue_mm": null,
           "headcount": null,
           "revenue_per_employee": null,
@@ -979,167 +1099,75 @@
     },
     "INFY": {
       "name": "Infosys",
-      "quarterly": [
-        {
-          "quarter": "2019-Q4",
-          "total_revenue_mm": 11799.0,
-          "ai_revenue_mm": null,
-          "headcount": null,
-          "revenue_per_employee": null,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2020-Q4",
-          "total_revenue_mm": 12780.0,
-          "ai_revenue_mm": null,
-          "headcount": null,
-          "revenue_per_employee": null,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2021-Q4",
-          "total_revenue_mm": 13561.0,
-          "ai_revenue_mm": null,
-          "headcount": null,
-          "revenue_per_employee": null,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2022-Q4",
-          "total_revenue_mm": 16311.0,
-          "ai_revenue_mm": null,
-          "headcount": null,
-          "revenue_per_employee": null,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2023-Q4",
-          "total_revenue_mm": 18212.0,
-          "ai_revenue_mm": null,
-          "headcount": null,
-          "revenue_per_employee": null,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2024-Q4",
-          "total_revenue_mm": 18562.0,
-          "ai_revenue_mm": null,
-          "headcount": null,
-          "revenue_per_employee": null,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2025-Q4",
-          "total_revenue_mm": 19277.0,
-          "ai_revenue_mm": null,
-          "headcount": null,
-          "revenue_per_employee": null,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        }
-      ]
+      "quarterly": []
     },
     "WIT": {
       "name": "Wipro",
-      "quarterly": [
-        {
-          "quarter": "2018-Q4",
-          "total_revenue_mm": 8368.0,
-          "ai_revenue_mm": null,
-          "headcount": null,
-          "revenue_per_employee": null,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2019-Q4",
-          "total_revenue_mm": 8471.0,
-          "ai_revenue_mm": null,
-          "headcount": null,
-          "revenue_per_employee": null,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2020-Q4",
-          "total_revenue_mm": 8094.0,
-          "ai_revenue_mm": null,
-          "headcount": null,
-          "revenue_per_employee": null,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2021-Q4",
-          "total_revenue_mm": 8469.0,
-          "ai_revenue_mm": null,
-          "headcount": null,
-          "revenue_per_employee": null,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2022-Q4",
-          "total_revenue_mm": 10425.0,
-          "ai_revenue_mm": null,
-          "headcount": null,
-          "revenue_per_employee": null,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2023-Q4",
-          "total_revenue_mm": 11011.0,
-          "ai_revenue_mm": null,
-          "headcount": null,
-          "revenue_per_employee": null,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2024-Q4",
-          "total_revenue_mm": 10770.0,
-          "ai_revenue_mm": null,
-          "headcount": null,
-          "revenue_per_employee": null,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2025-Q4",
-          "total_revenue_mm": 10428.0,
-          "ai_revenue_mm": null,
-          "headcount": null,
-          "revenue_per_employee": null,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        }
-      ]
+      "quarterly": []
     },
     "EPAM": {
       "name": "EPAM Systems",
       "quarterly": [
+        {
+          "quarter": "2017-Q1",
+          "total_revenue_mm": 324.7,
+          "ai_revenue_mm": null,
+          "headcount": null,
+          "revenue_per_employee": null,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2017-Q2",
+          "total_revenue_mm": 349.0,
+          "ai_revenue_mm": null,
+          "headcount": null,
+          "revenue_per_employee": null,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2017-Q3",
+          "total_revenue_mm": 377.5,
+          "ai_revenue_mm": null,
+          "headcount": null,
+          "revenue_per_employee": null,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2017-Q4",
+          "total_revenue_mm": 399.3,
+          "ai_revenue_mm": null,
+          "headcount": null,
+          "revenue_per_employee": null,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2018-Q1",
+          "total_revenue_mm": 424.1,
+          "ai_revenue_mm": null,
+          "headcount": null,
+          "revenue_per_employee": null,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2018-Q2",
+          "total_revenue_mm": 445.6,
+          "ai_revenue_mm": null,
+          "headcount": null,
+          "revenue_per_employee": null,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
         {
           "quarter": "2018-Q3",
           "total_revenue_mm": 468.2,
@@ -1272,7 +1300,7 @@
         },
         {
           "quarter": "2021-Q4",
-          "total_revenue_mm": 3758.1,
+          "total_revenue_mm": 1107.5,
           "ai_revenue_mm": null,
           "headcount": null,
           "revenue_per_employee": null,
@@ -1312,7 +1340,7 @@
         },
         {
           "quarter": "2022-Q4",
-          "total_revenue_mm": 4824.7,
+          "total_revenue_mm": 1231.3,
           "ai_revenue_mm": null,
           "headcount": null,
           "revenue_per_employee": null,
@@ -1352,7 +1380,7 @@
         },
         {
           "quarter": "2023-Q4",
-          "total_revenue_mm": 4690.5,
+          "total_revenue_mm": 1157.3,
           "ai_revenue_mm": null,
           "headcount": null,
           "revenue_per_employee": null,
@@ -1392,7 +1420,7 @@
         },
         {
           "quarter": "2024-Q4",
-          "total_revenue_mm": 4727.9,
+          "total_revenue_mm": 1248.4,
           "ai_revenue_mm": null,
           "headcount": null,
           "revenue_per_employee": null,
@@ -1432,7 +1460,7 @@
         },
         {
           "quarter": "2025-Q4",
-          "total_revenue_mm": 5457.1,
+          "total_revenue_mm": 1407.5,
           "ai_revenue_mm": null,
           "headcount": null,
           "revenue_per_employee": null,
@@ -1454,102 +1482,51 @@
     },
     "GLOB": {
       "name": "Globant",
-      "quarterly": [
-        {
-          "quarter": "2017-Q4",
-          "total_revenue_mm": 413.4,
-          "ai_revenue_mm": null,
-          "headcount": null,
-          "revenue_per_employee": null,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2018-Q4",
-          "total_revenue_mm": 522.3,
-          "ai_revenue_mm": null,
-          "headcount": null,
-          "revenue_per_employee": null,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2019-Q4",
-          "total_revenue_mm": 659.3,
-          "ai_revenue_mm": null,
-          "headcount": null,
-          "revenue_per_employee": null,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2020-Q4",
-          "total_revenue_mm": 814.1,
-          "ai_revenue_mm": null,
-          "headcount": null,
-          "revenue_per_employee": null,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2021-Q4",
-          "total_revenue_mm": 1297.1,
-          "ai_revenue_mm": null,
-          "headcount": null,
-          "revenue_per_employee": null,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2022-Q4",
-          "total_revenue_mm": 1780.2,
-          "ai_revenue_mm": null,
-          "headcount": null,
-          "revenue_per_employee": null,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2023-Q4",
-          "total_revenue_mm": 2095.9,
-          "ai_revenue_mm": null,
-          "headcount": null,
-          "revenue_per_employee": null,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2024-Q4",
-          "total_revenue_mm": 2415.7,
-          "ai_revenue_mm": null,
-          "headcount": null,
-          "revenue_per_employee": null,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2025-Q4",
-          "total_revenue_mm": 2454.9,
-          "ai_revenue_mm": null,
-          "headcount": null,
-          "revenue_per_employee": null,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        }
-      ]
+      "quarterly": []
     },
     "IT": {
       "name": "Gartner",
       "quarterly": [
+        {
+          "quarter": "2017-Q1",
+          "total_revenue_mm": 625.2,
+          "ai_revenue_mm": null,
+          "headcount": null,
+          "revenue_per_employee": null,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2017-Q2",
+          "total_revenue_mm": 843.7,
+          "ai_revenue_mm": null,
+          "headcount": null,
+          "revenue_per_employee": null,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2017-Q3",
+          "total_revenue_mm": 828.1,
+          "ai_revenue_mm": null,
+          "headcount": null,
+          "revenue_per_employee": null,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2017-Q4",
+          "total_revenue_mm": 1014.5,
+          "ai_revenue_mm": null,
+          "headcount": null,
+          "revenue_per_employee": null,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
         {
           "quarter": "2018-Q1",
           "total_revenue_mm": 963.6,
@@ -1582,7 +1559,7 @@
         },
         {
           "quarter": "2018-Q4",
-          "total_revenue_mm": 3975.5,
+          "total_revenue_mm": 1088.9,
           "ai_revenue_mm": null,
           "headcount": null,
           "revenue_per_employee": null,
@@ -1622,7 +1599,7 @@
         },
         {
           "quarter": "2019-Q4",
-          "total_revenue_mm": 4245.3,
+          "total_revenue_mm": 1203.5,
           "ai_revenue_mm": null,
           "headcount": null,
           "revenue_per_employee": null,
@@ -1662,7 +1639,7 @@
         },
         {
           "quarter": "2020-Q4",
-          "total_revenue_mm": 4099.4,
+          "total_revenue_mm": 1112.8,
           "ai_revenue_mm": null,
           "headcount": null,
           "revenue_per_employee": null,
@@ -1702,7 +1679,7 @@
         },
         {
           "quarter": "2021-Q4",
-          "total_revenue_mm": 4734.0,
+          "total_revenue_mm": 1306.3,
           "ai_revenue_mm": null,
           "headcount": null,
           "revenue_per_employee": null,
@@ -1742,7 +1719,7 @@
         },
         {
           "quarter": "2022-Q4",
-          "total_revenue_mm": 5475.8,
+          "total_revenue_mm": 1504.7,
           "ai_revenue_mm": null,
           "headcount": null,
           "revenue_per_employee": null,
@@ -1782,7 +1759,7 @@
         },
         {
           "quarter": "2023-Q4",
-          "total_revenue_mm": 5907.0,
+          "total_revenue_mm": 1586.1,
           "ai_revenue_mm": null,
           "headcount": null,
           "revenue_per_employee": null,
@@ -1822,7 +1799,7 @@
         },
         {
           "quarter": "2024-Q4",
-          "total_revenue_mm": 6267.4,
+          "total_revenue_mm": 1715.1,
           "ai_revenue_mm": null,
           "headcount": null,
           "revenue_per_employee": null,
@@ -1862,7 +1839,7 @@
         },
         {
           "quarter": "2025-Q4",
-          "total_revenue_mm": 6497.2,
+          "total_revenue_mm": 1752.6,
           "ai_revenue_mm": null,
           "headcount": null,
           "revenue_per_employee": null,
@@ -1886,321 +1863,371 @@
       "name": "Booz Allen Hamilton",
       "quarterly": [
         {
-          "quarter": "2019-Q1",
+          "quarter": "2017-Q2",
+          "total_revenue_mm": 1523.0,
+          "ai_revenue_mm": null,
+          "headcount": null,
+          "revenue_per_employee": null,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2017-Q3",
+          "total_revenue_mm": 1542.8,
+          "ai_revenue_mm": null,
+          "headcount": null,
+          "revenue_per_employee": null,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2017-Q4",
+          "total_revenue_mm": 1470.7,
+          "ai_revenue_mm": null,
+          "headcount": null,
+          "revenue_per_employee": null,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2018-Q1",
+          "total_revenue_mm": 1631.1,
+          "ai_revenue_mm": null,
+          "headcount": null,
+          "revenue_per_employee": null,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2018-Q2",
           "total_revenue_mm": 1646.8,
           "ai_revenue_mm": null,
-          "headcount": 24600,
-          "revenue_per_employee": 66.9,
+          "headcount": null,
+          "revenue_per_employee": null,
           "ai_pct": null,
           "relabeling_index": null,
           "relabeling_flag": false
         },
         {
-          "quarter": "2019-Q2",
+          "quarter": "2018-Q3",
           "total_revenue_mm": 1614.0,
           "ai_revenue_mm": null,
-          "headcount": 25300,
-          "revenue_per_employee": 63.8,
+          "headcount": null,
+          "revenue_per_employee": null,
           "ai_pct": null,
           "relabeling_index": null,
           "relabeling_flag": false
         },
         {
-          "quarter": "2019-Q3",
+          "quarter": "2018-Q4",
           "total_revenue_mm": 1663.1,
           "ai_revenue_mm": null,
-          "headcount": 25800,
-          "revenue_per_employee": 64.5,
+          "headcount": 24600,
+          "revenue_per_employee": 67.6,
           "ai_pct": null,
           "relabeling_index": null,
           "relabeling_flag": false
         },
         {
-          "quarter": "2019-Q4",
+          "quarter": "2019-Q1",
           "total_revenue_mm": 1780.1,
           "ai_revenue_mm": null,
-          "headcount": 26100,
-          "revenue_per_employee": 68.2,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2020-Q1",
-          "total_revenue_mm": 1825.2,
-          "ai_revenue_mm": null,
-          "headcount": 26400,
-          "revenue_per_employee": 69.1,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2020-Q2",
-          "total_revenue_mm": 1819.6,
-          "ai_revenue_mm": null,
-          "headcount": 27000,
-          "revenue_per_employee": 67.4,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2020-Q3",
-          "total_revenue_mm": 1849.4,
-          "ai_revenue_mm": null,
-          "headcount": 27200,
-          "revenue_per_employee": 68.0,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2020-Q4",
-          "total_revenue_mm": 1969.6,
-          "ai_revenue_mm": null,
-          "headcount": 27200,
+          "headcount": 24600,
           "revenue_per_employee": 72.4,
           "ai_pct": null,
           "relabeling_index": null,
           "relabeling_flag": false
         },
         {
-          "quarter": "2021-Q1",
-          "total_revenue_mm": 1956.5,
+          "quarter": "2019-Q2",
+          "total_revenue_mm": 1825.2,
           "ai_revenue_mm": null,
-          "headcount": 27400,
-          "revenue_per_employee": 71.4,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2021-Q2",
-          "total_revenue_mm": 2019.2,
-          "ai_revenue_mm": null,
-          "headcount": 27600,
-          "revenue_per_employee": 73.2,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2021-Q3",
-          "total_revenue_mm": 1904.0,
-          "ai_revenue_mm": null,
-          "headcount": 27600,
-          "revenue_per_employee": 69.0,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2021-Q4",
-          "total_revenue_mm": 1979.3,
-          "ai_revenue_mm": null,
-          "headcount": 27700,
-          "revenue_per_employee": 71.5,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2022-Q1",
-          "total_revenue_mm": 1989.1,
-          "ai_revenue_mm": null,
-          "headcount": 28600,
-          "revenue_per_employee": 69.5,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2022-Q2",
-          "total_revenue_mm": 2106.0,
-          "ai_revenue_mm": null,
-          "headcount": 29200,
+          "headcount": 25300,
           "revenue_per_employee": 72.1,
           "ai_pct": null,
           "relabeling_index": null,
           "relabeling_flag": false
         },
         {
-          "quarter": "2022-Q3",
+          "quarter": "2019-Q3",
+          "total_revenue_mm": 1819.6,
+          "ai_revenue_mm": null,
+          "headcount": 25800,
+          "revenue_per_employee": 70.5,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2019-Q4",
+          "total_revenue_mm": 1849.4,
+          "ai_revenue_mm": null,
+          "headcount": 26100,
+          "revenue_per_employee": 70.9,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2020-Q1",
+          "total_revenue_mm": 1969.6,
+          "ai_revenue_mm": null,
+          "headcount": 26400,
+          "revenue_per_employee": 74.6,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2020-Q2",
+          "total_revenue_mm": 1956.5,
+          "ai_revenue_mm": null,
+          "headcount": 27000,
+          "revenue_per_employee": 72.5,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2020-Q3",
+          "total_revenue_mm": 2019.2,
+          "ai_revenue_mm": null,
+          "headcount": 27200,
+          "revenue_per_employee": 74.2,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2020-Q4",
+          "total_revenue_mm": 1904.0,
+          "ai_revenue_mm": null,
+          "headcount": 27200,
+          "revenue_per_employee": 70.0,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2021-Q1",
+          "total_revenue_mm": 1979.3,
+          "ai_revenue_mm": null,
+          "headcount": 27400,
+          "revenue_per_employee": 72.2,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2021-Q2",
+          "total_revenue_mm": 1989.1,
+          "ai_revenue_mm": null,
+          "headcount": 27600,
+          "revenue_per_employee": 72.1,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2021-Q3",
+          "total_revenue_mm": 2106.0,
+          "ai_revenue_mm": null,
+          "headcount": 27600,
+          "revenue_per_employee": 76.3,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2021-Q4",
           "total_revenue_mm": 2030.5,
           "ai_revenue_mm": null,
+          "headcount": 27700,
+          "revenue_per_employee": 73.3,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2022-Q1",
+          "total_revenue_mm": 2238.1,
+          "ai_revenue_mm": null,
+          "headcount": 28600,
+          "revenue_per_employee": 78.3,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2022-Q2",
+          "total_revenue_mm": 2249.6,
+          "ai_revenue_mm": null,
+          "headcount": 29200,
+          "revenue_per_employee": 77.0,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2022-Q3",
+          "total_revenue_mm": 2299.0,
+          "ai_revenue_mm": null,
           "headcount": 29500,
-          "revenue_per_employee": 68.8,
+          "revenue_per_employee": 77.9,
           "ai_pct": null,
           "relabeling_index": null,
           "relabeling_flag": false
         },
         {
           "quarter": "2022-Q4",
-          "total_revenue_mm": 8363.7,
+          "total_revenue_mm": 2277.1,
           "ai_revenue_mm": null,
           "headcount": 29300,
-          "revenue_per_employee": 285.5,
+          "revenue_per_employee": 77.7,
           "ai_pct": null,
           "relabeling_index": null,
           "relabeling_flag": false
         },
         {
           "quarter": "2023-Q1",
-          "total_revenue_mm": 2249.6,
+          "total_revenue_mm": 2433.3,
           "ai_revenue_mm": null,
           "headcount": 29300,
-          "revenue_per_employee": 76.8,
+          "revenue_per_employee": 83.0,
           "ai_pct": null,
           "relabeling_index": null,
           "relabeling_flag": false
         },
         {
           "quarter": "2023-Q2",
-          "total_revenue_mm": 2299.0,
+          "total_revenue_mm": 2654.5,
           "ai_revenue_mm": null,
           "headcount": 30000,
-          "revenue_per_employee": 76.6,
+          "revenue_per_employee": 88.5,
           "ai_pct": null,
           "relabeling_index": null,
           "relabeling_flag": false
         },
         {
           "quarter": "2023-Q3",
-          "total_revenue_mm": 2277.1,
+          "total_revenue_mm": 2666.3,
           "ai_revenue_mm": null,
           "headcount": 31100,
-          "revenue_per_employee": 73.2,
+          "revenue_per_employee": 85.7,
           "ai_pct": null,
           "relabeling_index": null,
           "relabeling_flag": false
         },
         {
           "quarter": "2023-Q4",
-          "total_revenue_mm": 9258.9,
+          "total_revenue_mm": 2569.8,
           "ai_revenue_mm": null,
           "headcount": 31900,
-          "revenue_per_employee": 290.2,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2024-Q1",
-          "total_revenue_mm": 2654.5,
-          "ai_revenue_mm": null,
-          "headcount": 32600,
-          "revenue_per_employee": 81.4,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2024-Q2",
-          "total_revenue_mm": 2666.3,
-          "ai_revenue_mm": null,
-          "headcount": 33100,
           "revenue_per_employee": 80.6,
           "ai_pct": null,
           "relabeling_index": null,
           "relabeling_flag": false
         },
         {
-          "quarter": "2024-Q3",
-          "total_revenue_mm": 2569.8,
+          "quarter": "2024-Q1",
+          "total_revenue_mm": 2771.3,
           "ai_revenue_mm": null,
-          "headcount": 33800,
-          "revenue_per_employee": 76.0,
+          "headcount": 32600,
+          "revenue_per_employee": 85.0,
           "ai_pct": null,
           "relabeling_index": null,
           "relabeling_flag": false
         },
         {
-          "quarter": "2024-Q4",
-          "total_revenue_mm": 10661.9,
+          "quarter": "2024-Q2",
+          "total_revenue_mm": 2942.0,
           "ai_revenue_mm": null,
-          "headcount": 34200,
-          "revenue_per_employee": 311.8,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2025-Q1",
-          "total_revenue_mm": 2941.8,
-          "ai_revenue_mm": null,
-          "headcount": 35100,
-          "revenue_per_employee": 83.8,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2025-Q2",
-          "total_revenue_mm": 3146.4,
-          "ai_revenue_mm": null,
-          "headcount": 35800,
-          "revenue_per_employee": 87.9,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2025-Q3",
-          "total_revenue_mm": 2917.2,
-          "ai_revenue_mm": null,
-          "headcount": 35900,
-          "revenue_per_employee": 81.3,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2025-Q4",
-          "total_revenue_mm": 11980.0,
-          "ai_revenue_mm": null,
-          "headcount": 35800,
-          "revenue_per_employee": 334.6,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2026-Q1",
-          "total_revenue_mm": 2924.0,
-          "ai_revenue_mm": null,
-          "headcount": 33400,
-          "revenue_per_employee": 87.5,
-          "ai_pct": null,
-          "relabeling_index": null,
-          "relabeling_flag": false
-        },
-        {
-          "quarter": "2026-Q2",
-          "total_revenue_mm": 2890.0,
-          "ai_revenue_mm": null,
-          "headcount": 32500,
+          "headcount": 33100,
           "revenue_per_employee": 88.9,
           "ai_pct": null,
           "relabeling_index": null,
           "relabeling_flag": false
         },
         {
-          "quarter": "2026-Q3",
-          "total_revenue_mm": 2620.0,
+          "quarter": "2024-Q3",
+          "total_revenue_mm": 3146.0,
           "ai_revenue_mm": null,
-          "headcount": 31600,
-          "revenue_per_employee": 82.9,
+          "headcount": 33800,
+          "revenue_per_employee": 93.1,
           "ai_pct": null,
           "relabeling_index": null,
           "relabeling_flag": false
         },
         {
-          "quarter": "2026-Q4",
-          "total_revenue_mm": 11217.0,
+          "quarter": "2024-Q4",
+          "total_revenue_mm": 2917.0,
           "ai_revenue_mm": null,
-          "headcount": 31500,
-          "revenue_per_employee": 356.1,
+          "headcount": 34200,
+          "revenue_per_employee": 85.3,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2025-Q1",
+          "total_revenue_mm": 2975.0,
+          "ai_revenue_mm": null,
+          "headcount": 35100,
+          "revenue_per_employee": 84.8,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2025-Q2",
+          "total_revenue_mm": 2924.0,
+          "ai_revenue_mm": null,
+          "headcount": 35800,
+          "revenue_per_employee": 81.7,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2025-Q3",
+          "total_revenue_mm": 2890.0,
+          "ai_revenue_mm": null,
+          "headcount": 35900,
+          "revenue_per_employee": 80.5,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2025-Q4",
+          "total_revenue_mm": 2620.0,
+          "ai_revenue_mm": null,
+          "headcount": 35800,
+          "revenue_per_employee": 73.2,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2026-Q1",
+          "total_revenue_mm": 2783.0,
+          "ai_revenue_mm": null,
+          "headcount": 33400,
+          "revenue_per_employee": 83.3,
+          "ai_pct": null,
+          "relabeling_index": null,
+          "relabeling_flag": false
+        },
+        {
+          "quarter": "2026-Q2",
+          "total_revenue_mm": 2800.0,
+          "ai_revenue_mm": null,
+          "headcount": 32500,
+          "revenue_per_employee": 86.2,
           "ai_pct": null,
           "relabeling_index": null,
           "relabeling_flag": false
@@ -2209,6 +2236,46 @@
     }
   },
   "aggregate": [
+    {
+      "quarter": "2008-Q4",
+      "total_ai_revenue_mm": null,
+      "avg_ai_pct": null,
+      "avg_relabeling_index": null,
+      "avg_rev_per_employee": null,
+      "firms_flagged_relabeling": 0
+    },
+    {
+      "quarter": "2009-Q1",
+      "total_ai_revenue_mm": null,
+      "avg_ai_pct": null,
+      "avg_relabeling_index": null,
+      "avg_rev_per_employee": null,
+      "firms_flagged_relabeling": 0
+    },
+    {
+      "quarter": "2009-Q2",
+      "total_ai_revenue_mm": null,
+      "avg_ai_pct": null,
+      "avg_relabeling_index": null,
+      "avg_rev_per_employee": null,
+      "firms_flagged_relabeling": 0
+    },
+    {
+      "quarter": "2009-Q3",
+      "total_ai_revenue_mm": null,
+      "avg_ai_pct": null,
+      "avg_relabeling_index": null,
+      "avg_rev_per_employee": null,
+      "firms_flagged_relabeling": 0
+    },
+    {
+      "quarter": "2009-Q4",
+      "total_ai_revenue_mm": null,
+      "avg_ai_pct": null,
+      "avg_relabeling_index": null,
+      "avg_rev_per_employee": null,
+      "firms_flagged_relabeling": 0
+    },
     {
       "quarter": "2010-Q1",
       "total_ai_revenue_mm": null,
@@ -2494,7 +2561,7 @@
       "total_ai_revenue_mm": null,
       "avg_ai_pct": null,
       "avg_relabeling_index": null,
-      "avg_rev_per_employee": null,
+      "avg_rev_per_employee": 67.6,
       "firms_flagged_relabeling": 0
     },
     {
@@ -2502,7 +2569,7 @@
       "total_ai_revenue_mm": null,
       "avg_ai_pct": null,
       "avg_relabeling_index": null,
-      "avg_rev_per_employee": 66.9,
+      "avg_rev_per_employee": 72.4,
       "firms_flagged_relabeling": 0
     },
     {
@@ -2510,7 +2577,7 @@
       "total_ai_revenue_mm": null,
       "avg_ai_pct": null,
       "avg_relabeling_index": null,
-      "avg_rev_per_employee": 63.8,
+      "avg_rev_per_employee": 72.1,
       "firms_flagged_relabeling": 0
     },
     {
@@ -2518,7 +2585,7 @@
       "total_ai_revenue_mm": null,
       "avg_ai_pct": null,
       "avg_relabeling_index": null,
-      "avg_rev_per_employee": 64.5,
+      "avg_rev_per_employee": 70.5,
       "firms_flagged_relabeling": 0
     },
     {
@@ -2526,7 +2593,7 @@
       "total_ai_revenue_mm": null,
       "avg_ai_pct": null,
       "avg_relabeling_index": null,
-      "avg_rev_per_employee": 68.2,
+      "avg_rev_per_employee": 70.9,
       "firms_flagged_relabeling": 0
     },
     {
@@ -2534,7 +2601,7 @@
       "total_ai_revenue_mm": null,
       "avg_ai_pct": null,
       "avg_relabeling_index": null,
-      "avg_rev_per_employee": 69.1,
+      "avg_rev_per_employee": 74.6,
       "firms_flagged_relabeling": 0
     },
     {
@@ -2542,7 +2609,7 @@
       "total_ai_revenue_mm": null,
       "avg_ai_pct": null,
       "avg_relabeling_index": null,
-      "avg_rev_per_employee": 67.4,
+      "avg_rev_per_employee": 72.5,
       "firms_flagged_relabeling": 0
     },
     {
@@ -2550,7 +2617,7 @@
       "total_ai_revenue_mm": null,
       "avg_ai_pct": null,
       "avg_relabeling_index": null,
-      "avg_rev_per_employee": 68.0,
+      "avg_rev_per_employee": 74.2,
       "firms_flagged_relabeling": 0
     },
     {
@@ -2558,7 +2625,7 @@
       "total_ai_revenue_mm": null,
       "avg_ai_pct": null,
       "avg_relabeling_index": null,
-      "avg_rev_per_employee": 72.4,
+      "avg_rev_per_employee": 70.0,
       "firms_flagged_relabeling": 0
     },
     {
@@ -2566,7 +2633,7 @@
       "total_ai_revenue_mm": null,
       "avg_ai_pct": null,
       "avg_relabeling_index": null,
-      "avg_rev_per_employee": 71.4,
+      "avg_rev_per_employee": 72.2,
       "firms_flagged_relabeling": 0
     },
     {
@@ -2574,7 +2641,7 @@
       "total_ai_revenue_mm": null,
       "avg_ai_pct": null,
       "avg_relabeling_index": null,
-      "avg_rev_per_employee": 73.2,
+      "avg_rev_per_employee": 72.1,
       "firms_flagged_relabeling": 0
     },
     {
@@ -2582,7 +2649,7 @@
       "total_ai_revenue_mm": null,
       "avg_ai_pct": null,
       "avg_relabeling_index": null,
-      "avg_rev_per_employee": 69.0,
+      "avg_rev_per_employee": 76.3,
       "firms_flagged_relabeling": 0
     },
     {
@@ -2590,7 +2657,7 @@
       "total_ai_revenue_mm": null,
       "avg_ai_pct": null,
       "avg_relabeling_index": null,
-      "avg_rev_per_employee": 71.5,
+      "avg_rev_per_employee": 73.3,
       "firms_flagged_relabeling": 0
     },
     {
@@ -2598,7 +2665,7 @@
       "total_ai_revenue_mm": null,
       "avg_ai_pct": null,
       "avg_relabeling_index": null,
-      "avg_rev_per_employee": 69.5,
+      "avg_rev_per_employee": 78.3,
       "firms_flagged_relabeling": 0
     },
     {
@@ -2606,7 +2673,7 @@
       "total_ai_revenue_mm": null,
       "avg_ai_pct": null,
       "avg_relabeling_index": null,
-      "avg_rev_per_employee": 72.1,
+      "avg_rev_per_employee": 77.0,
       "firms_flagged_relabeling": 0
     },
     {
@@ -2614,7 +2681,7 @@
       "total_ai_revenue_mm": null,
       "avg_ai_pct": null,
       "avg_relabeling_index": null,
-      "avg_rev_per_employee": 68.8,
+      "avg_rev_per_employee": 77.9,
       "firms_flagged_relabeling": 0
     },
     {
@@ -2622,7 +2689,7 @@
       "total_ai_revenue_mm": null,
       "avg_ai_pct": null,
       "avg_relabeling_index": null,
-      "avg_rev_per_employee": 285.5,
+      "avg_rev_per_employee": 77.7,
       "firms_flagged_relabeling": 0
     },
     {
@@ -2630,7 +2697,7 @@
       "total_ai_revenue_mm": null,
       "avg_ai_pct": null,
       "avg_relabeling_index": null,
-      "avg_rev_per_employee": 76.8,
+      "avg_rev_per_employee": 83.0,
       "firms_flagged_relabeling": 0
     },
     {
@@ -2638,7 +2705,7 @@
       "total_ai_revenue_mm": null,
       "avg_ai_pct": null,
       "avg_relabeling_index": null,
-      "avg_rev_per_employee": 76.6,
+      "avg_rev_per_employee": 88.5,
       "firms_flagged_relabeling": 0
     },
     {
@@ -2646,7 +2713,7 @@
       "total_ai_revenue_mm": null,
       "avg_ai_pct": null,
       "avg_relabeling_index": null,
-      "avg_rev_per_employee": 73.2,
+      "avg_rev_per_employee": 85.7,
       "firms_flagged_relabeling": 0
     },
     {
@@ -2654,7 +2721,7 @@
       "total_ai_revenue_mm": null,
       "avg_ai_pct": null,
       "avg_relabeling_index": null,
-      "avg_rev_per_employee": 290.2,
+      "avg_rev_per_employee": 80.6,
       "firms_flagged_relabeling": 0
     },
     {
@@ -2662,7 +2729,7 @@
       "total_ai_revenue_mm": null,
       "avg_ai_pct": null,
       "avg_relabeling_index": null,
-      "avg_rev_per_employee": 81.4,
+      "avg_rev_per_employee": 85.0,
       "firms_flagged_relabeling": 0
     },
     {
@@ -2670,7 +2737,7 @@
       "total_ai_revenue_mm": null,
       "avg_ai_pct": null,
       "avg_relabeling_index": null,
-      "avg_rev_per_employee": 80.6,
+      "avg_rev_per_employee": 88.9,
       "firms_flagged_relabeling": 0
     },
     {
@@ -2678,7 +2745,7 @@
       "total_ai_revenue_mm": null,
       "avg_ai_pct": null,
       "avg_relabeling_index": null,
-      "avg_rev_per_employee": 76.0,
+      "avg_rev_per_employee": 93.1,
       "firms_flagged_relabeling": 0
     },
     {
@@ -2686,7 +2753,7 @@
       "total_ai_revenue_mm": null,
       "avg_ai_pct": null,
       "avg_relabeling_index": null,
-      "avg_rev_per_employee": 311.8,
+      "avg_rev_per_employee": 85.3,
       "firms_flagged_relabeling": 0
     },
     {
@@ -2694,7 +2761,7 @@
       "total_ai_revenue_mm": null,
       "avg_ai_pct": null,
       "avg_relabeling_index": null,
-      "avg_rev_per_employee": 83.8,
+      "avg_rev_per_employee": 84.8,
       "firms_flagged_relabeling": 0
     },
     {
@@ -2702,7 +2769,7 @@
       "total_ai_revenue_mm": null,
       "avg_ai_pct": null,
       "avg_relabeling_index": null,
-      "avg_rev_per_employee": 87.9,
+      "avg_rev_per_employee": 81.7,
       "firms_flagged_relabeling": 0
     },
     {
@@ -2710,7 +2777,7 @@
       "total_ai_revenue_mm": null,
       "avg_ai_pct": null,
       "avg_relabeling_index": null,
-      "avg_rev_per_employee": 81.3,
+      "avg_rev_per_employee": 80.5,
       "firms_flagged_relabeling": 0
     },
     {
@@ -2718,7 +2785,7 @@
       "total_ai_revenue_mm": null,
       "avg_ai_pct": null,
       "avg_relabeling_index": null,
-      "avg_rev_per_employee": 334.6,
+      "avg_rev_per_employee": 73.2,
       "firms_flagged_relabeling": 0
     },
     {
@@ -2726,7 +2793,7 @@
       "total_ai_revenue_mm": null,
       "avg_ai_pct": null,
       "avg_relabeling_index": null,
-      "avg_rev_per_employee": 87.5,
+      "avg_rev_per_employee": 83.3,
       "firms_flagged_relabeling": 0
     },
     {
@@ -2734,23 +2801,7 @@
       "total_ai_revenue_mm": null,
       "avg_ai_pct": null,
       "avg_relabeling_index": null,
-      "avg_rev_per_employee": 88.9,
-      "firms_flagged_relabeling": 0
-    },
-    {
-      "quarter": "2026-Q3",
-      "total_ai_revenue_mm": null,
-      "avg_ai_pct": null,
-      "avg_relabeling_index": null,
-      "avg_rev_per_employee": 82.9,
-      "firms_flagged_relabeling": 0
-    },
-    {
-      "quarter": "2026-Q4",
-      "total_ai_revenue_mm": null,
-      "avg_ai_pct": null,
-      "avg_relabeling_index": null,
-      "avg_rev_per_employee": 356.1,
+      "avg_rev_per_employee": 86.2,
       "firms_flagged_relabeling": 0
     }
   ]

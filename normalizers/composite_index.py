@@ -53,19 +53,97 @@ SIGNAL_FILES = {
     "apprenticeship":  os.path.join(DATA_DIR, "apprenticeship", "processed", "collapse.json"),
 }
 
-# Adding the apprenticeship signal (weight 0.15) rescales the original seven by
-# 0.85 so the set still sums to 1.0 and existing signals keep their relative
-# importance. apprenticeship is the only direct, posting-level measure of the
-# junior-tier collapse — see METHODOLOGY "Signal 7: The Apprenticeship Collapse".
+# 2026-07 methodology audit — two signals retired from the score.
+#
+#   vc_funding (was 0.1275): EDGAR full-text search does not return offering amounts,
+#     so all 46 matched Form D filings carry an unknown value and every one of the 17
+#     quarters reported $0.0M. The signal contributed 0.0 in 44/44 months, which capped
+#     the achievable score at 87.25 while the phase thresholds still assumed 100.
+#     Retired rather than repaired: the keyword classifier is independently broken
+#     (top match was an infrastructure fund), so recovering the amounts would have
+#     produced precise figures for the wrong deals.
+#
+#   apprenticeship (was 0.15): Census ACS is annual and the latest release is 2024-01,
+#     so the series was forward-filled flat at 5.7 for 30 consecutive months and read 0
+#     in 13 others. Because it bypassed min-max normalization its raw range topped out
+#     near 6 on a 0-100 scale, giving it 1.4% of realized influence against a 15%
+#     nominal weight. Still collected and still shown on the dashboard — excluded from
+#     the score until the next ACS release makes it a live series.
+#
+# Both are still loaded via SIGNAL_FILES/EXTRACTORS so the data remains available; only
+# the scoring weights are removed. The remaining six are the original pre-apprenticeship
+# weights renormalized over 0.7225 so the set sums to 1.0 and relative importance holds.
+# Signal polarity. A signal is INVERTED when a RISING raw value means LESS
+# displacement, so the normalizer must flip it before scoring.
+#
+#   employment   BLS professional & business services headcount. More people
+#                employed = less displacement. Inverted (always was).
+#   job_ratio    JOLTS openings index, Nov-2022 = 1.0. More job openings = less
+#                displacement. NOT inverted until the 2026-07 audit — this was a
+#                live sign error on 17.65% of the index. Professional-services
+#                openings fell 0.987 -> 0.701 (a 29% collapse in labour demand,
+#                the cleanest displacement signal in the set) and the index
+#                scored that decline 75.5 -> 30.8, reading a collapsing job
+#                market as displacement RECEDING. The bug entered when the
+#                signal was honestly renamed from `ai_to_traditional_ratio`
+#                (rising = more displacement) to JOLTS `openings_index`
+#                (rising = less); the semantics flipped, the polarity didn't.
+#
+# Not inverted, verified in the same audit: rev_per_employee (more output per
+# head = more displacement), trends, github, regulatory (more AI attention,
+# activity, and regulatory response = more displacement).
+#
+# Polarity is now expressed ONLY in the ANCHORS table below, as zero > hundred.
+# There is deliberately no separate invert flag: two sources of truth for the same
+# property is precisely how the job_ratio error survived a rename.
+
+# Fixed normalization anchors (2026-07 audit) — what 0 and 100 MEAN for each signal,
+# declared a priori instead of derived from the observed range. `zero` is the raw
+# measure that scores 0 (no displacement); `hundred` scores 100 (displacement
+# complete). When zero > hundred the mapping inverts naturally, so polarity lives
+# here and nowhere else.
+#
+# These thresholds are editorial judgments, not measurements, and they are the most
+# arguable numbers in the project. They are declared in one table precisely so they
+# can be challenged, cited, and changed deliberately rather than drifting silently
+# with the data. Every one is stated in METHODOLOGY.
+#
+#   employment        % change vs 2022-11 (ChatGPT launch, the project's baseline).
+#                     0 at +2% (sector still growing), 100 at -10% (a contraction
+#                     with no post-war precedent in professional services).
+#                     Currently -1.25%.
+#   rev_per_employee  Multiple of the 2022-11 baseline. 0 at 1.0x, 100 at 1.5x —
+#                     a 50% lift in output per head is the productivity signature
+#                     the displacement thesis predicts. Currently 1.11x.
+#   job_ratio         JOLTS openings, already indexed to 2022-11 = 1.0. 0 at 1.0
+#                     (hiring at pre-AI levels), 100 at 0.5 (openings halved).
+#                     Currently 0.70.
+#   trends            Google Trends' native 0-100 scale, used as-is. Deliberately
+#                     NOT rescaled to its observed max: search interest is nowhere
+#                     near saturation and pretending otherwise would inflate the
+#                     weakest signal in the set. Currently ~23.
+#   github            New AI-tooling repositories per month (flow). 0 at none,
+#                     100 at 5,000/month as a saturated-developer-attention
+#                     ceiling. Currently ~3,200.
+#   regulatory        AI guidance documents issued per quarter (flow). 0 at none,
+#                     100 at 20/quarter across the seven tracked regulators.
+#                     Currently 4-13.
+ANCHORS = {
+    "employment":       {"kind": "pct_vs_baseline",   "baseline_month": "2022-11", "zero": 2.0,   "hundred": -10.0},
+    "rev_per_employee": {"kind": "ratio_vs_baseline", "baseline_month": "2022-11", "zero": 1.0,   "hundred": 1.5},
+    "job_ratio":        {"kind": "absolute",                                       "zero": 1.0,   "hundred": 0.5},
+    "trends":           {"kind": "absolute",                                       "zero": 0.0,   "hundred": 100.0},
+    "github":           {"kind": "absolute",                                       "zero": 0.0,   "hundred": 5000.0},
+    "regulatory":       {"kind": "absolute",                                       "zero": 0.0,   "hundred": 20.0},
+}
+
 WEIGHTS = {
-    "employment": 0.2125,
-    "rev_per_employee": 0.17,
-    "vc_funding": 0.1275,
-    "job_ratio": 0.1275,
-    "trends": 0.085,
-    "github": 0.085,
-    "regulatory": 0.0425,
-    "apprenticeship": 0.15,
+    "employment": 0.2941,
+    "rev_per_employee": 0.2353,
+    "job_ratio": 0.1765,
+    "trends": 0.1176,
+    "github": 0.1176,
+    "regulatory": 0.0589,
 }
 
 EVENTS = [
@@ -288,13 +366,18 @@ def extract_monthly_github(data):
     if not data:
         return values
 
+    # FLOW, not stock (2026-07 audit). This previously read `total_stars`, which the
+    # collector accumulates — a monotone ratchet. Fed to a min-max normalizer, a
+    # counter that can only rise pins its latest month to ~100 by construction and
+    # carries no directional information at all. `total_new_repos` is the genuine
+    # per-month flow: new AI-tooling repositories created that month.
     agg = data.get("aggregate", [])
     if agg:
         for entry in agg:
             date = entry.get("date")
-            stars = entry.get("total_stars")
-            if date and stars is not None:
-                values[date] = stars
+            new_repos = entry.get("total_new_repos")
+            if date and new_repos is not None:
+                values[date] = new_repos
         return values
 
     # Legacy / mock shape
@@ -305,7 +388,20 @@ def extract_monthly_github(data):
 
 
 def extract_monthly_regulatory(data):
-    """Extract cumulative regulatory document count, expand quarterly to monthly."""
+    """Regulatory guidance ISSUED PER QUARTER, expanded to months.
+
+    FLOW, not stock (2026-07 audit). This previously read `cumulative_documents`,
+    a monotone counter that min-max normalization pins to ~100 at the latest month
+    regardless of whether regulators are accelerating or going quiet. The rate of
+    new guidance is the signal; the running total is an artifact of how long the
+    project has been collecting.
+
+    Caveat retained from the audit: the zeros before 2025-Q3 are a feed-depth
+    artifact, not regulatory silence — the collector reads live RSS feeds that only
+    carry recent items, so NIST's AI RMF (Jan 2023) and the EU AI Act (2024) fall
+    inside the all-zero window. Fixing that requires a document ledger, not a
+    normalization change; tracked separately.
+    """
     values = {}
     if data and "aggregate" in data:
         for entry in data["aggregate"]:
@@ -314,11 +410,13 @@ def extract_monthly_regulatory(data):
                 continue
             year = int(q[:4])
             qn = int(q[-1])
-            cum_docs = entry.get("cumulative_documents", 0)
+            docs = entry.get("total_documents")
+            if docs is None:
+                continue
             for m in range(1, 4):
                 month_num = (qn - 1) * 3 + m
                 date_str = f"{year}-{month_num:02d}"
-                values[date_str] = cum_docs
+                values[date_str] = docs
     return values
 
 
@@ -364,26 +462,105 @@ EXTRACTORS = {
 }
 
 
-def normalize_series(values, invert=False):
-    """Normalize a dict of {date: value} to 0-100 based on min/max range."""
+def _baseline_value(values, month):
+    """Raw value at the declared baseline month, or None if it isn't present.
+
+    Deliberately does NOT fall back to the earliest available month. An earlier
+    draft did, and it silently re-scaled the entire series whenever the baseline
+    was missing — reintroducing the exact look-ahead defect anchors exist to
+    remove. A missing baseline is a data problem and must surface as one.
+    """
     if not values:
-        return {}, 0, 0
-    vals = list(values.values())
-    lo = min(vals)
-    hi = max(vals)
-    span = hi - lo if hi != lo else 1
+        return None
+    return values.get(month)
+
+
+def normalize_to_anchors(values, anchor):
+    """Map a raw series to 0-100 against FIXED anchors.
+
+    Replaces min-max-over-observed-range (2026-07 audit). Min-max had three
+    defects, all fatal for a published index:
+
+      1. Retroactive rewriting. lo/hi were recomputed from the whole series every
+         run, so each new extreme silently restated every previously published
+         month. A weekly run rewrote all 44 months; a score screenshotted last
+         month could not be reproduced this month.
+      2. Look-ahead bias. The score for month M depended on data from months
+         after M, so no value was knowable at the time it described.
+      3. Implicit re-weighting. A signal's influence became a function of its
+         observed range, not its assigned weight — which is how a 0.15-weight
+         signal ended up with 1.4% of realized influence.
+
+    Anchors fix all three: `zero` and `hundred` are declared a priori, so a
+    month's score depends only on that month's data and never changes.
+
+    Polarity is carried by the anchors themselves — when `zero` > `hundred`
+    (employment, job_ratio) the mapping inverts naturally. There is no separate
+    invert flag to fall out of sync with a renamed signal, which is exactly how
+    the job_ratio sign error survived.
+
+    Returns (normalized, zero, hundred). Values are clamped to [0, 100]; an
+    excursion past an anchor is reported via the clamp count, not by silently
+    rescaling everything else.
+    """
+    if not values:
+        return {}, None, None
+
+    kind = anchor["kind"]
+    zero, hundred = anchor["zero"], anchor["hundred"]
+
+    if kind in ("pct_vs_baseline", "ratio_vs_baseline"):
+        base = _baseline_value(values, anchor["baseline_month"])
+        if not base:
+            print(
+                f"  ERROR: baseline month {anchor['baseline_month']} missing from series "
+                f"— cannot normalize against an absent baseline; signal dropped"
+            )
+            return {}, zero, hundred
 
     normalized = {}
     for date, val in values.items():
-        if invert:
-            normalized[date] = round((hi - val) / span * 100, 1)
+        if kind == "pct_vs_baseline":
+            measure = (val - base) / base * 100.0
+        elif kind == "ratio_vs_baseline":
+            measure = val / base
         else:
-            normalized[date] = round((val - lo) / span * 100, 1)
-    return normalized, lo, hi
+            measure = val
+        score = (measure - zero) / (hundred - zero) * 100.0
+        normalized[date] = round(max(0.0, min(100.0, score)), 1)
+
+    return normalized, zero, hundred
 
 
-def compute_composite_from_signals():
+def _run_health_gate(allow_degraded):
+    """Refuse to compute a published score from broken inputs.
+
+    The composite is what the audit caught silently averaging in a dead signal, so
+    the gate lives here, not only in CI: no path — cron, manual, or a future caller —
+    can publish a number without every scored signal passing. `--allow-degraded`
+    exists as a deliberate, logged override for local experimentation; it must never
+    be the default in a workflow.
+    """
+    import validate  # local import: validate.py imports this module
+
+    health = validate.validate()
+    if health["gate"] == "pass":
+        print(f"  Health gate: PASS ({health['as_of']})")
+        return
+    failures = ", ".join(health["scored_failures"])
+    if allow_degraded:
+        print(f"  Health gate: FAIL ({failures}) — proceeding under --allow-degraded")
+        return
+    print(f"  Health gate: FAIL — scored signals broken: {failures}")
+    print("  Refusing to publish a composite from broken inputs. "
+          "Fix the collector, or re-run with --allow-degraded to override.")
+    sys.exit(1)
+
+
+def compute_composite_from_signals(allow_degraded=False):
     """Load all signal files, normalize, weight, and produce composite index."""
+    _run_health_gate(allow_degraded)
+
     print("  Loading signal files...")
 
     # Load all signal data
@@ -407,9 +584,10 @@ def compute_composite_from_signals():
             norm_series[key] = {d: max(0.0, min(100.0, v)) for d, v in raw_series.get(key, {}).items()}
             print(f"    {key}: crossover-progress (raw 0-100, no min-max)")
             continue
-        invert = (key == "employment")  # Lower headcount = higher displacement
-        norm_series[key], lo, hi = normalize_series(raw_series.get(key, {}), invert=invert)
-        print(f"    {key} range: {lo:.1f} - {hi:.1f} {'(inverted)' if invert else ''}")
+        norm_series[key], zero, hundred = normalize_to_anchors(
+            raw_series.get(key, {}), ANCHORS[key]
+        )
+        print(f"    {key} anchors: 0 = {zero}, 100 = {hundred}")
 
     # Build monthly composite. Anchor the month axis to BLS, then forward-fill
     # slower-cadence signals so months past their last reported quarter still
@@ -426,8 +604,9 @@ def compute_composite_from_signals():
         if key == "apprenticeship":
             norm_series[key] = {d: max(0.0, min(100.0, v)) for d, v in raw_series.get(key, {}).items()}
             continue
-        invert = (key == "employment")
-        norm_series[key], _, _ = normalize_series(raw_series.get(key, {}), invert=invert)
+        norm_series[key], _, _ = normalize_to_anchors(
+            raw_series.get(key, {}), ANCHORS[key]
+        )
 
     monthly = []
     prev_score = None
@@ -510,9 +689,62 @@ def save_json(data, path):
 # CLI
 # ---------------------------------------------------------------------------
 
+def save_snapshot(data):
+    """Write an immutable dated copy of each published index.
+
+    With min-max normalization a re-run silently restated every historical month,
+    so a score cited last week could not be reproduced this week. Fixed anchors
+    make scores stable in principle; snapshots make that auditable in practice —
+    if a published number ever does move, the diff is on disk.
+
+    Named by the newest month covered rather than by wall-clock date, so re-running
+    the same inputs overwrites its own snapshot instead of accumulating duplicates.
+    """
+    snap_dir = os.path.join(DATA_DIR, "composite", "snapshots")
+    os.makedirs(snap_dir, exist_ok=True)
+    latest = data["monthly"][-1]["date"] if data.get("monthly") else "empty"
+    path = os.path.join(snap_dir, f"displacement_index_through_{latest}.json")
+    with open(path, "w") as f:
+        json.dump(data, f, indent=2)
+    print(f"  Snapshot: {os.path.relpath(path, BASE_DIR)}")
+
+
+def report_influence(data):
+    """Compare each signal's NOMINAL weight to its REALIZED influence.
+
+    Realized influence is the share of total across-signal movement a signal
+    actually supplies — its weighted contribution's range over the series divided
+    by the sum of all such ranges. A weight table is a claim about influence, and
+    before the 2026-07 audit that claim was false by an order of magnitude: the
+    apprenticeship signal carried 15% nominal weight and delivered 1.4%.
+
+    A gap is not automatically a defect — a signal that genuinely holds steady
+    within its anchor band SHOULD contribute stably rather than being stretched to
+    fill 0-100, which is what min-max used to do. The point is that the gap is now
+    visible every run instead of discoverable only by audit.
+    """
+    weights, monthly = data.get("weights", {}), data.get("monthly", [])
+    if not weights or not monthly:
+        return
+    spans = {
+        k: max(x["components"][k]["weighted"] for x in monthly)
+        - min(x["components"][k]["weighted"] for x in monthly)
+        for k in weights
+    }
+    total = sum(spans.values())
+    print("\n  Nominal weight vs realized influence:")
+    for key in sorted(weights, key=lambda k: -weights[k]):
+        realized = (spans[key] / total * 100) if total else 0.0
+        nominal = weights[key] * 100
+        flag = "  <-- inert" if realized < 1.0 else ""
+        print(f"    {key:18s} nominal {nominal:5.2f}%   realized {realized:5.1f}%{flag}")
+
+
 def main():
     parser = argparse.ArgumentParser(description="Composite Displacement Index")
     parser.add_argument("--mock", action="store_true", help="Generate mock composite data directly")
+    parser.add_argument("--allow-degraded", action="store_true",
+                        help="Publish even if the signal health gate fails (logged override)")
     args = parser.parse_args()
 
     print("Composite Displacement Index")
@@ -521,9 +753,12 @@ def main():
     if args.mock:
         data = generate_mock()
     else:
-        data = compute_composite_from_signals()
+        data = compute_composite_from_signals(allow_degraded=args.allow_degraded)
 
     save_json(data, OUTPUT_PATH)
+    if not args.mock:
+        save_snapshot(data)
+        report_influence(data)
 
     # Print summary
     first = data["monthly"][0]

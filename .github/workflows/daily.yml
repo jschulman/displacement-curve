@@ -18,6 +18,8 @@ jobs:
           python-version: '3.12'
       - name: Install dependencies
         run: pip install -r requirements.txt
+      - name: Run integrity tests
+        run: python -m unittest discover -s tests
       - name: Collect Google Trends data
         continue-on-error: true
         run: python collectors/google_trends.py
@@ -25,6 +27,8 @@ jobs:
         run: python collectors/github_activity.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Validate the signals this run collected
+        run: python normalizers/validate.py --signals trends,github
       - name: Copy processed data to docs
         run: |
           mkdir -p docs/data/bls/processed docs/data/trends/processed docs/data/github/processed

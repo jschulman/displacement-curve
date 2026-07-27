@@ -18,6 +18,8 @@ jobs:
           python-version: '3.12'
       - name: Install dependencies
         run: pip install -r requirements.txt
+      - name: Run integrity tests
+        run: python -m unittest discover -s tests
       - name: Collect job postings data (BLS JOLTS)
         run: python collectors/job_postings.py --api-key "$BLS_API_KEY"
         env:
@@ -28,6 +30,8 @@ jobs:
         run: python collectors/youth_share.py --years 2015-$(date -u +%Y)
         env:
           CENSUS_API_KEY: ${{ secrets.CENSUS_API_KEY }}
+      - name: Validate signal health (fails the run if a scored signal is dead)
+        run: python normalizers/validate.py
       - name: Recompute composite displacement index
         run: python normalizers/composite_index.py
       - name: Compute Apprenticeship Inflection Distance
@@ -39,7 +43,7 @@ jobs:
           mkdir -p docs/data/regulatory/processed
           cp data/regulatory/processed/*.json docs/data/regulatory/processed/
           mkdir -p docs/data/composite
-          cp data/composite/*.json docs/data/composite/
+          cp data/composite/*.json docs/data/composite/ 2>/dev/null || true
           mkdir -p docs/data/apprenticeship/processed
           cp data/apprenticeship/processed/*.json docs/data/apprenticeship/processed/
       - name: Commit and push

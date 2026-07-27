@@ -136,50 +136,121 @@ def fetch_earnings_from_edgar(tickers):
     return raw_data
 
 
+def _period_months(start, end):
+    """Inclusive length of an XBRL period in months, or None if undatable.
+
+    XBRL start/end are ISO dates. A discrete quarter spans 3, a half 6, a
+    three-quarter YTD 9, a fiscal year 12. Day-level jitter (52/53-week
+    retail calendars) is absorbed by rounding on month boundaries.
+    """
+    if not start or not end:
+        return None
+    try:
+        sy, sm, _ = (int(p) for p in start.split("-"))
+        ey, em, _ = (int(p) for p in end.split("-"))
+    except (ValueError, AttributeError):
+        return None
+    return (ey - sy) * 12 + (em - sm) + 1
+
+
+def _calendar_quarter(end):
+    """Map a period END date to the calendar quarter it falls in.
+
+    Fiscal labels are NOT usable for time alignment: Booz Allen's fiscal year
+    ends 03-31, so its fiscal Q4 (Jan-Mar) carries fp=FY/fy=2025 and the old
+    code labelled it 2025-Q4 — which the composite then expanded to Oct-Dec,
+    placing the data nine months late. Accenture (Aug year-end) skews the
+    other way. Deriving from the end date puts every filer on one axis.
+    """
+    try:
+        ey, em, _ = (int(p) for p in end.split("-"))
+    except (ValueError, AttributeError):
+        return None
+    return f"{ey}-Q{(em - 1) // 3 + 1}"
+
+
 def _parse_xbrl_revenue_entries(usd_entries):
     """
-    Parse USD-denominated XBRL entries into quarterly revenue data.
+    Parse USD-denominated XBRL entries into DISCRETE quarterly revenue.
+
+    Two defects this guards against, both found in the 2026-07 audit:
+
+    1. Annual totals booked as Q4. A 10-K carries fp=FY holding the full-year
+       figure; the old code mapped it straight to Q4. Booz Allen FY2025 then
+       published a Q4 of $11,980M against ~$2,900M quarters — a 3.99x spike
+       every fourth quarter that produced two of the index's three phase
+       transitions. Real Q4 = FY - (Q1+Q2+Q3) = $2,974.6M.
+
+    2. YTD entries silently substituted for discrete quarters. companyfacts
+       returns BOTH cumulative and discrete rows under the same fp label
+       (BAH fp=Q3 appears as 2024-04-01..2024-12-31 = $9,005.4M YTD *and*
+       2024-10-01..2024-12-31 = $2,917.2M discrete). The old dedup kept
+       whichever happened to appear last, so the series mixed the two.
+
+    Only 3-month periods are accepted as quarters. 12-month periods are held
+    aside and used solely to derive the one quarter a 10-K does not report
+    discretely. Quarters are keyed to the CALENDAR quarter of the period end.
 
     Returns list of {quarter, value_mm} dicts, or empty list.
     """
-    quarterly = []
-    seen = set()
+    discrete = {}   # calendar quarter -> (value, filed) for 3-month periods
+    annual = []     # 12-month periods, for Q4 derivation
+
     for entry in usd_entries:
-        fy = entry.get("fy")
-        fp = entry.get("fp")
         val = entry.get("val")
-
-        if fy is None or fp is None or val is None:
+        start, end = entry.get("start"), entry.get("end")
+        if val is None or not end:
             continue
 
-        # We want quarterly periods: Q1, Q2, Q3, Q4
-        # fp values: Q1, Q2, Q3, FY (for annual)
-        # For 10-K filings with fp=FY, that's the annual total - map to Q4
-        if fp not in ("Q1", "Q2", "Q3", "Q4", "FY"):
+        months = _period_months(start, end)
+        if months is None:
             continue
+        filed = entry.get("filed") or ""
 
-        if fp == "FY":
-            quarter_label = f"{fy}-Q4"
-        else:
-            quarter_label = f"{fy}-{fp}"
+        if months == 3:
+            quarter = _calendar_quarter(end)
+            if not quarter:
+                continue
+            # Restatements: prefer the most recently filed figure.
+            prior = discrete.get(quarter)
+            if prior is None or filed >= prior[1]:
+                discrete[quarter] = (val, filed)
+        elif months == 12:
+            annual.append((start, end, val, filed))
 
-        # Deduplicate - keep latest filing for each quarter
-        if quarter_label in seen:
-            for q in quarterly:
-                if q["quarter"] == quarter_label:
-                    q["value_mm"] = round(val / 1_000_000, 1)
-                    break
+    # Derive the unreported quarter of each fiscal year: FY total minus the
+    # three discrete quarters that fall inside the same 12-month window.
+    for start, end, total, filed in annual:
+        target = _calendar_quarter(end)
+        if not target or target in discrete:
             continue
+        covered = [
+            (q, v) for q, (v, _) in discrete.items()
+            if start <= _quarter_end_date(q) <= end
+        ]
+        if len(covered) != 3:
+            # Can't decompose safely — drop rather than publish an annual
+            # figure in a quarterly slot.
+            continue
+        derived = total - sum(v for _, v in covered)
+        if derived <= 0:
+            continue
+        discrete[target] = (derived, filed)
 
-        seen.add(quarter_label)
-        quarterly.append({
-            "quarter": quarter_label,
-            "value_mm": round(val / 1_000_000, 1),
-        })
-
-    if quarterly:
-        quarterly.sort(key=lambda x: x["quarter"])
+    quarterly = [
+        {"quarter": q, "value_mm": round(v / 1_000_000, 1)}
+        for q, (v, _) in sorted(discrete.items())
+    ]
     return quarterly
+
+
+_QUARTER_END_MMDD = {1: "03-31", 2: "06-30", 3: "09-30", 4: "12-31"}
+
+
+def _quarter_end_date(quarter):
+    """Last day of a calendar quarter label, as an ISO date string."""
+    year, qn = quarter.split("-Q")
+    return f"{year}-{_QUARTER_END_MMDD[int(qn)]}"
 
 
 def _extract_revenue_quarterly(facts):

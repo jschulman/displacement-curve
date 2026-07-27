@@ -165,7 +165,14 @@ def main():
             "quarterly": normalized_quarterly,
         }
 
-        # Print summary for this firm
+        # Print summary for this firm. A firm can legitimately have no quarterly
+        # rows: INFY, WIT and GLOB file only 12-month periods in XBRL, so once the
+        # collector stopped booking annual totals as Q4 (2026-07 audit) they carry
+        # no quarterly revenue at all. Guard rather than IndexError on [-1].
+        if not normalized_quarterly:
+            print(f"  {ticker} ({firm['name']}): no quarterly periods reported — skipped")
+            continue
+
         last_q = normalized_quarterly[-1]
         print(f"  {ticker} ({firm['name']}):")
         ai_pct_str = f"{last_q['ai_pct']}%" if last_q.get('ai_pct') is not None else "N/A"

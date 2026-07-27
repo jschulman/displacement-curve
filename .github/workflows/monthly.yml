@@ -18,12 +18,16 @@ jobs:
           python-version: '3.12'
       - name: Install dependencies
         run: pip install -r requirements.txt
+      - name: Run integrity tests
+        run: python -m unittest discover -s tests
       - name: Collect BLS employment data
         run: python collectors/bls_employment.py --api-key "$BLS_API_KEY"
         env:
           BLS_API_KEY: ${{ secrets.BLS_API_KEY }}
-      - name: Collect VC funding data
+      - name: Collect VC funding data (informational — retired from the composite)
         run: python collectors/vc_funding.py
+      - name: Validate the signal this run collected
+        run: python normalizers/validate.py --signals employment
       - name: Copy processed data to docs
         run: |
           mkdir -p docs/data/bls/processed docs/data/vc/processed

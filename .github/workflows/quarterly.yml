@@ -18,12 +18,16 @@ jobs:
           python-version: '3.12'
       - name: Install dependencies
         run: pip install -r requirements.txt
+      - name: Run integrity tests
+        run: python -m unittest discover -s tests
       - name: Collect earnings data
         run: python collectors/earnings_transcripts.py
       - name: Collect SEC workforce data
         run: python collectors/sec_workforce.py
       - name: Run normalizer
         run: python normalizers/earnings_normalizer.py
+      - name: Validate the signal this run collected
+        run: python normalizers/validate.py --signals rev_per_employee
       - name: Copy to docs
         run: |
           mkdir -p docs/data/earnings/processed docs/data/sec/processed

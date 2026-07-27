@@ -485,6 +485,18 @@
   function renderInflection(data) {
     var el = document.getElementById("inflection-section");
     if (!el) return;
+
+    // WITHHELD (2026-07 methodology audit). The crossover year range was derived from
+    // forecast anchors hardcoded in normalizers/inflection_distance.py with no author,
+    // publication, or URL — and applied on top of a composite slope that the same audit
+    // found to be partly sign-inverted and partly a filing artifact. Publishing a specific
+    // year on that basis is opinion presented as data. The panel stays hidden until the
+    // anchors are replaced with cited, externally-published forecasts and the underlying
+    // composite corrections have landed. Render path below is intentionally preserved.
+    el.style.display = "none";
+    return;
+
+    /* eslint-disable no-unreachable */
     if (!data || !data.estimate || !data.components || !data.components.crossover) {
       el.style.display = "none";
       return;
@@ -506,6 +518,7 @@
     // Progress bar width
     var bar = document.getElementById("inflection-bar-fill");
     if (bar) bar.style.width = Math.max(2, Math.min(100, cx.progress_pct)) + "%";
+    /* eslint-enable no-unreachable */
   }
 
   // ---- Timeline Chart ----
@@ -1548,7 +1561,7 @@
   function render() {
     // Update last-updated from metadata
     var dates = [];
-    ["employment", "trends", "github", "earnings", "workforce", "vc", "jobs", "regulatory"].forEach(function (key) {
+    ["employment", "trends", "github", "earnings", "workforce", "jobs", "regulatory"].forEach(function (key) {
       var d = state.data[key];
       if (d && d.metadata && d.metadata.last_updated) {
         dates.push(d.metadata.last_updated);
@@ -1573,16 +1586,20 @@
     var trendsSummary = getTrendsSummary(state.data.trends);
     renderCard("trends", trendsSummary);
 
-    var earningsSummary = getEarningsSummary(state.data.earnings);
-    renderCard("earnings", earningsSummary);
+    // "AI Revenue Reporting" card REMOVED (2026-07 audit). Firms do not tag AI revenue
+    // separately in XBRL, so total_ai_revenue_mm is null in all 68 quarters and the card
+    // fell back to avg_rev_per_employee — rendering a number identical to the Revenue Per
+    // Employee card beside it, under an AI-specific label. The earnings FETCH stays because
+    // the Revenue Per Employee card is derived from it.
 
     var workforceSummary = getWorkforceSummary(state.data.earnings);
     renderCard("workforce", workforceSummary);
 
     renderCard("youth", getYouthSummary(state.data.youth));
 
-    var vcSummary = getVcSummary(state.data.vc);
-    renderCard("vc", vcSummary);
+    // "VC Funding: AI Services" card REMOVED (2026-07 audit). EDGAR full-text search does
+    // not return offering amounts, so all 46 matched deals carry an unknown value and every
+    // quarter reports $0.0M. Signal retired from the composite in the same pass.
 
     var jobsSummary = getJobsSummary(state.data.jobs);
     renderCard("jobs", jobsSummary);
