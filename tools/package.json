@@ -1,0 +1,14 @@
+{
+  "name": "displacement-curve-tools",
+  "private": true,
+  "type": "module",
+  "description": "Build-time chart rendering for the displacement-curve GitHub Pages site.",
+  "scripts": {
+    "render": "node render_chart.mjs ../data/composite/displacement_index.json ../docs/displacement-index.png"
+  },
+  "dependencies": {
+    "@resvg/resvg-js": "2.6.2",
+    "vega": "6.1.2",
+    "vega-lite": "6.2.0"
+  }
+}
