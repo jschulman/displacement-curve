@@ -38,8 +38,10 @@ const C = {
   ink: '#e6edf3', ink2: '#9da7b3', muted: '#7d8590', grid: 'rgba(110,118,129,0.28)', surface: '#0d1117',
 };
 const bands = [
-  { y0: 0, y1: 25, label: 'Pre-disruption · 0–25', fill: C.bandLow },
-  { y0: 25, y1: 50, label: 'Productivity · 26–50', fill: C.bandHigh },
+  // ly = label y-position, placed in open space inside each band so the zone
+  // labels clear the event labels that bottom out along the top edge.
+  { y0: 0, y1: 25, ly: 22, label: 'Pre-disruption · 0–25', fill: C.bandLow },
+  { y0: 25, y1: 50, ly: 37, label: 'Productivity · 26–50', fill: C.bandHigh },
 ];
 const Y = { field: 'score', type: 'quantitative', scale: { domain: [0, 50] },
   axis: { title: 'Composite score', titleColor: C.ink2, values: [0, 10, 20, 30, 40, 50], grid: true, gridColor: C.grid, tickColor: C.grid, labelColor: C.muted } };
@@ -55,8 +57,8 @@ const spec = {
   layer: [
     { data: { values: bands }, mark: { type: 'rect' },
       encoding: { y: { field: 'y0', type: 'quantitative', scale: { domain: [0, 50] } }, y2: { field: 'y1' }, color: { field: 'fill', type: 'nominal', scale: null, legend: null } } },
-    { data: { values: bands }, mark: { type: 'text', align: 'left', baseline: 'top', dx: 8, dy: 5, font: 'sans-serif', fontSize: 12, fontWeight: 600, color: C.muted },
-      encoding: { y: { field: 'y1', type: 'quantitative' }, x: { value: 4 }, text: { field: 'label' } } },
+    { data: { values: bands }, mark: { type: 'text', align: 'left', baseline: 'middle', dx: 8, font: 'sans-serif', fontSize: 12, fontWeight: 600, color: C.muted },
+      encoding: { y: { field: 'ly', type: 'quantitative' }, x: { value: 4 }, text: { field: 'label' } } },
     { data: { values: evMuted }, mark: { type: 'rule', strokeDash: [3, 3], color: C.evMuted, strokeWidth: 1 }, encoding: { x: X } },
     { data: { values: evEmph }, mark: { type: 'rule', strokeDash: [4, 2], color: C.evEmph, strokeWidth: 2 }, encoding: { x: X } },
     { data: { values: rows }, mark: { type: 'line', color: C.line, strokeWidth: 2.5, interpolate: 'monotone' }, encoding: { x: X, y: Y } },
