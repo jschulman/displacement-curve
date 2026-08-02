@@ -46,10 +46,18 @@ jobs:
           cp data/composite/*.json docs/data/composite/ 2>/dev/null || true
           mkdir -p docs/data/apprenticeship/processed
           cp data/apprenticeship/processed/*.json docs/data/apprenticeship/processed/
+      - name: Set up Node (for static chart render)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Render static index chart (social/OG preview + no-JS fallback)
+        run: |
+          npm --prefix tools install --no-audit --no-fund
+          node tools/render_chart.mjs data/composite/displacement_index.json docs/displacement-index.png
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/ docs/data/
+          git add data/ docs/data/ docs/displacement-index.png
           git diff --staged --quiet || git commit -m "chore: weekly data collection $(date -u +%Y-%m-%d)"
           git push

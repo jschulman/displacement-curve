@@ -12,3 +12,6 @@ build/
 
 # Raw API responses (large, regenerable)
 data/*/raw/
+
+# Node deps for the static chart renderer (tools/)
+tools/node_modules/
