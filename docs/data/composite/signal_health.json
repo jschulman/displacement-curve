@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-07",
+  "as_of": "2026-08",
   "gate": "pass",
   "gate_scope": "all_scored",
   "scored_failures": [],
@@ -17,7 +17,7 @@
       "n_records": 54,
       "n_nonzero": 54,
       "newest": "2026-06",
-      "lag_months": 1,
+      "lag_months": 2,
       "reason": "healthy"
     },
     "rev_per_employee": {
@@ -32,7 +32,7 @@
       "n_records": 93,
       "n_nonzero": 93,
       "newest": "2026-06",
-      "lag_months": 1,
+      "lag_months": 2,
       "reason": "healthy"
     },
     "job_ratio": {
@@ -47,7 +47,7 @@
       "n_records": 53,
       "n_nonzero": 53,
       "newest": "2026-05",
-      "lag_months": 2,
+      "lag_months": 3,
       "reason": "healthy"
     },
     "trends": {
@@ -59,9 +59,9 @@
         "has_nonzero": true,
         "fresh": true
       },
-      "n_records": 46,
-      "n_nonzero": 25,
-      "newest": "2026-07",
+      "n_records": 47,
+      "n_nonzero": 24,
+      "newest": "2026-08",
       "lag_months": 0,
       "reason": "healthy"
     },
@@ -74,9 +74,9 @@
         "has_nonzero": true,
         "fresh": true
       },
-      "n_records": 45,
-      "n_nonzero": 45,
-      "newest": "2026-07",
+      "n_records": 46,
+      "n_nonzero": 46,
+      "newest": "2026-08",
       "lag_months": 0,
       "reason": "healthy"
     },
@@ -91,7 +91,7 @@
       },
       "n_records": 51,
       "n_nonzero": 15,
-      "newest": "2026-07",
+      "newest": "2026-08",
       "lag_months": 0,
       "reason": "healthy"
     },
@@ -107,7 +107,7 @@
       "n_records": 9,
       "n_nonzero": 6,
       "newest": "2024-01",
-      "lag_months": 30,
+      "lag_months": 31,
       "reason": "healthy"
     },
     "vc_funding": {
@@ -121,7 +121,7 @@
       },
       "n_records": 51,
       "n_nonzero": 0,
-      "newest": "2026-07",
+      "newest": "2026-08",
       "lag_months": 0,
       "reason": "every value is zero \u2014 collector is producing nothing usable"
     }
