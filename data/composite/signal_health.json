@@ -2,8 +2,7 @@
   "as_of": "2026-08",
   "gate": "pass",
   "gate_scope": [
-    "github",
-    "trends"
+    "employment"
   ],
   "scored_failures": [],
   "gating_failures": [],
@@ -17,10 +16,10 @@
         "has_nonzero": true,
         "fresh": true
       },
-      "n_records": 54,
-      "n_nonzero": 54,
-      "newest": "2026-06",
-      "lag_months": 2,
+      "n_records": 55,
+      "n_nonzero": 55,
+      "newest": "2026-07",
+      "lag_months": 1,
       "reason": "healthy"
     },
     "rev_per_employee": {
