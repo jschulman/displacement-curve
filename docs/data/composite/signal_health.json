@@ -14,10 +14,10 @@
         "has_nonzero": true,
         "fresh": true
       },
-      "n_records": 54,
-      "n_nonzero": 54,
-      "newest": "2026-06",
-      "lag_months": 2,
+      "n_records": 55,
+      "n_nonzero": 55,
+      "newest": "2026-07",
+      "lag_months": 1,
       "reason": "healthy"
     },
     "rev_per_employee": {
@@ -44,10 +44,10 @@
         "has_nonzero": true,
         "fresh": true
       },
-      "n_records": 53,
-      "n_nonzero": 53,
-      "newest": "2026-05",
-      "lag_months": 3,
+      "n_records": 54,
+      "n_nonzero": 54,
+      "newest": "2026-06",
+      "lag_months": 2,
       "reason": "healthy"
     },
     "trends": {
@@ -60,7 +60,7 @@
         "fresh": true
       },
       "n_records": 47,
-      "n_nonzero": 24,
+      "n_nonzero": 33,
       "newest": "2026-08",
       "lag_months": 0,
       "reason": "healthy"
