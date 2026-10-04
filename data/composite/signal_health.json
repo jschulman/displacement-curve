@@ -62,10 +62,10 @@
         "has_nonzero": true,
         "fresh": true
       },
-      "n_records": 48,
-      "n_nonzero": 30,
-      "newest": "2026-09",
-      "lag_months": 1,
+      "n_records": 49,
+      "n_nonzero": 37,
+      "newest": "2026-10",
+      "lag_months": 0,
       "reason": "healthy"
     },
     "github": {
