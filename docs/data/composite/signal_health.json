@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09",
+  "as_of": "2026-10",
   "gate": "pass",
   "gate_scope": "all_scored",
   "scored_failures": [],
@@ -14,9 +14,9 @@
         "has_nonzero": true,
         "fresh": true
       },
-      "n_records": 56,
-      "n_nonzero": 56,
-      "newest": "2026-08",
+      "n_records": 57,
+      "n_nonzero": 57,
+      "newest": "2026-09",
       "lag_months": 1,
       "reason": "healthy"
     },
@@ -32,7 +32,7 @@
       "n_records": 93,
       "n_nonzero": 93,
       "newest": "2026-06",
-      "lag_months": 3,
+      "lag_months": 4,
       "reason": "healthy"
     },
     "job_ratio": {
@@ -44,9 +44,9 @@
         "has_nonzero": true,
         "fresh": true
       },
-      "n_records": 55,
-      "n_nonzero": 55,
-      "newest": "2026-07",
+      "n_records": 56,
+      "n_nonzero": 56,
+      "newest": "2026-08",
       "lag_months": 2,
       "reason": "healthy"
     },
@@ -59,9 +59,9 @@
         "has_nonzero": true,
         "fresh": true
       },
-      "n_records": 48,
-      "n_nonzero": 35,
-      "newest": "2026-09",
+      "n_records": 49,
+      "n_nonzero": 40,
+      "newest": "2026-10",
       "lag_months": 0,
       "reason": "healthy"
     },
@@ -74,9 +74,9 @@
         "has_nonzero": true,
         "fresh": true
       },
-      "n_records": 47,
-      "n_nonzero": 47,
-      "newest": "2026-09",
+      "n_records": 48,
+      "n_nonzero": 48,
+      "newest": "2026-10",
       "lag_months": 0,
       "reason": "healthy"
     },
@@ -90,8 +90,8 @@
         "fresh": true
       },
       "n_records": 51,
-      "n_nonzero": 12,
-      "newest": "2026-09",
+      "n_nonzero": 15,
+      "newest": "2026-10",
       "lag_months": 0,
       "reason": "healthy"
     },
@@ -107,7 +107,7 @@
       "n_records": 9,
       "n_nonzero": 6,
       "newest": "2024-01",
-      "lag_months": 32,
+      "lag_months": 33,
       "reason": "healthy"
     },
     "vc_funding": {
@@ -121,7 +121,7 @@
       },
       "n_records": 51,
       "n_nonzero": 0,
-      "newest": "2026-09",
+      "newest": "2026-10",
       "lag_months": 0,
       "reason": "every value is zero \u2014 collector is producing nothing usable"
     }

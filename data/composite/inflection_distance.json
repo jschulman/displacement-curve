@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-09-28"
+    "last_updated": "2026-10-11"
   },
   "crossover_definition": "youth share of professional-services employment falls to 50% of its 2015-2019 baseline",
   "estimate": {
@@ -30,12 +30,12 @@
       "trajectory": "flat"
     },
     "hires_trajectory": {
-      "hires_index_latest": 0.783,
-      "trailing": 0.886,
+      "hires_index_latest": 0.814,
+      "trailing": 0.869,
       "falling": true
     },
     "composite": {
-      "score": 48.0,
+      "score": 46.5,
       "phase": "Productivity"
     }
   },

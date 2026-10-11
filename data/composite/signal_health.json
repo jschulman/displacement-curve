@@ -1,10 +1,7 @@
 {
   "as_of": "2026-10",
   "gate": "pass",
-  "gate_scope": [
-    "github",
-    "trends"
-  ],
+  "gate_scope": "all_scored",
   "scored_failures": [],
   "gating_failures": [],
   "signals": {
@@ -47,10 +44,10 @@
         "has_nonzero": true,
         "fresh": true
       },
-      "n_records": 55,
-      "n_nonzero": 55,
-      "newest": "2026-07",
-      "lag_months": 3,
+      "n_records": 56,
+      "n_nonzero": 56,
+      "newest": "2026-08",
+      "lag_months": 2,
       "reason": "healthy"
     },
     "trends": {
@@ -93,7 +90,7 @@
         "fresh": true
       },
       "n_records": 51,
-      "n_nonzero": 12,
+      "n_nonzero": 15,
       "newest": "2026-10",
       "lag_months": 0,
       "reason": "healthy"
