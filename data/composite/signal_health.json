@@ -2,8 +2,7 @@
   "as_of": "2026-10",
   "gate": "pass",
   "gate_scope": [
-    "github",
-    "trends"
+    "rev_per_employee"
   ],
   "scored_failures": [],
   "gating_failures": [],

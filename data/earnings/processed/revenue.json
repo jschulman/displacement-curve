@@ -1,7 +1,7 @@
 {
   "metadata": {
     "source": "SEC EDGAR XBRL",
-    "last_updated": "2026-07-27",
+    "last_updated": "2026-10-15",
     "mock": false
   },
   "firms": {
@@ -1040,6 +1040,13 @@
           "ai_revenue_mm": null,
           "headcount": null,
           "revenue_per_employee": null
+        },
+        {
+          "quarter": "2026-Q2",
+          "total_revenue_mm": 1414.8,
+          "ai_revenue_mm": null,
+          "headcount": null,
+          "revenue_per_employee": null
         }
       ]
     },
@@ -1305,6 +1312,13 @@
         {
           "quarter": "2026-Q1",
           "total_revenue_mm": 1511.0,
+          "ai_revenue_mm": null,
+          "headcount": null,
+          "revenue_per_employee": null
+        },
+        {
+          "quarter": "2026-Q2",
+          "total_revenue_mm": 1675.9,
           "ai_revenue_mm": null,
           "headcount": null,
           "revenue_per_employee": null
