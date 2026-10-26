@@ -1,7 +1,7 @@
 {
   "metadata": {
     "source": "Displacement Curve Composite",
-    "last_updated": "2026-10-19",
+    "last_updated": "2026-10-26",
     "mock": false,
     "version": "1.0"
   },
@@ -328,7 +328,7 @@
     },
     {
       "date": "2023-07",
-      "score": 24.4,
+      "score": 24.3,
       "phase": "Pre-disruption",
       "phase_range": "0-25",
       "components": {
@@ -348,9 +348,9 @@
           "weighted": 14.4
         },
         "trends": {
-          "raw_value": 0.6,
-          "normalized": 0.6,
-          "weighted": 0.07
+          "raw_value": 0.0,
+          "normalized": 0.0,
+          "weighted": 0.0
         },
         "github": {
           "raw_value": 10,
@@ -367,7 +367,7 @@
     },
     {
       "date": "2023-08",
-      "score": 19.4,
+      "score": 19.3,
       "phase": "Pre-disruption",
       "phase_range": "0-25",
       "components": {
@@ -387,9 +387,9 @@
           "weighted": 9.28
         },
         "trends": {
-          "raw_value": 0.6,
-          "normalized": 0.6,
-          "weighted": 0.07
+          "raw_value": 0.0,
+          "normalized": 0.0,
+          "weighted": 0.0
         },
         "github": {
           "raw_value": 12,
@@ -406,7 +406,7 @@
     },
     {
       "date": "2023-09",
-      "score": 20.7,
+      "score": 20.6,
       "phase": "Pre-disruption",
       "phase_range": "0-25",
       "components": {
@@ -426,9 +426,9 @@
           "weighted": 10.31
         },
         "trends": {
-          "raw_value": 0.6,
-          "normalized": 0.6,
-          "weighted": 0.07
+          "raw_value": 0.0,
+          "normalized": 0.0,
+          "weighted": 0.0
         },
         "github": {
           "raw_value": 4,
@@ -484,7 +484,7 @@
     },
     {
       "date": "2023-11",
-      "score": 21.2,
+      "score": 21.3,
       "phase": "Pre-disruption",
       "phase_range": "0-25",
       "components": {
@@ -504,9 +504,9 @@
           "weighted": 13.13
         },
         "trends": {
-          "raw_value": 0.0,
-          "normalized": 0.0,
-          "weighted": 0.0
+          "raw_value": 0.7,
+          "normalized": 0.7,
+          "weighted": 0.08
         },
         "github": {
           "raw_value": 8,
@@ -523,7 +523,7 @@
     },
     {
       "date": "2023-12",
-      "score": 20.6,
+      "score": 20.7,
       "phase": "Pre-disruption",
       "phase_range": "0-25",
       "components": {
@@ -543,9 +543,9 @@
           "weighted": 12.35
         },
         "trends": {
-          "raw_value": 0.0,
-          "normalized": 0.0,
-          "weighted": 0.0
+          "raw_value": 0.7,
+          "normalized": 0.7,
+          "weighted": 0.08
         },
         "github": {
           "raw_value": 12,
@@ -562,7 +562,7 @@
     },
     {
       "date": "2024-01",
-      "score": 22.0,
+      "score": 22.1,
       "phase": "Pre-disruption",
       "phase_range": "0-25",
       "components": {
@@ -582,9 +582,9 @@
           "weighted": 11.33
         },
         "trends": {
-          "raw_value": 0.0,
-          "normalized": 0.0,
-          "weighted": 0.0
+          "raw_value": 0.7,
+          "normalized": 0.7,
+          "weighted": 0.08
         },
         "github": {
           "raw_value": 13,
@@ -660,9 +660,9 @@
           "weighted": 13.45
         },
         "trends": {
-          "raw_value": 0.1,
-          "normalized": 0.1,
-          "weighted": 0.01
+          "raw_value": 0.0,
+          "normalized": 0.0,
+          "weighted": 0.0
         },
         "github": {
           "raw_value": 15,
@@ -699,9 +699,9 @@
           "weighted": 14.76
         },
         "trends": {
-          "raw_value": 0.1,
-          "normalized": 0.1,
-          "weighted": 0.01
+          "raw_value": 0.0,
+          "normalized": 0.0,
+          "weighted": 0.0
         },
         "github": {
           "raw_value": 20,
@@ -738,12 +738,12 @@
           "weighted": 13.2
         },
         "trends": {
-          "raw_value": 0.1,
-          "normalized": 0.1,
-          "weighted": 0.01
+          "raw_value": 0.0,
+          "normalized": 0.0,
+          "weighted": 0.0
         },
         "github": {
-          "raw_value": 23,
+          "raw_value": 24,
           "normalized": 0.5,
           "weighted": 0.06
         },
@@ -777,9 +777,9 @@
           "weighted": 17.01
         },
         "trends": {
-          "raw_value": 0.2,
-          "normalized": 0.2,
-          "weighted": 0.02
+          "raw_value": 0.0,
+          "normalized": 0.0,
+          "weighted": 0.0
         },
         "github": {
           "raw_value": 23,
@@ -816,9 +816,9 @@
           "weighted": 13.59
         },
         "trends": {
-          "raw_value": 0.2,
-          "normalized": 0.2,
-          "weighted": 0.02
+          "raw_value": 0.0,
+          "normalized": 0.0,
+          "weighted": 0.0
         },
         "github": {
           "raw_value": 27,
@@ -835,7 +835,7 @@
     },
     {
       "date": "2024-08",
-      "score": 30.5,
+      "score": 30.4,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
@@ -855,9 +855,9 @@
           "weighted": 13.48
         },
         "trends": {
-          "raw_value": 0.2,
-          "normalized": 0.2,
-          "weighted": 0.02
+          "raw_value": 0.0,
+          "normalized": 0.0,
+          "weighted": 0.0
         },
         "github": {
           "raw_value": 34,
@@ -874,7 +874,7 @@
     },
     {
       "date": "2024-09",
-      "score": 31.9,
+      "score": 32.0,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
@@ -894,12 +894,12 @@
           "weighted": 14.79
         },
         "trends": {
-          "raw_value": 0.0,
-          "normalized": 0.0,
-          "weighted": 0.0
+          "raw_value": 0.4,
+          "normalized": 0.4,
+          "weighted": 0.05
         },
         "github": {
-          "raw_value": 24,
+          "raw_value": 26,
           "normalized": 0.5,
           "weighted": 0.06
         },
@@ -913,7 +913,7 @@
     },
     {
       "date": "2024-10",
-      "score": 27.3,
+      "score": 27.4,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
@@ -933,12 +933,12 @@
           "weighted": 14.4
         },
         "trends": {
-          "raw_value": 0.2,
-          "normalized": 0.2,
-          "weighted": 0.02
+          "raw_value": 0.6,
+          "normalized": 0.6,
+          "weighted": 0.07
         },
         "github": {
-          "raw_value": 34,
+          "raw_value": 33,
           "normalized": 0.7,
           "weighted": 0.08
         },
@@ -972,9 +972,9 @@
           "weighted": 10.17
         },
         "trends": {
-          "raw_value": 0.3,
-          "normalized": 0.3,
-          "weighted": 0.04
+          "raw_value": 0.6,
+          "normalized": 0.6,
+          "weighted": 0.07
         },
         "github": {
           "raw_value": 34,
@@ -1011,9 +1011,9 @@
           "weighted": 13.7
         },
         "trends": {
-          "raw_value": 0.4,
-          "normalized": 0.4,
-          "weighted": 0.05
+          "raw_value": 0.1,
+          "normalized": 0.1,
+          "weighted": 0.01
         },
         "github": {
           "raw_value": 61,
@@ -1050,9 +1050,9 @@
           "weighted": 14.4
         },
         "trends": {
-          "raw_value": 0.3,
-          "normalized": 0.3,
-          "weighted": 0.04
+          "raw_value": 0.1,
+          "normalized": 0.1,
+          "weighted": 0.01
         },
         "github": {
           "raw_value": 79,
@@ -1089,9 +1089,9 @@
           "weighted": 14.93
         },
         "trends": {
-          "raw_value": 1.1,
-          "normalized": 1.1,
-          "weighted": 0.13
+          "raw_value": 0.7,
+          "normalized": 0.7,
+          "weighted": 0.08
         },
         "github": {
           "raw_value": 141,
@@ -1108,7 +1108,7 @@
     },
     {
       "date": "2025-03",
-      "score": 28.5,
+      "score": 28.4,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
@@ -1128,9 +1128,9 @@
           "weighted": 15.11
         },
         "trends": {
-          "raw_value": 1.5,
-          "normalized": 1.5,
-          "weighted": 0.18
+          "raw_value": 1.1,
+          "normalized": 1.1,
+          "weighted": 0.13
         },
         "github": {
           "raw_value": 158,
@@ -1147,7 +1147,7 @@
     },
     {
       "date": "2025-04",
-      "score": 24.4,
+      "score": 24.3,
       "phase": "Pre-disruption",
       "phase_range": "0-25",
       "components": {
@@ -1167,12 +1167,12 @@
           "weighted": 12.99
         },
         "trends": {
-          "raw_value": 1.8,
-          "normalized": 1.8,
-          "weighted": 0.21
+          "raw_value": 1.3,
+          "normalized": 1.3,
+          "weighted": 0.15
         },
         "github": {
-          "raw_value": 164,
+          "raw_value": 165,
           "normalized": 3.3,
           "weighted": 0.39
         },
@@ -1206,12 +1206,12 @@
           "weighted": 14.9
         },
         "trends": {
-          "raw_value": 1.1,
-          "normalized": 1.1,
-          "weighted": 0.13
+          "raw_value": 1.0,
+          "normalized": 1.0,
+          "weighted": 0.12
         },
         "github": {
-          "raw_value": 184,
+          "raw_value": 183,
           "normalized": 3.7,
           "weighted": 0.44
         },
@@ -1225,7 +1225,7 @@
     },
     {
       "date": "2025-06",
-      "score": 25.5,
+      "score": 25.6,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
@@ -1245,12 +1245,12 @@
           "weighted": 13.1
         },
         "trends": {
-          "raw_value": 4.5,
-          "normalized": 4.5,
-          "weighted": 0.53
+          "raw_value": 4.9,
+          "normalized": 4.9,
+          "weighted": 0.58
         },
         "github": {
-          "raw_value": 238,
+          "raw_value": 240,
           "normalized": 4.8,
           "weighted": 0.56
         },
@@ -1264,7 +1264,7 @@
     },
     {
       "date": "2025-07",
-      "score": 27.2,
+      "score": 27.1,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
@@ -1284,14 +1284,14 @@
           "weighted": 14.61
         },
         "trends": {
-          "raw_value": 10.3,
-          "normalized": 10.3,
-          "weighted": 1.21
+          "raw_value": 9.5,
+          "normalized": 9.5,
+          "weighted": 1.12
         },
         "github": {
-          "raw_value": 263,
-          "normalized": 5.3,
-          "weighted": 0.62
+          "raw_value": 262,
+          "normalized": 5.2,
+          "weighted": 0.61
         },
         "regulatory": {
           "raw_value": 0,
@@ -1303,7 +1303,7 @@
     },
     {
       "date": "2025-08",
-      "score": 30.5,
+      "score": 30.6,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
@@ -1323,14 +1323,14 @@
           "weighted": 17.05
         },
         "trends": {
-          "raw_value": 16.0,
-          "normalized": 16.0,
-          "weighted": 1.88
+          "raw_value": 16.3,
+          "normalized": 16.3,
+          "weighted": 1.92
         },
         "github": {
-          "raw_value": 221,
-          "normalized": 4.4,
-          "weighted": 0.52
+          "raw_value": 224,
+          "normalized": 4.5,
+          "weighted": 0.53
         },
         "regulatory": {
           "raw_value": 0,
@@ -1342,7 +1342,7 @@
     },
     {
       "date": "2025-09",
-      "score": 28.6,
+      "score": 28.7,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
@@ -1362,12 +1362,12 @@
           "weighted": 14.19
         },
         "trends": {
-          "raw_value": 21.8,
-          "normalized": 21.8,
-          "weighted": 2.56
+          "raw_value": 22.9,
+          "normalized": 22.9,
+          "weighted": 2.69
         },
         "github": {
-          "raw_value": 253,
+          "raw_value": 254,
           "normalized": 5.1,
           "weighted": 0.6
         },
@@ -1381,7 +1381,7 @@
     },
     {
       "date": "2025-10",
-      "score": 27.5,
+      "score": 27.8,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
@@ -1401,9 +1401,9 @@
           "weighted": 14.16
         },
         "trends": {
-          "raw_value": 21.6,
-          "normalized": 21.6,
-          "weighted": 2.54
+          "raw_value": 24.3,
+          "normalized": 24.3,
+          "weighted": 2.86
         },
         "github": {
           "raw_value": 298,
@@ -1420,7 +1420,7 @@
     },
     {
       "date": "2025-11",
-      "score": 26.5,
+      "score": 26.7,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
@@ -1440,14 +1440,14 @@
           "weighted": 13.48
         },
         "trends": {
-          "raw_value": 21.6,
-          "normalized": 21.6,
-          "weighted": 2.54
+          "raw_value": 23.3,
+          "normalized": 23.3,
+          "weighted": 2.74
         },
         "github": {
-          "raw_value": 407,
-          "normalized": 8.1,
-          "weighted": 0.95
+          "raw_value": 410,
+          "normalized": 8.2,
+          "weighted": 0.96
         },
         "regulatory": {
           "raw_value": 1,
@@ -1459,7 +1459,7 @@
     },
     {
       "date": "2025-12",
-      "score": 28.6,
+      "score": 28.7,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
@@ -1479,9 +1479,9 @@
           "weighted": 15.85
         },
         "trends": {
-          "raw_value": 16.1,
-          "normalized": 16.1,
-          "weighted": 1.89
+          "raw_value": 17.1,
+          "normalized": 17.1,
+          "weighted": 2.01
         },
         "github": {
           "raw_value": 480,
@@ -1498,7 +1498,7 @@
     },
     {
       "date": "2026-01",
-      "score": 33.1,
+      "score": 33.3,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
@@ -1518,12 +1518,12 @@
           "weighted": 15.36
         },
         "trends": {
-          "raw_value": 17.3,
-          "normalized": 17.3,
-          "weighted": 2.03
+          "raw_value": 18.4,
+          "normalized": 18.4,
+          "weighted": 2.16
         },
         "github": {
-          "raw_value": 913,
+          "raw_value": 917,
           "normalized": 18.3,
           "weighted": 2.15
         },
@@ -1537,7 +1537,7 @@
     },
     {
       "date": "2026-02",
-      "score": 34.5,
+      "score": 34.7,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
@@ -1557,14 +1557,14 @@
           "weighted": 13.59
         },
         "trends": {
-          "raw_value": 21.1,
-          "normalized": 21.1,
-          "weighted": 2.48
+          "raw_value": 22.8,
+          "normalized": 22.8,
+          "weighted": 2.68
         },
         "github": {
-          "raw_value": 2084,
-          "normalized": 41.7,
-          "weighted": 4.9
+          "raw_value": 2081,
+          "normalized": 41.6,
+          "weighted": 4.89
         },
         "regulatory": {
           "raw_value": 4,
@@ -1576,7 +1576,7 @@
     },
     {
       "date": "2026-03",
-      "score": 43.5,
+      "score": 43.9,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
@@ -1596,14 +1596,14 @@
           "weighted": 17.65
         },
         "trends": {
-          "raw_value": 29.1,
-          "normalized": 29.1,
-          "weighted": 3.42
+          "raw_value": 31.9,
+          "normalized": 31.9,
+          "weighted": 3.75
         },
         "github": {
-          "raw_value": 3905,
-          "normalized": 78.1,
-          "weighted": 9.18
+          "raw_value": 3930,
+          "normalized": 78.6,
+          "weighted": 9.24
         },
         "regulatory": {
           "raw_value": 4,
@@ -1615,7 +1615,7 @@
     },
     {
       "date": "2026-04",
-      "score": 38.9,
+      "score": 39.2,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
@@ -1635,14 +1635,14 @@
           "weighted": 10.73
         },
         "trends": {
-          "raw_value": 33.5,
-          "normalized": 33.5,
-          "weighted": 3.94
+          "raw_value": 36.5,
+          "normalized": 36.5,
+          "weighted": 4.29
         },
         "github": {
-          "raw_value": 3994,
-          "normalized": 79.9,
-          "weighted": 9.4
+          "raw_value": 4005,
+          "normalized": 80.1,
+          "weighted": 9.42
         },
         "regulatory": {
           "raw_value": 4,
@@ -1654,7 +1654,7 @@
     },
     {
       "date": "2026-05",
-      "score": 41.4,
+      "score": 41.8,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
@@ -1674,14 +1674,14 @@
           "weighted": 12.35
         },
         "trends": {
-          "raw_value": 35.1,
-          "normalized": 35.1,
-          "weighted": 4.13
+          "raw_value": 37.5,
+          "normalized": 37.5,
+          "weighted": 4.41
         },
         "github": {
-          "raw_value": 4339,
-          "normalized": 86.8,
-          "weighted": 10.21
+          "raw_value": 4361,
+          "normalized": 87.2,
+          "weighted": 10.25
         },
         "regulatory": {
           "raw_value": 4,
@@ -1693,7 +1693,7 @@
     },
     {
       "date": "2026-06",
-      "score": 44.4,
+      "score": 44.5,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
@@ -1713,14 +1713,14 @@
           "weighted": 15.25
         },
         "trends": {
-          "raw_value": 33.7,
-          "normalized": 33.7,
-          "weighted": 3.96
+          "raw_value": 34.6,
+          "normalized": 34.6,
+          "weighted": 4.07
         },
         "github": {
-          "raw_value": 4585,
-          "normalized": 91.7,
-          "weighted": 10.78
+          "raw_value": 4609,
+          "normalized": 92.2,
+          "weighted": 10.84
         },
         "regulatory": {
           "raw_value": 4,
@@ -1732,7 +1732,7 @@
     },
     {
       "date": "2026-07",
-      "score": 46.1,
+      "score": 45.7,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
@@ -1752,26 +1752,26 @@
           "weighted": 13.56
         },
         "trends": {
-          "raw_value": 26.0,
-          "normalized": 26.0,
-          "weighted": 3.06
+          "raw_value": 27.1,
+          "normalized": 27.1,
+          "weighted": 3.19
         },
         "github": {
-          "raw_value": 4774,
-          "normalized": 95.5,
-          "weighted": 11.23
+          "raw_value": 4797,
+          "normalized": 95.9,
+          "weighted": 11.28
         },
         "regulatory": {
-          "raw_value": 17,
-          "normalized": 85.0,
-          "weighted": 5.01
+          "raw_value": 15,
+          "normalized": 75.0,
+          "weighted": 4.42
         }
       },
       "trend": "up"
     },
     {
       "date": "2026-08",
-      "score": 47.5,
+      "score": 46.9,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
@@ -1791,26 +1791,26 @@
           "weighted": 15.53
         },
         "trends": {
-          "raw_value": 15.8,
-          "normalized": 15.8,
-          "weighted": 1.86
+          "raw_value": 16.4,
+          "normalized": 16.4,
+          "weighted": 1.93
         },
         "github": {
-          "raw_value": 5762,
+          "raw_value": 5790,
           "normalized": 100.0,
           "weighted": 11.76
         },
         "regulatory": {
-          "raw_value": 17,
-          "normalized": 85.0,
-          "weighted": 5.01
+          "raw_value": 15,
+          "normalized": 75.0,
+          "weighted": 4.42
         }
       },
       "trend": "up"
     },
     {
       "date": "2026-09",
-      "score": 46.5,
+      "score": 46.0,
       "phase": "Productivity",
       "phase_range": "26-50",
       "components": {
@@ -1830,19 +1830,19 @@
           "weighted": 15.53
         },
         "trends": {
-          "raw_value": 6.8,
-          "normalized": 6.8,
-          "weighted": 0.8
+          "raw_value": 7.3,
+          "normalized": 7.3,
+          "weighted": 0.86
         },
         "github": {
-          "raw_value": 6803,
+          "raw_value": 6885,
           "normalized": 100.0,
           "weighted": 11.76
         },
         "regulatory": {
-          "raw_value": 17,
-          "normalized": 85.0,
-          "weighted": 5.01
+          "raw_value": 15,
+          "normalized": 75.0,
+          "weighted": 4.42
         }
       },
       "trend": "down"
