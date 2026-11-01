@@ -27,6 +27,7 @@ import os
 import sys
 import time
 from datetime import datetime, timezone
+from urllib.parse import urlparse
 
 try:
     import requests
@@ -50,6 +51,7 @@ PROCESSED_DIR = os.path.join(DATA_DIR, "regulatory", "processed")
 MAX_RETRIES = 3
 RETRY_DELAY = 5  # seconds
 USER_AGENT = "DisplacementCurve/1.0 (secedgar@1to3.co)"
+GENERIC_USER_AGENT = "DisplacementCurve/1.0"
 
 # RSS / Atom feed URLs for each regulator
 REGULATOR_FEEDS = {
@@ -131,6 +133,14 @@ REGULATOR_FEEDS = {
 # RSS Feed Processing (Live Mode)
 # ---------------------------------------------------------------------------
 
+def user_agent_for(url):
+    """Send the contact only to SEC hosts, whose policy asks for it."""
+    host = urlparse(url).hostname or ""
+    if host == "sec.gov" or host.endswith(".sec.gov"):
+        return USER_AGENT
+    return GENERIC_USER_AGENT
+
+
 def fetch_feed(url):
     """Fetch and parse an RSS/Atom feed with timeout."""
     if feedparser is None:
@@ -140,7 +150,7 @@ def fetch_feed(url):
     try:
         # Use requests with timeout first, then parse content
         if requests is not None:
-            headers = {"User-Agent": USER_AGENT}
+            headers = {"User-Agent": user_agent_for(url)}
             resp = requests.get(url, headers=headers, timeout=10)
             resp.raise_for_status()
             feed = feedparser.parse(resp.content)
