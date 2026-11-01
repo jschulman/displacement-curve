@@ -1,7 +1,7 @@
 {
   "metadata": {
     "source": "SEC EDGAR Form D",
-    "last_updated": "2026-10-08",
+    "last_updated": "2026-11-01",
     "mock": false
   },
   "categories": {
@@ -214,8 +214,8 @@
         {
           "quarter": "2026-Q4",
           "funding_mm": 0.0,
-          "deal_count": 0,
-          "unknown_amount_deals": 0
+          "deal_count": 1,
+          "unknown_amount_deals": 1
         }
       ]
     },
@@ -642,8 +642,8 @@
         {
           "quarter": "2026-Q4",
           "funding_mm": 0.0,
-          "deal_count": 0,
-          "unknown_amount_deals": 0
+          "deal_count": 2,
+          "unknown_amount_deals": 2
         }
       ]
     }
@@ -764,8 +764,8 @@
     {
       "quarter": "2026-Q4",
       "total_funding_mm": 0.0,
-      "total_deals": 0,
-      "unknown_amount_deals": 0,
+      "total_deals": 3,
+      "unknown_amount_deals": 3,
       "cumulative_mm": 0.0
     }
   ]
