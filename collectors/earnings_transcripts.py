@@ -64,7 +64,7 @@ FIRM_NAMES = {
 
 EDGAR_COMPANY_FACTS_URL = "https://data.sec.gov/api/xbrl/companyfacts/CIK{cik}.json"
 
-USER_AGENT = "DisplacementCurve/1.0 (secedgar@1to3.co)"
+USER_AGENT = "DisplacementCurve/1.0 (pai@1to3.co)"
 
 # XBRL revenue tags in preference order (us-gaap namespace)
 REVENUE_TAGS_USGAAP = [

@@ -50,7 +50,7 @@ PROCESSED_DIR = os.path.join(DATA_DIR, "regulatory", "processed")
 
 MAX_RETRIES = 3
 RETRY_DELAY = 5  # seconds
-USER_AGENT = "DisplacementCurve/1.0 (secedgar@1to3.co)"
+USER_AGENT = "DisplacementCurve/1.0 (pai@1to3.co)"
 GENERIC_USER_AGENT = "DisplacementCurve/1.0"
 
 # RSS / Atom feed URLs for each regulator

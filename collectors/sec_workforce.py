@@ -66,7 +66,7 @@ FIRM_NAMES = {
 
 EDGAR_COMPANY_FACTS_URL = "https://data.sec.gov/api/xbrl/companyfacts/CIK{cik}.json"
 
-USER_AGENT = "DisplacementCurve/1.0 (secedgar@1to3.co)"
+USER_AGENT = "DisplacementCurve/1.0 (pai@1to3.co)"
 
 HEADCOUNT_TAG = "EntityNumberOfEmployees"
 HEADCOUNT_TAG_IFRS = "NumberOfEmployees"
