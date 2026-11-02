@@ -1,7 +1,7 @@
 {
   "metadata": {
     "source": "Federal Regulators RSS",
-    "last_updated": "2026-11-01",
+    "last_updated": "2026-11-02",
     "mock": false
   },
   "regulators": {
@@ -724,7 +724,7 @@
         },
         {
           "quarter": "2025-Q4",
-          "document_count": 1,
+          "document_count": 0,
           "enforcement_count": 0,
           "guidance_count": 0
         },
@@ -818,28 +818,28 @@
     },
     {
       "quarter": "2025-Q4",
-      "total_documents": 1,
-      "cumulative_documents": 1
+      "total_documents": 0,
+      "cumulative_documents": 0
     },
     {
       "quarter": "2026-Q1",
       "total_documents": 4,
-      "cumulative_documents": 5
+      "cumulative_documents": 4
     },
     {
       "quarter": "2026-Q2",
       "total_documents": 4,
-      "cumulative_documents": 9
+      "cumulative_documents": 8
     },
     {
       "quarter": "2026-Q3",
       "total_documents": 14,
-      "cumulative_documents": 23
+      "cumulative_documents": 22
     },
     {
       "quarter": "2026-Q4",
       "total_documents": 8,
-      "cumulative_documents": 31
+      "cumulative_documents": 30
     }
   ]
 }
