@@ -1,7 +1,7 @@
 {
   "metadata": {
     "source": "GitHub API",
-    "last_updated": "2026-11-08",
+    "last_updated": "2026-11-09",
     "mock": false
   },
   "categories": {
@@ -660,43 +660,43 @@
         {
           "date": "2026-06",
           "new_repos": 3,
-          "total_stars": 74,
-          "contributors": 74,
+          "total_stars": 75,
+          "contributors": 75,
           "forks": 9
         },
         {
           "date": "2026-07",
           "new_repos": 0,
-          "total_stars": 74,
-          "contributors": 74,
+          "total_stars": 75,
+          "contributors": 75,
           "forks": 0
         },
         {
           "date": "2026-08",
           "new_repos": 1,
-          "total_stars": 74,
-          "contributors": 74,
+          "total_stars": 75,
+          "contributors": 75,
           "forks": 0
         },
         {
           "date": "2026-09",
           "new_repos": 0,
-          "total_stars": 74,
-          "contributors": 74,
+          "total_stars": 75,
+          "contributors": 75,
           "forks": 0
         },
         {
           "date": "2026-10",
           "new_repos": 0,
-          "total_stars": 74,
-          "contributors": 74,
+          "total_stars": 75,
+          "contributors": 75,
           "forks": 0
         },
         {
           "date": "2026-11",
           "new_repos": 0,
-          "total_stars": 74,
-          "contributors": 74,
+          "total_stars": 75,
+          "contributors": 75,
           "forks": 0
         }
       ]
@@ -805,246 +805,246 @@
         {
           "date": "2024-01",
           "new_repos": 1,
-          "total_stars": 285,
-          "contributors": 285,
+          "total_stars": 286,
+          "contributors": 286,
           "forks": 79
         },
         {
           "date": "2024-02",
           "new_repos": 0,
-          "total_stars": 285,
-          "contributors": 285,
+          "total_stars": 286,
+          "contributors": 286,
           "forks": 0
         },
         {
           "date": "2024-03",
           "new_repos": 0,
-          "total_stars": 285,
-          "contributors": 285,
+          "total_stars": 286,
+          "contributors": 286,
           "forks": 0
         },
         {
           "date": "2024-04",
           "new_repos": 0,
-          "total_stars": 285,
-          "contributors": 285,
+          "total_stars": 286,
+          "contributors": 286,
           "forks": 0
         },
         {
           "date": "2024-05",
           "new_repos": 0,
-          "total_stars": 285,
-          "contributors": 285,
+          "total_stars": 286,
+          "contributors": 286,
           "forks": 0
         },
         {
           "date": "2024-06",
           "new_repos": 0,
-          "total_stars": 285,
-          "contributors": 285,
+          "total_stars": 286,
+          "contributors": 286,
           "forks": 0
         },
         {
           "date": "2024-07",
           "new_repos": 0,
-          "total_stars": 285,
-          "contributors": 285,
+          "total_stars": 286,
+          "contributors": 286,
           "forks": 0
         },
         {
           "date": "2024-08",
           "new_repos": 1,
-          "total_stars": 659,
-          "contributors": 659,
+          "total_stars": 660,
+          "contributors": 660,
           "forks": 127
         },
         {
           "date": "2024-09",
           "new_repos": 0,
-          "total_stars": 659,
-          "contributors": 659,
+          "total_stars": 660,
+          "contributors": 660,
           "forks": 0
         },
         {
           "date": "2024-10",
           "new_repos": 0,
-          "total_stars": 659,
-          "contributors": 659,
+          "total_stars": 660,
+          "contributors": 660,
           "forks": 0
         },
         {
           "date": "2024-11",
           "new_repos": 0,
-          "total_stars": 659,
-          "contributors": 659,
+          "total_stars": 660,
+          "contributors": 660,
           "forks": 0
         },
         {
           "date": "2024-12",
           "new_repos": 1,
-          "total_stars": 659,
-          "contributors": 659,
+          "total_stars": 660,
+          "contributors": 660,
           "forks": 0
         },
         {
           "date": "2025-01",
           "new_repos": 0,
-          "total_stars": 659,
-          "contributors": 659,
+          "total_stars": 660,
+          "contributors": 660,
           "forks": 0
         },
         {
           "date": "2025-02",
           "new_repos": 1,
-          "total_stars": 664,
-          "contributors": 664,
+          "total_stars": 665,
+          "contributors": 665,
           "forks": 4
         },
         {
           "date": "2025-03",
           "new_repos": 4,
-          "total_stars": 679,
-          "contributors": 679,
+          "total_stars": 680,
+          "contributors": 680,
           "forks": 5
         },
         {
           "date": "2025-04",
           "new_repos": 0,
-          "total_stars": 679,
-          "contributors": 679,
-          "forks": 0
-        },
-        {
-          "date": "2025-05",
-          "new_repos": 1,
-          "total_stars": 679,
-          "contributors": 679,
-          "forks": 0
-        },
-        {
-          "date": "2025-06",
-          "new_repos": 3,
           "total_stars": 680,
           "contributors": 680,
           "forks": 0
         },
         {
+          "date": "2025-05",
+          "new_repos": 1,
+          "total_stars": 680,
+          "contributors": 680,
+          "forks": 0
+        },
+        {
+          "date": "2025-06",
+          "new_repos": 3,
+          "total_stars": 681,
+          "contributors": 681,
+          "forks": 0
+        },
+        {
           "date": "2025-07",
           "new_repos": 4,
-          "total_stars": 751,
-          "contributors": 751,
-          "forks": 19
+          "total_stars": 752,
+          "contributors": 752,
+          "forks": 21
         },
         {
           "date": "2025-08",
           "new_repos": 4,
-          "total_stars": 753,
-          "contributors": 753,
+          "total_stars": 754,
+          "contributors": 754,
           "forks": 1
         },
         {
           "date": "2025-09",
           "new_repos": 1,
-          "total_stars": 760,
-          "contributors": 760,
+          "total_stars": 761,
+          "contributors": 761,
           "forks": 1
         },
         {
           "date": "2025-10",
           "new_repos": 5,
-          "total_stars": 788,
-          "contributors": 788,
+          "total_stars": 789,
+          "contributors": 789,
           "forks": 7
         },
         {
           "date": "2025-11",
           "new_repos": 7,
-          "total_stars": 1015,
-          "contributors": 1015,
+          "total_stars": 1016,
+          "contributors": 1016,
           "forks": 12
         },
         {
           "date": "2025-12",
           "new_repos": 4,
-          "total_stars": 1019,
-          "contributors": 1019,
+          "total_stars": 1020,
+          "contributors": 1020,
           "forks": 0
         },
         {
           "date": "2026-01",
           "new_repos": 4,
-          "total_stars": 1463,
-          "contributors": 1463,
+          "total_stars": 1468,
+          "contributors": 1468,
           "forks": 30
         },
         {
           "date": "2026-02",
           "new_repos": 14,
-          "total_stars": 1656,
-          "contributors": 1656,
+          "total_stars": 1661,
+          "contributors": 1661,
           "forks": 25
         },
         {
           "date": "2026-03",
           "new_repos": 19,
-          "total_stars": 2046,
-          "contributors": 2046,
+          "total_stars": 2051,
+          "contributors": 2051,
           "forks": 74
         },
         {
           "date": "2026-04",
           "new_repos": 52,
-          "total_stars": 2094,
-          "contributors": 2094,
+          "total_stars": 2099,
+          "contributors": 2099,
           "forks": 8
         },
         {
           "date": "2026-05",
           "new_repos": 57,
-          "total_stars": 2318,
-          "contributors": 2318,
+          "total_stars": 2323,
+          "contributors": 2323,
           "forks": 60
         },
         {
           "date": "2026-06",
           "new_repos": 45,
-          "total_stars": 2364,
-          "contributors": 2364,
+          "total_stars": 2369,
+          "contributors": 2369,
           "forks": 26
         },
         {
           "date": "2026-07",
           "new_repos": 31,
-          "total_stars": 2393,
-          "contributors": 2393,
+          "total_stars": 2398,
+          "contributors": 2398,
           "forks": 8
         },
         {
           "date": "2026-08",
           "new_repos": 32,
-          "total_stars": 2651,
-          "contributors": 2651,
+          "total_stars": 2656,
+          "contributors": 2656,
           "forks": 16
         },
         {
           "date": "2026-09",
           "new_repos": 20,
-          "total_stars": 2671,
-          "contributors": 2671,
+          "total_stars": 2676,
+          "contributors": 2676,
           "forks": 3
         },
         {
           "date": "2026-10",
           "new_repos": 25,
-          "total_stars": 2690,
-          "contributors": 2690,
+          "total_stars": 2695,
+          "contributors": 2695,
           "forks": 7
         },
         {
           "date": "2026-11",
-          "new_repos": 4,
-          "total_stars": 2692,
-          "contributors": 2692,
+          "new_repos": 5,
+          "total_stars": 2698,
+          "contributors": 2698,
           "forks": 0
         }
       ]
@@ -1055,345 +1055,345 @@
         {
           "date": "2022-11",
           "new_repos": 3,
-          "total_stars": 22165,
-          "contributors": 22165,
-          "forks": 1391
+          "total_stars": 22172,
+          "contributors": 22172,
+          "forks": 1394
         },
         {
           "date": "2022-12",
           "new_repos": 6,
-          "total_stars": 47665,
-          "contributors": 47665,
-          "forks": 4452
+          "total_stars": 47692,
+          "contributors": 47692,
+          "forks": 4455
         },
         {
           "date": "2023-01",
           "new_repos": 5,
-          "total_stars": 48859,
-          "contributors": 48859,
-          "forks": 112
+          "total_stars": 48888,
+          "contributors": 48888,
+          "forks": 113
         },
         {
           "date": "2023-02",
           "new_repos": 3,
-          "total_stars": 48937,
-          "contributors": 48937,
+          "total_stars": 48966,
+          "contributors": 48966,
           "forks": 25
         },
         {
           "date": "2023-03",
           "new_repos": 6,
-          "total_stars": 73803,
-          "contributors": 73803,
-          "forks": 2124
+          "total_stars": 73898,
+          "contributors": 73898,
+          "forks": 2130
         },
         {
           "date": "2023-04",
           "new_repos": 9,
-          "total_stars": 86783,
-          "contributors": 86783,
-          "forks": 1538
+          "total_stars": 86888,
+          "contributors": 86888,
+          "forks": 1539
         },
         {
           "date": "2023-05",
           "new_repos": 17,
-          "total_stars": 95654,
-          "contributors": 95654,
-          "forks": 1355
+          "total_stars": 95785,
+          "contributors": 95785,
+          "forks": 1359
         },
         {
           "date": "2023-06",
           "new_repos": 7,
-          "total_stars": 134634,
-          "contributors": 134634,
-          "forks": 4854
+          "total_stars": 134779,
+          "contributors": 134779,
+          "forks": 4855
         },
         {
           "date": "2023-07",
-          "new_repos": 9,
-          "total_stars": 137571,
-          "contributors": 137571,
-          "forks": 334
+          "new_repos": 10,
+          "total_stars": 137718,
+          "contributors": 137718,
+          "forks": 335
         },
         {
           "date": "2023-08",
           "new_repos": 11,
-          "total_stars": 146084,
-          "contributors": 146084,
-          "forks": 2938
+          "total_stars": 146246,
+          "contributors": 146246,
+          "forks": 2949
         },
         {
           "date": "2023-09",
           "new_repos": 5,
-          "total_stars": 146086,
-          "contributors": 146086,
+          "total_stars": 146248,
+          "contributors": 146248,
           "forks": 0
         },
         {
           "date": "2023-10",
           "new_repos": 13,
-          "total_stars": 151979,
-          "contributors": 151979,
+          "total_stars": 152150,
+          "contributors": 152150,
           "forks": 576
         },
         {
           "date": "2023-11",
           "new_repos": 9,
-          "total_stars": 152292,
-          "contributors": 152292,
+          "total_stars": 152463,
+          "contributors": 152463,
           "forks": 55
         },
         {
           "date": "2023-12",
           "new_repos": 10,
-          "total_stars": 152636,
-          "contributors": 152636,
+          "total_stars": 152807,
+          "contributors": 152807,
           "forks": 66
         },
         {
           "date": "2024-01",
           "new_repos": 11,
-          "total_stars": 153014,
-          "contributors": 153014,
-          "forks": 34
+          "total_stars": 153186,
+          "contributors": 153186,
+          "forks": 35
         },
         {
           "date": "2024-02",
           "new_repos": 16,
-          "total_stars": 174015,
-          "contributors": 174015,
-          "forks": 2052
+          "total_stars": 174194,
+          "contributors": 174194,
+          "forks": 2054
         },
         {
           "date": "2024-03",
           "new_repos": 15,
-          "total_stars": 187872,
-          "contributors": 187872,
-          "forks": 1596
+          "total_stars": 188088,
+          "contributors": 188088,
+          "forks": 1600
         },
         {
           "date": "2024-04",
           "new_repos": 19,
-          "total_stars": 188314,
-          "contributors": 188314,
+          "total_stars": 188529,
+          "contributors": 188529,
           "forks": 74
         },
         {
           "date": "2024-05",
           "new_repos": 22,
-          "total_stars": 195713,
-          "contributors": 195713,
-          "forks": 919
+          "total_stars": 195932,
+          "contributors": 195932,
+          "forks": 921
         },
         {
           "date": "2024-06",
           "new_repos": 20,
-          "total_stars": 206248,
-          "contributors": 206248,
+          "total_stars": 206468,
+          "contributors": 206468,
           "forks": 883
         },
         {
           "date": "2024-07",
           "new_repos": 25,
-          "total_stars": 209110,
-          "contributors": 209110,
-          "forks": 410
+          "total_stars": 209349,
+          "contributors": 209349,
+          "forks": 414
         },
         {
           "date": "2024-08",
           "new_repos": 28,
-          "total_stars": 247420,
-          "contributors": 247420,
-          "forks": 5698
+          "total_stars": 247666,
+          "contributors": 247666,
+          "forks": 5704
         },
         {
           "date": "2024-09",
           "new_repos": 23,
-          "total_stars": 252189,
-          "contributors": 252189,
-          "forks": 695
+          "total_stars": 252462,
+          "contributors": 252462,
+          "forks": 700
         },
         {
           "date": "2024-10",
           "new_repos": 33,
-          "total_stars": 257691,
-          "contributors": 257691,
+          "total_stars": 257966,
+          "contributors": 257966,
           "forks": 551
         },
         {
           "date": "2024-11",
           "new_repos": 30,
-          "total_stars": 260370,
-          "contributors": 260370,
-          "forks": 243
+          "total_stars": 260649,
+          "contributors": 260649,
+          "forks": 246
         },
         {
           "date": "2024-12",
           "new_repos": 53,
-          "total_stars": 269985,
-          "contributors": 269985,
-          "forks": 1230
+          "total_stars": 270266,
+          "contributors": 270266,
+          "forks": 1231
         },
         {
           "date": "2025-01",
-          "new_repos": 74,
-          "total_stars": 323362,
-          "contributors": 323362,
-          "forks": 6659
+          "new_repos": 76,
+          "total_stars": 323813,
+          "contributors": 323813,
+          "forks": 6693
         },
         {
           "date": "2025-02",
           "new_repos": 138,
-          "total_stars": 362275,
-          "contributors": 362275,
-          "forks": 4342
+          "total_stars": 362789,
+          "contributors": 362789,
+          "forks": 4352
         },
         {
           "date": "2025-03",
-          "new_repos": 142,
-          "total_stars": 397868,
-          "contributors": 397868,
-          "forks": 4367
+          "new_repos": 143,
+          "total_stars": 398420,
+          "contributors": 398420,
+          "forks": 4377
         },
         {
           "date": "2025-04",
           "new_repos": 154,
-          "total_stars": 406472,
-          "contributors": 406472,
-          "forks": 1976
+          "total_stars": 407040,
+          "contributors": 407040,
+          "forks": 1988
         },
         {
           "date": "2025-05",
           "new_repos": 164,
-          "total_stars": 427383,
-          "contributors": 427383,
-          "forks": 3269
+          "total_stars": 427991,
+          "contributors": 427991,
+          "forks": 3273
         },
         {
           "date": "2025-06",
           "new_repos": 219,
-          "total_stars": 565944,
-          "contributors": 565944,
-          "forks": 20034
+          "total_stars": 566816,
+          "contributors": 566816,
+          "forks": 20060
         },
         {
           "date": "2025-07",
           "new_repos": 229,
-          "total_stars": 854511,
-          "contributors": 854511,
-          "forks": 61914
+          "total_stars": 855833,
+          "contributors": 855833,
+          "forks": 62151
         },
         {
           "date": "2025-08",
           "new_repos": 198,
-          "total_stars": 901434,
-          "contributors": 901434,
-          "forks": 4812
+          "total_stars": 902811,
+          "contributors": 902811,
+          "forks": 4823
         },
         {
           "date": "2025-09",
           "new_repos": 221,
-          "total_stars": 967530,
-          "contributors": 967530,
-          "forks": 7747
+          "total_stars": 969036,
+          "contributors": 969036,
+          "forks": 7775
         },
         {
           "date": "2025-10",
-          "new_repos": 274,
-          "total_stars": 976780,
-          "contributors": 976780,
-          "forks": 1437
+          "new_repos": 275,
+          "total_stars": 978294,
+          "contributors": 978294,
+          "forks": 1445
         },
         {
           "date": "2025-11",
           "new_repos": 364,
-          "total_stars": 1005885,
-          "contributors": 1005885,
-          "forks": 3909
+          "total_stars": 1007461,
+          "contributors": 1007461,
+          "forks": 3918
         },
         {
           "date": "2025-12",
-          "new_repos": 430,
-          "total_stars": 1152326,
-          "contributors": 1152326,
-          "forks": 13904
+          "new_repos": 432,
+          "total_stars": 1154744,
+          "contributors": 1154744,
+          "forks": 13973
         },
         {
           "date": "2026-01",
-          "new_repos": 846,
-          "total_stars": 1449878,
-          "contributors": 1449878,
-          "forks": 85975
+          "new_repos": 849,
+          "total_stars": 1453166,
+          "contributors": 1453166,
+          "forks": 86246
         },
         {
           "date": "2026-02",
           "new_repos": 1950,
-          "total_stars": 1747860,
-          "contributors": 1747860,
-          "forks": 36273
+          "total_stars": 1751789,
+          "contributors": 1751789,
+          "forks": 36350
         },
         {
           "date": "2026-03",
           "new_repos": 3726,
-          "total_stars": 2090111,
-          "contributors": 2090111,
-          "forks": 54202
+          "total_stars": 2095133,
+          "contributors": 2095133,
+          "forks": 54314
         },
         {
           "date": "2026-04",
-          "new_repos": 3689,
-          "total_stars": 2531402,
-          "contributors": 2531402,
-          "forks": 59624
+          "new_repos": 3693,
+          "total_stars": 2537566,
+          "contributors": 2537566,
+          "forks": 59774
         },
         {
           "date": "2026-05",
-          "new_repos": 4043,
-          "total_stars": 2649674,
-          "contributors": 2649674,
-          "forks": 14481
+          "new_repos": 4057,
+          "total_stars": 2656285,
+          "contributors": 2656285,
+          "forks": 14560
         },
         {
           "date": "2026-06",
-          "new_repos": 4337,
-          "total_stars": 2731899,
-          "contributors": 2731899,
-          "forks": 11973
+          "new_repos": 4345,
+          "total_stars": 2738992,
+          "contributors": 2738992,
+          "forks": 12055
         },
         {
           "date": "2026-07",
-          "new_repos": 4551,
-          "total_stars": 2846364,
-          "contributors": 2846364,
-          "forks": 14487
+          "new_repos": 4549,
+          "total_stars": 2854082,
+          "contributors": 2854082,
+          "forks": 14587
         },
         {
           "date": "2026-08",
-          "new_repos": 5535,
-          "total_stars": 2905133,
-          "contributors": 2905133,
-          "forks": 5028
+          "new_repos": 5541,
+          "total_stars": 2913504,
+          "contributors": 2913504,
+          "forks": 5111
         },
         {
           "date": "2026-09",
-          "new_repos": 6430,
-          "total_stars": 2936282,
-          "contributors": 2936282,
-          "forks": 4055
+          "new_repos": 6438,
+          "total_stars": 2945328,
+          "contributors": 2945328,
+          "forks": 4133
         },
         {
           "date": "2026-10",
-          "new_repos": 6270,
-          "total_stars": 3005733,
-          "contributors": 3005733,
-          "forks": 9203
+          "new_repos": 6283,
+          "total_stars": 3017708,
+          "contributors": 3017708,
+          "forks": 9427
         },
         {
           "date": "2026-11",
-          "new_repos": 1450,
-          "total_stars": 3007606,
-          "contributors": 3007606,
-          "forks": 190
+          "new_repos": 1677,
+          "total_stars": 3020767,
+          "contributors": 3020767,
+          "forks": 472
         }
       ]
     },
@@ -1438,309 +1438,309 @@
         {
           "date": "2023-04",
           "new_repos": 1,
-          "total_stars": 4892,
-          "contributors": 4892,
+          "total_stars": 4901,
+          "contributors": 4901,
           "forks": 726
         },
         {
           "date": "2023-05",
           "new_repos": 0,
-          "total_stars": 4892,
-          "contributors": 4892,
+          "total_stars": 4901,
+          "contributors": 4901,
           "forks": 0
         },
         {
           "date": "2023-06",
           "new_repos": 0,
-          "total_stars": 4892,
-          "contributors": 4892,
+          "total_stars": 4901,
+          "contributors": 4901,
           "forks": 0
         },
         {
           "date": "2023-07",
           "new_repos": 0,
-          "total_stars": 4892,
-          "contributors": 4892,
+          "total_stars": 4901,
+          "contributors": 4901,
           "forks": 0
         },
         {
           "date": "2023-08",
           "new_repos": 1,
-          "total_stars": 4894,
-          "contributors": 4894,
+          "total_stars": 4903,
+          "contributors": 4903,
           "forks": 0
         },
         {
           "date": "2023-09",
           "new_repos": 0,
-          "total_stars": 4894,
-          "contributors": 4894,
+          "total_stars": 4903,
+          "contributors": 4903,
           "forks": 0
         },
         {
           "date": "2023-10",
           "new_repos": 1,
-          "total_stars": 4894,
-          "contributors": 4894,
+          "total_stars": 4903,
+          "contributors": 4903,
           "forks": 0
         },
         {
           "date": "2023-11",
           "new_repos": 0,
-          "total_stars": 4894,
-          "contributors": 4894,
+          "total_stars": 4903,
+          "contributors": 4903,
           "forks": 0
         },
         {
           "date": "2023-12",
           "new_repos": 2,
-          "total_stars": 4907,
-          "contributors": 4907,
+          "total_stars": 4916,
+          "contributors": 4916,
           "forks": 2
         },
         {
           "date": "2024-01",
           "new_repos": 0,
-          "total_stars": 4907,
-          "contributors": 4907,
-          "forks": 0
-        },
-        {
-          "date": "2024-02",
-          "new_repos": 1,
-          "total_stars": 4914,
-          "contributors": 4914,
-          "forks": 0
-        },
-        {
-          "date": "2024-03",
-          "new_repos": 0,
-          "total_stars": 4914,
-          "contributors": 4914,
-          "forks": 0
-        },
-        {
-          "date": "2024-04",
-          "new_repos": 1,
-          "total_stars": 4914,
-          "contributors": 4914,
-          "forks": 0
-        },
-        {
-          "date": "2024-05",
-          "new_repos": 1,
           "total_stars": 4916,
           "contributors": 4916,
           "forks": 0
         },
         {
+          "date": "2024-02",
+          "new_repos": 1,
+          "total_stars": 4923,
+          "contributors": 4923,
+          "forks": 0
+        },
+        {
+          "date": "2024-03",
+          "new_repos": 0,
+          "total_stars": 4923,
+          "contributors": 4923,
+          "forks": 0
+        },
+        {
+          "date": "2024-04",
+          "new_repos": 1,
+          "total_stars": 4923,
+          "contributors": 4923,
+          "forks": 0
+        },
+        {
+          "date": "2024-05",
+          "new_repos": 1,
+          "total_stars": 4925,
+          "contributors": 4925,
+          "forks": 0
+        },
+        {
           "date": "2024-06",
           "new_repos": 2,
-          "total_stars": 5197,
-          "contributors": 5197,
+          "total_stars": 5207,
+          "contributors": 5207,
           "forks": 79
         },
         {
           "date": "2024-07",
           "new_repos": 4,
-          "total_stars": 5779,
-          "contributors": 5779,
+          "total_stars": 5789,
+          "contributors": 5789,
           "forks": 135
         },
         {
           "date": "2024-08",
           "new_repos": 7,
-          "total_stars": 38598,
-          "contributors": 38598,
-          "forks": 4841
+          "total_stars": 38623,
+          "contributors": 38623,
+          "forks": 4845
         },
         {
           "date": "2024-09",
           "new_repos": 3,
-          "total_stars": 39848,
-          "contributors": 39848,
+          "total_stars": 39873,
+          "contributors": 39873,
           "forks": 252
         },
         {
           "date": "2024-10",
           "new_repos": 2,
-          "total_stars": 39850,
-          "contributors": 39850,
+          "total_stars": 39875,
+          "contributors": 39875,
           "forks": 0
         },
         {
           "date": "2024-11",
           "new_repos": 3,
-          "total_stars": 39852,
-          "contributors": 39852,
+          "total_stars": 39877,
+          "contributors": 39877,
           "forks": 1
         },
         {
           "date": "2024-12",
           "new_repos": 7,
-          "total_stars": 39923,
-          "contributors": 39923,
+          "total_stars": 39948,
+          "contributors": 39948,
           "forks": 8
         },
         {
           "date": "2025-01",
           "new_repos": 5,
-          "total_stars": 40605,
-          "contributors": 40605,
+          "total_stars": 40630,
+          "contributors": 40630,
           "forks": 137
         },
         {
           "date": "2025-02",
           "new_repos": 6,
-          "total_stars": 40640,
-          "contributors": 40640,
+          "total_stars": 40665,
+          "contributors": 40665,
           "forks": 9
         },
         {
           "date": "2025-03",
           "new_repos": 12,
-          "total_stars": 41110,
-          "contributors": 41110,
+          "total_stars": 41137,
+          "contributors": 41137,
           "forks": 101
         },
         {
           "date": "2025-04",
           "new_repos": 13,
-          "total_stars": 41139,
-          "contributors": 41139,
+          "total_stars": 41166,
+          "contributors": 41166,
           "forks": 5
         },
         {
           "date": "2025-05",
           "new_repos": 17,
-          "total_stars": 68774,
-          "contributors": 68774,
-          "forks": 6915
+          "total_stars": 68822,
+          "contributors": 68822,
+          "forks": 6917
         },
         {
           "date": "2025-06",
           "new_repos": 20,
-          "total_stars": 69929,
-          "contributors": 69929,
+          "total_stars": 69977,
+          "contributors": 69977,
           "forks": 290
         },
         {
           "date": "2025-07",
           "new_repos": 31,
-          "total_stars": 71361,
-          "contributors": 71361,
-          "forks": 266
+          "total_stars": 71414,
+          "contributors": 71414,
+          "forks": 267
         },
         {
           "date": "2025-08",
           "new_repos": 23,
-          "total_stars": 71990,
-          "contributors": 71990,
+          "total_stars": 72043,
+          "contributors": 72043,
           "forks": 101
         },
         {
           "date": "2025-09",
           "new_repos": 31,
-          "total_stars": 72140,
-          "contributors": 72140,
-          "forks": 45
+          "total_stars": 72193,
+          "contributors": 72193,
+          "forks": 44
         },
         {
           "date": "2025-10",
           "new_repos": 35,
-          "total_stars": 73484,
-          "contributors": 73484,
-          "forks": 199
+          "total_stars": 73555,
+          "contributors": 73555,
+          "forks": 201
         },
         {
           "date": "2025-11",
-          "new_repos": 45,
-          "total_stars": 73720,
-          "contributors": 73720,
-          "forks": 36
+          "new_repos": 44,
+          "total_stars": 73750,
+          "contributors": 73750,
+          "forks": 33
         },
         {
           "date": "2025-12",
           "new_repos": 47,
-          "total_stars": 74238,
-          "contributors": 74238,
-          "forks": 234
+          "total_stars": 74286,
+          "contributors": 74286,
+          "forks": 237
         },
         {
           "date": "2026-01",
           "new_repos": 78,
-          "total_stars": 77139,
-          "contributors": 77139,
-          "forks": 367
+          "total_stars": 77194,
+          "contributors": 77194,
+          "forks": 368
         },
         {
           "date": "2026-02",
-          "new_repos": 126,
-          "total_stars": 86570,
-          "contributors": 86570,
-          "forks": 1333
+          "new_repos": 125,
+          "total_stars": 86626,
+          "contributors": 86626,
+          "forks": 1334
         },
         {
           "date": "2026-03",
           "new_repos": 232,
-          "total_stars": 88203,
-          "contributors": 88203,
-          "forks": 217
+          "total_stars": 88261,
+          "contributors": 88261,
+          "forks": 220
         },
         {
           "date": "2026-04",
-          "new_repos": 213,
-          "total_stars": 98870,
-          "contributors": 98870,
-          "forks": 736
+          "new_repos": 212,
+          "total_stars": 98963,
+          "contributors": 98963,
+          "forks": 740
         },
         {
           "date": "2026-05",
           "new_repos": 239,
-          "total_stars": 99488,
-          "contributors": 99488,
+          "total_stars": 99583,
+          "contributors": 99583,
           "forks": 126
         },
         {
           "date": "2026-06",
           "new_repos": 217,
-          "total_stars": 99761,
-          "contributors": 99761,
-          "forks": 31
+          "total_stars": 99856,
+          "contributors": 99856,
+          "forks": 32
         },
         {
           "date": "2026-07",
           "new_repos": 260,
-          "total_stars": 99943,
-          "contributors": 99943,
+          "total_stars": 100038,
+          "contributors": 100038,
           "forks": 17
         },
         {
           "date": "2026-08",
-          "new_repos": 301,
-          "total_stars": 100125,
-          "contributors": 100125,
+          "new_repos": 300,
+          "total_stars": 100217,
+          "contributors": 100217,
           "forks": 38
         },
         {
           "date": "2026-09",
           "new_repos": 371,
-          "total_stars": 100629,
-          "contributors": 100629,
+          "total_stars": 100724,
+          "contributors": 100724,
           "forks": 63
         },
         {
           "date": "2026-10",
-          "new_repos": 454,
-          "total_stars": 100709,
-          "contributors": 100709,
-          "forks": 14
+          "new_repos": 453,
+          "total_stars": 100804,
+          "contributors": 100804,
+          "forks": 17
         },
         {
           "date": "2026-11",
-          "new_repos": 78,
-          "total_stars": 100748,
-          "contributors": 100748,
+          "new_repos": 91,
+          "total_stars": 100881,
+          "contributors": 100881,
           "forks": 0
         }
       ]
@@ -1750,296 +1750,296 @@
     {
       "date": "2022-11",
       "total_new_repos": 4,
-      "total_stars": 22166,
-      "total_contributors": 22166
+      "total_stars": 22173,
+      "total_contributors": 22173
     },
     {
       "date": "2022-12",
       "total_new_repos": 6,
-      "total_stars": 47666,
-      "total_contributors": 47666
+      "total_stars": 47693,
+      "total_contributors": 47693
     },
     {
       "date": "2023-01",
       "total_new_repos": 6,
-      "total_stars": 48860,
-      "total_contributors": 48860
+      "total_stars": 48889,
+      "total_contributors": 48889
     },
     {
       "date": "2023-02",
       "total_new_repos": 4,
-      "total_stars": 48938,
-      "total_contributors": 48938
+      "total_stars": 48967,
+      "total_contributors": 48967
     },
     {
       "date": "2023-03",
       "total_new_repos": 6,
-      "total_stars": 73804,
-      "total_contributors": 73804
+      "total_stars": 73899,
+      "total_contributors": 73899
     },
     {
       "date": "2023-04",
       "total_new_repos": 10,
-      "total_stars": 91675,
-      "total_contributors": 91675
+      "total_stars": 91789,
+      "total_contributors": 91789
     },
     {
       "date": "2023-05",
       "total_new_repos": 17,
-      "total_stars": 100546,
-      "total_contributors": 100546
+      "total_stars": 100686,
+      "total_contributors": 100686
     },
     {
       "date": "2023-06",
       "total_new_repos": 7,
-      "total_stars": 139526,
-      "total_contributors": 139526
+      "total_stars": 139680,
+      "total_contributors": 139680
     },
     {
       "date": "2023-07",
-      "total_new_repos": 10,
-      "total_stars": 142626,
-      "total_contributors": 142626
+      "total_new_repos": 11,
+      "total_stars": 142782,
+      "total_contributors": 142782
     },
     {
       "date": "2023-08",
       "total_new_repos": 12,
-      "total_stars": 151141,
-      "total_contributors": 151141
+      "total_stars": 151312,
+      "total_contributors": 151312
     },
     {
       "date": "2023-09",
       "total_new_repos": 5,
-      "total_stars": 151143,
-      "total_contributors": 151143
+      "total_stars": 151314,
+      "total_contributors": 151314
     },
     {
       "date": "2023-10",
       "total_new_repos": 14,
-      "total_stars": 157036,
-      "total_contributors": 157036
+      "total_stars": 157216,
+      "total_contributors": 157216
     },
     {
       "date": "2023-11",
       "total_new_repos": 9,
-      "total_stars": 157349,
-      "total_contributors": 157349
+      "total_stars": 157529,
+      "total_contributors": 157529
     },
     {
       "date": "2023-12",
       "total_new_repos": 12,
-      "total_stars": 157706,
-      "total_contributors": 157706
+      "total_stars": 157886,
+      "total_contributors": 157886
     },
     {
       "date": "2024-01",
       "total_new_repos": 12,
-      "total_stars": 158206,
-      "total_contributors": 158206
+      "total_stars": 158388,
+      "total_contributors": 158388
     },
     {
       "date": "2024-02",
       "total_new_repos": 17,
-      "total_stars": 179214,
-      "total_contributors": 179214
+      "total_stars": 179403,
+      "total_contributors": 179403
     },
     {
       "date": "2024-03",
       "total_new_repos": 15,
-      "total_stars": 193071,
-      "total_contributors": 193071
+      "total_stars": 193297,
+      "total_contributors": 193297
     },
     {
       "date": "2024-04",
       "total_new_repos": 20,
-      "total_stars": 193513,
-      "total_contributors": 193513
+      "total_stars": 193738,
+      "total_contributors": 193738
     },
     {
       "date": "2024-05",
       "total_new_repos": 23,
-      "total_stars": 200914,
-      "total_contributors": 200914
+      "total_stars": 201143,
+      "total_contributors": 201143
     },
     {
       "date": "2024-06",
       "total_new_repos": 22,
-      "total_stars": 211730,
-      "total_contributors": 211730
+      "total_stars": 211961,
+      "total_contributors": 211961
     },
     {
       "date": "2024-07",
       "total_new_repos": 29,
-      "total_stars": 215174,
-      "total_contributors": 215174
+      "total_stars": 215424,
+      "total_contributors": 215424
     },
     {
       "date": "2024-08",
       "total_new_repos": 36,
-      "total_stars": 286677,
-      "total_contributors": 286677
+      "total_stars": 286949,
+      "total_contributors": 286949
     },
     {
       "date": "2024-09",
       "total_new_repos": 26,
-      "total_stars": 292696,
-      "total_contributors": 292696
+      "total_stars": 292995,
+      "total_contributors": 292995
     },
     {
       "date": "2024-10",
       "total_new_repos": 35,
-      "total_stars": 298200,
-      "total_contributors": 298200
+      "total_stars": 298501,
+      "total_contributors": 298501
     },
     {
       "date": "2024-11",
       "total_new_repos": 33,
-      "total_stars": 300881,
-      "total_contributors": 300881
+      "total_stars": 301186,
+      "total_contributors": 301186
     },
     {
       "date": "2024-12",
       "total_new_repos": 61,
-      "total_stars": 310567,
-      "total_contributors": 310567
+      "total_stars": 310874,
+      "total_contributors": 310874
     },
     {
       "date": "2025-01",
-      "total_new_repos": 79,
-      "total_stars": 364626,
-      "total_contributors": 364626
+      "total_new_repos": 81,
+      "total_stars": 365103,
+      "total_contributors": 365103
     },
     {
       "date": "2025-02",
       "total_new_repos": 145,
-      "total_stars": 403579,
-      "total_contributors": 403579
+      "total_stars": 404119,
+      "total_contributors": 404119
     },
     {
       "date": "2025-03",
-      "total_new_repos": 158,
-      "total_stars": 439657,
-      "total_contributors": 439657
+      "total_new_repos": 159,
+      "total_stars": 440237,
+      "total_contributors": 440237
     },
     {
       "date": "2025-04",
       "total_new_repos": 167,
-      "total_stars": 448290,
-      "total_contributors": 448290
+      "total_stars": 448886,
+      "total_contributors": 448886
     },
     {
       "date": "2025-05",
       "total_new_repos": 182,
-      "total_stars": 496836,
-      "total_contributors": 496836
+      "total_stars": 497493,
+      "total_contributors": 497493
     },
     {
       "date": "2025-06",
       "total_new_repos": 242,
-      "total_stars": 636553,
-      "total_contributors": 636553
+      "total_stars": 637474,
+      "total_contributors": 637474
     },
     {
       "date": "2025-07",
       "total_new_repos": 264,
-      "total_stars": 926623,
-      "total_contributors": 926623
+      "total_stars": 927999,
+      "total_contributors": 927999
     },
     {
       "date": "2025-08",
       "total_new_repos": 225,
-      "total_stars": 974177,
-      "total_contributors": 974177
+      "total_stars": 975608,
+      "total_contributors": 975608
     },
     {
       "date": "2025-09",
       "total_new_repos": 253,
-      "total_stars": 1040430,
-      "total_contributors": 1040430
+      "total_stars": 1041990,
+      "total_contributors": 1041990
     },
     {
       "date": "2025-10",
-      "total_new_repos": 314,
-      "total_stars": 1051052,
-      "total_contributors": 1051052
+      "total_new_repos": 315,
+      "total_stars": 1052638,
+      "total_contributors": 1052638
     },
     {
       "date": "2025-11",
-      "total_new_repos": 416,
-      "total_stars": 1080620,
-      "total_contributors": 1080620
+      "total_new_repos": 415,
+      "total_stars": 1082227,
+      "total_contributors": 1082227
     },
     {
       "date": "2025-12",
-      "total_new_repos": 482,
-      "total_stars": 1227592,
-      "total_contributors": 1227592
+      "total_new_repos": 484,
+      "total_stars": 1230059,
+      "total_contributors": 1230059
     },
     {
       "date": "2026-01",
-      "total_new_repos": 928,
-      "total_stars": 1528489,
-      "total_contributors": 1528489
+      "total_new_repos": 931,
+      "total_stars": 1531837,
+      "total_contributors": 1531837
     },
     {
       "date": "2026-02",
-      "total_new_repos": 2090,
-      "total_stars": 1836095,
-      "total_contributors": 1836095
+      "total_new_repos": 2089,
+      "total_stars": 1840085,
+      "total_contributors": 1840085
     },
     {
       "date": "2026-03",
       "total_new_repos": 3981,
-      "total_stars": 2180384,
-      "total_contributors": 2180384
+      "total_stars": 2185469,
+      "total_contributors": 2185469
     },
     {
       "date": "2026-04",
-      "total_new_repos": 3957,
-      "total_stars": 2632402,
-      "total_contributors": 2632402
+      "total_new_repos": 3960,
+      "total_stars": 2638664,
+      "total_contributors": 2638664
     },
     {
       "date": "2026-05",
-      "total_new_repos": 4339,
-      "total_stars": 2751516,
-      "total_contributors": 2751516
+      "total_new_repos": 4353,
+      "total_stars": 2758227,
+      "total_contributors": 2758227
     },
     {
       "date": "2026-06",
-      "total_new_repos": 4602,
-      "total_stars": 2834110,
-      "total_contributors": 2834110
+      "total_new_repos": 4610,
+      "total_stars": 2841304,
+      "total_contributors": 2841304
     },
     {
       "date": "2026-07",
-      "total_new_repos": 4843,
-      "total_stars": 2948786,
-      "total_contributors": 2948786
+      "total_new_repos": 4841,
+      "total_stars": 2956605,
+      "total_contributors": 2956605
     },
     {
       "date": "2026-08",
-      "total_new_repos": 5870,
-      "total_stars": 3007996,
-      "total_contributors": 3007996
+      "total_new_repos": 5875,
+      "total_stars": 3016465,
+      "total_contributors": 3016465
     },
     {
       "date": "2026-09",
-      "total_new_repos": 6822,
-      "total_stars": 3039671,
-      "total_contributors": 3039671
+      "total_new_repos": 6830,
+      "total_stars": 3048818,
+      "total_contributors": 3048818
     },
     {
       "date": "2026-10",
-      "total_new_repos": 6749,
-      "total_stars": 3109221,
-      "total_contributors": 3109221
+      "total_new_repos": 6761,
+      "total_stars": 3121297,
+      "total_contributors": 3121297
     },
     {
       "date": "2026-11",
-      "total_new_repos": 1532,
-      "total_stars": 3111135,
-      "total_contributors": 3111135
+      "total_new_repos": 1773,
+      "total_stars": 3124436,
+      "total_contributors": 3124436
     }
   ]
 }
